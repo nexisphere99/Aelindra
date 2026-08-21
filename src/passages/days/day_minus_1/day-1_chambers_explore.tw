@@ -1,0 +1,36 @@
+:: day-1_chambers_explore [nobr]
+<<set _chamberImg to ($timeSlot is "NIGHT") ? "palace_chambers_night" : "palace_chambers">>
+<<locationImage _chamberImg "Edrin's Chambers">>
+<h2>🛏 Edrin's Chambers</h2>
+<p>Your room. The half-written letter is gone from the desk. The mirror waits.</p>
+
+<<if $timeSlot is "NIGHT" and $d2_npc_perrin and not $d1_npc_perrin2>>
+<div class="interaction-card side">
+  <<npcPortrait "perrin" "Perrin">>
+  <h4>🚪 The Corridor   Perrin Is at His Post</h4>
+  <p>The room is warm. You could use some air before you sleep.</p>
+  [[Step into the corridor|day-1_npc_perrin2]]
+</div>
+<</if>>
+
+<<if $timeSlot is "NIGHT" and $d1_rowan and not $d1_night and not $d1_npc_lastjerk>>
+<div class="interaction-card side">
+  <h4>🔥 The Body   You Know What This Is</h4>
+  <p>Tomorrow you walk to the tower. Tomorrow the body changes. Tonight, for the last time, you know exactly how this works.</p>
+  [[One last time → |day-1_scene_masturbation]]
+</div>
+<</if>>
+
+<div class="interaction-card">
+  <h4>🪞 The Mirror</h4>
+  <p>The full-length mirror. Gilded frame. Ancient, slightly warped glass.</p>
+  <<if $timeSlot is "NIGHT" and $d1_rowan>>
+    [[Stand before it   one last time|day-1_night]]
+  <<else>>
+    <p class="flavor-dim">Not yet. Not today. The mirror and you have said enough for now.</p>
+  <</if>>
+</div>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

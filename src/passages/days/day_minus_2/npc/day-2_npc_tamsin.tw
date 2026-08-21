@@ -1,0 +1,46 @@
+:: day-2_npc_tamsin [nobr]
+<<npcPortrait "tamsin" "Tamsin">>
+<h3>Young Recruit   Tamsin</h3>
+
+<p>A young woman   recruit, by the uniform, which is too clean and too well-pressed to belong to anyone who's seen real duty   is methodically destroying a training dummy with a quarterstaff. Her form is wrong. Her grip is wrong. Her footwork is wrong. But the intensity is right. She's hitting the dummy like it said something about her mother.</p>
+
+<p>She sees me and freezes. The quarterstaff clatters against the dummy's wooden head one final time, a dying echo.</p>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Y-Your Highness. I didn't   I wasn't expecting "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"At ease, recruit." I pick up the quarterstaff she's dropped. "You're overextending on your backswing. You're opening up your left side every time you commit to a high strike."</div>
+
+<p>She blinks.</p>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"You... know quarterstaff?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Aldric made me learn every weapon in the yard before he let me specialise. His philosophy is that a swordsman who doesn't understand a spear doesn't understand reach, and a man who doesn't understand reach doesn't understand combat."</div>
+
+<p>I demonstrate the correction   shorter backswing, elbow tucked, weight on the balls of the feet rather than the heels. She watches with the focused intensity of someone who has been teaching herself from observation and is hearing actual instruction for the first time.</p>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Tamsin, Your Highness. From the northern garrison. I transferred three weeks ago."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Three weeks and nobody's corrected your form?"</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"The senior guards say recruits learn by doing and by getting hit."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's half right. You learn by getting hit <em>after</em> someone explains what you're doing wrong. Otherwise you just learn how to get hit."</div>
+
+<p>I work with her for ten minutes. It's the first time today that my mind has been fully in my body   not in the Queen's chambers, not in the library, not circling the drain of the Rite. Just here. Hands on a staff. Feet on stone. The simple physics of force and leverage.</p>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Thank you, Your Highness." Tamsin's form is marginally better. Marginally is a start.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Practice the short backswing. Fifty repetitions, morning and night. You'll feel the difference in a week."</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Yes, Your Highness."</div>
+
+<p>I set the staff down. The brief clarity is already fading, the dread seeping back in like water through cracks. But for ten minutes, I was just a man who knew something useful and shared it.</p>
+
+<<set $d2_npc_tamsin to true>>
+<<set $statPRO += 1>>
+<<set $stress -= 3>>
+<<set $repMilitary += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_training_hub]]
+</div>

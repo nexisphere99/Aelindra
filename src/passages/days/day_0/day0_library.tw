@@ -1,0 +1,19 @@
+:: day0_library [nobr]
+<<locationImage "grand_library" "Grand Library">>
+<h2>📚 Grand Library</h2>
+<p>Empty. Dawn light. The constellations turn in silence. Haeth is at his desk.</p>
+
+<<if not $d0_npc_haeth>>
+<div class="interaction-card main">
+  <<npcPortrait "haeth" "Haeth">>
+  <h4>📖 The Book Between the Pages</h4>
+  <p>He's not cataloguing. He's watching the door. He was waiting for you.</p>
+  [[Approach|day0_npc_haeth]]
+</div>
+<<else>>
+  <p class="empty-note">Haeth has returned to his desk, spectacles on, exactly as he intends to remain.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

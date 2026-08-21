@@ -1,0 +1,152 @@
+:: day-2_hub [nobr]
+<div class="hub-header">
+  <h2>Crown's Rest - <<print formatDayNumber($dayNumber)>>: The Summons</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
+</div>
+
+<div class="location-grid">
+
+<!-- ========== EDRIN'S CHAMBERS ========== -->
+<div class="loc-card<<if $d2_woke>> visited<</if>>">
+  <<locationImage "palace_chambers" "Edrin's Chambers">>
+  <h3>🛏 Edrin's Chambers</h3>
+  <p class="loc-flavor">Your stone-walled bedchamber. Austere. Familiar.</p>
+  <<if not $d2_woke>>
+    <span class="badge main">⚔ Wake Up</span>
+    [[Enter → |day-2_wake]]
+  <<else>>
+    <<if $timeSlot is "NIGHT" and not $d2_night>>
+      <span class="badge main">⚔ Sleep</span>
+    <<elseif not $d2_npc_letter>>
+      <span class="badge side">📜 Examine desk</span>
+    <</if>>
+    [[Enter → |day-2_chambers_explore]]
+  <</if>>
+</div>
+
+<!-- ========== TRAINING YARD ========== -->
+<<if $d2_woke>>
+<div class="loc-card<<if $d2_sparred>> visited<</if>>">
+  <<locationImage "training_yard" "Training Yard">>
+  <h3>⚔ Training Yard</h3>
+  <p class="loc-flavor">Practice blades and chalk-dusted flagstones. Aldric waits.</p>
+  <<if not $d2_sparred>>
+    <span class="badge main">⚔ Spar with Captain Vane</span>
+  <</if>>
+  <<if $d2_sparred and not $d2_npc_keller>>
+    <span class="badge side">🗡 Guardsman at the bench</span>
+  <</if>>
+  <<if $d2_sparred and not $d2_npc_tamsin>>
+    <span class="badge side">🗡 Recruit at the dummies</span>
+  <</if>>
+  [[Enter → |day-2_training_hub]]
+</div>
+<</if>>
+
+<!-- ========== QUEEN'S CHAMBERS ========== -->
+<<if $d2_sparred and not $d2_queen>>
+<div class="loc-card">
+  <<locationImage "queen_chambers" "Queen's Chambers">>
+  <h3>👑 Queen's Chambers   East Wing</h3>
+  <p class="loc-flavor">The oak door with the royal crest. More guards than usual.</p>
+  <span class="badge main">⚔ Answer the summons</span>
+  [[Enter → |day-2_queen]]
+</div>
+<</if>>
+
+<!-- ========== PALACE CORRIDORS ========== -->
+<<if $d2_woke>>
+<div class="loc-card">
+  <<locationImage "corridors" "Palace Corridors">>
+  <h3>🏛 Palace Corridors</h3>
+  <p class="loc-flavor">Stone hallways connecting the palace wings. Portraits of queens line the walls.</p>
+  <<if not $d2_npc_maids>>
+    <span class="badge side">🗡 Voices near the tapestry</span>
+  <</if>>
+  <<if not $d2_npc_caedric>>
+    <span class="badge side">🗡 Someone sitting in the alcove</span>
+  <</if>>
+  [[Explore → |day-2_corridors]]
+</div>
+<</if>>
+
+<!-- ========== KITCHENS ========== -->
+<<if $d2_woke>>
+<div class="loc-card">
+  <<locationImage "kitchens" "Palace Kitchens">>
+  <h3>🍞 Palace Kitchens</h3>
+  <p class="loc-flavor">Heat, steam, and the smell of fresh bread. Marta's domain.</p>
+  <<if not $d2_npc_marta>>
+    <span class="badge side">🗡 The Head Cook</span>
+  <</if>>
+  <<if $d2_npc_marta and not $d2_npc_joss>>
+    <span class="badge side">🗡 The scullion has gossip</span>
+  <</if>>
+  [[Enter → |day-2_kitchen]]
+</div>
+<</if>>
+
+<!-- ========== GRAND LIBRARY ========== -->
+<<if $d2_queen>>
+<div class="loc-card<<if $d2_library>> visited<</if>>">
+  <<locationImage "grand_library" "Grand Library">>
+  <h3>📚 Grand Library</h3>
+  <p class="loc-flavor">Three stories of knowledge. Painted constellations on the ceiling. Answers, maybe.</p>
+  <<if not $d2_library>>
+    <span class="badge main">⚔ Research the Rite of Becoming</span>
+  <</if>>
+  <<if $d2_library and not $d2_npc_elise>>
+    <span class="badge side">🗡 A librarian in the stacks</span>
+  <</if>>
+  <<if $d2_library and not $d2_npc_vaelin>>
+    <span class="badge side">🗡 A scholar on the floor</span>
+  <</if>>
+  [[Enter → |day-2_library_hub]]
+</div>
+<</if>>
+
+<!-- ========== ROYAL BATHS ========== -->
+<<if $d2_queen and $timeSlot is "AFTERNOON" and not $d2_npc_bath>>
+<div class="loc-card">
+  <<locationImage "royal_baths" "Royal Baths">>
+  <h3>🛁 The Royal Baths</h3>
+  <p class="loc-flavor">Hot water. Steam. You need to wash the day off.</p>
+  <span class="badge side">🗡 Lissara is on duty</span>
+  [[Bathe → |day-2_scene_bath]]
+</div>
+<</if>>
+
+<!-- ========== SERVANT QUARTERS ========== -->
+<<if $d2_queen>>
+<div class="loc-card">
+  <<locationImage "servant_quarters" "Servant Quarters">>
+  <h3>🔑 Servant Quarters   Below Stairs</h3>
+  <p class="loc-flavor">The machinery of royal life. Clean corridors, honest work.</p>
+  <<if not $d2_npc_alva>>
+    <span class="badge side">🗡 The Head Housekeeper</span>
+  <</if>>
+  [[Enter → |day-2_servants]]
+</div>
+<</if>>
+
+<!-- ========== ROYAL GARDENS ========== -->
+<<if $d2_library>>
+<div class="loc-card<<if $d2_gardens>> visited<</if>>">
+  <<locationImage "royal_gardens" "Royal Gardens">>
+  <h3>🌿 Royal Gardens</h3>
+  <p class="loc-flavor">Stone paths, night-blooming jasmine, a silver stag fountain. Someone is playing a lute.</p>
+  <<if not $d2_gardens>>
+    <span class="badge main">⚔ Follow the music</span>
+  <</if>>
+  <<if not $d2_npc_wynn>>
+    <span class="badge side">🗡 The old gardener</span>
+  <</if>>
+  <<if not $d2_npc_harwick>>
+    <span class="badge side">🗡 A perfumed ambush</span>
+  <</if>>
+  [[Enter → |day-2_gardens_hub]]
+</div>
+<</if>>
+
+</div>

@@ -1,0 +1,38 @@
+:: day-1_npc_aldwyn [nobr]
+<<npcPortrait "aldwyn" "Master Aldwyn">>
+<h3>The Royal Healer   Master Aldwyn</h3>
+
+<p>I nearly collide with him at the junction where the east wing corridor meets the central staircase. Master Aldwyn   the Royal Healer   is moving fast for a man of sixty, his robes billowing behind him like he's being chased by his own urgency. He carries a leather satchel that clinks with glass vials, and his face has the particular expression of a physician who has bad news and is trying to outrun it.</p>
+
+<div class="dialogue"><span class="speaker">ALDWYN</span>"Your Highness " He stops. Adjusts his grip on the satchel. The vials inside clink again, a small dissonant music. "I was coming to find you."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The Queen?"</div>
+
+<div class="dialogue"><span class="speaker">ALDWYN</span>"Had a difficult night. The coughing episodes increased   four between midnight and dawn. The third one..." He pauses. Aldwyn is a man who measures his words the way an apothecary measures doses   precisely, with full awareness of their effect. "The third one was productive."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Productive." I hate medical euphemisms. They dress suffering in clean linen and call it clinical.</div>
+
+<div class="dialogue"><span class="speaker">ALDWYN</span>"There was blood. More than I'd like. I've adjusted her tincture   stronger anti-haemorrhagic, increased the pain management, added a sleeping draught for tonight." He looks at me. His eyes are tired. Physicians who care about their patients always have tired eyes, and Aldwyn has cared about my mother for fifteen years. "She's refusing to rest, of course. She's been writing correspondence since dawn."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Of course she has."</div>
+
+<div class="dialogue"><span class="speaker">ALDWYN</span>"Your Highness... I know you're carrying a great deal. I won't pretend to know what she's asked of you   I know only what falls within my remit, and my remit is her body, not her politics. But I need you to understand: the trajectory is not ambiguous. Four months was my generous estimate. I'm revising it. Three, perhaps. Perhaps less."</div>
+
+<p>Three months. The number drops into my chest like a stone into a well.</p>
+
+<div class="dialogue"><span class="speaker">ALDWYN</span>"I'm not telling you this to pressure you," he continues, though we both know that's exactly what the information does. "I'm telling you because you have the right to know. Whatever decisions are before you   they have less time than you think."</div>
+
+<p>He adjusts the satchel again. The vials clink. He bows   perfunctory, the bow of a man who has too many patients and too few hours   and continues down the corridor at his urgent clip.</p>
+
+<p>I stand at the junction. Three months. Maybe less. The corridor stretches in both directions   toward the east wing and my mother, toward the central palace and the rest of my life, whatever shape that life takes.</p>
+
+<p>The junction feels metaphorical. I resent it for that.</p>
+
+<<set $d1_npc_aldwyn to true>>
+<<set $stress += 5>>
+<<set $statWIS += 1>>
+<<completeObjective "corridor_aldwyn">>
+
+<div class="scene-end">
+  [[Continue → |day-1_corridors]]
+</div>

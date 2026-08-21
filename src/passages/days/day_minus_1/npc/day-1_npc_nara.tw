@@ -1,0 +1,55 @@
+:: day-1_npc_nara [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Silverveil Apprentice   Nara</h3>
+
+<p>The tower's lower levels are where the apprentices live and study. I discover this by taking a wrong turn on the spiral staircase   down instead of up, toward the bridge   and ending up in a corridor lined with doors, each painted a different colour, each radiating a faint warmth that suggests personal enchantment.</p>
+
+<p>One door is open. Inside, a young woman sits cross-legged on the floor surrounded by books, crystals, and what appears to be a partially disassembled music box that is playing itself despite having no visible mechanism. She's nineteen, maybe twenty   dark-skinned, close-cropped hair, wide brown eyes that go even wider when she sees me in her doorway.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Oh. Oh no. You're the   you're him. The prince. Prince Edrin." She scrambles to her feet. A book falls. A crystal rolls. The music box hiccups and plays three notes backward. "I'm Nara. Apprentice. Third year. I   please don't tell Ilara I was sitting on the floor, she says it's 'energetically irresponsible' but I can't think in chairs "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I won't tell Ilara."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Oh thank the Mother." She exhales. Then catches herself. "I mean   welcome to the Moonspire. Are you   do you need something? I can get Ilara, or "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm leaving, actually. I just took the stairs in the wrong direction."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Oh! Right. Yes. Up for the bridge, down for us. Common mistake. Well   not common, because almost nobody comes here. You're the first visitor in... months? Ilara doesn't encourage socialising. She says it dilutes the magical focus. I think she just doesn't like people."</div>
+
+<p>I almost smile. The girl's nervousness is genuine and completely without agenda   she's not performing, not calculating, not angling for favour. She's a student who's been caught sitting on the floor with a broken music box, and her primary concern is not getting in trouble.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What are you working on?"</div>
+
+<p>Her face transforms. The nervousness doesn't disappear, but it's instantly subordinated to excitement   the particular incandescent enthusiasm of someone asked about the thing they love.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Sympathetic resonance enchantment! The idea is that you enchant two objects so they vibrate in harmony   what happens to one happens to the other. The music box is the test case. If I can get it working, you could play a melody on one box and the paired box would play the same melody anywhere in the world. Instant communication through music!"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's... remarkable."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"It doesn't work yet." The music box chooses this moment to emit a loud discordant twang and go silent. "See? The sympathetic bond degrades over distance. I can get it to work across a room but not across a building. Ilara says I'm trying to run before I can walk. I say walking is boring."</div>
+
+<p>She seems to remember who she's talking to. The enthusiasm dims, replaced by an awkward formality.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I'm sorry, Your Highness. You don't want to hear about music boxes. You're here for... important things."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm here because I took the wrong stairs. And the music box is considerably more interesting than the things I'm here for."</div>
+
+<p>Something in my voice   the flatness of it, maybe, or the weight beneath the words   makes her look at me more carefully. She's a Silverveil apprentice. She may not know the specifics of what Ilara and I discussed, but she knows the tower, she knows the Rite exists, and she's not stupid.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"The tower looks scary from outside," she says, quietly. "All that white stone and the glowing and the wind on the bridge. But inside it's just... rooms. And people. And badly enchanted music boxes. It's not as frightening as it looks."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Is that wisdom or comfort?"</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Both. I specialise in efficiency."</div>
+
+<p>I leave her with her crystals and her broken music box and her earnest, uncomplicated kindness. The stairs wind upward. The tapestries shift. The tower is, as she said, just rooms and people.</p>
+
+<p>It helps to remember that. Slightly.</p>
+
+<<set $d1_npc_nara to true>>
+<<set $stress -= 5>>
+<<set $silverveilFamiliarity += 2>>
+
+<div class="scene-end">
+  [[Continue → |day-1_moonspire_hub]]
+</div>

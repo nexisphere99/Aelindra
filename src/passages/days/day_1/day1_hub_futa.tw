@@ -1,0 +1,23 @@
+:: day1_hub_futa [nobr]
+<!--
+  PLACEHOLDER — pipeline test only, AND the current end of the
+  public build's content.
+  This is the FUTANARI-route Day 1 hub — a separate file from
+  day1_hub.tw by design, not an <<if $gamePath>> branch inside it.
+  Per day0_ritual_futa.md's own integration note, the waking scene,
+  mirror scene, body discovery, and NPC interactions all need to
+  address the dual anatomy specifically and are NOT a find-and-
+  replace from the female route. Replace with real Day 1 (futa)
+  content and its own day1Init/futa flag block when written — at
+  that point, move the <<endOfContentNotice>> call below down to
+  wherever the new content's own final passage ends, rather than
+  deleting it.
+-->
+<div class="day-transition">
+  <h2><<print formatDayNumber($dayNumber)>> — Both</h2>
+  <p>Someone new opens her eyes. She carries everything.</p>
+  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
+  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+</div>
+
+<<endOfContentNotice>>

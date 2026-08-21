@@ -1,0 +1,29 @@
+:: title-screen
+<div class="title-screen">
+  <div class="title-art">
+    <h1 class="title-main">AELINDRA</h1>
+    <p class="title-sub">The Rite of Becoming</p>
+    <div class="title-ornament">⚜</div>
+    <p class="title-tagline">"You have a choice," she says.<br>"Become my daughter   or watch everything I built burn."</p>
+  </div>
+  <div class="title-menu">
+    <<link "Begin">>
+      <<set $gameStarted to true>>
+      <<day2Init>>
+      <<goto "day-2_hub">>
+    <</link>>
+    [[Load Game|title-load]]
+    [[Credits|credits]]
+  </div>
+</div>
+
+:: title-load
+<div class="title-screen">
+  <h1 class="title-main" style="font-size:2rem;">Load Game</h1>
+  <div class="title-menu">
+    <<link "Open Load Menu">>
+      <<run UI.buildSaves(); UI.saves()>>
+    <</link>>
+  </div>
+  <p class="nav-return"><<link "◄ Back" "title-screen">><</link>></p>
+</div>

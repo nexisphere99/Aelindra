@@ -1,0 +1,41 @@
+:: day-2_npc_wynn [nobr]
+<<npcPortrait "wynn" "Old Wynn">>
+<h3>The Gardener   Old Wynn</h3>
+
+<p>Old Wynn has been the palace gardener for longer than anyone can remember. He predates my mother's reign, my grandmother's reign, possibly the castle itself. He's a small, bent man who smells of soil and speaks to his plants with more affection than he shows to humans. I've never seen him indoors. I'm not convinced he <em>can</em> go indoors   like a tree that would wither without sunlight.</p>
+
+<p>He's pruning the winter roses when I find him. His shears click with the metronomic precision of a heartbeat.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Your Highness." He doesn't look up. "You're walking heavy tonight. I can hear you from the herb beds."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Am I?"</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Mmm. Heel-striking. You usually land on the balls of your feet   training habit. Tonight you're stomping. Something on your mind."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Nothing that concerns rose pruning."</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Everything concerns rose pruning, Your Highness." Click. Click. A dead branch falls. "Roses are the most honest plants in the garden. They grow where they're planted, bloom when it's time, and die when they're done. No pretence. No politics. Just... becoming what they are."</div>
+
+<p>He pauses. Looks at the bush   a winter rose, deep crimson, still holding blooms despite the cold.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"This one nearly died last autumn. Root rot. I had to cut it back to almost nothing   just a stump and two canes. The other gardeners said I should pull it out, plant something new. But I know this variety. Deep roots. Patient. I cut away everything that was dying and let it decide for itself whether to grow back."</div>
+
+<p>He touches a bloom. It nods under his calloused finger.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"It grew back. Different shape. New canes going directions I didn't expect. But the flowers are the same. Same colour, same scent. Same rose. Just... wearing a new body."</div>
+
+<p>He looks at me for the first time. His eyes are sharp   the bright, unsentimental gaze of a man who has spent sixty years watching things die and grow and die and grow.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Good evening, Your Highness."</div>
+
+<p>He turns back to his pruning. Click. Click.</p>
+
+<p>I stand in the garden and listen to the shears and the fountain and the jasmine unfolding and I think about roots and roses and the things that survive the cutting.</p>
+
+<<set $d2_npc_wynn to true>>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+
+<div class="scene-end">
+  [[Continue → |day-2_gardens_hub]]
+</div>

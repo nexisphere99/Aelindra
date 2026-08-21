@@ -1,0 +1,31 @@
+:: day-2_corridors [nobr]
+<<locationImage "corridors" "Palace Corridors">>
+<h2>🏛 Palace Corridors</h2>
+<p>Long stone hallways. Portraits of queens. Echoing footsteps.</p>
+
+<<completeObjective "explore_corridors">>
+
+<<if not $d2_npc_maids>>
+<div class="interaction-card side">
+  <h4>🤫 Whispering Near the Tapestry</h4>
+  <p>Two handmaidens pressed against the wall, speaking in urgent tones.</p>
+  [[Pass by|day-2_npc_maids]]
+</div>
+<</if>>
+
+<<if not $d2_npc_caedric>>
+<div class="interaction-card side">
+  <<npcPortrait "caedric" "Ser Caedric">>
+  <h4>🪑 The Alcove by the Portrait Gallery</h4>
+  <p>An old knight on a worn bench. He's been sitting there since before you were born.</p>
+  [[Sit with him|day-2_npc_caedric]]
+</div>
+<</if>>
+
+<<if $d2_npc_maids and $d2_npc_caedric>>
+  <p class="empty-note">The corridors are quiet. Just portraits and stone and the echoes of your boots.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

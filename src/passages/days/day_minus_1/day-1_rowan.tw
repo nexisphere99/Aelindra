@@ -1,0 +1,120 @@
+:: day-1_rowan [nobr]
+<div class="scene-image"><<locationImage "palace_chambers" "Edrin's Chambers">></div>
+
+<h2>Edrin's Chambers   Telling Rowan</h2>
+
+<p>Evening. The fire is lit   someone came in while I was destroying training dummies, rebuilt it, left fresh candles and a tray of food I haven't touched. My hands are wrapped in linen bandages that I did myself, badly. The blisters sting beneath.</p>
+
+<p>The knock is Rowan's knock   three taps, a pause, two more, our old signal from years of late-night conversations in tournament camps and borrowed rooms in taverns where the walls were thin and the innkeepers were nosy.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"It's open."</div>
+
+<p><<npcPortrait "rowan" "Rowan">>They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality. And cheese. A wedge of something sharp and crumbly, wrapped in cloth. And their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"You look like you lost a fight with a threshing machine," they say, dropping to the floor in front of the fire because Rowan has never, in the entirety of our friendship, sat in a chair when a floor was available. They claim furniture creates artificial hierarchy. I think they just like being on the ground.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Training dummy."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Did the dummy win?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The dummy is in several pieces."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Then you won. Congratulations. You've defeated practice straw." They pour wine into two cups   mismatched, one ceramic, one wooden, both stolen from the kitchen. "Drink."</div>
+
+<p>I sit on the floor across from them. The fire is warm at my back. The wine is rough, dark, slightly sour   tavern wine, not court wine. It doesn't pretend to be anything. I drink it and the warmth spreads down my throat and into my chest and loosens something that's been locked tight since this morning.</p>
+
+<p>We sit. We drink. Rowan picks at the cheese and eats the rind first, which is a habit I've never understood and they've never explained. The fire crackles. Outside, through the arrow-slit window, the sky is turning the deep bruised purple of early evening, and the first stars are showing, and the world looks exactly the way it's always looked, which feels like a lie.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I need to tell you something."</div>
+
+<p>Rowan sets down their cup. They don't say <em>what is it</em> or <em>are you alright</em> or any of the reflexive responses that most people offer when you announce bad news. They just look at me. Their honey-coloured eyes are steady. They wait.</p>
+
+<p>I tell them. Everything.</p>
+
+<p>The succession crisis. The Elder Council. Vareth's alliances, his lawyers, his army, his seven legal minds paid to seal every loophole shut. Mother's illness   worse than anyone outside the east wing knows, the blood in the handkerchief she doesn't hide quickly enough, the cough that racks her body like something inside is trying to claw its way out. The Founding Charter, unbreakable, un-amendable, a six-hundred-year-old cage. The list in my pocket, every item crossed off.</p>
+
+<p>And the Rite. The Moonspire. Ilara. The altar. The potion. The six hours of pain. The permanent, irreversible, total transformation. Bones reshaping. Height dropping. Organs... changing. Everything that I am, physically, replaced by something else. Something female. Something that can sit on the throne and bear an heir and satisfy the bloodless bureaucratic language of a law written by dead men in an age when dragons may or may not have been real.</p>
+
+<p>I tell them about the restricted diary in the library   <em>whose are these?</em> I tell them about Ilara's explanation   clinical, precise, devastating. I tell them about the training dummy, the two hours of hitting things because the alternative was screaming.</p>
+
+<p>I tell them things I haven't told anyone. That I'm terrified. That I feel like I'm being erased   not killed, which would be simpler and in some horrible way more dignified, but erased. Rewritten. The person who is me, overwritten by a person who is also me but lives in a body I can't imagine and didn't ask for. That every time I look at my own hands now, I see something temporary. A draft. A rough sketch that's about to be painted over.</p>
+
+<p>Rowan listens without interrupting. Not because they're patient   Rowan is many things but naturally patient is not one of them   but because they understand that this isn't a conversation. It's an exorcism. I'm casting out every fear by naming it, and the naming requires silence from everyone except the person doing the naming.</p>
+
+<p>When I finish, my voice is hoarse. The wine is half gone. The fire has burned lower. Rowan is quiet for a long time.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"You want me to tell you not to do it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I want SOMEONE to tell me there's another way."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"There isn't." Their voice is gentle. Rowan's gentleness is different from Aldric's   Aldric is gentle the way a gloved hand is soft, padding over steel. Rowan is gentle the way water is gentle   shapeless, adaptable, finding every crack. "I know you. You've already looked for every other door. You wouldn't be telling me if you hadn't exhausted them all."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"So you think I should."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"I think you will. Because you love your mother, and you love this kingdom, and you love the people who live in it more than you love the shape of your own jaw."</div>
+
+<p>The words land. They land because they're true and because Rowan is the only person alive who could say them without it sounding like a judgement. From anyone else, it would sound like <em>you should sacrifice yourself.</em> From Rowan, it sounds like <em>I see who you are, and the person I see would not let others burn.</em></p>
+
+<p>Something breaks in me. Not dramatically   not a collapse, not a scene from a mummer's play. Just a crack. A fissure in the wall I've been holding up since yesterday morning, since the oak door and the blood-smell and the grey-blue eyes and <em>by becoming the heir this kingdom needs.</em></p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm not ready " My voice cracks. Actually cracks, the way it hasn't since I was fourteen and still growing and my body couldn't decide what register to speak in.</div>
+
+<p>Rowan moves. They set their cup down, shift across the floor to my side, and put an arm around my shoulders. Their body is warm. Their lute-calloused fingers grip my upper arm with a strength that surprises me   Rowan looks delicate, built for music and movement, but the grip is real and solid and present.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"No one's ever ready to become someone new," they say, their voice close to my ear, breath warm. "You just... wake up one morning and realize you already did."</div>
+
+<p>I lean into them. Just for a moment. Just because there's no one else in the world I can be this with   this small, this scared, this unmade. My forehead against their shoulder. The leather of their vest smells like road-dust and campfire smoke and the faintest trace of rosin from their lute strings. It smells like every summer I've spent counting the days until they visit.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Will you still..." I can't finish. The words stick.</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Will I still what? Know you? See you? Be here?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"When I'm..."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"I'll still be here. You'll still be you. Just... more." They squeeze my arm. "Edrin. Listen. I have been remaking myself every day since I was old enough to understand that the world doesn't have a shape for what I am. Half-elf. Half-human. Neither thing completely. Every town I enter, I choose which part to lead with. Which ears to show. Which songs to play. It's not losing yourself. It's finding out which parts were always the real ones."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And which parts are the real ones?"</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"The ones that survive the change."</div>
+
+<p>We sit by the fire until the wine is gone. Rowan plays   their lute voice filling the room with something that has no words, just melody, minor key shifting to major and back, like a question that doesn't need an answer. Like breathing, in and out, the music of being alive in a body that is yours for exactly as long as it is yours and not one moment longer.</p>
+
+<p>When Rowan leaves   late, very late, the candles guttering and the fire reduced to a red memory   they stop at the door.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Tomorrow."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Tomorrow."</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"I'll be in the courtyard. Before dawn. If you walk toward the tower, I'll walk with you."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You don't have to "</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"No. But I'm going to. Because that's what friends do   they walk you to the places you're afraid to go, and they wait outside, and they're there when you come out the other side."</div>
+
+<p>The door closes. The room is quiet.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $stress -= 20>>
+<<set $statRES += 2>>
+<<set $affRowan += 10>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "NIGHT">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_rowan to true>>
+<<completeObjective "chambers_rowan">>
+<<addObjective "mirror_last" "The mirror. One last time." "MAIN">>
+<<addObjective "perrin_night" "The corridor   Perrin is at his post" "SIDE">>
+
+<<if not $d1_npc_rowan_desire>>
+<div class="interaction-card side">
+  <h4>🔥 Ask the Question</h4>
+  <p>"Rowan. When I'm... different. When I have a woman's body. Will you still..." You can't finish. But they know what you're asking.</p>
+  [[Ask → |day-1_scene_rowan_desire]]
+</div>
+<</if>>
+
+<div class="scene-end">
+  [[Continue → |day-1_hub]]
+</div>

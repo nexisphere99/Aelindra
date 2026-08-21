@@ -1,0 +1,15 @@
+:: time-system [script nobr]
+/*
+  TIME SLOT SYSTEM
+  ------------------------------------------------------------
+  Time slots: MORNING, MIDDAY, AFTERNOON, EVENING, NIGHT.
+  $timeSlot is initialized in StoryInit.tw; the basic
+  <<advanceTime "SLOT">> widget lives in src/ui/widgets.tw.
+
+  Reserved for day-content logic that needs more than a flat
+  set   e.g. a canonical slot order + a <<nextTimeSlot>> widget
+  that rolls over into the next day, or per-slot energy/stress
+  drift. Add that here once the day-loop structure is decided.
+*/
+
+var TIME_SLOTS = ["MORNING", "MIDDAY", "AFTERNOON", "EVENING", "NIGHT"];

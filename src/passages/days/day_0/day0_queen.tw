@@ -1,0 +1,67 @@
+:: day0_queen [nobr]
+<div class="scene-image"><<locationImage "queen_chambers" "Queen's Chambers">></div>
+
+<h2>Queen's Chambers — Goodbye as a Son</h2>
+
+<p>I knock. Not the formal knock of a prince requesting audience — two sharp raps, official, proper. The private knock. Three soft taps, the way I've knocked on this door since I was tall enough to reach it.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Come in." Her voice is thin this morning. Thinner than yesterday. The illness tightens its grip in increments so small that you don't notice until you look back across a week and realise the woman you're hearing is a diminished version of the woman you heard seven days ago.</div>
+
+<p><<npcPortrait "seraphina" "Queen Seraphina">>She's sitting up in bed. Not the chaise — she hasn't made it that far today. The pillows are fortress-stacked behind her. Her writing desk is absent for the first time I can remember — she's not working. She's waiting. She's been waiting for me, and the fact that she isn't working means she set aside the kingdom to be here for this moment, and that act of prioritisation is the most terrifying thing I've seen in three days because Seraphina does not set aside the kingdom. Ever.</p>
+
+<p>Unless she knows what's coming. Unless she's been lying here in the dark, counting the same minutes I've been counting, waiting to find out if her son will walk through that door heading for the tower or heading for the gate.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm going."</div>
+
+<p>The exhale that leaves her is not relief. It's something more complicated — a sound that carries weight, the way a bridge carries traffic, bearing up under something it was built for but never wanted to hold. She didn't know. She hoped. She calculated, she planned, she positioned the pieces — Rowan's letter, Ilara's readiness, the lunar alignment, the two-day deadline — with the strategic precision of the queen she is. But she didn't know. The uncertainty was real.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Edrin..."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Don't." I hold up my hand. The gesture is sharper than I intend. "If you say anything kind right now, I won't be able to walk up those stairs."</div>
+
+<p>She stands. It takes effort — I can see it in the way her arms press against the mattress, the tremor in her shoulders, the moment where gravity and illness conspire and she almost doesn't make it. But she does. She crosses to me. Three steps. Each one costs her something she can't afford.</p>
+
+<p>She's shorter than I remember. Or I'm taller. Or the illness has compressed her the way time compresses everyone eventually, shrinking the body around the spirit until the spirit is the only thing left at full size. She reaches up. Her hands find my face — cold fingers, thin as bird bones, pressing against my cheeks, my jaw, the sharp angles that are hers reflected in male geometry.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"You are the bravest person I have ever known." Her voice is steady. Iron beneath silk. "Braver than your father. Braver than me."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm not brave. I'm out of options."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"That's what bravery is." Her thumbs trace my cheekbones. Her eyes — grey-blue, mine, the one thing every portrait in the gallery shares — are bright with something she won't let fall. "Doing the right thing when every other thing has been taken from you."</div>
+
+<p>She stretches up. I bend down — she's too short to reach otherwise, and I realise with a lurch in my stomach that this is the last time she'll have to reach up for her child. After today, I'll be shorter. She might actually be able to kiss my forehead without me bending.</p>
+
+<p>The absurdity of that — the tiny, practical detail of height differentials in a moment of world-ending emotional devastation — almost makes me laugh. Almost. The laugh dies somewhere in my throat, strangled by everything else.</p>
+
+<p>Her lips press against my forehead. The kiss is warm and dry and tastes like the medicinal balm she uses for her cracked lips. I close my eyes. I'm twenty years old and my mother is kissing my forehead and I'm about to walk to a tower and lie on a stone altar and let five women unmake me, and this kiss is the last thing that will touch this face before it stops being this face.</p>
+
+<p>I hold her. Carefully — she's so fragile now, so thin that my arms feel like they could snap her, so light that the woman I'm holding is a ghost-echo of the woman who carried me on her hip when I was two and commanded armies from horseback when I was ten.</p>
+
+<p>She smells like lavender and illness. The two scents have become inseparable — the herb she uses to mask the other smell, the other smell that no amount of herb can fully cover. I breathe it in. I memorise it.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Will you visit?" My voice is rough. "After?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Every day." She pulls back. Holds my face again. "I'll teach you everything I know. You'll be a better queen than I ever was."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I don't want to be a queen."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Neither did I, once." The ghost of a smile. The warmth of a truth that is simultaneously terrifying and comforting — she didn't want this either. She became it anyway. The crown doesn't care what you want. It only cares what you do.</div>
+
+<p>I release her. She releases me. The space between us is three inches and six hundred years of maternal succession and everything unspoken that parents and children carry between them like shared luggage that neither wants to unpack.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Go. Before I say something kind and ruin you."</div>
+
+<p>I go. I don't look back. My eyes are burning and the corridor is long and the portraits of queens watch me pass and I walk faster because if I slow down I'll stop and if I stop I'll turn around and if I turn around I'll climb into my mother's bed and press my face against her shoulder and refuse to leave and the kingdom will fall and people will die and it will be my fault because I couldn't walk a corridor without crying.</p>
+
+<p>I make it to the end. I turn the corner. I lean against the wall. I breathe. In, out. In, out.</p>
+
+<p>Then I walk.</p>
+
+<<set $d0_queen to true>>
+<<set $stress += 5>>
+<<set $affSeraphina += 5>>
+<<completeObjective "farewell_queen">>
+
+<div class="scene-end">
+  [[Continue → |day0_hub]]
+</div>

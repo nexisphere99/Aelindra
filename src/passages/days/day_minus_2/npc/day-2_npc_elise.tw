@@ -1,0 +1,56 @@
+:: day-2_npc_elise [nobr]
+<<npcPortrait "elise_librarian" "Elise">>
+<h3>Junior Librarian   Elise</h3>
+
+<p>She finds me between the shelves. Or I find her   hard to tell who was lost first. Elise is a junior librarian, one of Haeth's three apprentices, a nervous woman in her mid-twenties with ink-stained fingers and spectacles that keep sliding to the tip of her nose. She pushes them up approximately once every four seconds. I've counted.</p>
+
+<div class="dialogue"><span class="speaker">ELISE</span>"Your Highness! I   I didn't realise you were   are you looking for something specific? I can "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I found what I needed, thank you."</div>
+
+<div class="dialogue"><span class="speaker">ELISE</span>"Oh. Good. That's   good." She pushes her spectacles up. Four seconds. "Only, I noticed you pulled the Silverveil Compendium, and   I'm sorry, it's not my place, but   there are two additional sources in the restricted section that Haeth might not have mentioned. A diary, attributed to the second subject of the Rite   the unnamed commoner   and a treatise by Archsorceress Vesper on the theoretical limits of transformation magic. Both are fragile and Haeth doesn't like people touching them, but you're   well, you're the prince, so..."</div>
+
+<p>I stop. The diary of the second subject. The nameless commoner who disappeared from records.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Where?"</div>
+
+<div class="dialogue"><span class="speaker">ELISE</span>"Restricted case seven. The glass one near the spiral staircase. I can unlock it   I have Haeth's secondary key." She flushes, as if admitting this is a confession. "He doesn't know I copied it. Please don't tell him."</div>
+
+<p>I almost smile.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Your secret is safe."</div>
+
+<p>She leads me to the restricted case. It's tall, iron-framed, glass-panelled. Inside, among other ancient documents, sit two items: a small leather-bound diary, cover cracked with age, and a thick manuscript bound in green cloth.</p>
+
+<p>Elise unlocks the case. Her hands are steady despite her nerves   a librarian's hands, precise and careful.</p>
+
+<p>The diary is short. Most of it is water-damaged and illegible. But a few passages survive:</p>
+
+<p><em>I was nobody before and nobody after. That is the secret they do not tell you   the Rite does not care who you are. It only cares what you are willing to become. I was willing. I am still deciding if that was courage or surrender.</em></p>
+
+<p><em>My body is a country I am still learning to navigate. There are borders I did not expect. Territories that surprise me. I map myself daily and the map is never finished.</em></p>
+
+<p>I close the diary. My hands are shaking again.</p>
+
+<p>Vesper's treatise is dense, theoretical, and largely incomprehensible without a Silverveil education. But one passage stands out:</p>
+
+<p><em>The Rite of Becoming does not create. It reveals. The body holds all possibilities; the Rite merely selects one and makes it dominant. This is why consent is required   the subject must agree to become what they already, in some fundamental sense, are.</em></p>
+
+<p>I don't know what to do with that. I put both books back. Elise locks the case.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Elise."</div>
+
+<div class="dialogue"><span class="speaker">ELISE</span>"Your Highness." She pushes her spectacles up. "If you need anything else   anything at all   I'm usually shelving in section twelve. The poetry section. Nobody goes there."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Noted."</div>
+
+<p>I leave her standing by the case, fingers on the iron frame, watching me go with an expression I can't read.</p>
+
+<<set $d2_npc_elise to true>>
+<<set $statWIS += 1>>
+<<set $stress += 5>>
+<<set $libraryLore to true>>
+
+<div class="scene-end">
+  [[Continue → |day-2_library_hub]]
+</div>

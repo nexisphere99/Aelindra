@@ -1,0 +1,51 @@
+:: day-2_night [nobr]
+<div class="scene-image"><<locationImage "palace_chambers_night" "Edrin's Chambers, Night">></div>
+
+<h2>Edrin's Chambers   Night</h2>
+
+<p>My chambers are dark when I return. The fire has been rebuilt   someone came in while I was out, despite my standing orders. I should be annoyed. I'm not. The warmth is welcome.</p>
+
+<p>I undress mechanically. Jerkin on the chair. Shirt over the back. Boots beside the bed, left then right, the way I've done since I was old enough to dress myself. The routine is comforting in a way that feels pathetic   like clinging to a ritual because the world outside the ritual has stopped making sense.</p>
+
+<p>I stand in front of the mirror in my smallclothes.</p>
+
+<p>I don't know why. I didn't plan to. But my hands are taking stock, running an inventory that feels suddenly urgent, as if I need to record what's here before it changes.</p>
+
+<p>My shoulders. Broad. The muscle dense from years of daily training   not bulky, more like cables wound tight under the skin. I roll them back. They move the way they've always moved.</p>
+
+<p>My chest. Flat. Defined. I can see the ladder of my ribs when I breathe in deep, the valley of my sternum, the faint trail of dark hair that runs from navel to the waistband of my smallclothes.</p>
+
+<p>My arms. Long. Lean. A scar on the left forearm where a hunting knife slipped when I was sixteen. My hands   I hold them up. Large palms, long fingers, calluses on the grip-line from thousands of hours with a sword. These hands have held blades, quills, reins. Have gripped Aldric's arm after a good bout. Have pressed flat against my mother's cheek when she cried and pretended she wasn't.</p>
+
+<p>My jaw. I touch it. Sharp angle. The scratch of stubble that wasn't there this morning. My throat   Adam's apple, prominent, the thing that bobs when I swallow hard.</p>
+
+<p>Below. I'm aware of the weight of my cock, soft against my thigh. Unremarkable. Warm. Mine. I don't touch it   not like that, not tonight. I just... acknowledge it. The way you acknowledge a room you've lived in your whole life when someone tells you you might be moving.</p>
+
+<p>This body has been mine for twenty years. It is the only home I have ever known. It is strong and imperfect and I have never thanked it for anything and I have never had to because it was always going to be here.</p>
+
+<p>Two days.</p>
+
+<p>I get into bed. The sheets are cold, then warm. The fire crackles. Outside, very faintly, I can hear Rowan playing   they must be in the guest quarters overlooking the garden. Something without a melody, just chords, drifting.</p>
+
+<p>I think about my mother's eyes. The fire in them. The certainty. She's already decided. She decided before she called me. The two days aren't for her to make up her mind   they're for me to arrive at the conclusion she's already reached.</p>
+
+<p>I think about Lord Vareth Ashborne. I've met him twice. A large man with a smile that doesn't reach his eyes and hands that grip too hard when he shakes yours. His plans for the kingdom are no secret   taxes doubled, military expansion, the common people pressed into service or poverty. He'd be a king of wolves, and the sheep would bleed.</p>
+
+<p>I think about the anonymous account in blue leather. <em>Whose are these? then, mine.</em></p>
+
+<p>I think about Rowan's words. <em>Finding out which parts were real all along.</em></p>
+
+<p>I think about the water dream that woke me this morning   the cold closing over my head, the half-second of not knowing whether I was sinking or rising. I didn't think about it again, all day. There wasn't room. Now it's the only thing in the room with me.</p>
+
+<p>I don't sleep until the hour before dawn and in that single hour, I dream of water again   a deep, warm pool, and I'm sinking into it, and it's closing over my head, and I can't tell if I'm drowning or being born.</p>
+
+<!-- --- STATE CHANGES --- -->
+<<set $d2_night to true>>
+<<completeObjective "return_chambers">>
+<<addObjective "sleep_d2" "Sleep" "MAIN">>
+
+<div class="scene-end">
+  <<link "Sleep →" "day-2_sleep_transition">>
+    <<completeObjective "sleep_d2">>
+  <</link>>
+</div>

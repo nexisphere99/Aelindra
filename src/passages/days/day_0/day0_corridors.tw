@@ -1,0 +1,37 @@
+:: day0_corridors [nobr]
+<<locationImage "corridors" "Palace Corridors">>
+<h2>🏛 Palace Corridors</h2>
+<p>Portraits of queens. The smell of stone and centuries.</p>
+
+<<if $d2_npc_caedric and not $d0_npc_caedric>>
+<div class="interaction-card side">
+  <<npcPortrait "caedric" "Ser Caedric">>
+  <h4>🪑 Ser Caedric — The Bench, One Last Time</h4>
+  <p>He's on the bench. Of course he's on the bench.</p>
+  [[Sit with him|day0_npc_caedric]]
+</div>
+<</if>>
+
+<<if not $d0_npc_maids2>>
+<div class="interaction-card side">
+  <h4>🤫 Senior Staff Near the East Wing</h4>
+  <p>Two handmaidens, arms full of linens, speaking in low tones near the junction.</p>
+  [[Pass by|day0_npc_maids2]]
+</div>
+<</if>>
+
+<<if not $d0_npc_watching>>
+<div class="interaction-card side">
+  <h4>👁 Watching Them Move</h4>
+  <p>The corridors are full of women. You've never watched them like this before — not with desire but with dread.</p>
+  [[Watch → |day0_scene_watching]]
+</div>
+<</if>>
+
+<<if (not $d2_npc_caedric or $d0_npc_caedric) and $d0_npc_maids2 and $d0_npc_watching>>
+  <p class="empty-note">The corridors settle back into their quiet business. Nothing else here needs you.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

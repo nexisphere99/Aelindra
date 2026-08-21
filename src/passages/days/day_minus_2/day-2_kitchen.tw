@@ -1,0 +1,32 @@
+:: day-2_kitchen [nobr]
+<<locationImage "kitchens" "Palace Kitchens">>
+<h2>🍞 Palace Kitchens</h2>
+<p>Heat, steam, chaos. Three hearths blazing. The smell of fresh bread and rosemary.</p>
+
+<<completeObjective "visit_kitchen_am">>
+
+<<if not $d2_npc_marta>>
+<div class="interaction-card side">
+  <<npcPortrait "marta" "Marta">>
+  <h4>👩‍🍳 Head Cook Marta</h4>
+  <p>She spots you immediately. There's a stool, a plate, and a look that says sitting is mandatory.</p>
+  [[Sit|day-2_npc_marta]]
+</div>
+<</if>>
+
+<<if $d2_npc_marta and not $d2_npc_joss>>
+<div class="interaction-card side">
+  <<npcPortrait "joss" "Joss">>
+  <h4>🧹 The Scullion</h4>
+  <p>A soot-covered boy appears at your elbow. He has news.</p>
+  [[Listen|day-2_npc_joss]]
+</div>
+<</if>>
+
+<<if $d2_npc_marta and $d2_npc_joss>>
+  <p class="empty-note">The kitchen hums on. Marta is back to commanding her domain. No one else needs your attention.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

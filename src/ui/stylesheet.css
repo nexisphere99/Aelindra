@@ -1,0 +1,1488 @@
+/* ================================================================
+   AELINDRA   MASTER STYLESHEET
+   Medieval Dark Fantasy Theme
+   Color Palette: Deep purples, golds, dark stone, candlelight amber, blood red
+   Fonts: Cinzel (headings), Cormorant Garamond (body)
+   ================================================================ */
+
+/* --- FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* --- CSS VARIABLES --- */
+:root {
+  /* Backgrounds */
+  --bg-deepest:       #0d0a0f;
+  --bg-primary:       #1a1118;
+  --bg-secondary:     #231a20;
+  --bg-card:          #2a1f26;
+  --bg-card-hover:    #342830;
+  --bg-passage:       #1e1520;
+  --bg-input:         #160f14;
+
+  /* Text */
+  --text-primary:     #d4c5a9;
+  --text-bright:      #e8dcc4;
+  --text-dim:         #8a7e6b;
+  --text-faint:       #5a5145;
+
+  /* Accents */
+  --gold:             #c9a84c;
+  --gold-bright:      #e0c168;
+  --gold-dim:         #8a7433;
+  --red:              #8b2d2d;
+  --red-bright:       #b33a3a;
+  --purple:           #5c3d6e;
+  --purple-bright:    #7e55a0;
+  --purple-dim:       #3a2548;
+  --amber:            #b8860b;
+  --teal:             #2d6b6b;
+
+  /* Borders */
+  --border-stone:     #3a2e35;
+  --border-gold:      rgba(201, 168, 76, 0.3);
+  --border-purple:    rgba(92, 61, 110, 0.4);
+
+  /* Gradients */
+  --grad-sidebar:     linear-gradient(180deg, #1a1118 0%, #0d0a0f 100%);
+  --grad-passage:     linear-gradient(180deg, #1e1520 0%, #1a1118 100%);
+  --grad-gold:        linear-gradient(135deg, #c9a84c 0%, #8a7433 100%);
+
+  /* Shadows */
+  --shadow-card:      0 2px 8px rgba(0,0,0,0.4);
+  --shadow-glow-gold: 0 0 12px rgba(201, 168, 76, 0.15);
+  --shadow-glow-purple: 0 0 12px rgba(126, 85, 160, 0.15);
+
+  /* Fonts */
+  --font-heading:     'Cinzel', 'Georgia', serif;
+  --font-body:        'Cormorant Garamond', 'Garamond', 'Times New Roman', serif;
+  --font-ui:          'Cinzel', serif;
+
+  /* Sizing */
+  --sidebar-left-w:   260px;
+  --sidebar-right-w:  240px;
+  --portrait-max-w:   200px;
+  --portrait-max-h:   360px;
+  --bar-height:       8px;
+  --border-radius:    6px;
+}
+
+
+/* ================================================================
+   GLOBAL RESETS & BASE
+   ================================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-deepest);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+
+/* ================================================================
+   HIDE DEFAULT SUGARCUBE UI
+   We replace it entirely with StoryInterface
+   ================================================================ */
+
+#ui-bar, #ui-bar-toggle, #ui-bar-history {
+  display: none !important;
+}
+
+#story {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* ================================================================
+   THREE-PANEL LAYOUT
+   ================================================================ */
+
+#aelindra-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- LEFT SIDEBAR --- */
+#sidebar-left {
+  width: var(--sidebar-left-w);
+  min-width: var(--sidebar-left-w);
+  background: var(--grad-sidebar);
+  border-right: 1px solid var(--border-stone);
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
+#sidebar-left-inner {
+  padding: 20px 16px;
+}
+
+/* --- CENTER PASSAGE --- */
+#passage-wrapper {
+  flex: 1;
+  margin-left: var(--sidebar-left-w);
+  margin-right: var(--sidebar-right-w);
+  background: var(--grad-passage);
+  min-height: 100vh;
+}
+
+#passage-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+/* --- PASSAGE NAV BAR — Back / Forward + (mobile-only) sidebar toggles --- */
+#passage-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 14px 32px 0;
+}
+
+.nav-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  color: var(--text-dim);
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-dim);
+  color: var(--text-primary);
+}
+
+/* Sidebar-toggle buttons: desktop already shows both sidebars, so
+   these stay hidden until the mobile breakpoint below reveals them */
+.mobile-sidebar-toggle {
+  display: none;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+}
+
+/* Backdrop shown behind an open mobile sidebar drawer; tapping it
+   closes the drawer (see aelindraCloseSidebars() in script.js) */
+#mobile-sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 150;
+}
+
+body.mobile-sidebar-active #mobile-sidebar-backdrop {
+  display: block;
+}
+
+/* --- RIGHT SIDEBAR --- */
+#sidebar-right {
+  width: var(--sidebar-right-w);
+  min-width: var(--sidebar-right-w);
+  background: var(--grad-sidebar);
+  border-left: 1px solid var(--border-stone);
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
+#sidebar-right-inner {
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ================================================================
+   LEFT SIDEBAR COMPONENTS
+   ================================================================ */
+
+/* Game Logo */
+#game-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+#game-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+}
+
+#game-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin: 4px 0 0;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(58, 46, 53, 0.5);
+}
+
+.section-head {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+/* Time Block */
+#time-block {
+  text-align: center;
+}
+
+#day-display {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--text-bright);
+  letter-spacing: 0.08em;
+}
+
+#time-display {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--amber);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Resource Bars */
+.resource-bar-wrap {
+  margin-bottom: 10px;
+}
+
+.resource-bar-wrap label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.bar-track {
+  width: 100%;
+  height: var(--bar-height);
+  background: var(--bg-input);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-stone);
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.bar-fill.energy {
+  background: linear-gradient(90deg, var(--teal), #4a9e9e);
+}
+
+.bar-fill.stress {
+  background: linear-gradient(90deg, var(--amber), var(--red-bright));
+}
+
+.bar-fill.arousal {
+  background: linear-gradient(90deg, #9b3a6e, #d44a8e);
+}
+
+.bar-val {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  float: right;
+  margin-top: 2px;
+}
+
+/* Stat List */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(58, 46, 53, 0.3);
+}
+
+.stat-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.stat-value.highlight {
+  color: var(--gold);
+}
+
+/* Objective Panel */
+.obj-type-head {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 8px 0 4px;
+}
+
+#obj-main-list, #obj-side-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#obj-main-list li, #obj-side-list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 5px 0 5px 16px;
+  position: relative;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+#obj-main-list li::before {
+  content: '⚔';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+#obj-side-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 2px;
+  color: var(--text-dim);
+  font-size: 0.5rem;
+  top: 9px;
+}
+
+#obj-side-list li {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* Gold Display */
+#gold-block {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+.gold-icon {
+  font-size: 1rem;
+}
+
+/* Menu Buttons */
+#sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Targets #sidebar-menu's button AND link elements directly, rather
+   than relying on the shared .menu-btn class alone, so both the
+   plain onclick="" buttons (Save/Load/Settings/Restart) and the
+   plain href="" Patreon link get identical sizing/spacing without
+   needing to duplicate every rule per element type. */
+#sidebar-menu button,
+#sidebar-menu a.menu-btn {
+  display: block;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  color: var(--text-dim);
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  padding: 7px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+#sidebar-menu button:hover,
+#sidebar-menu a.menu-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-dim);
+  color: var(--text-primary);
+}
+
+/* Support link gets a subtle permanent gold accent so it reads as
+   distinct from the utility buttons around it, without being as
+   loud as the full end-of-content Patreon CTA button. */
+.menu-btn-support {
+  border-color: var(--gold-dim) !important;
+  color: var(--gold) !important;
+}
+
+.menu-btn-support:hover {
+  background: rgba(201, 168, 76, 0.12) !important;
+  color: var(--gold-bright) !important;
+}
+
+
+/* ================================================================
+   RIGHT SIDEBAR   MC PORTRAIT
+   ================================================================ */
+
+/* Portrait Frame */
+#mc-portrait-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+#mc-portrait-border {
+  width: var(--portrait-max-w);
+  max-height: var(--portrait-max-h);
+  border: 2px solid var(--gold-dim);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 0 20px rgba(201, 168, 76, 0.08),
+    inset 0 0 30px rgba(0, 0, 0, 0.5);
+  background: var(--bg-deepest);
+}
+
+/* Ornate corner accents */
+#mc-portrait-border::before,
+#mc-portrait-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold);
+  z-index: 2;
+}
+
+#mc-portrait-border::before {
+  top: 4px;
+  left: 4px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+
+#mc-portrait-border::after {
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+
+#mc-portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 280px;
+  background: var(--bg-deepest);
+  /* Placeholder gradient when no image loaded */
+  background: linear-gradient(180deg, var(--purple-dim) 0%, var(--bg-deepest) 50%, var(--bg-secondary) 100%);
+}
+
+/* MC Name Block */
+#mc-name-block {
+  text-align: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-gold);
+  width: 100%;
+}
+
+#mc-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+#mc-title {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Body Stats */
+#body-status-block {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.body-stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(58, 46, 53, 0.3);
+}
+
+.body-label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.body-value {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-bright);
+}
+
+/* Outfit Block */
+#outfit-block {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+#current-outfit {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Relationship Block */
+#relationship-block {
+  width: 100%;
+}
+
+.rel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.rel-name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.rel-hearts {
+  color: var(--red-bright);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+
+/* ================================================================
+   CENTER PASSAGE   CONTENT STYLING
+   ================================================================ */
+
+/* Passage text */
+#passages {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+#passages p {
+  margin: 0 0 1em;
+  text-indent: 0;
+}
+
+/* Headings in passages */
+#passages h2 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+#passages h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  margin: 16px 0 8px;
+}
+
+/* Links */
+#passages a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+  transition: all 0.2s ease;
+}
+
+#passages a:hover {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold);
+  text-shadow: 0 0 8px rgba(201, 168, 76, 0.2);
+}
+
+/* Dialogue styling */
+.dialogue {
+  font-style: italic;
+  color: var(--text-bright);
+  margin: 8px 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--gold-dim);
+}
+
+.dialogue .speaker {
+  font-family: var(--font-heading);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Emphasis */
+#passages em {
+  color: var(--text-bright);
+  font-style: italic;
+}
+
+#passages strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Horizontal rule / scene divider */
+#passages hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  margin: 28px 0;
+}
+
+
+/* ================================================================
+   HUB & CARD COMPONENTS
+   ================================================================ */
+
+/* Location Grid */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.loc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.loc-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-dim);
+  box-shadow: var(--shadow-glow-gold);
+  transform: translateY(-1px);
+}
+
+.loc-card.visited {
+  opacity: 0.65;
+  border-left: 3px solid var(--gold-dim);
+}
+
+.loc-card.loc-new {
+  border-left: 3px solid var(--purple);
+}
+
+.loc-card.loc-new:hover {
+  box-shadow: var(--shadow-glow-purple);
+}
+
+/* Point-of-no-return card (Day 0's bridge) */
+.loc-card.loc-final {
+  border: 1px solid var(--red);
+  background: rgba(139, 45, 45, 0.08);
+}
+
+.loc-card.loc-final:hover {
+  border-color: var(--red-bright);
+  box-shadow: 0 0 12px rgba(179, 58, 58, 0.15);
+}
+
+.loc-warning {
+  font-size: 0.8rem;
+  color: var(--red-bright);
+  margin-top: 8px;
+}
+
+.loc-card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--text-bright);
+  margin: 0 0 6px;
+  letter-spacing: 0.04em;
+}
+
+.loc-flavor {
+  font-family: var(--font-body);
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 6px 0 10px;
+  line-height: 1.4;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 3px 4px 3px 0;
+}
+
+.badge.main {
+  background: var(--gold);
+  color: var(--bg-deepest);
+  font-weight: 600;
+}
+
+.badge.side {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border-stone);
+}
+
+.badge.discovered {
+  background: transparent;
+  color: var(--purple-bright);
+  border: 1px solid var(--border-purple);
+}
+
+/* Choice cards   a small set of mutually-exclusive player decisions,
+   side by side (e.g. accept/decline a sensitive optional scene) */
+.choice-cards {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.choice-cards .interaction-card {
+  flex: 1 1 220px;
+  margin: 0;
+}
+
+/* Interaction Cards (sub-hubs) */
+.interaction-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  padding: 14px 16px;
+  margin: 10px 0;
+  transition: all 0.2s ease;
+}
+
+.interaction-card:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+}
+
+.interaction-card.main {
+  border-left: 3px solid var(--gold);
+}
+
+.interaction-card.side {
+  border-left: 3px solid var(--text-faint);
+}
+
+.interaction-card h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--text-bright);
+  margin: 0 0 4px;
+}
+
+.interaction-card p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Location / scene header images (hub cards + scene banners) */
+.loc-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  margin: -16px -16px 12px;
+  background: var(--bg-input);
+}
+
+.loc-card .loc-image {
+  width: calc(100% + 32px);
+}
+
+.loc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Scene banner (top of a main scene passage) */
+.scene-image {
+  width: 100%;
+  max-width: 780px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin: 0 0 20px;
+  border: 1px solid var(--border-stone);
+}
+
+.scene-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Small inline NPC portrait beside an encounter's opening line */
+.npc-portrait-inline {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dim);
+  float: left;
+  margin: 0 12px 6px 0;
+  shape-outside: circle();
+}
+
+/* Empty state */
+.empty-note {
+  color: var(--text-faint);
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+  font-size: 0.9rem;
+}
+
+/* Quiet inline aside   a passing detail, not a full paragraph */
+.flavor-dim {
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Moonspire Tower   cooler, otherworldly aside text (tapestry gallery, etc.) */
+.moonspire-flavor {
+  color: #9b8ec4;
+  font-style: italic;
+}
+
+/* Return navigation */
+.nav-return {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.nav-return a {
+  color: var(--text-dim);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-stone);
+  padding-bottom: 2px;
+}
+
+.nav-return a:hover {
+  color: var(--gold-dim);
+  border-bottom-color: var(--gold-dim);
+}
+
+/* Scene end / continue */
+.scene-end {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-stone);
+  text-align: center;
+}
+
+.scene-end a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: 10px 28px;
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--border-radius);
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.scene-end a:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-glow-gold);
+  transform: translateY(-1px);
+}
+
+/* Day transition screens */
+.day-transition {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.day-transition h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.day-transition p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 12px;
+}
+
+.transition-morning {
+  color: var(--amber) !important;
+  font-style: italic;
+}
+
+
+/* ================================================================
+   STAT CHANGE NOTIFICATION (toast)
+   ================================================================ */
+
+.stat-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--border-radius);
+  padding: 8px 20px;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  z-index: 9999;
+  animation: toastIn 0.3s ease, toastOut 0.3s ease 2s forwards;
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.stat-toast.negative {
+  border-color: var(--red);
+  color: var(--red-bright);
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes toastOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+
+/* ================================================================
+   TITLE SCREEN
+   ================================================================ */
+
+.title-screen {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-main {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.25em;
+  margin: 0;
+  text-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
+}
+
+.title-sub {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  font-style: italic;
+  letter-spacing: 0.15em;
+  margin: 8px 0 20px;
+}
+
+.title-ornament {
+  color: var(--gold-dim);
+  font-size: 1.5rem;
+  margin: 16px 0;
+}
+
+.title-tagline {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.title-menu {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-menu a {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-decoration: none;
+  padding: 12px 40px;
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--border-radius);
+  transition: all 0.25s ease;
+}
+
+.title-menu a:hover {
+  background: rgba(201, 168, 76, 0.1);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+/* --- CREDITS --- */
+.credits-screen {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.credits-screen h2 {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+}
+
+.credits-screen p {
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+
+/* ================================================================
+   PORTRAIT PLACEHOLDER (when no image file exists yet)
+   ================================================================ */
+
+.portrait-placeholder {
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(180deg, var(--purple-dim) 0%, var(--bg-deepest) 60%, var(--bg-secondary) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.placeholder-silhouette {
+  width: 80px;
+  height: 120px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid var(--gold-dim);
+  border-radius: 40px 40px 20px 20px;
+  margin-bottom: 12px;
+}
+
+.placeholder-text {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+
+/* ================================================================
+   RESPONSIVE — MOBILE DRAWER SIDEBARS
+   Below the breakpoint, both sidebars leave the document flow
+   entirely and become full-height off-canvas drawers (slid out via
+   transform, toggled by the two nav-bar buttons + closed by tapping
+   the backdrop or navigating to a new passage — see script.js).
+   Above the breakpoint, the normal desktop three-panel layout
+   (defined earlier in this file) applies unchanged.
+   ================================================================ */
+
+@media (max-width: 900px) {
+  #passage-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #passage-container {
+    padding: 20px 16px;
+  }
+
+  #passage-nav {
+    padding: 12px 16px 0;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reveal the two mobile-only sidebar-toggle buttons */
+  .mobile-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Both sidebars become fixed-position drawers, off-screen by
+     default. width: min(...) keeps them from spanning edge-to-edge
+     on wider phones/small tablets while still being comfortably
+     full-width on narrow ones. */
+  #sidebar-left,
+  #sidebar-right {
+    position: fixed;
+    top: 0;
+    width: min(300px, 85vw);
+    height: 100vh;
+    z-index: 200;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s ease;
+  }
+
+  #sidebar-left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  #sidebar-right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  #sidebar-left.mobile-open,
+  #sidebar-right.mobile-open {
+    transform: translateX(0);
+  }
+
+  #sidebar-left-inner,
+  #sidebar-right-inner {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+
+/* ================================================================
+   POINT-OF-NO-RETURN CONFIRMATION (Day 0 bridge)
+   ================================================================ */
+
+.bridge-confirm {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bridge-confirm h2 {
+  font-family: var(--font-heading);
+  color: var(--red-bright);
+  letter-spacing: 0.08em;
+}
+
+.confirm-checklist {
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.confirm-checklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.confirm-checklist li {
+  padding: 4px 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-checklist li.done {
+  color: var(--gold);
+}
+
+.confirm-checklist li.pending {
+  color: var(--text-faint);
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.confirm-buttons a {
+  padding: 10px 24px;
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.confirm-buttons a:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold-dim);
+}
+
+/* ================================================================
+   PATH CHOICE (day0_path_choice.tw) — the permanent Female/Futa
+   fork. Was originally an upfront title-screen choice; removed from
+   there per an earlier revision (see README's "no upfront choice"
+   note) and moved here, mid-ritual, where it actually lives now.
+   ================================================================ */
+
+.path-choice-ritual {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.path-intro {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dim);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+}
+
+.path-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.path-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: 8px;
+  padding: 24px 20px;
+  width: 300px;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.path-card:hover {
+  border-color: var(--gold-dim);
+  box-shadow: var(--shadow-glow-gold);
+  transform: translateY(-2px);
+}
+
+.path-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.path-desc {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.path-notes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.path-notes li {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+
+.path-notes li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--gold-dim);
+  font-size: 0.5rem;
+  top: 7px;
+}
+
+.path-card a {
+  display: block;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  padding: 10px;
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.path-card a:hover {
+  background: rgba(201, 168, 76, 0.15);
+}
+
+
+/* ================================================================
+   END-OF-CONTENT NOTICE (<<endOfContentNotice>> widget)
+   ================================================================ */
+
+.end-of-content {
+  text-align: center;
+  max-width: 520px;
+  margin: 32px auto 0;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-dim);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.end-of-content h3 {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+}
+
+.end-of-content p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.patreon-cta {
+  margin-top: 16px !important;
+}
+
+.patreon-cta a {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--bg-deepest);
+  background: var(--grad-gold);
+  padding: 12px 28px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.patreon-cta a:hover {
+  box-shadow: var(--shadow-glow-gold);
+  transform: translateY(-1px);
+}

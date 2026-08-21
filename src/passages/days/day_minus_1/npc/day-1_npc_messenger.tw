@@ -1,0 +1,50 @@
+:: day-1_npc_messenger [nobr]
+<h3>Messenger from Lord Veltham</h3>
+
+<p>A palace runner intercepts me near the stairwell   a lean boy of sixteen whose entire purpose is to carry messages at speed through the palace's labyrinthine corridors. He's breathing hard. He's also terrified, because delivering messages to the prince apparently ranks somewhere between "thrilling" and "potentially fatal" in the servant hierarchy.</p>
+
+<div class="dialogue"><span class="speaker">RUNNER</span>"Your Highness   a letter. From Lord Veltham. Delivered to the palace gate this morning, marked urgent."</div>
+
+<p>He holds out a sealed parchment. The seal is green wax   Veltham's sigil, a pair of crossed keys over a wheat sheaf. Lord Veltham is a minor lord from the agricultural provinces. Wealthy enough to matter. Not powerful enough to threaten. A reliable ally of the crown for two generations.</p>
+
+<p>I break the seal. The letter is written in Veltham's hand   careful, formal, slightly trembling at the edges in a way that suggests he wrote it quickly and under stress.</p>
+
+<p><em>Your Royal Highness,</em></p>
+
+<p><em>I write with urgency and in confidence. Lord Ashborne has dispatched envoys to the northern provinces with proposals of alliance. Three houses have received formal visits this week   Thornecrest, Wyld-Marsh, and my own. The proposals are framed as trade agreements, but the substance is political: support for Ashborne's succession claim in exchange for tax concessions, trade privileges, and territorial adjustments.</em></p>
+
+<p><em>I refused. Thornecrest refused. Wyld-Marsh is considering.</em></p>
+
+<p><em>I do not know the extent of Ashborne's diplomatic campaign, but the pace suggests urgency. He is moving quickly, as if on a timetable. Whatever your mother's advisors are telling you   it may be more pressing than they know.</em></p>
+
+<p><em>Your servant in loyalty,<br>Lord Edric Veltham</em></p>
+
+<p>I fold the letter. My hands are steady. My stomach is not.</p>
+
+<p>Ashborne isn't just waiting for the Elder Council to rule. He's actively building his coalition. He's preparing for the transition as if it's already decided   as if my mother's death is a scheduling matter and the aftermath is a business opportunity.</p>
+
+<p>Three houses visited in one week. How many more that Veltham doesn't know about?</p>
+
+<p>I need to show this to Mother. Or to her advisors. Or to </p>
+
+<p>I put the letter in my pocket. Next to the crumpled list with every item crossed off. Two pieces of parchment that together describe the exact shape of the trap I'm standing in.</p>
+
+<p>The runner is still hovering.</p>
+
+<div class="dialogue"><span class="speaker">RUNNER</span>"Reply, Your Highness?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Tell Lord Veltham: received, with gratitude. His loyalty is noted and will be remembered."</div>
+
+<p>The runner nods, bows, and sprints off. I watch him go and think about urgency, about timetables, about a kingdom being divided like property before the owner is even dead.</p>
+
+<<set $d1_npc_messenger to true>>
+<<set $statAUT += 2>>
+<<set $stress += 5>>
+<<set $ashborneThreat += 1>>
+<<set $hasVelthamLetter to true>>
+<<addItem "veltham_letter" "Lord Veltham's Letter" "A warning: Ashborne is building alliances ahead of the succession ruling.">>
+<<completeObjective "corridor_messenger">>
+
+<div class="scene-end">
+  [[Continue → |day-1_corridors]]
+</div>

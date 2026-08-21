@@ -1,0 +1,166 @@
+:: StoryInterface [nobr]
+<div id="aelindra-wrapper">
+
+  <!-- LEFT SIDEBAR   Stats, Time, Objectives -->
+  <div id="sidebar-left" role="complementary">
+    <div id="sidebar-left-inner">
+
+      <!-- Game Logo / Title -->
+      <div id="game-logo">
+        <h1 id="game-title">AELINDRA</h1>
+        <p id="game-subtitle">The Rite of Becoming</p>
+      </div>
+
+      <!-- Day & Time Display -->
+      <div id="time-block" class="sidebar-section">
+        <div id="day-display"></div>
+        <div id="time-display"></div>
+      </div>
+
+      <!-- Resource Bars -->
+      <div id="resource-bars" class="sidebar-section">
+        <div id="energy-bar-container" class="resource-bar-wrap">
+          <label>Energy</label>
+          <div class="bar-track"><div id="energy-bar" class="bar-fill energy"></div></div>
+          <span id="energy-val" class="bar-val"></span>
+        </div>
+        <div id="stress-bar-container" class="resource-bar-wrap">
+          <label>Stress</label>
+          <div class="bar-track"><div id="stress-bar" class="bar-fill stress"></div></div>
+          <span id="stress-val" class="bar-val"></span>
+        </div>
+        <div id="arousal-bar-container" class="resource-bar-wrap" style="display:none;">
+          <label>Arousal</label>
+          <div class="bar-track"><div id="arousal-bar" class="bar-fill arousal"></div></div>
+          <span id="arousal-val" class="bar-val"></span>
+        </div>
+      </div>
+
+      <!-- Primary Stats -->
+      <div id="stat-block" class="sidebar-section">
+        <h3 class="section-head">Attributes</h3>
+        <div id="stat-list"></div>
+      </div>
+
+      <!-- Objective Panel -->
+      <div id="objective-panel" class="sidebar-section">
+        <h3 class="section-head">⚔ Objectives</h3>
+        <div id="obj-main-section">
+          <h4 class="obj-type-head">Main</h4>
+          <ul id="obj-main-list"></ul>
+        </div>
+        <div id="obj-side-section">
+          <h4 class="obj-type-head">Side</h4>
+          <ul id="obj-side-list"></ul>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div id="gold-block" class="sidebar-section">
+        <span class="gold-icon">🪙</span> <span id="gold-val"></span> gold
+      </div>
+
+      <!-- Menu Buttons
+           NOTE: plain onclick="" on purpose, calling the window-
+           scoped wrappers defined in script.js. StoryInterface.tw
+           is injected as raw HTML (not run through SugarCube's
+           Wikifier), so <<macro>> syntax typed here never executes
+           - the browser's HTML parser mangles it instead (especially
+           <<button>>, since "button" is also a real tag name). See
+           script.js for the full explanation. -->
+      <div id="sidebar-menu" class="sidebar-section">
+        <button id="btn-save" class="menu-btn" onclick="aelindraSaves()">💾 Save</button>
+        <button id="btn-load" class="menu-btn" onclick="aelindraSaves()">📂 Load</button>
+        <button id="btn-settings" class="menu-btn" onclick="aelindraSettings()">⚙ Settings</button>
+        <button id="btn-restart" class="menu-btn" onclick="aelindraRestart()">🔄 Restart</button>
+        <!-- Plain link, not a macro call, so no onclick/wrapper-function
+             pattern needed here - just a real href. -->
+        <a id="btn-support" class="menu-btn menu-btn-support" href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">💛 Support on Patreon</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CENTER   Passage Content -->
+  <div id="passage-wrapper">
+
+    <!-- Nav bar: history Back/Forward (SugarCube's Engine.backward()/
+         forward(), same as the default UI bar's history controls) plus
+         two sidebar-toggle buttons that only render on mobile widths
+         (see .mobile-sidebar-toggle in stylesheet.css). Same onclick=""
+         pattern as the sidebar menu buttons above, same reason. -->
+    <div id="passage-nav">
+      <button id="btn-sidebar-left-toggle" class="nav-btn mobile-sidebar-toggle" onclick="aelindraToggleSidebar('left')" aria-label="Open stats and objectives">📊 Stats</button>
+      <button id="btn-back" class="nav-btn" onclick="aelindraBack()" aria-label="Go back">◄ Back</button>
+      <button id="btn-forward" class="nav-btn" onclick="aelindraForward()" aria-label="Go forward">Forward ►</button>
+      <button id="btn-sidebar-right-toggle" class="nav-btn mobile-sidebar-toggle" onclick="aelindraToggleSidebar('right')" aria-label="Open character panel">👤 Character</button>
+    </div>
+
+    <div id="passage-container">
+      <div id="passages"></div>
+    </div>
+  </div>
+
+  <!-- Mobile-only backdrop behind an open sidebar drawer; tapping it closes the drawer -->
+  <div id="mobile-sidebar-backdrop" onclick="aelindraCloseSidebars()"></div>
+
+  <!-- RIGHT SIDEBAR   MC Portrait & Body Info -->
+  <div id="sidebar-right" role="complementary">
+    <div id="sidebar-right-inner">
+
+      <!-- MC Portrait Frame -->
+      <div id="mc-portrait-frame">
+        <div id="mc-portrait-border">
+          <img id="mc-portrait-img" src="" alt="Character Portrait">
+        </div>
+      </div>
+
+      <!-- MC Name & Title -->
+      <div id="mc-name-block">
+        <div id="mc-name"></div>
+        <div id="mc-title"></div>
+      </div>
+
+      <!-- Body Status (appears after transformation begins) -->
+      <div id="body-status-block" style="display:none;">
+        <h3 class="section-head">Body</h3>
+        <div id="body-stats">
+          <div class="body-stat-row">
+            <span class="body-label">Height</span>
+            <span id="bs-height" class="body-value"></span>
+          </div>
+          <div class="body-stat-row">
+            <span class="body-label">Bust</span>
+            <span id="bs-bust" class="body-value"></span>
+          </div>
+          <div class="body-stat-row">
+            <span class="body-label">Waist</span>
+            <span id="bs-waist" class="body-value"></span>
+          </div>
+          <div class="body-stat-row">
+            <span class="body-label">Hips</span>
+            <span id="bs-hips" class="body-value"></span>
+          </div>
+          <div class="body-stat-row">
+            <span class="body-label">Sensitivity</span>
+            <span id="bs-sensitivity" class="body-value"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Outfit (appears when wardrobe unlocks) -->
+      <div id="outfit-block" style="display:none;">
+        <h3 class="section-head">Outfit</h3>
+        <div id="current-outfit"></div>
+      </div>
+
+      <!-- Relationship Quick-View -->
+      <div id="relationship-block" style="display:none;">
+        <h3 class="section-head">Bonds</h3>
+        <div id="rel-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

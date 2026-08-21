@@ -1,0 +1,34 @@
+:: day-2_npc_joss [nobr]
+<<npcPortrait "joss" "Joss">>
+<h3>Scullion Joss   Kitchen Gossip</h3>
+
+<p>Joss is a scullion   fourteen, gap-toothed, perpetually smudged with soot, and possessed of the most efficient gossip network in Crown's Rest. He knows everything that happens in the palace because he delivers trays to every wing and nobody notices the pot-boy.</p>
+
+<div class="dialogue"><span class="speaker">JOSS</span>"Your Highness!" He appears at my elbow like a soot-covered apparition. "Did you hear about the merchant at the gate?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What merchant?"</div>
+
+<div class="dialogue"><span class="speaker">JOSS</span>"From the Free Cities. Sarrow Coast. Brought a cart full of silks   silks, Your Highness, in winter!   and tried to bribe Guardsman Keller to let him skip the inspection queue. Keller said no. The merchant offered double. Keller said no louder. The merchant offered triple and a bolt of Sarrow blue for his wife. Keller said his wife hates blue and arrested the merchant."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Keller's wife <em>does</em> hate blue."</div>
+
+<div class="dialogue"><span class="speaker">JOSS</span>"Everyone knows that except merchants from the Sarrow Coast, apparently." Joss grins. "Also   don't tell Marta I told you   but the wine delivery from the eastern vineyard is late, and she's furious because the banquet next week needs forty casks and she's only got thirty-two, and she says if Lord Harwick complains about the vintage again she'll put his head in the stockpot."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Would she?"</div>
+
+<div class="dialogue"><span class="speaker">JOSS</span>"She'd try. Lord Harwick has a very large head. I'm not sure it'd fit."</div>
+
+<p>Despite everything   despite the morning, the Queen, the books, the ceiling, the two-day countdown   I laugh. It's a small laugh, more breath than sound, but Joss beams like he's won a tournament.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Go on, before Marta catches you gossiping."</div>
+
+<div class="dialogue"><span class="speaker">JOSS</span>"She already knows. She knows everything. She's like a spider in a web made of flour."</div>
+
+<p>He vanishes back into the steam. The kitchen goes on.</p>
+
+<<set $d2_npc_joss to true>>
+<<set $stress -= 2>>
+
+<div class="scene-end">
+  [[Continue → |day-2_kitchen]]
+</div>

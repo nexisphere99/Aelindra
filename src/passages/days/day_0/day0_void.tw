@@ -1,0 +1,36 @@
+:: day0_void [nobr]
+<h2>Void — Unconscious</h2>
+
+<p>Nothing.</p>
+
+<p>Not sleep. Not dreaming. Nothing. The kind of absence that is total — no sensation, no thought, no body to feel with or mind to think with. Just dark. Just the void between who I was and who I will be.</p>
+
+<p>Somewhere, very far away, lute strings. Rowan. Playing on the bridge. Waiting.</p>
+
+<p>Somewhere, closer, a heartbeat. Mine. New. Beating in a chest that is shaped differently, that holds different organs, that belongs to someone I haven't met yet.</p>
+
+<p>The heartbeat strengthens. The darkness thins. There is something beyond it — light, and cold, and the smell of candles and magic and stone.</p>
+
+<p>Not yet. Not yet.</p>
+
+<p>The darkness holds me a little longer. Just a little longer. The last mercy before the morning.</p>
+
+<<set $d0_void to true>>
+
+/* === PRE-SET DAY 1 VARIABLES (FEMALE ROUTE) === */
+<<set $mcName to "Aelindra">>
+<<set $mcTitle to "Princess of Aethermere">>
+<<set $mcHeight to "5'6\"">>
+<<set $mcBust to "A-B cup">>
+<<set $mcWaist to "26\"">>
+<<set $mcHips to "34\"">>
+<<set $mcSensitivity to "Extreme (new body)">>
+<<set $mcBreastSize to "A-B">>
+<<set $mcPortrait to "aelindra_day1">>
+<<set $bodyStatusVisible to true>>
+
+<div class="day-transition">
+  <p>The darkness holds. The heartbeat strengthens. Light gathers at the edges.</p>
+  <p class="transition-morning"><em>Tomorrow, someone new opens her eyes.</em></p>
+  [[Wake → |day1_hub]]
+</div>

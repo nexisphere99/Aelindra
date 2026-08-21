@@ -1,0 +1,50 @@
+:: day-1_npc_perrin2 [nobr]
+<<npcPortrait "perrin" "Perrin">>
+<h3>Night Guard Perrin   Final Watch</h3>
+
+<p>The corridor is quiet. Perrin is at his post. He looks up when I open the door   not startled, but attentive, the way a good night guard should be.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Perrin."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Your friend left a while ago. The one with the lute." A pause. "Sadder music tonight."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes."</div>
+
+<p>We stand in the silence for a moment. Perrin's face is neutral   the professional blankness of a guard on duty   but his eyes have that quality I noticed last night: a genuine attention, unforced, uncalculating. He's not a complex man. He guards a door. He does it well. There's a purity to that.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I asked you last night about choices you didn't want to make."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"The tannery. I remember."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What if the choice changes everything? Not just your work or where you live   everything. The person you are. The body you wake up in."</div>
+
+<p>He thinks about it. He takes his time, the way he did last night, and I wait because rushing Perrin would be like rushing a candle   it burns at the speed it burns.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"My grandmother used to say that people aren't their bodies. She said bodies are like clothes   you wear them, they wear out, they change. She was a small woman, my grandmother. Got smaller every year. Bent over, lost teeth, couldn't see past her own nose by the end. But she was still her. Still sharp. Still funny. Still told the same terrible jokes. The body changed. She didn't."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Bodies don't usually change all at once."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"No. But the principle's the same, isn't it? Whether it's slow or fast   the body's just the house. You're the person living in it."</div>
+
+<p>He adjusts his sword belt. The leather creaks.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Whatever you're facing, Your Highness   you'll still be you on the other side of it. That's what I believe. For what the belief of a night guard is worth."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"It's worth more than you think, Perrin."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Then I'll keep believing it. Good night, Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Good night."</div>
+
+<p>I close the door. The mirror is waiting. The last inventory.</p>
+
+<<set $d1_npc_perrin2 to true>>
+<<set $statRES += 1>>
+<<set $stress -= 3>>
+<<completeObjective "perrin_night">>
+
+<div class="scene-end">
+  [[Continue → |day-1_chambers_explore]]
+</div>

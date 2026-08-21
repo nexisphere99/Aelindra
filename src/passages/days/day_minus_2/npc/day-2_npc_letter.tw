@@ -1,0 +1,22 @@
+:: day-2_npc_letter [nobr]
+<h3>The Half-Written Letter</h3>
+
+<p>I pick up the letter to Rowan. Three weeks old. The ink has crusted in the nib, and when I tap it, a flake of dried black drops onto the parchment.</p>
+
+<p><em>"The court is suffocating and I'm considering taking up goat herding as an alternative career "</em></p>
+
+<p>That's where I stopped. I remember now. I was trying to be funny. Trying to write something light because Rowan's letters are always light   full of tavern stories and terrible puns and sketches of people they've met on the road. A merchant with a moustache shaped like a seagull. A dog that stole a whole roast chicken from a banquet table. Small, beautiful things.</p>
+
+<p>I wanted to match that energy. I couldn't. Everything I tried to write after the goat herding line turned dark   <em>Mother is worse. The court is circling. I feel like I'm standing on a trapdoor and someone's hand is on the lever.</em></p>
+
+<p>I put the letter down. If Mother is right   if the Rite is the only option   then this letter is a relic from a man who doesn't exist yet. A man who's still deciding.</p>
+
+<p>I fold it. Tuck it into the desk drawer.</p>
+
+<p>If I send it, it'll be the last letter Edrin ever writes.</p>
+
+<<set $d2_npc_letter to true>>
+
+<div class="scene-end">
+  [[Continue → |day-2_chambers_explore]]
+</div>

@@ -1,0 +1,54 @@
+:: day-2_npc_marta [nobr]
+<<npcPortrait "marta" "Marta">>
+<h3>Head Cook Marta</h3>
+
+<p>The palace kitchens are a realm unto themselves   a vast, low-ceilinged cavern of stone and iron where three massive hearths blaze day and night, filling the air with heat, smoke, and the complex layered aroma of twelve dishes being prepared simultaneously. Pots hang from ceiling hooks. Herbs dry in bundles above the doorways. A small army of kitchen workers   junior cooks, scullions, pot-boys, pastry apprentices   move in choreographed chaos that would make a military commander weep with envy.</p>
+
+<p>At the center of it all: Marta. Head Cook. Fifty-something. Built like a barrel of ale and twice as formidable. She has flour in her hair, grease on her apron, a wooden spoon in her right hand that functions as both utensil and scepter, and a voice that can be heard through two walls and a courtyard.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"OUT of my way, Joss, or I swear on the Mother's left   Prince Edrin!" Her manner shifts from volcanic to warm in the time it takes her to spot me. "My boy. You ate standing up again, didn't you? I can always tell. Your breakfast tray comes back with the food gone but the chair cold."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I prefer eating at the window."</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"You prefer <em>not sitting still long enough for your thoughts to catch up.</em> It's the same thing, and I've been watching you do it since you were nine." She steers me toward a stool near the prep table with the gentle inevitability of a river current. "Sit. Eat. I've got fresh pastries coming out   cheese and herb, the ones you like."</div>
+
+<p>I sit. Resistance is theoretical when Marta is involved.</p>
+
+<p>She puts a plate in front of me   two pastries, golden-brown, steam curling from the latticed top, the smell of melted cheese and rosemary sharp enough to cut through every other scent in the kitchen. They're absurdly good. Marta has been making these since I was a child, and the recipe has not changed because perfection does not require revision.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"You look thin," she says, which is her standard opening regardless of my actual weight.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You always say that."</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"You're always thin. Eat."</div>
+
+<p>She watches me bite into the pastry. Her expression settles into satisfaction   the particular look of a cook watching someone enjoy their food, which is the closest thing to religious ecstasy that exists in the culinary profession.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Marta. Have you heard anything... unusual today? About the east wing?"</div>
+
+<p>Her hands, which were wiping the prep table, slow. She doesn't look up.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"I hear everything in this kitchen, Your Highness. Sound travels through stone. The scullions hear the guards, the guards hear the ministers, the ministers hear the Queen, and all of it ends up in my kitchen before the soup is cold."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"So what?"</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"I've been making cheese pastries since dawn. You know what that means."</div>
+
+<p>I do. Marta makes cheese pastries when the palace is scared. She made them the day my father died. She made them during the border skirmish. She made them when the plague hit the lower city three years ago.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Your mother is the strongest woman I've ever known," Marta says quietly, her back to me, stirring something that doesn't need stirring. "Whatever she's asked of you   she wouldn't ask if there were another way."</div>
+
+<p>I look at her. She looks at the pot. Neither of us says anything else. The kitchen goes on around us   the clatter of pots, the shout of orders, the sizzle of fat in pans. The world is ending and the pastries are perfect and Marta is stirring a pot and somewhere in this equation is a truth about how life continues even when it shouldn't.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Marta."</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Eat the second one. You're thin."</div>
+
+<<set $d2_npc_marta to true>>
+<<set $energy += 10>>
+<<set $stress -= 5>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_kitchen]]
+</div>

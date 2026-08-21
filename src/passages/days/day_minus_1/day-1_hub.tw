@@ -1,0 +1,143 @@
+:: day-1_hub [nobr]
+<div class="hub-header">
+  <h2>Crown's Rest   <<print formatDayNumber($dayNumber)>>: The Arguments</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
+</div>
+
+<div class="location-grid">
+
+<!-- ========== EDRIN'S CHAMBERS ========== -->
+<div class="loc-card">
+  <<locationImage "palace_chambers" "Edrin's Chambers">>
+  <h3>🛏 Edrin's Chambers</h3>
+  <p class="loc-flavor">Your room. The half-written letter is gone from the desk. The mirror waits.</p>
+  <<if $timeSlot is "EVENING" and not $d1_rowan>>
+    <span class="badge main">⚔ Someone is knocking</span>
+    [[Enter → |day-1_rowan]]
+  <<elseif $timeSlot is "NIGHT" and not $d1_night>>
+    <span class="badge main">⚔ The mirror. One last time.</span>
+    [[Enter → |day-1_chambers_explore]]
+  <<else>>
+    [[Enter → |day-1_chambers_explore]]
+  <</if>>
+</div>
+
+<!-- ========== QUEEN'S CHAMBERS ========== -->
+<<if not $d1_queen>>
+<div class="loc-card">
+  <<locationImage "queen_chambers" "Queen's Chambers">>
+  <h3>👑 Queen's Chambers   East Wing</h3>
+  <p class="loc-flavor">You have a list. She'll have answers. You already know you won't like them.</p>
+  <span class="badge main">⚔ Confront the Queen</span>
+  [[Enter → |day-1_queen]]
+</div>
+<</if>>
+
+<!-- ========== PALACE CORRIDORS ========== -->
+<div class="loc-card">
+  <<locationImage "corridors" "Palace Corridors">>
+  <h3>🏛 Palace Corridors</h3>
+  <p class="loc-flavor">Stone hallways. Portraits of queens. The usual traffic   plus some unusual faces.</p>
+  <<if not $d1_npc_aldwyn>>
+    <span class="badge side">🗡 A physician in a hurry</span>
+  <</if>>
+  <<if not $d1_npc_messenger>>
+    <span class="badge side">🗡 A messenger with a sealed letter</span>
+  <</if>>
+  [[Explore → |day-1_corridors]]
+</div>
+
+<!-- ========== MOONSPIRE TOWER (NEW) ========== -->
+<<if $d1_queen>>
+<div class="loc-card loc-new<<if $d1_moonspire>> visited<</if>>">
+  <<locationImage "moonspire_tower" "Moonspire Tower">>
+  <h3>🌙 Moonspire Tower</h3>
+  <p class="loc-flavor">White stone. Faint moonlight glow. The covered bridge howls with wind.</p>
+  <<if not $d1_moonspire>>
+    <span class="badge main">⚔ Meet Archsorceress Ilara</span>
+  <<else>>
+    <<if not $d1_npc_nara>>
+      <span class="badge side">🗡 Voices on the lower level</span>
+    <</if>>
+    <<if not $d1_npc_vael>>
+      <span class="badge side">🗡 The Apothecary is open</span>
+    <</if>>
+  <</if>>
+  [[Cross the bridge → |day-1_moonspire_hub]]
+</div>
+<</if>>
+
+<!-- ========== TRAINING YARD ========== -->
+<<if $d1_moonspire>>
+<div class="loc-card<<if $d1_training>> visited<</if>>">
+  <<locationImage "training_yard" "Training Yard">>
+  <h3>⚔ Training Yard</h3>
+  <p class="loc-flavor">Practice dummies. Weapon racks. The smell of chalk and iron. Right now, iron sounds good.</p>
+  <<if not $d1_training>>
+    <span class="badge main">⚔ Burn it off</span>
+  <</if>>
+  <<if $d1_training and $d2_npc_tamsin and not $d1_npc_tamsin2>>
+    <span class="badge side">🗡 Tamsin is at the dummies</span>
+  <</if>>
+  <<if $d1_training and not $d1_npc_voss>>
+    <span class="badge side">🗡 An officer watching drills</span>
+  <</if>>
+  [[Enter → |day-1_training_hub]]
+</div>
+<</if>>
+
+<!-- ========== KITCHENS ========== -->
+<div class="loc-card">
+  <<locationImage "kitchens" "Palace Kitchens">>
+  <h3>🍞 Palace Kitchens</h3>
+  <p class="loc-flavor">The output is staggering. Marta is baking like the world is ending. She might not be wrong.</p>
+  <<if $d2_npc_marta and not $d1_npc_marta2>>
+    <span class="badge side">🗡 Crisis tempo</span>
+  <</if>>
+  [[Enter → |day-1_kitchen]]
+</div>
+
+<!-- ========== GRAND LIBRARY ========== -->
+<<if $d1_moonspire>>
+<div class="loc-card">
+  <<locationImage "grand_library" "Grand Library">>
+  <h3>📚 Grand Library</h3>
+  <p class="loc-flavor">Three stories of answers. Some of them might even be useful today.</p>
+  <<if $d2_npc_vaelin and not $d1_npc_vaelin2>>
+    <span class="badge side">🗡 Brother Vaelin's book fortress has grown</span>
+  <</if>>
+  <<if not $d1_npc_haeth>>
+    <span class="badge side">🗡 Haeth at his desk</span>
+  <</if>>
+  [[Enter → |day-1_library_hub]]
+</div>
+<</if>>
+
+<!-- ========== SERVANT QUARTERS ========== -->
+<<if $d1_moonspire>>
+<div class="loc-card">
+  <<locationImage "servant_quarters" "Servant Quarters">>
+  <h3>🔑 Servant Quarters   Below Stairs</h3>
+  <p class="loc-flavor">Alva's intelligence network. The machinery runs. It sees everything.</p>
+  <<if $d2_npc_alva and not $d1_npc_alva2>>
+    <span class="badge side">🗡 "I have three items"</span>
+  <</if>>
+  [[Enter → |day-1_servants]]
+</div>
+<</if>>
+
+<!-- ========== ROYAL GARDENS ========== -->
+<<if $d1_training and ($timeSlot is "EVENING" or $timeSlot is "AFTERNOON")>>
+<div class="loc-card">
+  <<locationImage "royal_gardens" "Royal Gardens">>
+  <h3>🌿 Royal Gardens</h3>
+  <p class="loc-flavor">Dusk again. The jasmine is covered tonight   frost warning.</p>
+  <<if $d2_npc_wynn and not $d1_npc_wynn2>>
+    <span class="badge side">🗡 Old Wynn covering the roses</span>
+  <</if>>
+  [[Enter → |day-1_gardens_hub]]
+</div>
+<</if>>
+
+</div>

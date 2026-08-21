@@ -1,0 +1,41 @@
+:: day-2_training_hub [nobr]
+<<locationImage "training_yard" "Training Yard">>
+<h2>⚔ Training Yard</h2>
+<p>Chalk-dusted flagstones. Practice blades on the rack. Morning light.</p>
+
+<<if not $d2_sparred>>
+  <div class="interaction-card main">
+    <<npcPortrait "aldric" "Aldric">>
+    <h4>🗡 Captain Aldric Vane</h4>
+    <p>He's running a whetstone along his practice blade. Waiting for you.</p>
+    [[Spar with Aldric|day-2_training]]
+  </div>
+<</if>>
+
+<<if $d2_sparred>>
+  <<if not $d2_npc_keller>>
+  <div class="interaction-card side">
+    <<npcPortrait "keller" "Guardsman Keller">>
+    <h4>🛡 Guardsman at the Bench</h4>
+    <p>A weathered soldier sharpening his sword. He looks like he wants to talk.</p>
+    [[Approach|day-2_npc_keller]]
+  </div>
+  <</if>>
+
+  <<if not $d2_npc_tamsin>>
+  <div class="interaction-card side">
+    <<npcPortrait "tamsin" "Tamsin">>
+    <h4>🗡 Recruit at the Training Dummies</h4>
+    <p>A young woman beating a dummy with questionable technique but admirable fury.</p>
+    [[Watch / Intervene|day-2_npc_tamsin]]
+  </div>
+  <</if>>
+
+  <<if $d2_npc_keller and $d2_npc_tamsin>>
+    <p class="empty-note">The yard is quiet now. Nothing else demands your attention here.</p>
+  <</if>>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

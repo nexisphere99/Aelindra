@@ -1,0 +1,73 @@
+:: day0-init [widget nobr]
+
+/* ============================================================
+   DAY 0 ("The Rite") — SCENE & NPC FLAG INIT
+   Called once, from day-1_sleep_transition.tw, mirroring
+   day-1-init.tw / day-2-init.tw. Opens with <<clearObjectives>>
+   per the established convention (see day-1-init.tw for the
+   full rationale).
+
+   ARCHITECTURE NOTE: Day 0 is split. The morning
+   (day0_wake -> day0_hub and its sub-hubs) is open-world, same
+   as every previous day. But entering day0_bridge is a hard
+   point of no return — day0_hub is never linked back to after
+   that, and the game becomes fully linear: bridge -> path choice
+   -> ritual (female or futa, permanently divergent) -> void ->
+   Day 1 (day1_hub, or the new day1_hub_futa). $gamePath, set at
+   the path choice, is what a body of future Day 1+ content keys
+   off of to know which branch it's in.
+   ============================================================ */
+<<widget "day0Init">>
+  <<clearObjectives>>
+
+  /* --- Day 0 Scene Flags --- */
+  <<set $d0_wake to false>>
+  <<set $d0_queens_gift to false>>
+  <<set $d0_queen to false>>
+  <<set $d0_bridge to false>>
+  <<set $d0_pathChosen to false>>
+  <<set $d0_ritual to false>>
+  <<set $d0_void to false>>
+
+  /* --- Day 0 NPC / side-content Flags --- */
+  <<set $d0_npc_brin to false>>
+  <<set $d0_npc_sword to false>>
+  <<set $d0_npc_caedric to false>>
+  <<set $d0_npc_maids2 to false>>
+  <<set $d0_npc_aldric_gift to false>>
+  <<set $d0_npc_marta3 to false>>
+  <<set $d0_npc_haeth to false>>
+  <<set $d0_npc_wynn3 to false>>
+  <<set $d0_npc_alva3 to false>>
+  <<set $d0_npc_nara2 to false>>
+  <<set $d0_npc_vael2 to false>>
+  <<set $d0_npc_morningwood to false>>
+  <<set $d0_npc_watching to false>>
+
+  /* --- Items collected this day --- */
+  <<set $hasAldricSword to false>>
+  <<set $hasAldricLetter to false>>
+  <<set $hasMoonflower to false>>
+  <<set $hasJasmine to false>>
+  <<set $hasGingerRoot to false>>
+  <<set $hasHandkerchief to false>>
+
+  /* --- Point of no return --- */
+  <<set $bridgeWarningAcknowledged to false>>
+
+  /* --- Day framing --- */
+  <<set $dayNumber to 0>>
+  <<set $dayLabel to "The Rite">>
+  <<set $timeSlot to "MORNING">>
+
+  /* --- Objectives ---
+       Queen's Gift is listed first per its own integration note:
+       Seraphina timed it to arrive before the goodbye, pleasure
+       before grief before the tower. The bridge objective is
+       added now and stays visible the whole morning, carrying its
+       own warning text baked into the hub card rather than a
+       separate objective-panel warning. */
+  <<addObjective "queens_gift" "A knock at the door — not a servant's" "MAIN">>
+  <<addObjective "farewell_queen" "Say goodbye — the Queen's Chambers" "MAIN">>
+  <<addObjective "cross_bridge" "When you're ready — cross the bridge to the Moonspire Tower" "MAIN">>
+<</widget>>

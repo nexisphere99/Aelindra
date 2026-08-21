@@ -1,0 +1,49 @@
+:: day-2_npc_caedric [nobr]
+<<npcPortrait "caedric" "Ser Caedric">>
+<h3>Old Ser Caedric   The Retired Knight</h3>
+
+<p>He's sitting in the alcove near the portrait gallery, where the old knights always sit   a stone bench with a worn cushion that's been here since before I was born. Ser Caedric. Seventy-three. Retired from the Royal Guard twelve years ago when his knees gave out. He still wears his sword, though the palace wags say it's rusted into the scabbard.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Prince Edrin." He doesn't stand. His knees won't allow it, and we stopped pretending years ago.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ser Caedric."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Sit with me a moment?"</div>
+
+<p>I shouldn't. I have places to be, things to dread, a future to collapse into. But Caedric served my grandmother. He carried me on his shoulders when I was three. He taught me to whittle, badly, and never once told me I was too old for it.</p>
+
+<p>I sit.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"You look like your mother. Same look she had the day your father died. Like the world has just told a terrible joke and you're still deciding whether to laugh."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I didn't know you knew my father well."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"I carried his coffin." Caedric's voice is matter-of-fact. Old soldiers talk about death the way bakers talk about flour   a material they've worked with so long it's lost its mystery. "Good man. Quiet. Loved your mother more than anything, including himself, which is the only kind of love worth having."</div>
+
+<p>He adjusts his sword belt. The leather creaks.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"The palace is nervous today. Guards doubled on the east wing. Ilara sighted at the Moonspire. The kitchen staff are making comfort food   always a sign of institutional anxiety. Marta makes cheese pastries when she's worried."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You notice a lot for a man on a bench."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"I notice everything from this bench. It's the perfect surveillance position. Every corridor converges here. I've been monitoring palace morale from this spot since before you could walk." He gives me a look   sharp, fond, knowing. "Whatever your mother told you today   and she told you something, because you've gone grey around the eyes   remember that the Thornridge queens survived worse. Your great-grandmother fought a war at nineteen with half an army and a broken sword. She won. Not because she was strong. Because she was stubborn."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Being stubborn and being strong aren't the same thing."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"They're not. But stubbornness is more reliable. Strength fails. Stubbornness just keeps showing up."</div>
+
+<p>He pats my knee with a gnarled hand.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Go on. Do whatever it is you need to do. I'll be on this bench."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're always on this bench."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"That's the stubbornness."</div>
+
+<<set $d2_npc_caedric to true>>
+<<set $statRES += 1>>
+<<set $stress -= 3>>
+
+<div class="scene-end">
+  [[Continue → |day-2_corridors]]
+</div>

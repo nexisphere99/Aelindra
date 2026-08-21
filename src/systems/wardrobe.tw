@@ -1,0 +1,15 @@
+:: wardrobe-system [script nobr]
+/*
+  WARDROBE / OUTFIT SYSTEM   STUB
+  ------------------------------------------------------------
+  Not implemented yet. Future home for:
+    - an outfit list ($wardrobe = [{id, name, GRA, ALL, AUT}, ...])
+    - a <<wearOutfit>> widget that sets $currentOutfit and the
+      outfitGRA/outfitALL/outfitAUT modifiers declared in
+      StoryInit.tw
+    - a wardrobe selection passage, gated behind
+      $wardrobeUnlocked (see StoryInit.tw and the
+      #outfit-block sidebar panel, which is already wired up
+      in StoryInterface.tw + script.js and just waiting on
+      this system to populate it).
+*/

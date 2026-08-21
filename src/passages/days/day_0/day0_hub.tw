@@ -1,0 +1,147 @@
+:: day0_hub [nobr]
+<div class="hub-header">
+  <h2>Crown's Rest — <<print formatDayNumber($dayNumber)>>: The Rite</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
+</div>
+
+<div class="location-grid">
+
+<!-- ========== THE BRIDGE — POINT OF NO RETURN ========== -->
+<div class="loc-card loc-final">
+  <<locationImage "moonspire_bridge" "The Bridge to Moonspire Tower">>
+  <h3>🌙 The Bridge — Moonspire Tower</h3>
+  <p class="loc-flavor">The covered bridge. Thirty paces between who you are and who you're about to become. Rowan is waiting at the near end.</p>
+  <span class="badge main">⚔ Cross the Bridge — When You're Ready</span>
+  <p class="loc-warning">⚠ <em>Once you cross, you cannot return. Complete any remaining business first.</em></p>
+  <<if $bridgeWarningAcknowledged>>
+    [[Cross the Bridge → |day0_bridge]]
+  <<else>>
+    [[Cross the Bridge → |day0_bridge_confirm]]
+  <</if>>
+</div>
+
+<!-- ========== EDRIN'S CHAMBERS ========== -->
+<div class="loc-card">
+  <<locationImage "palace_chambers" "Edrin's Chambers">>
+  <h3>🛏 Edrin's Chambers</h3>
+  <p class="loc-flavor">Your room. For the last time as this person.</p>
+  <<if not $d0_queens_gift>>
+    <span class="badge main">⚔ Someone is knocking — not a servant</span>
+  <</if>>
+  <<if not $d0_npc_brin>>
+    <span class="badge side">🗡 Brin brought breakfast</span>
+  <</if>>
+  <<if not $d0_npc_sword>>
+    <span class="badge side">🗡 The training sword on the wall</span>
+  <</if>>
+  <<if not $d0_npc_morningwood>>
+    <span class="badge side">🗡 The body's goodbye</span>
+  <</if>>
+  [[Enter → |day0_chambers]]
+</div>
+
+<!-- ========== QUEEN'S CHAMBERS ========== -->
+<<if not $d0_queen>>
+<div class="loc-card">
+  <<locationImage "queen_chambers" "Queen's Chambers">>
+  <h3>👑 Queen's Chambers</h3>
+  <p class="loc-flavor">She's waiting. She didn't know if you'd come. She hoped.</p>
+  <span class="badge main">⚔ Say goodbye — as a son</span>
+  [[Enter → |day0_queen]]
+</div>
+<</if>>
+
+<!-- ========== CORRIDORS ========== -->
+<div class="loc-card">
+  <<locationImage "corridors" "Palace Corridors">>
+  <h3>🏛 Palace Corridors</h3>
+  <p class="loc-flavor">Portraits of queens. The smell of stone and centuries.</p>
+  <<if $d2_npc_caedric and not $d0_npc_caedric>>
+    <span class="badge side">🗡 Ser Caedric on his bench</span>
+  <</if>>
+  <<if not $d0_npc_maids2>>
+    <span class="badge side">🗡 Senior staff near the east wing</span>
+  <</if>>
+  <<if not $d0_npc_watching>>
+    <span class="badge side">🗡 Watching them move</span>
+  <</if>>
+  [[Explore → |day0_corridors]]
+</div>
+
+<!-- ========== TRAINING YARD ========== -->
+<div class="loc-card">
+  <<locationImage "training_yard" "Training Yard">>
+  <h3>⚔ Training Yard</h3>
+  <p class="loc-flavor">Empty this morning. But something was left on the weapon rack.</p>
+  <<if not $d0_npc_aldric_gift>>
+    <span class="badge side">🗡 Something new on the rack</span>
+  <</if>>
+  [[Enter → |day0_training]]
+</div>
+
+<!-- ========== KITCHENS ========== -->
+<<if $d2_npc_marta>>
+<div class="loc-card">
+  <<locationImage "kitchens" "Palace Kitchens">>
+  <h3>🍞 Palace Kitchens</h3>
+  <p class="loc-flavor">Every surface covered. She's been baking since midnight.</p>
+  <<if not $d0_npc_marta3>>
+    <span class="badge side">🗡 Marta made your favourite</span>
+  <</if>>
+  [[Enter → |day0_kitchen]]
+</div>
+<</if>>
+
+<!-- ========== LIBRARY ========== -->
+<div class="loc-card">
+  <<locationImage "grand_library" "Grand Library">>
+  <h3>📚 Grand Library</h3>
+  <p class="loc-flavor">Empty. Dawn light. The constellations turn in silence. Haeth is at his desk.</p>
+  <<if not $d0_npc_haeth>>
+    <span class="badge side">🗡 The librarian is waiting</span>
+  <</if>>
+  [[Enter → |day0_library]]
+</div>
+
+<!-- ========== GARDENS ========== -->
+<<if $d2_npc_wynn>>
+<div class="loc-card">
+  <<locationImage "royal_gardens" "Royal Gardens">>
+  <h3>🌿 Royal Gardens</h3>
+  <p class="loc-flavor">Morning light. The jasmine has been uncovered. New growth.</p>
+  <<if not $d0_npc_wynn3>>
+    <span class="badge side">🗡 Old Wynn by the jasmine</span>
+  <</if>>
+  [[Enter → |day0_gardens]]
+</div>
+<</if>>
+
+<!-- ========== SERVANT QUARTERS ========== -->
+<<if $d2_npc_alva>>
+<div class="loc-card">
+  <<locationImage "servant_quarters" "Servant Quarters">>
+  <h3>🔑 Servant Quarters</h3>
+  <p class="loc-flavor">Alva is standing at her desk. Not sitting. Standing.</p>
+  <<if not $d0_npc_alva3>>
+    <span class="badge side">🗡 "I have a report"</span>
+  <</if>>
+  [[Enter → |day0_servants]]
+</div>
+<</if>>
+
+<!-- ========== MOONSPIRE TOWER (PRE-BRIDGE, LOWER LEVELS) ========== -->
+<div class="loc-card loc-new">
+  <<locationImage "moonspire_tower" "Moonspire Tower">>
+  <h3>🌙 Moonspire Tower — Lower Levels</h3>
+  <p class="loc-flavor">Accessible via the service stair, not the bridge. The preparations are underway.</p>
+  <<if $d1_npc_nara and not $d0_npc_nara2>>
+    <span class="badge side">🗡 Nara on the stairs, carrying candles</span>
+  <</if>>
+  <<if not $d0_npc_vael2>>
+    <span class="badge side">🗡 The Apothecary — the potion is ready</span>
+  <</if>>
+  [[Enter → |day0_moonspire_lower]]
+</div>
+
+</div>

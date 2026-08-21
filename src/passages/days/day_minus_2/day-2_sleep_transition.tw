@@ -1,0 +1,10 @@
+:: day-2_sleep_transition [nobr]
+<<day1Init>>
+<<set $energy to 80>>
+<<set $stress += 5>>
+
+<div class="day-transition">
+  <h2>Night passes. You don't sleep until the hour before dawn.</h2>
+  <p class="transition-morning">In that single hour, you dream of water   a deep, warm pool, and you're sinking into it, and it's closing over your head, and you can't tell if you're drowning or being born.</p>
+  [[Dawn breaks. → |day-1_hub]]
+</div>

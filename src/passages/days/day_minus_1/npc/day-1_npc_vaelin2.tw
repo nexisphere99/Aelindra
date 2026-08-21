@@ -1,0 +1,41 @@
+:: day-1_npc_vaelin2 [nobr]
+<<npcPortrait "vaelin" "Brother Vaelin">>
+<h3>Brother Vaelin   Theological Update</h3>
+
+<p>He's still on the floor. I think he may have been here all night   the book fortress has grown, and there are crumbs near his left knee suggesting he ate at some point but didn't bother standing up to do it.</p>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"Your Highness!" He scrambles up. Books topple. He catches one, loses four. "I   I've been working. I found something else."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The <em>vaelthin</em> research?"</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"Beyond that. I found the original Kaethric commentary on the Founding Charter   the marginalia, the glosses, the notes the scholars made while debating the wording. It's in the restricted section   Elise let me in, please don't tell Haeth   and the commentary is fascinating."</div>
+
+<p>He's vibrating with scholarly excitement, the kind that obliterates awareness of social context. He doesn't notice my bandaged hands or the shadows under my eyes or the fact that I look like a man who's been fighting the world and losing. He notices texts.</p>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"The original drafters debated the succession clause extensively. The primary argument was about what constitutes a 'daughter of the blood.' One faction   the literalists   wanted to specify biological birth. Another faction   the pragmatists   argued for broader language. The pragmatists won. The final wording is 'those who carry the Mother's form by blood and rite.' By blood AND rite. 'Rite' is the key word. It explicitly allows for transformation   for someone who becomes a daughter through sacred ritual, not just through birth."</div>
+
+<p>I stare at him.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Brother Vaelin. Are you telling me the Founding Charter specifically anticipated the Rite of Becoming?"</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"I'm telling you the drafters left the door open. Deliberately. The broader language was a conscious choice   they knew about the Silverveil, they knew about transformation magic, and they included it in the succession criteria. Which means..." He looks at me. The scholarly excitement dims slightly as the implications of what he's saying catch up to the saying of it. "Which means if you   if someone were to undergo the Rite   their claim would be legally sound. Not a loophole. Not a stretch. Legally explicit."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Have you shared this with anyone?"</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"No, Your Highness. Just you. And Elise, who helped me find it, but she doesn't know why I was looking."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Keep it that way. And keep working. I want every reference, every gloss, every scrap of marginalia that mentions 'rite' in the context of succession. Compile it. Date it. Make it unassailable."</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"Yes, Your Highness." He's already sinking back to the floor, hands reaching for books, his mind already three paragraphs ahead of his body. "I'll have it within two days."</div>
+
+<p>Two days. Everything in my life has a two-day deadline.</p>
+
+<<set $d1_npc_vaelin2 to true>>
+<<set $statWIS += 2>>
+<<set $statAUT += 1>>
+<<set $loreSuc += 2>>
+<<set $vaelinQuestActive to true>>
+
+<div class="scene-end">
+  [[Continue → |day-1_library_hub]]
+</div>

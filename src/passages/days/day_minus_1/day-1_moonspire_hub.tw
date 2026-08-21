@@ -1,0 +1,48 @@
+:: day-1_moonspire_hub [nobr]
+<<locationImage "moonspire_tower" "Moonspire Tower">>
+<h2>🌙 Moonspire Tower</h2>
+<p class="moonspire-flavor">White stone walls. Enchanted candles. Tapestries that shift when you're not looking. The air tastes electric.</p>
+
+<<if not $d1_moonspire>>
+  <div class="interaction-card main">
+    <<npcPortrait "ilara" "Archsorceress Ilara">>
+    <h4>🔮 The Ritual Chamber   Archsorceress Ilara</h4>
+    <p>She's waiting at the top of the stairs. She knew you'd come.</p>
+    [[Climb the stairs|day-1_moonspire]]
+  </div>
+<</if>>
+
+<<if $d1_moonspire>>
+  <<completeObjective "moonspire_explore">>
+
+  <<if not $d1_npc_nara>>
+  <div class="interaction-card side">
+    <<npcPortrait "nara" "Nara">>
+    <h4>🎵 Apprentice Quarters   Lower Level</h4>
+    <p>A wrong turn leads down. A painted door is open. Something mechanical is playing music, badly.</p>
+    [[Investigate|day-1_npc_nara]]
+  </div>
+  <</if>>
+
+  <<if not $d1_npc_vael>>
+  <div class="interaction-card side">
+    <<npcPortrait "vael" "Mistress Vael">>
+    <h4>⚗ The Apothecary   Third Level</h4>
+    <p>A circular room of glass bottles and competing scents. Someone is grinding something with unnecessary force.</p>
+    [[Enter|day-1_npc_vael]]
+  </div>
+  <</if>>
+
+  <div class="interaction-card">
+    <h4>📜 Tapestry Gallery   Stairwell</h4>
+    <p class="moonspire-flavor">The serpent becoming a river. The tree becoming a woman. The bird becoming a song. They shift when you blink.</p>
+  </div>
+
+  <<if $d1_npc_nara and $d1_npc_vael>>
+    <p class="empty-note">The tower has settled into its hush. Just candlelight, stone, and the tapestries watching.</p>
+  <</if>>
+<</if>>
+
+<div class="nav-return">
+  [[← Cross the bridge back|day-1_hub]]
+</div>

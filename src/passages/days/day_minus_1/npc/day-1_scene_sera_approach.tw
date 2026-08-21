@@ -1,0 +1,43 @@
+:: day-1_scene_sera_approach [nobr]
+<<npcPortrait "sera" "Sera">>
+<h3>The Approach</h3>
+
+<p>She's in the corridor near the guest wing. Sera. Twenty-four. Dark hair braided and pinned under the white cap that all the senior handmaidens wear. Dark eyes that have been finding mine across rooms and corridors for six months   across the breakfast hall, across the laundry corridor, once across the throne room when she was replacing the cushions and I was pretending to review petitions and we held eye contact for four seconds too long and neither of us said anything afterward.</p>
+
+<p>She's carrying linens. She always seems to be carrying linens when I see her. I've begun to suspect the linens are a prop   an excuse to be in corridors where a handmaiden might cross paths with a prince.</p>
+
+<p>She sees me. Stops. The linens press against her chest. Her eyes take me in   the bandaged hands, the sweat-stained shirt from the training yard, the wild-eyed look of a man who has just spent two hours beating a training dummy to death and is still vibrating with undischarged energy.</p>
+
+<div class="dialogue"><span class="speaker">SERA</span>"Your Highness." Her voice is low. Careful. The voice of a woman who is aware of rank and proximity and the distance between what is proper and what is desired. "You look like you've been fighting."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The training dummy lost."</div>
+
+<div class="dialogue"><span class="speaker">SERA</span>"I heard." A small smile. "The armoury is composing a eulogy."</div>
+
+<p>We're standing three feet apart. The corridor is empty. The afternoon light slants through a window and catches the fine hairs at her temple, the curve of her collarbone above the neckline of her dress.</p>
+
+<p>I should walk away. I should go to my chambers and stare at the ceiling and think about tomorrow and the tower and the Rite and the body that will be rewritten while I sleep.</p>
+
+<p>Instead I say:</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Sera."</div>
+
+<p>Her name. I've never said her name directly to her face before. It changes the air between us. The distance of <em>Your Highness</em> and <em>Handmaiden</em> collapses, and what's left is a man and a woman standing in an empty corridor with six months of unspoken tension and the particular electricity of mutual want acknowledged for the first time.</p>
+
+<div class="dialogue"><span class="speaker">SERA</span>"Yes?" Her voice is quieter now. The linens have lowered slightly. She's looking at me the way she's always looked at me   but now she's not hiding it.</div>
+
+<<set $d1_npc_sera to true>>
+<<set $seraEncountered to true>>
+
+<div class="choice-cards">
+  <div class="interaction-card main">
+    <h4>Stay</h4>
+    <p>"Come with me."</p>
+    [[→ |day-1_scene_sera_sex]]
+  </div>
+  <div class="interaction-card side">
+    <h4>Walk away</h4>
+    <p>Not tonight. Not like this   desperate, terrified, using her body as an anchor.</p>
+    [[→ |day-1_corridors]]
+  </div>
+</div>

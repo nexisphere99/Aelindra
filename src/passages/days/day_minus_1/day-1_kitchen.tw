@@ -1,0 +1,23 @@
+:: day-1_kitchen [nobr]
+<<locationImage "kitchens" "Palace Kitchens">>
+<h2>🍞 Palace Kitchens</h2>
+<p>The output is staggering. Marta is baking like the world is ending. She might not be wrong.</p>
+
+<<completeObjective "visit_kitchen_d1">>
+
+<<if $d2_npc_marta and not $d1_npc_marta2>>
+<div class="interaction-card side">
+  <<npcPortrait "marta" "Marta">>
+  <h4>👩‍🍳 Crisis Tempo</h4>
+  <p>Bread in three varieties. Two soups. A cake usually reserved for state occasions.</p>
+  [[Sit|day-1_npc_marta2]]
+</div>
+<</if>>
+
+<<if not $d2_npc_marta or $d1_npc_marta2>>
+  <p class="empty-note">The kitchen churns on regardless. Heat, steam, the clatter of a palace feeding itself through a crisis.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

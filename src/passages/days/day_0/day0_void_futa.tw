@@ -1,0 +1,42 @@
+:: day0_void_futa [nobr]
+<h2>Void — Two Channels</h2>
+
+<p>Nothing.</p>
+
+<p>The same void. The same absence. But the absence is shaped differently — not the total surrender of the full transformation, but a void that holds two things in suspension. Like a river that has split into two channels and runs parallel, each carrying the same water in different directions, each arriving at the same sea.</p>
+
+<p>Somewhere far away: lute strings. Rowan on the bridge. Waiting for someone to emerge from the tower who is neither the prince they knew nor the princess the world expects, but something between. Something that Rowan — half-elf, half-human, perpetually between — might understand better than anyone.</p>
+
+<p>Somewhere closer: a heartbeat. Mine. New. Beating in a chest that holds breasts and a body that holds both, and the rhythm is steady, and the rhythm is complicated, and the rhythm is mine.</p>
+
+<p>The darkness thins. Light gathers.</p>
+
+<p>Not yet. Not yet.</p>
+
+<p>The darkness holds me. The last space where I am neither one thing nor the other. The last mercy before I have to be both.</p>
+
+<<set $d0_void to true>>
+
+/* === PRE-SET DAY 1 VARIABLES (FUTANARI ROUTE) === */
+<<set $mcName to "Aelindra">>
+<<set $mcTitle to "Princess of Aethermere">>
+<<set $mcHeight to "5'6\"">>
+<<set $mcBust to "A-B cup">>
+<<set $mcWaist to "26\"">>
+<<set $mcHips to "33\"">>
+<<set $mcSensitivity to "Extreme (dual anatomy)">>
+<<set $mcBreastSize to "A-B">>
+<<set $mcPortrait to "aelindra_futa_day1">>
+<<set $bodyStatusVisible to true>>
+<<set $cockPresent to true>>
+<<set $cockLength to "7 inches">>
+<<set $vaginaPresent to true>>
+<<set $dualAnatomy to true>>
+<<set $concealmentDifficulty to 30>>
+
+<div class="day-transition">
+  <p>The darkness holds. Two threads of light — silver and amber — run parallel through the void.</p>
+  <p>A heartbeat where they converge. Yours. Both.</p>
+  <p class="transition-morning"><em>Tomorrow, someone new opens her eyes. She carries everything.</em></p>
+  [[Wake → |day1_hub_futa]]
+</div>

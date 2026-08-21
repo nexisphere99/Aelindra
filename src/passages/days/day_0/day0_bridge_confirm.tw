@@ -1,0 +1,31 @@
+:: day0_bridge_confirm [nobr]
+<div class="bridge-confirm">
+  <h2>⚠ Point of No Return</h2>
+  <p>Once you cross the bridge, the Rite will begin. You will not be able to return to the palace until it's over.</p>
+  <p>Any encounters you haven't completed will be unavailable.</p>
+
+  <div class="confirm-checklist">
+    <h4>Farewells</h4>
+    <ul>
+      <li class="<<if $d0_queen>>done<<else>>pending<</if>>">Queen Seraphina <<if $d0_queen>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_caedric>>done<<else>>pending<</if>>">Ser Caedric <<if $d0_npc_caedric>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_marta3>>done<<else>>pending<</if>>">Head Cook Marta <<if $d0_npc_marta3>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_aldric_gift>>done<<else>>pending<</if>>">Aldric's gift <<if $d0_npc_aldric_gift>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_haeth>>done<<else>>pending<</if>>">Librarian Haeth <<if $d0_npc_haeth>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_wynn3>>done<<else>>pending<</if>>">Old Wynn <<if $d0_npc_wynn3>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_npc_alva3>>done<<else>>pending<</if>>">Mistress Alva <<if $d0_npc_alva3>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_queens_gift>>done<<else>>pending<</if>>">The Queen's Gift <<if $d0_queens_gift>>✓<<else>>—<</if>></li>
+    </ul>
+  </div>
+
+  <div class="confirm-buttons">
+    <<link "I'm ready. Cross the bridge.">>
+      <<set $bridgeWarningAcknowledged to true>>
+      <<goto "day0_bridge">>
+    <</link>>
+
+    <<link "Not yet. Go back.">>
+      <<goto "day0_hub">>
+    <</link>>
+  </div>
+</div>

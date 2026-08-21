@@ -1,0 +1,24 @@
+:: day0_npc_sword [nobr]
+<h3>The Sword on the Wall</h3>
+
+<p>The training sword. Mounted above the desk on two iron pegs. Blade dull — it was never meant to be sharp. The grip worn to a polish by years of evening drills, the leather wrapping smoothed by palm sweat and repetition until it's as soft as skin.</p>
+
+<p>I take it down. Hold it. The weight is familiar — not heavy, not light, exactly what a practice sword should weigh. The balance point is six inches above the guard, where my index finger naturally rests when I grip for a thrust.</p>
+
+<p>I assume first position. Feet apart, sword extended, left hand behind my back. The stance is muscle memory — I don't think about it. My body simply knows where every part of itself should be in relation to the blade.</p>
+
+<p>I hold it for a long moment. Then I lower the sword. Set it on the desk.</p>
+
+<p>This body knows how to fight. The new body won't — not immediately. The muscle memory will be scrambled, the leverage different, the reach shorter by five inches. I'll have to relearn everything. Aldric will have to reteach me from the beginning, adjusting for a body that is lighter, shorter, with a different centre of gravity and narrower shoulders and—</p>
+
+<p>Breasts. I'll have breasts. How do you hold a sword with breasts? Is there a stance adjustment? Do the Silverveil teach that?</p>
+
+<p>The absurdity of this thought — standing in my chambers at dawn on the morning I'm going to have my entire body rewritten, worrying about sword grip with breasts — is so profound that I laugh. Once. A single, sharp, unhinged sound that echoes off the stone walls and comes back to me sounding exactly like a man losing his mind.</p>
+
+<p>I put the sword back. It can stay here. A relic. A reminder of the man who held it.</p>
+
+<<set $d0_npc_sword to true>>
+
+<div class="scene-end">
+  [[Continue → |day0_chambers]]
+</div>

@@ -1,0 +1,122 @@
+:: day-2_queen [nobr]
+<div class="scene-image"><<locationImage "queen_chambers" "Queen's Chambers">></div>
+
+<h2>Queen's Chambers   The Truth</h2>
+
+<p>The corridor to the east wing is long and gets longer every time I walk it. Portraits line the walls   my grandmother in battle armour, her mother in a coronation gown, her mother's mother on horseback with a falcon on her wrist. Every painting is a woman. Every queen, an unbroken line stretching back six hundred years to the Founding.</p>
+
+<p>At the end of that line: me. A man. The crack in the chain.</p>
+
+<p>More guards than usual flank the oak door to Mother's chambers. They bow. I nod. One of them   a young soldier I don't know, barely old enough to shave   looks at me with something that might be pity. I hate it immediately.</p>
+
+<p>The door is heavy. Carved with the royal crest: a silver stag beneath a crescent moon. I push it open.</p>
+
+<p>Inside: dim. The curtains are drawn against the daylight, which means it's a bad day. Mother only blocks the sun when the light hurts her eyes, and the light only hurts her eyes when the illness is flaring and the healers have given her the strong tinctures that make her pupils wide and fragile.</p>
+
+<p>The smell hits me. Medicinal herbs   rosemary, meadowsweet, something sharp and astringent I don't know the name of. Honey, because the healers mix it into everything to mask the taste of the bitter draughts and beneath all of it, quiet as a secret, the copper-sweet rot. The smell of her body consuming itself from the inside.</p>
+
+<p><<npcPortrait "seraphina" "Queen Seraphina">>She sits propped against a fortress of pillows, a writing desk balanced across her lap. Papers everywhere   she's been working. Of course she has. Queen Seraphina does not lie in bed and wait to die. She lies in bed and governs, and woe to the minister who assumes her horizontal position indicates diminished authority.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Close the door. Sit. Don't argue until I finish."</div>
+
+<p>Her voice. Even now, even thinned by illness and the draughts that make her tongue slow, her voice has the quality of a drawn bowstring   controlled tension, the promise of release. I grew up obeying that voice. I sit.</p>
+
+<p>She studies me. Those eyes   grey-blue, same as mine, the one thing the portraits all share across six centuries of queens. Hers are sunken now, ringed dark, but the fire in them could smelt iron.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"How much do you know about the succession law?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Maternal line. Eldest daughter inherits. Unbroken for "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Six hundred and twelve years and do you know why the Elder Council has refused every attempt to alter it?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Tradition. Prophecy. Stubbornness."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"The Founding Charter was signed in dragon's blood, Edrin. Whether that's literal or metaphor, it doesn't matter   the Elder Council treats it as divine law. Seven queens have tried to amend it. Seven failed. I was the eighth. I failed three years ago, before the illness, when I still had political capital to burn. The Council said no. They will always say no."</div>
+
+<p>She lifts a document from the desk. Official seal. I recognise the Ashborne crest before she speaks.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Lord Vareth submitted a formal succession claim last month. I've been blocking the hearing. I can block it for two more days. After that, the Elder Council convenes and rules."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"They'll rule for Ashborne?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"They'll rule that without a female heir, the crown passes to the nearest eligible house. Which is Ashborne. Yes."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then we fight. We rally the bannermen "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Vareth has alliances with Tormark, Veldain, and the Free Cities of the Sarrow Coast. Combined forces: twelve thousand professional soldiers. We can field seven thousand, and two thousand of those are garrison troops who haven't fought since the border skirmish nine years ago. The military analysis is not ambiguous, Edrin. If we fight, we lose. Not might lose. Will lose. Within eight weeks."</div>
+
+<p>The room is very quiet. I can hear the candle flames guttering. I can hear my own heartbeat, stupidly loud.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What about a political marriage? Adopt a girl from another house, marry her to "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Non-blood heirs have no claim under the Charter. It was tried in the fourth century. The resulting civil war killed twenty thousand people."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Legitimise a cousin. Father's side "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Your father was an only child from a minor house with no living relatives. I checked. Twice."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Change the Elder Council. Replace them with "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Appointed for life by the previous Council. Self-perpetuating. I can't remove them without cause, and 'they disagree with me' isn't cause."</div>
+
+<p>Every door I open, she's already closed. Every escape route, already bricked shut. She's not presenting a problem   she's presenting a verdict and she knows it. I can see it in the way she watches me: patient, certain, and underneath it all, devastated.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"There is one alternative."</div>
+
+<p>She tells me about the Rite of Becoming.</p>
+
+<p>The Silverveil. The Moonspire Tower. Archsorceress Ilara, who she's already spoken with. The Rite   ancient, forbidden, performed three times in recorded history. Each time, the subject survived. Each time, the transformation was permanent. Complete. Total.</p>
+
+<p>She tells me what it means. What it would do to my body. What I would become.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"In every legal, biological, and magical sense   you would be my daughter. The succession holds. The Ashbornes have no claim. The kingdom survives."</div>
+
+<p>I stare at her. The candles flicker. Somewhere in the palace, a clock chimes noon, and the sound seems to come from very far away, from a world where things make sense and mothers don't ask their sons to </p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're asking me to stop being your son."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I'm asking you to save everything I've lived for. Everything your grandmother lived for. Everything your great-grandmother bled for on the battlefield at Thornridge."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"By becoming a <em>woman</em>?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"By becoming the heir this kingdom needs."</div>
+
+<p>The words hang in the air between us. They have weight   I can feel them pressing on my chest, on my ribs, on the lungs that suddenly aren't working the way lungs should work. I'm not breathing. I am, but it doesn't feel like it.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I need to think."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"You have two days. Then Vareth files his formal challenge, and the Elder Council rules. After that, no Rite, no ritual, no magic in the world will matter. The law will have spoken."</div>
+
+<p>I stand. My legs work, which surprises me. I walk to the door. My hand finds the handle through some miracle of muscle memory because my vision has gone narrow and strange, like looking down a long corridor.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Edrin."</div>
+
+<p>I stop. Don't turn.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I didn't do this to you. The world did this. I'm just the one who refuses to pretend it isn't happening."</div>
+
+<p>I leave. I don't slam the door. I want to. I want to put my fist through the ancient oak and feel my knuckles split and bleed because at least that would be a pain I chose, a pain that makes sense, a pain with a clear cause and a clear end.</p>
+
+<p>Instead I press my forehead against the cold stone of the corridor wall. I breathe. In, out. In, out. The stone smells like nothing. Like minerals and centuries and the accumulated indifference of rock that has stood here long before I was born and will stand long after I'm dust.</p>
+
+<p>Two days.</p>
+
+<p>Two days to decide whether I lose my body or my kingdom.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $stress += 35>>
+<<set $affSeraphina += 3>>
+<<set $loreSuc += 1>>
+<<set $d2_queen to true>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "AFTERNOON">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<completeObjective "queen_summons">>
+<<addObjective "research_library" "Seek answers   the Grand Library holds records of the Rite" "MAIN">>
+<<addObjective "explore_servants" "Explore the servant quarters   Below Stairs" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-2_hub]]
+</div>

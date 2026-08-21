@@ -1,0 +1,23 @@
+:: day-2_servants [nobr]
+<<locationImage "servant_quarters" "Servant Quarters">>
+<h2>🔑 Servant Quarters   Below Stairs</h2>
+<p>Clean corridors beneath the palace. The machinery of royal life.</p>
+
+<<completeObjective "explore_servants">>
+
+<<if not $d2_npc_alva>>
+<div class="interaction-card side">
+  <<npcPortrait "alva" "Mistress Alva">>
+  <h4>🗝 Mistress Alva</h4>
+  <p>The Head Housekeeper. Iron-grey hair, ramrod posture. She doesn't curtsy. She never curtsies.</p>
+  [[Speak with her|day-2_npc_alva]]
+</div>
+<</if>>
+
+<<if $d2_npc_alva>>
+  <p class="empty-note">The servants go about their work. You're not supposed to be here, and lingering would make them uncomfortable.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

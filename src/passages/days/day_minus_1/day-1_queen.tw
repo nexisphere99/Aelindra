@@ -1,0 +1,116 @@
+:: day-1_queen [nobr]
+<div class="scene-image"><<locationImage "queen_chambers" "Queen's Chambers">></div>
+
+<h2>Queen's Chambers   Round Two</h2>
+
+<p>I didn't sleep. I should clarify   I slept for one hour, in the grey nothing between deep night and dawn, and dreamed of water closing over my head. So functionally, I didn't sleep. My body moved through the motions of waking anyway: legs off the bed, feet on stone, the hiss through my teeth at the cold. Muscle memory doesn't need consciousness. It just needs a body, and mine   for now   complies.</p>
+
+<p>I dress without looking at the mirror. Not today. The mirror and I have said what we needed to say.</p>
+
+<p>I skip breakfast. My stomach is a clenched fist and the thought of bread and cheese makes something in my throat tighten reflexively. I drink water from the pitcher by the bed. It's been sitting overnight and tastes of iron from the jug and the minerals in the palace well-water. It tastes real. That's enough.</p>
+
+<p>The walk to the east wing is familiar now   I made this walk yesterday and every step felt like a mile. Today it feels like a march. I'm not dragging my feet. I'm advancing. There's a difference. Yesterday I was a man being summoned. Today I'm a man with a list.</p>
+
+<p>I wrote the list at three in the morning by candlelight, because sleep wasn't coming and my mind was a dog chasing its own tail and writing things down was the only way to make the spinning stop. It's on a scrap of parchment in my pocket: every alternative I could think of, every legal angle, every political manoeuvre, every desperate half-baked scheme that came to me in the dark.</p>
+
+<p>The guards bow. I nod. The young soldier from yesterday   the one who looked at me with pity   is gone, replaced by a veteran who looks at me with nothing, which I prefer. The oak door opens.</p>
+
+<p><<npcPortrait "seraphina" "Queen Seraphina">>Mother is awake. She's propped on her pillows, but she's moved to the chaise longue by the window today   a good sign, maybe, or a performance of strength for my benefit. The curtains are half-drawn. Daylight stripes her face: half in light, half in shadow. She looks like a portrait of herself, painted by someone who loved her but couldn't lie about how thin she's become.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"You have a list," she says, before I've said a word. "I can see the parchment in your pocket."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I have a list."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Read it."</div>
+
+<p>I pull it out. My hands are steady. I am going to fight this one more time   not because I think I'll win, but because the man I am right now needs to know he tried everything. That when the door finally closes, he was the one who checked every lock.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Adopt a girl. A commoner with the right blood markers   there must be distant cousins, third or fourth generation, someone "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"The Elder Council requires direct blood descent. 'Blood of the Queen's body,' it reads. No adoption has ever been recognised for succession in six hundred years of case law. Vareth's lawyers   and he has seven, Edrin, seven of the sharpest legal minds in the kingdom, all paid handsomely to find exactly these loopholes and seal them shut   have already filed a preemptive challenge against any adoption claim."</div>
+
+<p>I cross it off. The ink is still wet.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then find a bastard cousin. Father surely "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Your father was faithful to me." She says this without sentiment, as a fact, the way you'd say water is wet. "He was faithful because he loved me and because he lacked the imagination for infidelity. Even if he hadn't been   illegitimate blood is excluded by Clause Seven of the Charter. 'None born outside the sanctified union of the Crown shall bear claim to its inheritance.' The language is explicit. The precedent is unbreakable."</div>
+
+<p>I cross it off.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then we change the law. You're the Queen. You've been the Queen for twenty-five years. You have authority "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I have authority over every law in this kingdom except the Founding Charter. The Charter predates the monarchy   it created the monarchy. Amending it requires a two-thirds vote of the Elder Council. Seven of the twelve Elders are, as of last month, receiving stipends from Ashborne-affiliated trade houses. I've been trying to reform the Council for fifteen years. I was doing it before I was sick, when I had full political capital, when I could call in every favour I was owed. I failed. Fifteen years, Edrin. Do you think you'll succeed in two days?"</div>
+
+<p>My hand tightens on the parchment. The next item. The one I know is desperate.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then we dissolve the Elder Council. Declare a state of emergency. Strip their authority "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"That requires a two-thirds vote of the Council itself. The founders   clever bastards that they were   designed it to be un-dissolvable. It's a closed loop. The only body that can dissolve the Council is the Council, and the Council will never vote to dissolve itself."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then we FIGHT!" The word comes out louder than I intend. It fills the room, bounces off the stone walls, disturbs the candle flames.</div>
+
+<p>Mother doesn't flinch.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"We raise the army. Call the banners. Every loyal house "</div>
+
+<p>The cough hits her. Not a polite cough, not a dry tickle   a racking, wet, tearing sound that comes from somewhere deep in her chest and shakes her entire body. She doubles over on the chaise, one hand on her mouth, the other gripping the armrest with knuckles like white bone. It goes on for thirty seconds. Thirty seconds of watching my mother's body try to rip itself apart while I stand three feet away with a list in my hand and nothing useful to do with either.</p>
+
+<p>She pulls the handkerchief away from her mouth. She tries to fold it quickly   hide it   but I see. Red. Not pink, not rust, not the ambiguous brown of old blood. Red. Fresh. The colour of life leaving.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Vareth has alliances with Velmara, the Iron Reach, and the Coastal Principalities." Her voice is raw now, scraped thin by the cough, but she keeps talking because stopping would be admitting weakness and she will burn to ash before she admits weakness. "Their combined forces outnumber ours three to one. Our generals have war-gamed it. Eight scenarios. We lose all eight. The capital falls in six to eight weeks. The common people   YOUR people, Edrin   die in the thousands. Not soldiers. People. Bakers and farmers and the woman who sells flowers in the lower market and the children who play in the fountain square. They die. Because we chose pride over pragmatism."</div>
+
+<p>The room is silent. The candles gutter. Somewhere in the palace, the clock chimes   counting hours I don't have.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"This isn't a choice." My voice sounds like someone else's. Far away. Hollow.</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"No. It's a sacrifice. I'm sorry I'm asking you to make it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're not sorry." And the bitterness in my voice is pure, undiluted, the kind of bitter that comes from knowing someone so well that you can see through their guilt to the calculation beneath. "You'd ask me to walk into fire if the kingdom needed it."</div>
+
+<p>A pause. Her eyes are wet. The fire in them is still there   nothing could extinguish that fire, not illness, not death, not the sight of her only child looking at her with something close to hatred   but the wetness is real. The tears she won't shed are real.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Yes." Her voice is iron wrapped in velvet. "I would. Because that's what queens do. And that's what I'm asking you to become."</div>
+
+<<if $maleBaselineEstablished>>
+<p>She says <em>become</em> and the word hooks something in the back of my brain and drags it forward — not a thought, an image. Involuntary. Vivid. The kind of intrusive flash that arrives without permission and detonates before you can look away.</p>
+
+<p>Me. But not me. A woman's body — my woman's body, the one that waits on the other side of the Rite. Smaller. Softer. Breasts on a chest that's currently flat. Hips wider than shoulders. And between the legs — nothing I recognise. A slit. Folds. Wetness.</p>
+
+<p>And in this flash, this woman who is me is lying on a bed and there's a man between her thighs and he's inside her. Inside. The cock pushing into the space where my cock used to be, filling the hollow the magic will create, stretching tissue that doesn't exist yet but will — tomorrow, the day after — and the woman who is me is making sounds. Not the sounds I make. Higher sounds. Breathier. The moans of a woman being fucked, being filled, being penetrated in a place she used to penetrate from.</p>
+
+<p>The image lasts two seconds. Maybe three. Then it's gone, burned away by the reality of my mother's grey-blue eyes and the blood on her handkerchief and the succession law and the eight-week military analysis.</p>
+
+<p>But the ghost of it lingers. The echo of being entered. The phantom sensation of something pushing into me rather than me pushing into something. The terrifying, vertiginous reversal of twenty years of sexual experience — from the one who penetrates to the one who is penetrated.</p>
+
+<p>My mother is still talking. I'm still arguing. But somewhere in the basement of my brain, the woman I'm going to become is lying on a bed and the sounds she's making are mine.</p>
+<</if>>
+
+<p>I stand. The parchment with my list is crumpled in my fist. Every item crossed off. Every door closed. Every escape route bricked shut by law, by politics, by military reality, by the simple vicious mathematics of power.</p>
+
+<p>I leave. I don't slam the door. I want to. I want to tear it off its hinges and hurl it down the corridor and watch it splinter against the portraits of my ancestors   all those queens, all those women, six hundred years of them staring down at me from their frames with eyes that say <em>this is what we did, this is what we were, and now it's your turn.</em></p>
+
+<p>Instead I walk. My body shaking   not with fear, not anymore. With rage. At the law. At Vareth. At the founding bastards who wrote the Charter in dragon's blood and made it immutable. At the universe itself, which built this cage with walls of tradition and stone and gave me exactly one key, and the key is shaped like a body that isn't mine.</p>
+
+<p>I reach the end of the corridor. Turn left. The covered bridge to the Moonspire Tower stretches before me   white stone, open on both sides to the wind, the chasm below where the river cuts through rock and the sound of water is the sound of everything falling.</p>
+
+<p>I stop. I'm not going to the tower. I haven't decided. I HAVEN'T DECIDED.</p>
+
+<p>I go to the tower.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $stress += 25>>
+<<set $statRES += 3>>
+<<set $affSeraphina += 2>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "MIDDAY">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_queen to true>>
+<<completeObjective "queen_round2">>
+<<addObjective "moonspire_ilara" "The Moonspire Tower   Archsorceress Ilara can explain the Rite" "MAIN">>
+<<addObjective "corridor_messenger" "A palace messenger has an urgent letter" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-1_hub]]
+</div>

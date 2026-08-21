@@ -1,0 +1,50 @@
+:: day-2_npc_alva [nobr]
+<<npcPortrait "alva" "Mistress Alva">>
+<h3>The Head Housekeeper   Mistress Alva</h3>
+
+<p>The servant quarters sit below the palace's main level   a network of clean, plain corridors where the machinery of royal life operates invisibly. Here is where the linen is pressed, the silver polished, the candles replaced, the fires laid. It's a world I'm not supposed to see and rarely do, which is exactly why I come here sometimes. It's honest work. No one is performing.</p>
+
+<p>Mistress Alva runs it all. She's fifty, severe, with iron-grey hair pinned under a white cap and a posture that suggests she was born standing at attention. She runs the household staff of eighty-seven people with the efficiency of a military commander and the warmth of a glacier. She terrifies everyone, including me, and she's been doing it since before I could walk.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Your Highness." She doesn't curtsy   she has never curtsied to anyone, as far as I know, on the grounds that bending wastes time. "This is an unusual visit."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I wanted to walk."</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"You wanted to avoid the east wing corridor. The route through the servant quarters bypasses it entirely. I know. I designed the layout."</div>
+
+<p>She knows. Of course she knows. Alva knows the location of every person in this palace at any given moment. She's a human panopticon.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Your breakfast was returned with the bread eaten and the cheese eaten and the meat eaten and the chair cold. You ate standing."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I did."</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Your mother ate lying down. She's been doing that more often. Her appetite is diminishing. The healers have shifted to fortified broths." Alva's voice is clinical. She reports facts the way a surgeon reports vital signs. "I've increased the laundry rotation for the east wing. The Queen's linens need changing more frequently now."</div>
+
+<p>I don't want to know this. I need to know this. These are the details that the ministers don't mention and the healers euphemise   the physical reality of a dying woman's daily life, measured in linens and broths and the declining angle of a pillow stack.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Alva. Is there anything she needs?"</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"She needs a miracle or a successor. I can provide neither. I can provide clean sheets, hot broth, and a palace that runs smoothly enough that she can focus her remaining energy on governance rather than domestic logistics." A pause. "I can also provide information, should you require it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Information?"</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"I oversee eighty-seven staff. They move through every room in this palace. They see things. Hear things. The east wing guards are on double rotation   that I ordered, at the Queen's request. The Silverveil bridge was crossed by Archsorceress Ilara at dawn   my staff reported it. Lord Ashborne's household sent a courier to the Elder Council this morning   one of my laundresses is married to a Council clerk."</div>
+
+<p>She looks at me. There's no warmth in her eyes, but there's something else   the fierce, unsentimental protectiveness of a woman who has served the crown for thirty years and considers its survival a personal responsibility.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"The household is loyal, Your Highness. Whatever comes."</div>
+
+<p>The same words Keller used. Different voice, same promise. The palace is circling its wagons, and they're doing it quietly, without being asked, because that's what loyalty looks like when it's real.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Alva."</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Don't thank me. Eat sitting down. You'll develop acid reflux."</div>
+
+<<set $d2_npc_alva to true>>
+<<set $statAUT += 1>>
+<<set $statRES += 1>>
+<<set $repStaff += 2>>
+
+<div class="scene-end">
+  [[Continue → |day-2_servants]]
+</div>

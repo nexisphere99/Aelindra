@@ -1,0 +1,50 @@
+:: day-2_npc_brin [nobr]
+<<npcPortrait "brin" "Brin">>
+<h3>The Servant   Brin</h3>
+
+<p>The servant lingers near the door after setting down the tray. He's young   sixteen, maybe seventeen   with sandy hair that sticks up on one side like he slept on it wrong and didn't have time to fix it. His livery is slightly too large. New hire. The palace takes them from common families as a form of patronage   steady work, meals, a roof that doesn't leak.</p>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"Is there anything else you need, Your Highness? More bread? I can get the fresh loaves from the kitchen   Marta just pulled them, they're still steaming "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The stale bread is fine."</div>
+
+<p>He blinks. Most princes, I imagine, do not prefer stale bread. I could explain the texture argument. I don't.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're new," I say instead, because his nervous hovering is going to outlast my patience.</div>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"Third week, Your Highness. I'm Brin. Son of Tomlen the tanner. From the Lower Market district." He says it like he's reciting for an exam. "My mum said to be useful and not drop anything."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"How's that going?"</div>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"I dropped a soup tureen yesterday. In front of Lady Harwick. She made a noise like a horse being stepped on."</div>
+
+<p>I almost smile. Almost. "Lady Harwick makes that noise when her wine is the wrong temperature. Don't take it personally."</p>
+
+<p>He relaxes, marginally.</p>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"The guards are saying... there's extra security on the east wing today. Is the Queen "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The Queen is fine."</div>
+
+<p>The lie comes easily. Princes learn to lie before they learn to ride.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"She's meeting with advisors. Routine."</div>
+
+<p>He nods, wanting to believe it because the alternative is frightening. I know the feeling.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Brin."</div>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"Your Highness?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The fresh bread. Bring me a loaf for later and tell Marta I said her cheese pastries from last week were excellent."</div>
+
+<p>His face lights up. A small kindness   it costs me nothing and gives him a story to tell in the servants' hall tonight. <em>The prince remembered the pastries. The prince knows my name.</em> These things matter to people who are rarely seen.</p>
+
+<p>He leaves with more confidence than he entered.</p>
+
+<<set $d2_npc_brin to true>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_chambers_explore]]
+</div>

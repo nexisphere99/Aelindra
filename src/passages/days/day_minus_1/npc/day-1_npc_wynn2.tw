@@ -1,0 +1,37 @@
+:: day-1_npc_wynn2 [nobr]
+<<npcPortrait "wynn" "Old Wynn">>
+<h3>Old Wynn   The Gardener's Night</h3>
+
+<p>Wynn is covering the rose beds with burlap. The temperature is dropping   a clear night, which means frost, and frost means vulnerable plants need protecting. He works with the unhurried precision of a man who has been covering rose beds for longer than most of the roses have been alive.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Your Highness. Walking heavy again."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You said that yesterday."</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"You're still doing it. Heavier tonight." He tucks a corner of burlap around a stem with the tenderness of a parent tucking a blanket. "The tower bridge was used today. I can see it from the herb garden. You crossed it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I did."</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"And came back."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I came back."</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Good. Coming back is the important part." He straightens   slowly, spine protesting. "I covered the jasmine last night. Thirty-year-old plant, that one. The frost came harder than I expected, and when I uncovered it this morning, three branches had frozen through. Dead. Black with it."</div>
+
+<p>He moves to the next bed. I follow, because following Wynn through a garden at night is the closest thing to meditation I've found.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"I cut the dead branches. Clean cuts. Sealed the wounds with wax. And you know what? Underneath the dead wood, the core was green. Alive. The frost killed the outside but the inside survived. It'll put out new branches in spring. Different directions, different shape, but the same jasmine. Same scent. Same roots."</div>
+
+<p>He looks at me. The same sharp gaze as yesterday   unsentimental, unblinking, the gaze of a man who speaks in plants because plants are more honest than people.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Whatever the frost is, Your Highness   it kills the outside. The inside survives. That's what roots are for."</div>
+
+<p>He returns to his burlap. The night is cold. The stars are sharp. The garden smells of frozen earth and covered roses and, faintly, of jasmine that survived.</p>
+
+<<set $d1_npc_wynn2 to true>>
+<<set $statRES += 2>>
+<<set $stress -= 8>>
+
+<div class="scene-end">
+  [[Continue → |day-1_gardens_hub]]
+</div>

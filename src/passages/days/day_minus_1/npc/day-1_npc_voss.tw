@@ -1,0 +1,50 @@
+:: day-1_npc_voss [nobr]
+<<npcPortrait "voss" "Sergeant Voss">>
+<h3>Aldric's Second   Sergeant Voss</h3>
+
+<p>Sergeant Voss is Aldric's second-in-command   a compact, broad woman of thirty with shoulders like a bull and a voice that could strip paint from a wall at fifty paces. She runs the guard training rotations when Aldric is on duty with the royal family. The recruits are terrified of her. The veterans respect her. Both are correct.</p>
+
+<p>She's supervising a group of junior guards running a drill   shield wall formation, the kind of disciplined cooperative work that turns individual soldiers into a unit. She watches with the calculating stillness of a predator assessing prey.</p>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"Your Highness." She doesn't turn from the drill. "Captain Vane mentioned you had a vigorous session today."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's one word for it."</div>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"He said the training dummy should be given a state funeral." Still not turning. "I've requisitioned a replacement. The armoury is used to it   we lose three or four a month to recruits who haven't learned that technique matters more than force. Though I suppose princes have different reasons."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Same reason, usually. Bad day."</div>
+
+<p>Now she turns. Voss's eyes are dark brown, assessing, utterly without deference. She respects rank because rank is structure, but she doesn't genuflect.</p>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"Your Highness. Permission to speak freely."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Granted."</div>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"The Guard is aware that the palace is under unusual tension. Doubled shifts on the east wing. Silverveil movement on the bridge. The Queen's health   we're not blind, and we're not deaf, and the servant gossip has been... extensive."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And?"</div>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"And the Guard's loyalty is to the crown. Not to a person   to the crown. Whoever wears it. However they come to wear it. I want you to know that." She holds my gaze. "Whatever changes are coming, the Guard will adapt. We always do."</div>
+
+<p>There's a weight to the word <em>changes</em> that tells me Voss knows more than she's saying   or suspects more than she can confirm. The palace is a small world. Secrets don't stay secret. They merely become information that people choose not to acknowledge out loud.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Sergeant."</div>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"Thank me by wrapping those hands properly. I saw the bandage job. It's embarrassing. Come to the barracks dispensary   I'll have the medic do it right."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"It's fine "</div>
+
+<div class="dialogue"><span class="speaker">VOSS</span>"Your Highness. I'm not asking."</div>
+
+<p>I go to the barracks dispensary. The medic rewraps my hands properly   clean linen, salve on the blisters, tight enough to protect without restricting movement. It takes ten minutes and costs me nothing except a mild lecture about grip technique that I probably deserve.</p>
+
+<<set $d1_npc_voss to true>>
+<<set $statPRO += 1>>
+<<set $energy += 5>>
+<<set $stress -= 2>>
+<<set $repMilitary += 2>>
+<<set $guardLoyalty += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-1_training_hub]]
+</div>

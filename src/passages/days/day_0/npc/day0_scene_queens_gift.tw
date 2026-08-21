@@ -1,0 +1,46 @@
+:: day0_scene_queens_gift [nobr]
+<h3>The Queen's Gift</h3>
+
+<p>Two knocks. Soft. Deliberate. Not Brin's nervous tap. Not Rowan's coded three-and-two. Something else — practiced, patient, the knock of someone who has been told to arrive and is arriving exactly on time.</p>
+
+<p>A note slides under the door. Parchment. The royal seal — silver stag, crescent moon, the wax still warm. I pick it up. Break the seal.</p>
+
+<p>Two words in my mother's handwriting. Steady. Deliberate. The penmanship of a queen who governs from her deathbed and leaves nothing unconsidered.</p>
+
+<p><em>My gift.</em></p>
+
+<p>I open the door.</p>
+
+<p>Two women. Standing in the corridor, dressed not in servant's livery but in silk — deep blue and burgundy, the colours of the royal household's intimate staff. They are not handmaidens. They are something else — something the palace maintains but doesn't discuss openly. Companions. Trained in the arts of pleasure the way Aldric is trained in the art of the sword: professionally, thoroughly, with pride.</p>
+
+<p><<npcPortrait "veyla" "Veyla">>Veyla. Twenty-five. Tall — almost my height, which is unusual and striking. Auburn hair falling in loose waves past her shoulders. Green eyes. A body that is lean and elegant, long-limbed, with small high breasts and a waist that narrows into hips that curve with the precise geometry of a woman who knows exactly what her body does to a room when she enters it. She carries herself like a dancer — every motion calibrated, every gesture deliberate.</p>
+
+<p><<npcPortrait "senna" "Senna">>Senna. Twenty-three. Shorter, rounder, built on an entirely different blueprint. Dark skin, dark hair cropped close to her skull, brown eyes that are warm and direct and hold yours without flinching. Full breasts — genuinely full, the kind that strain against silk and create the deep shadow of cleavage that draws the eye like gravity. Wide hips. A generous ass that the burgundy silk drapes over like water over stone. She carries herself like a woman who has never once apologised for taking up space.</p>
+
+<p>They stand in the corridor. They don't speak. They don't need to. The note said everything. My mother — dying, political, ruthless, loving — has sent me two women on the morning I walk to the tower to lose my body. She has given me the one thing she can give: a last experience of manhood in its fullest expression. A farewell performed in the language of flesh.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The Queen sent you."</div>
+
+<div class="dialogue"><span class="speaker">VEYLA</span>"Yes, Your Highness." Veyla's voice is low, smooth, a voice designed for dark rooms and close quarters. "She said you might need something to remember."</div>
+
+<p><em>Something to remember.</em> My mother knows. She knows what the Rite will take. She knows that the body walking into the Moonspire tonight will come out unable to do what the body in this doorway can do right now — take two women to bed and fuck them with the cock she's about to sacrifice on the altar of succession.</p>
+
+<p>She's not being sentimental. She's being strategic. She's giving me a baseline so visceral, so physically overwhelming, that the memory of it will burn through whatever grief follows. She's arming me with pleasure the way Aldric arms me with a sword — as a tool, a defense, a thing to hold when the darkness comes.</p>
+
+<<set $d0_queens_gift to true>>
+<<set $veylaEncountered to true>>
+<<set $sennaEncountered to true>>
+<<completeObjective "queens_gift">>
+
+<div class="choice-cards">
+  <div class="interaction-card main">
+    <h4>Accept the gift</h4>
+    <p>"Come in."</p>
+    [[→ |day0_scene_queens_gift_sex]]
+  </div>
+  <div class="interaction-card side">
+    <h4>Decline</h4>
+    <p>"Tell my mother... thank you. But I need to walk to that tower knowing I chose to walk, not that I was comforted into it."</p>
+    [[→ |day0_chambers]]
+  </div>
+</div>

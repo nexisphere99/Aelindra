@@ -1,0 +1,45 @@
+:: day0_npc_nara2 [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Apprentice Nara — Preparing the Chamber</h3>
+
+<p>She's on the stairs. Carrying candles — an armful of white wax pillars that she's struggling to balance. Her robe keeps catching under her feet. The enchanted music box is clipped to her belt, playing three notes on repeat — a fragment of the sympathetic resonance experiment, still not working right.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Your — oh! — Your Highness!" She wobbles. A candle slides. She catches it with her chin, which is both impressive and alarming. "I'm setting up the chamber. Ilara wants four hundred and twelve candles. Four hundred and twelve. Not four hundred, not four hundred and twenty — four hundred and TWELVE. Because apparently the magic cares about prime factors."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Four hundred and twelve isn't prime."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I KNOW! I told her that! She said it factors into sacred geometries that I'll understand in my sixth year. I'm in my third year. I have three more years of not understanding sacred geometries."</div>
+
+<p>She sets the candles down on a step. Catches her breath. Looks at me.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"You're going through with it." Not a question. She's been in this tower long enough to read the signs.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I am."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Can I tell you something? Something I probably shouldn't?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Go ahead."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I was born with my left hand fused — the fingers webbed together. Couldn't grip, couldn't hold. The Silverveil fixed it when I was three. Transformation magic. Not the Rite — a smaller working, just the hand. But the principle is the same."</div>
+
+<p>She holds up her left hand. Five fingers, separate, functional. A faint silvery line runs between the ring and middle fingers — a scar, or a memory of one.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I don't remember having the webbed hand. I was too young. But my mother says I screamed for an hour after the working, and then I stopped, and I looked at my new hand, and I opened and closed my fingers for the rest of the day because I couldn't believe they moved separately. She says the first thing I gripped was a wooden spoon. Which is probably why I ended up in a tower full of tools and instruments."</div>
+
+<p>She picks up the candles again. Balances them against her chest.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"It's going to hurt. I won't pretend it won't. But on the other side of the hurt, there are fingers that move. There's a hand that grips. There's a you that works in ways you can't imagine yet."</div>
+
+<p>She starts up the stairs. Pauses. Turns back.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Four hundred and eleven candles are set. You're my last trip. When I place this batch, the chamber is ready. For you."</div>
+
+<p>She climbs. The music box plays its three notes. The candles glow faintly in her arms, anticipating the fire.</p>
+
+<<set $d0_npc_nara2 to true>>
+<<set $stress -= 5>>
+<<set $silverveilFamiliarity += 2>>
+
+<div class="scene-end">
+  [[Continue → |day0_moonspire_lower]]
+</div>

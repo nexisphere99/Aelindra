@@ -1,0 +1,54 @@
+:: day-2_npc_perrin [nobr]
+<<npcPortrait "perrin" "Perrin">>
+<h3>The Night Guard   Perrin</h3>
+
+<p>I open the door to get air   the room is warm from the rebuilt fire and I can't breathe   and nearly walk into the night guard. Perrin. Young. Earnest. The kind of guard who takes the night shift seriously, which means he stands at rigid attention for eight hours even though no one is watching.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Your Highness! I   do you need anything?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"No. Just air."</div>
+
+<p>He nods. Stands aside. I lean against the doorframe and breathe the corridor air   cooler, stone-scented, with a faint draft from the stairwell.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Quiet night," I say, because the alternative is going back inside and staring at the ceiling.</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Yes, Your Highness. Very quiet." He hesitates. "Except   there was something. Around midnight. Music. From the guest wing."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's Rowan. A friend."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Ah. Good music. Sad, though."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes."</div>
+
+<p>We stand in comfortable silence for a moment. Perrin is perhaps the least complicated person I've interacted with today   a guard on a post, doing his job, noticing music in the dark. There's something restful about simplicity.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Perrin. Have you ever had to make a choice you didn't want to make?"</div>
+
+<p>He thinks about it. Actually thinks, which I appreciate   I'm so tired of reflexive answers and political calculations.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"When I joined the Guard, Your Highness. My father wanted me to take over the tannery. Leather trade. Good money. Stable life. But I wanted   I needed   something else. I couldn't explain it. I just knew the tannery wasn't... me. So I left. My father didn't speak to me for two years."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Now?"</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Now he brags to his friends that his son guards the prince." A small smile. "He came around. It took time, but he came around."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What if the choice is bigger than a tannery?"</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Then I suppose the coming-around takes longer. But in my experience, Your Highness, the people who love you don't stop. They just need time to understand the new shape of things."</div>
+
+<p>The new shape of things. I file that beside <em>vaelthin</em> and <em>one who has walked between</em> and <em>the same rose in a new body</em> and all the other phrases that are collecting in my chest like stones in a cairn.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Good night, Perrin."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Good night, Your Highness."</div>
+
+<p>I close the door. The ceiling is waiting.</p>
+
+<<set $d2_npc_perrin to true>>
+<<set $statRES += 1>>
+<<set $stress -= 2>>
+<<completeObjective "speak_perrin">>
+
+<div class="scene-end">
+  [[Continue → |day-2_chambers_explore]]
+</div>

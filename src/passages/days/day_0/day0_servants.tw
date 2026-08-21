@@ -1,0 +1,19 @@
+:: day0_servants [nobr]
+<<locationImage "servant_quarters" "Servant Quarters">>
+<h2>🔑 Servant Quarters</h2>
+<p>Alva is standing at her desk. Not sitting. Standing.</p>
+
+<<if not $d0_npc_alva3>>
+<div class="interaction-card main">
+  <<npcPortrait "alva" "Mistress Alva">>
+  <h4>📋 Operational Readiness</h4>
+  <p>"Your Highness. I've been expecting you."</p>
+  [[Speak with her|day0_npc_alva3]]
+</div>
+<<else>>
+  <p class="empty-note">The household runs on, precise and ready, exactly as Alva intends.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

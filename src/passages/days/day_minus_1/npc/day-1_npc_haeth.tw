@@ -1,0 +1,45 @@
+:: day-1_npc_haeth [nobr]
+<<npcPortrait "haeth" "Haeth">>
+<h3>Librarian Haeth   Quiet Wisdom</h3>
+
+<p>Haeth is at his desk. He's always at his desk. I'm beginning to suspect the desk is a part of him   that if you removed Haeth from the Grand Library, the library would dim, the constellations on the ceiling would stop turning, and the books would close themselves in mourning.</p>
+
+<p>He doesn't look up as I approach, but he speaks.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"You read the restricted sources. Elise's key work."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You know about that."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I know everything that happens in my library. I know about the key. I know about the diary. I know that Brother Vaelin has been camping in section twelve for thirty-six hours and eating crumbs on my floor, which I find personally offensive." He turns a page of whatever he's cataloguing. "I also know why you were reading what you were reading."</div>
+
+<p>He looks up. Those sharp old eyes   bright as a bird's, missing nothing, forgiving everything.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I've been librarian here for forty-three years, Your Highness. I was here when your grandmother was queen. I catalogued the Silverveil Compendium myself   I was the one who placed it in the eastern alcove, because the light there is best for reading difficult material and anyone consulting that particular volume would need all the help they could get."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You placed it there deliberately."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I place everything deliberately. A librarian's job is not to store books. It's to ensure the right book reaches the right person at the right time. You needed that book. It was where you could find it."</div>
+
+<p>He returns to his cataloguing. Then, without looking up:</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"The anonymous diary in the blue leather. The second subject of the Rite. You noticed it was anonymous."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I've spent thirty years trying to determine the author. I failed. But I found something else   a letter, tucked between the diary's pages when I first acquired the volume, written in a different hand. It was addressed to no one. It said: 'I was afraid of becoming someone else. I became someone I was always meant to be. The fear was real. The becoming was realer.'"</div>
+
+<p>He closes his catalogue. Looks at me over his spectacles.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"That letter is still in the diary, Your Highness. Between pages forty-three and forty-four. If you need it."</div>
+
+<p>I don't go back to the diary. Not today. But I know it's there. Between pages forty-three and forty-four. A letter from someone who walked this road and left a torch burning behind them.</p>
+
+<<set $d1_npc_haeth to true>>
+<<set $statRES += 2>>
+<<set $statWIS += 1>>
+<<set $stress -= 5>>
+<<set $libraryLore to true>>
+
+<div class="scene-end">
+  [[Continue → |day-1_library_hub]]
+</div>

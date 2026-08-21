@@ -1,0 +1,33 @@
+:: day-2_npc_maids [nobr]
+<h3>The Gossiping Maids</h3>
+
+<p>Two handmaidens are pressed against the wall near the tapestry of the Battle of Thornridge, speaking in the urgent whisper that palace servants use when they think they're being quiet but are absolutely not.</p>
+
+<div class="dialogue"><span class="speaker">MAID</span>" summoned the Silverveil, I heard. Telsa saw Archsorceress Ilara crossing the bridge to the Moonspire at dawn "</div>
+
+<div class="dialogue"><span class="speaker">MAID</span>"Ilara herself? Not one of the apprentices?"</div>
+
+<div class="dialogue"><span class="speaker">MAID</span>"Herself and the Queen's healer went to the east wing at first light. The guards doubled."</div>
+
+<div class="dialogue"><span class="speaker">MAID</span>"Do you think she's "</div>
+
+<p>They see me. The silence is instantaneous and guilty. Both curtsy   deep, formal, the kind you give when you've been caught saying something you shouldn't.</p>
+
+<div class="dialogue"><span class="speaker">MAID</span>"Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ladies."</div>
+
+<p>I walk past. I feel their eyes on my back. The whispering resumes before I round the corner   quieter this time, but not quiet enough.</p>
+
+<div class="dialogue"><span class="speaker">MAID</span>" the prince looks terrible. Did you see his eyes? He hasn't been sleeping "</div>
+
+<div class="dialogue"><span class="speaker">MAID</span>"My mum says when the Queen goes, the Ashbornes will "</div>
+
+<p>I walk faster. The palace has always been a machine that runs on gossip. Today, the gears are turning on my mother's illness, and I'm caught between the teeth.</p>
+
+<<set $d2_npc_maids to true>>
+<<set $stress += 2>>
+
+<div class="scene-end">
+  [[Continue → |day-2_corridors]]
+</div>

@@ -1,0 +1,49 @@
+:: day-1_training_hub [nobr]
+<<locationImage "training_yard" "Training Yard">>
+<h2>⚔ Training Yard</h2>
+<p>Chalk and iron. The weapon rack. The training dummies stand like silent witnesses.</p>
+
+<<if not $d1_training>>
+  <div class="interaction-card main">
+    <h4>🗡 The Heavy Practice Sword</h4>
+    <p>The weighted one. Lead in the pommel. Too heavy for finesse. Perfect for what you need.</p>
+    [[Take it|day-1_training]]
+  </div>
+<</if>>
+
+<<if $d1_training>>
+  <<if $d2_npc_tamsin and not $d1_npc_tamsin2>>
+  <div class="interaction-card side">
+    <<npcPortrait "tamsin" "Tamsin">>
+    <h4>🗡 Tamsin at the Dummies</h4>
+    <p>She's back. Her form is better. The short backswing took root.</p>
+    [[Watch|day-1_npc_tamsin2]]
+  </div>
+  <</if>>
+
+  <<if not $d1_npc_voss>>
+  <div class="interaction-card side">
+    <<npcPortrait "voss" "Sergeant Voss">>
+    <h4>🛡 Sergeant Voss   Drill Perimeter</h4>
+    <p>A compact, broad woman watching junior guards with the stillness of a predator.</p>
+    [[Approach|day-1_npc_voss]]
+  </div>
+  <</if>>
+
+  <div class="interaction-card">
+    <h4>⚔ The Destroyed Dummy</h4>
+    <p class="flavor-dim">A skeleton of post and nails. Straw scattered across ten feet of flagstones. One arm missing entirely. Your work.</p>
+  </div>
+
+  <<if not $d1_npc_fantasy and $timeSlot is "AFTERNOON">>
+  <div class="interaction-card side">
+    <h4>💭 Intrusive Thoughts</h4>
+    <p>Your body is wrung out. Your mind, unguarded, goes to places you don't want it to go.</p>
+    [[Don't look away → |day-1_scene_fantasy]]
+  </div>
+  <</if>>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

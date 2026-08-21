@@ -1,0 +1,12 @@
+:: objectives-system [script nobr]
+/*
+  OBJECTIVE SYSTEM
+  ------------------------------------------------------------
+  The core add/complete/clear widgets already live in
+  src/ui/widgets.tw (<<addObjective>>, <<completeObjective>>,
+  <<clearObjectives>>) since they're generic UI widgets shared
+  by every day. This file is reserved for objective-related
+  logic that grows beyond simple add/complete   e.g. chained
+  objectives, day-specific objective sets, or side-quest
+  branching tables   once day content needs it.
+*/

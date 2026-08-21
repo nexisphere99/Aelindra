@@ -1,0 +1,52 @@
+:: day-1_npc_vael [nobr]
+<<npcPortrait "vael" "Mistress Vael">>
+<h3>The Apothecary   Mistress Vael</h3>
+
+<p>The Apothecary occupies a room on the tower's third level   a circular chamber with walls lined floor to ceiling with shelves of glass bottles, ceramic jars, dried plant bundles, mineral samples, and things I cannot identify and am not certain I want to. The air is thick with competing scents: lavender, something acrid, something sweet enough to make my back teeth ache, and an undertone of alcohol used as a solvent.</p>
+
+<p>Mistress Vael is the Silverveil's alchemist. She's forty-five, red-haired, broad-shouldered, with the kind of face that suggests she has strong opinions and will share them regardless of whether you asked. She's grinding something in a stone mortar with more force than seems necessary.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Ah. The prince." She doesn't stop grinding. "Ilara said you might wander. She said to answer your questions honestly and send you home before you touch anything."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I wasn't planning to touch anything."</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Everyone says that. Then they pick up the blue bottle on the third shelf. Don't pick up the blue bottle on the third shelf. It's a concentrated soporific and the fumes alone will put you to sleep for fourteen hours."</div>
+
+<p>I look at the blue bottle. It sits innocently among its neighbours, unremarkable, deeply tempting.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You brew the potion for the Rite," I say.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"I prepare the base. Moonflower essence, silverveil silk dissolved in a specificity solution, and a personalised blood component. The blood goes in last   it's what tells the magic who you are and what you need to become." She sets down the mortar. Looks at me. "You want to know if it tastes bad."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I want to know what it does."</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"It opens the body to transformation. Think of it as... unlocking a door that's been sealed since birth. Every human body carries the potential for both sexes   the same tissue that becomes a penis in one body becomes a clitoris in another. The same glands, the same structures, just expressed differently. The potion doesn't create something from nothing. It tells your body to express what was always latent."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ilara said something similar. That it reveals rather than creates."</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Ilara is philosophically precise. I'm practically precise. The philosophy means it's not an invasion   your body isn't being forced into a foreign shape. It's being told to do something it already knows how to do, just hasn't done. The practice means it's going to hurt like being turned inside out and wrung like a dishcloth, and you'll want to die for about four hours of the six, and then you'll wake up and your hands will be smaller and your hips will be wider and you'll need to learn to piss sitting down."</div>
+
+<p>Her bluntness is   strangely   more comforting than Ilara's precision. There's something reassuring about someone who describes the worst honestly, without padding.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The previous subjects. Their potions "</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"I didn't brew them. My predecessor did   Mistress Thorval, two generations back, for Prince Castien. But the records are thorough. Each potion was tailored to the individual. Each worked. The formula hasn't changed because the magic hasn't changed. Transformation is one of the oldest schools   older than healing, older than divination. The body knows what to do. We just give it permission."</div>
+
+<p>She picks up the mortar again. Resumes grinding.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"If you do this   when you do this   I'll bring the potion to the ritual chamber myself. It'll be warm. It'll taste of iron and flowers and something you can't name. Drink it all. Don't sip. The magic works best when it hits all at once."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You said 'when,' not 'if.'"</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"I've been doing this for twenty years, Your Highness. I know the look. You've already decided. You just haven't told yourself yet."</div>
+
+<p>The grinding continues. I leave the Apothecary smelling of lavender and certainty I don't feel.</p>
+
+<<set $d1_npc_vael to true>>
+<<set $statWIS += 2>>
+<<set $stress += 3>>
+<<set $riteKnowledge += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-1_moonspire_hub]]
+</div>

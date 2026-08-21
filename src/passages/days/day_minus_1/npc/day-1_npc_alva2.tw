@@ -1,0 +1,39 @@
+:: day-1_npc_alva2 [nobr]
+<<npcPortrait "alva" "Mistress Alva">>
+<h3>Mistress Alva   Intelligence Update</h3>
+
+<p>Alva is reviewing shift schedules at her desk   a plain oak table in a plain room that serves as the nerve center of palace household operations. She looks up when I enter with the expression of a woman who expected me and has already prepared.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Your Highness. I have three items."</div>
+
+<p>She doesn't ask how I am. Alva doesn't trade in pleasantries. She trades in information, and she trades it efficiently.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"First: the Ashborne courier who visited the Elder Council yesterday also visited the palace solicitor's office. He delivered a document   my staff couldn't determine the contents, but the solicitor's clerk mentioned the words 'succession challenge' and 'expedited hearing.' The formal challenge may come sooner than your mother expects."</div>
+
+<p>My jaw tightens.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Second: Archsorceress Ilara requisitioned additional moonflower essence from the palace apothecary stores this morning. The quantity is consistent with ritual preparation. She also requested privacy enchantments for the Moonspire bridge   sound-dampening wards, to be activated at her discretion."</div>
+
+<p>She knows. Alva knows, or has deduced enough to know. She doesn't say it. She doesn't need to.</p>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Third: the kitchen stores are at seventy-two percent capacity. Marta is baking at crisis tempo, which depletes flour and butter reserves faster than the normal supply rotation can replace them. I've ordered an emergency resupply from the market. I mention this because it's the only problem in this palace I can actually solve."</div>
+
+<p>The last sentence is as close to a joke as Alva gets. I almost miss it.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Alva."</div>
+
+<div class="dialogue"><span class="speaker">ALVA</span>"Your Highness." She picks up her quill. Returns to the schedules. Then, without looking up: "The east wing linens are prepared. Whatever happens tomorrow   the household is ready."</div>
+
+<p>The east wing linens. She's talking about the Moonspire. About the ritual chamber. About the bed where someone might wake up changed.</p>
+
+<p>She's prepared for it. The whole palace, whether they know the specifics or not, is preparing.</p>
+
+<<set $d1_npc_alva2 to true>>
+<<set $statAUT += 2>>
+<<set $stress += 5>>
+<<set $ashborneThreat += 1>>
+<<set $householdReady += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-1_servants]]
+</div>

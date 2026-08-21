@@ -1,0 +1,19 @@
+:: day0_training [nobr]
+<<locationImage "training_yard" "Training Yard">>
+<h2>⚔ Training Yard</h2>
+<p>Empty this morning. But something was left on the weapon rack.</p>
+
+<<if not $d0_npc_aldric_gift>>
+<div class="interaction-card main">
+  <<npcPortrait "aldric" "Aldric">>
+  <h4>🗡 Something New on the Rack</h4>
+  <p>A practice sword you don't recognise. Smaller. Lighter. A note beside it.</p>
+  [[Investigate|day0_npc_aldric_gift]]
+</div>
+<<else>>
+  <p class="empty-note">The yard is empty and quiet. The gift is already yours.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

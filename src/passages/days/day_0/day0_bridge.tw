@@ -1,0 +1,81 @@
+:: day0_bridge [nobr]
+<div class="scene-image"><<locationImage "moonspire_bridge" "The Bridge">></div>
+
+<h2>The Bridge — Crossing</h2>
+
+<p>The covered bridge stretches between the palace and the Moonspire Tower like a stone throat connecting two worlds. Thirty paces long. Open on both sides to the wind that howls through the chasm, carrying spray from the river far below — a sound like the world clearing its throat, like the earth coughing up its own deep water.</p>
+
+<p>I step onto the bridge.</p>
+
+<p>Rowan is there.</p>
+
+<p><<npcPortrait "rowan" "Rowan">>They're leaning against the railing at the near end, lute absent for the first time I can remember. Their arms are crossed. Their honey-coloured eyes find mine immediately — they've been waiting. They said they would be. <em>I'll be in the courtyard. Before dawn. If you walk toward the tower, I'll walk with you.</em></p>
+
+<p>They don't say anything. They push off the railing and fall into step beside me. Their shoulder brushes mine. The contact is deliberate and grounding — a tether, a reminder that the body walking this bridge is real and solid and present, not yet dissolved into the thing it's about to become.</p>
+
+<p>We walk. The wind roars. The spray catches my face — cold, sharp, tasting of minerals and deep earth. Below, the river carves through the gorge with the patient violence of water that has been doing this for a thousand years and will continue for a thousand more, indifferent to the small human drama crossing above it.</p>
+
+<p>Halfway across, I stop. My hands find the stone railing. The stone is worn smooth — centuries of hands gripping this rail, centuries of people crossing between the mundane world and the magical one, bringing their fears and their desperation and their impossible hopes to the tower that glows faintly white against the morning sky.</p>
+
+<p>I look down. Not suicidal. Not considering it. Just... the vertigo. The dizziness of standing between who I am and who I'm about to become, with nothing below but a long fall and cold water and the implacable fact of gravity.</p>
+
+<p>Rowan stands beside me. Looking down too. Their hair catches the wind — dark with copper, whipping across their face.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You don't have to watch me go in," I say.</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"I know."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Then why are you here?"</div>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Because that's what friends do. They walk you to the places you're afraid to go, and they wait outside, and they're there when you come out the other side."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What if what comes out isn't me?"</div>
+
+<p>Rowan turns. Looks at me. Their expression is something I've never seen on them before — not the easy warmth, not the performer's charm, not the gentle deflection of someone who's learned to keep the world at arm's length with humour and music. Something raw. Something that costs them.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"It'll be you. Different wrapping. Same person. I'll know you. I've always known you."</div>
+
+<p>They put their hand on my arm. The grip is firm. Lute-calloused fingers pressing through the leather of my jerkin, and I can feel the warmth of their palm and the slight tremor that tells me they're not as calm as they're performing and that undoes me more than anything else today — the knowledge that Rowan, who is never shaken, is shaking.</p>
+
+<div class="dialogue"><span class="speaker">ROWAN</span>"Go. I'll be right here. Right here on this bridge. When you wake up."</div>
+
+<p>I nod. I can't speak. My throat has closed around every word I could possibly say and sealed them in like a tomb.</p>
+
+<p>I walk the remaining fifteen paces. The tower entrance looms — white stone, arched doorway, carved symbols that pulse faintly silver. Ilara is there.</p>
+
+<p><<npcPortrait "ilara" "Archsorceress Ilara">>She's wearing the full ceremonial robes of the Silverveil — deep purple, silver-threaded, a crescent moon pendant at her throat that catches the morning light. Behind her, four sorceresses stand in a line — hooded, robed, silent, radiating that electric-ozone pressure of concentrated magic. The air around them hums.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm not choosing this." My voice comes out steady. I don't know how. "I'm choosing the thing that isn't watching everything my mother built be destroyed."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"That's still a choice."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"It's the worst one I've ever made."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Not the worst. The hardest. There's a difference."</div>
+
+<p>I look up at the tower. White stone rising into a sky that's beginning to show the first pale colours of morning — lavender, dove-grey, the faintest blush of gold at the eastern horizon. The tower doesn't care about my feelings. It's been here for centuries, performing its function, remaking the world one body at a time.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Will it hurt?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Yes."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Good. I want to remember I didn't go willingly."</div>
+
+<p>I climb the stairs. Behind me, I hear Rowan's lute — they've produced it from somewhere, as they always do, and the first notes drift up the stairwell like a benediction. Something without words. Something that says <em>I'm here, I'm here, I'm here.</em></p>
+
+<p>The stairs spiral upward. The tapestries shift as I pass — the serpent becoming the river, the tree becoming the woman, the bird becoming the song. I've seen them before. Today they feel like prophecy.</p>
+
+<<set $d0_bridge to true>>
+<<set $timeSlot to "MIDDAY">>
+<<set $mcPortrait to "edrin_default">>
+<<clearObjectives>>
+
+<div class="scene-end">
+<<if $gamePath is "none">>
+  [[Continue → |day0_path_choice]]
+<<elseif $gamePath is "female">>
+  [[Continue → |day0_ritual_female]]
+<<else>>
+  [[Continue → |day0_ritual_futa]]
+<</if>>
+</div>

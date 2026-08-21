@@ -1,0 +1,74 @@
+:: day-2_training [nobr]
+<div class="scene-image"><<locationImage "training_yard" "Training Yard">></div>
+
+<h2>Training Yard   Morning Drill</h2>
+
+<p>The training yard smells the way it always smells   iron, leather, sweat, and the particular dusty chalk they spread on the flagstones to keep the footing honest. Morning light slants across the open square, catching the edge of practice blades lined up on the rack like surgical tools.</p>
+
+<p><<npcPortrait "aldric" "Aldric">>Aldric is already here. Of course he is. I'm convinced the man sleeps standing up in his armour somewhere in the barracks and simply opens his eyes when the sun touches the horizon. He's running a whetstone along his practice blade   not because it needs sharpening, practice blades are intentionally dull, but because the motion calms him. I've watched him do it before every spar for six years.</p>
+
+<p>He's tall. Taller than me by two inches, which irritates me more than it should. Broad across the shoulders and chest, built like something designed for the specific purpose of breaking other things. A scar runs from his left temple to his jaw   a bandit's knife, three years ago, when he threw himself between me and a blade during a hunting trip. I told him that was unnecessary. He told me it was literally his job. We didn't speak for two days because we were both right.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Your Highness." He sets down the whetstone. Stands. The motion is economical   no wasted energy, no theatrical flourish. Aldric moves the way a sword cuts: direct.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Captain."</div>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"You look like hell."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Aldric. Your gift for courtly flattery remains unmatched."</div>
+
+<p>The ghost of a smile. He hands me a practice blade   weighted steel, edge rounded, heavy enough to simulate the real thing without removing limbs. I take it. The grip is familiar. My palm fits the leather wrapping the way a key fits a lock.</p>
+
+<p>We circle. The yard is empty this early   just us and the pigeons on the battlement. The air is cool. My breath comes in thin clouds.</p>
+
+<p>Aldric moves first. A testing strike   high, right side, the kind you can read from across a continent. I parry. Turn it. Riposte. He blocks without looking, which is the most insulting thing a swordsman can do to another swordsman, and steps inside my guard.</p>
+
+<p>My mind isn't in it. My mind is in my mother's chambers, in the copper-sweet smell of medicinal herbs that doesn't quite cover the other smell, the one the healers pretend doesn't exist. The smell of someone dying slowly.</p>
+
+<p>His blade touches my ribs. I didn't see the feint.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Dead," he says, stepping back.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Best of three."</div>
+
+<p>We reset. I'm faster this time   anger is a decent substitute for focus, in short bursts. I catch his blade on the cross-guard, twist, drive forward. For half a second I see something in his eyes   surprise, maybe approval. Then he drops his shoulder, pivots, and the flat of his practice sword cracks across my forearm hard enough to numb my fingers. My blade clatters to the flagstones.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Your mind isn't here, Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"My mind is in my mother's lungs, where all the air seems to have gone."</div>
+
+<p>He doesn't say anything for a moment. Aldric isn't good with words   he's good with silences, which is rarer and more useful. He picks up my blade. Hands it back, hilt-first.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"She asked for you. This morning. The Royal Healer was summoned at dawn."</div>
+
+<p>So the servant wasn't exaggerating the urgency. Wonderful.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I know."</div>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Go to her."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I was planning to."</div>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Go now. The swords will be here tomorrow."</div>
+
+<p>I sheathe the practice blade without cleaning it   muscle memory, not disrespect, but I see Aldric's jaw tighten at the breach of discipline. Any other day he'd correct me. Today, he says nothing. He just watches me cross the yard toward the palace entrance, and when I glance back, he's standing exactly where I left him, hands clasped behind his back, face unreadable.</p>
+
+<p>The pigeons scatter as I pass. Somewhere in the kitchens, someone drops a pot. The morning goes on.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $statPRO += 1>>
+<<set $stress += 5>>
+<<set $d2_sparred to true>>
+<<set $affAldric += 2>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "MIDDAY">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<completeObjective "train_aldric">>
+<<addObjective "queen_summons" "Answer the Queen's summons   Queen's Chambers, East Wing" "MAIN">>
+<<addObjective "explore_corridors" "Explore the corridors" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-2_hub]]
+</div>

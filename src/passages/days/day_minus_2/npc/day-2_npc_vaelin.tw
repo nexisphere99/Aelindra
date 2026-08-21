@@ -1,0 +1,49 @@
+:: day-2_npc_vaelin [nobr]
+<<npcPortrait "vaelin" "Brother Vaelin">>
+<h3>The Theology Student   Brother Vaelin</h3>
+
+<p>A young man in temple robes is sitting cross-legged on the floor between the theology shelves, surrounded by a fortress of open books and looking like he hasn't moved in several hours. He has the pallid complexion and thousand-yard stare of someone who has been reading about divine succession law for too long.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Excuse me "</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"The Mother's Covenant does not explicitly prohibit succession through transformed heirs!" he says, loudly, to no one in particular, then sees me and turns the colour of a ripe tomato. "Your   Your Highness. I'm   I was just   academic research "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The Mother's Covenant?"</div>
+
+<p>He scrambles to his feet. Books topple. He catches two, loses three.</p>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"Brother Vaelin, Your Highness. Theology student from the Temple of the Mother. I'm writing a treatise on succession law and divine mandate   purely academic, I assure you   and I've found something... interesting."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Interesting."</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"The Founding Charter references divine mandate. 'Let the crown pass through the blood of daughters, as the Mother wills.' But the original Kaethric text   the pre-translation version   uses a word that doesn't exactly mean 'daughters.' It's closer to 'those who carry the Mother's form.' Which is   well, it's <em>vague.</em> Deliberately vague, possibly. The Kaethric scholars weren't specific about sex and gender the way we are."</div>
+
+<p>He's speaking rapidly, the way scholars do when they've discovered something that excites them and haven't yet considered whether the discovery is dangerous.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"'Those who carry the Mother's form,'" I repeat.</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"It could mean born female. It could mean... other things. The Kaethric understanding of gender was more fluid than ours. They had a concept   <em>vaelthin</em>   which translates roughly to 'one who has walked between.' It applied to people who changed, whether through magic, circumstance, or will."</div>
+
+<p>He stops. Realises what he's saying. Realises who he's saying it to.</p>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"This is purely academic," he repeats, weakly.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Of course."</div>
+
+<p>I look at him for a long moment. He's sweating.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Brother Vaelin. If you finish that treatise, I'd like to read it."</div>
+
+<div class="dialogue"><span class="speaker">VAELIN</span>"It's   it's very preliminary "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Send it to my desk when it's done."</div>
+
+<p>I leave him to his books and his fortress and his accidental discovery. <em>Vaelthin. One who has walked between.</em> I add the word to the growing inventory of things I don't know what to do with.</p>
+
+<<set $d2_npc_vaelin to true>>
+<<set $statWIS += 1>>
+<<set $loreSuc += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_library_hub]]
+</div>

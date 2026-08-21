@@ -1,0 +1,23 @@
+:: day-1_gardens_hub [nobr]
+<<locationImage "royal_gardens" "Royal Gardens">>
+<h2>🌿 Royal Gardens</h2>
+<p>Dusk again. The jasmine is covered tonight   frost warning.</p>
+
+<<completeObjective "gardens_wynn">>
+
+<<if $d2_npc_wynn and not $d1_npc_wynn2>>
+<div class="interaction-card side">
+  <<npcPortrait "wynn" "Old Wynn">>
+  <h4>🌹 Old Wynn Covering the Roses</h4>
+  <p>Burlap over the beds. His hands move like he's done this a thousand winters running.</p>
+  [[Approach|day-1_npc_wynn2]]
+</div>
+<</if>>
+
+<<if not $d2_npc_wynn or $d1_npc_wynn2>>
+  <p class="empty-note">The garden is cold and quiet, wrapped against the frost.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

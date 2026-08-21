@@ -1,0 +1,46 @@
+:: day-1_npc_tamsin2 [nobr]
+<<npcPortrait "tamsin" "Tamsin">>
+<h3>Recruit Tamsin   Return Visit</h3>
+
+<p>She's at the dummies again. This time, her form is marginally better   the short backswing I showed her yesterday has taken root, and the left side isn't opening up as badly. Marginally is still marginally, but the improvement is visible.</p>
+
+<p>She sees me and does not freeze this time. Progress on multiple fronts.</p>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Your Highness. I've been doing the repetitions. Fifty morning and night, as you said."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Show me."</div>
+
+<p>She demonstrates. The backswing is tighter. The weight transfer is cleaner. The strikes have a snap to them that was missing yesterday   not power, exactly, but intention. She knows where the staff is going and why.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Better. Your footwork still drifts   you're sliding your back foot instead of planting it. But the arms are good."</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Thank you, Your Highness." She hesitates. Then: "The other recruits are saying I'm showing off because the prince taught me. Korran   he's a second-year   said I should learn 'the proper way' from a real instructor."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And what did you say?"</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"I asked him to spar. He said no." A small, fierce grin. "I think he's afraid I'll hit him with the backswing."</div>
+
+<p>I laugh. The sound surprises me   I didn't think I had any left in me today. But Tamsin's stubborn competence is a bright, clean thing in a day full of grey.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Your form is good. Korran can take his proper way and choke on it. Keep practicing."</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Yes, Your Highness." She pauses. "You look... like you've been hitting things too."</div>
+
+<p>She glances at the destroyed training dummy behind me   the one I gutted during the rage session. Straw everywhere. The post listing at an angle. One arm missing entirely.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I was having a conversation with the dummy."</div>
+
+<div class="dialogue"><span class="speaker">TAMSIN</span>"Must have been a bad conversation."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The worst."</div>
+
+<p>She nods. She doesn't ask. Soldiers   even new ones   understand that some things are worked out with a blade and not with words.</p>
+
+<<set $d1_npc_tamsin2 to true>>
+<<set $statPRO += 1>>
+<<set $stress -= 3>>
+<<set $repMilitary += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-1_training_hub]]
+</div>

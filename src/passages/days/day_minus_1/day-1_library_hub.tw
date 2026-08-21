@@ -1,0 +1,32 @@
+:: day-1_library_hub [nobr]
+<<locationImage "grand_library" "Grand Library">>
+<h2>📚 Grand Library</h2>
+<p>Three stories of answers. Some of them might even be useful today.</p>
+
+<<completeObjective "library_vaelin">>
+
+<<if $d2_npc_vaelin and not $d1_npc_vaelin2>>
+<div class="interaction-card side">
+  <<npcPortrait "vaelin" "Brother Vaelin">>
+  <h4>📿 Brother Vaelin's Book Fortress</h4>
+  <p>It's grown since yesterday. He may not have moved. He may not have slept.</p>
+  [[Approach|day-1_npc_vaelin2]]
+</div>
+<</if>>
+
+<<if not $d1_npc_haeth>>
+<div class="interaction-card side">
+  <<npcPortrait "haeth" "Haeth">>
+  <h4>📖 Haeth at His Desk</h4>
+  <p>He hasn't moved either. He never really does.</p>
+  [[Speak with him|day-1_npc_haeth]]
+</div>
+<</if>>
+
+<<if (not $d2_npc_vaelin or $d1_npc_vaelin2) and $d1_npc_haeth>>
+  <p class="empty-note">The library holds its usual hush. The constellations turn slowly on the ceiling.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

@@ -1,0 +1,44 @@
+:: day-2_npc_harwick [nobr]
+<<npcPortrait "harwick" "Lady Harwick">>
+<h3>Lady Harwick   The Court Gossip</h3>
+
+<p>Lady Harwick materialises from behind a topiary like a well-dressed ambush. She's sixty, perfumed to the point of weaponisation, draped in enough jewelry to furnish a small treasury, and possessed of a smile that could mean anything from "delighted to see you" to "I'm going to destroy your reputation at dinner."</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Prince Edrin! What a surprise. I was just taking my evening constitutional."</div>
+
+<p>She says "constitutional" the way other people say "intelligence-gathering mission."</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Lady Harwick."</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"You look peaky, dear. Are you sleeping? Young men your age should be sleeping well   and eating. Are you eating? I told Marta you looked thin at the autumn feast. She agreed. We both worry."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I assure you I'm "</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"The Queen! Poor dear. We're all praying, of course. The temple has been full every morning   I've been myself, twice. Though between us, the incense they're burning this season is atrocious. It smells like someone set fire to a perfumery. I've complained to the Head Priestess. She ignored me. Everyone ignores me. It's a burden."</div>
+
+<p>No one ignores Lady Harwick. Lady Harwick is ignored the way a thunderstorm is ignored   technically possible, practically inadvisable.</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"I heard the most interesting thing from Lord Veltham's wife at tea yesterday." Her voice drops to what she imagines is a whisper but is actually audible from the next hedge. "Apparently, Lord Ashborne has been entertaining ambassadors from Tormark. <em>Three</em> ambassadors. In one week. Now what do you suppose that's about?"</div>
+
+<p>My stomach tightens. Ashborne strengthening alliances. This isn't gossip   it's intelligence.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm sure it's routine diplomacy, Lady Harwick."</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Routine diplomacy requires one ambassador, dear. Three requires ambition." She adjusts a brooch the size of a small shield. "I'm not political, of course. I leave that to the men. But a woman my age doesn't survive court this long without noticing patterns and the pattern I'm noticing is that Lord Ashborne is building something, and your mother's illness is the foundation he's building on."</div>
+
+<p>She pats my arm. Her rings dig into my sleeve.</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Eat something, dear and sleep. You really do look peaky."</div>
+
+<p>She glides away, trailing perfume like a comet's tail. I stand in the garden and process the information she just handed me   casually, between complaints about incense, wrapped in grandmotherly concern like a dagger in a silk scarf.</p>
+
+<p>Lady Harwick is the most dangerous person in this garden and she wants me to know it. I'm not sure if that's a warning or an offer of alliance.</p>
+
+<<set $d2_npc_harwick to true>>
+<<set $statAUT += 1>>
+<<set $stress += 3>>
+<<set $repCourt += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_gardens_hub]]
+</div>

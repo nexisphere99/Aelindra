@@ -1,0 +1,23 @@
+:: day-1_servants [nobr]
+<<locationImage "servant_quarters" "Servant Quarters">>
+<h2>🔑 Servant Quarters   Below Stairs</h2>
+<p>Alva's intelligence network. The machinery runs. It sees everything.</p>
+
+<<completeObjective "servants_alva">>
+
+<<if $d2_npc_alva and not $d1_npc_alva2>>
+<div class="interaction-card side">
+  <<npcPortrait "alva" "Mistress Alva">>
+  <h4>🗝 "I Have Three Items"</h4>
+  <p>She's expecting you. She's always expecting you.</p>
+  [[Speak with her|day-1_npc_alva2]]
+</div>
+<</if>>
+
+<<if not $d2_npc_alva or $d1_npc_alva2>>
+  <p class="empty-note">The household runs quietly on, unseen and essential.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-1_hub]]
+</div>

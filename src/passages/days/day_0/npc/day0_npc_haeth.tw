@@ -1,0 +1,52 @@
+:: day0_npc_haeth [nobr]
+<<npcPortrait "haeth" "Haeth">>
+<h3>Haeth — The Book Between the Pages</h3>
+
+<p>The library is empty. Dawn light through the tall windows. The painted constellations on the ceiling turn slowly in the silence. Dust motes drift.</p>
+
+<p>Haeth is at his desk. He's not cataloguing. He's sitting with his hands folded, spectacles on the desk beside him, watching the door. He was waiting for me.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Haeth."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I assumed you might come. People often return to libraries before significant events. The instinct to seek knowledge persists even when knowledge can no longer change the outcome."</div>
+
+<p>He stands — slowly, joints protesting. He walks to the restricted case. Opens it with his own key. Removes the blue-leather diary.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I told you there was a letter between pages forty-three and forty-four."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You did."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I didn't tell you there was a second item. Between pages sixty-one and sixty-two."</div>
+
+<p>He opens the diary. Between the pages — pressed flat, preserved by the dry library air — is a flower. Small, white, star-shaped. Dried but intact.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Moonflower," he says. "The primary ingredient in the transformation potion. Someone — the anonymous author of this diary, presumably — pressed it here after the Rite. A memento. A marker. The flower that changed them."</div>
+
+<p>He holds it out. The dried moonflower sits on his wrinkled palm, weightless and ancient and impossibly delicate.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"I've been keeping this for forty-three years, waiting for someone who needed it more than the book did."</div>
+
+<p>I take the flower. It's so light it barely registers in my hand. A flower from a ritual performed centuries ago, pressed between the pages of a diary by someone who underwent the same transformation I'm about to undergo, preserved by a librarian who understood that some things are more than historical artefacts.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Keep it," Haeth says. "Through the Rite and after. A reminder that someone walked this path before you and left a flower behind for the next person."</div>
+
+<p>I close my hand gently around it. The petals are dry and papery and they don't crumble because Haeth has spent forty-three years ensuring this library's climate is perfect for the preservation of fragile things.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Haeth."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Thank the person who left it. I merely stored it."</div>
+
+<p>He returns to his desk. Sits. Puts on his spectacles. Resumes the posture of a man who has been in this library for forty-three years and intends to remain for forty-three more.</p>
+
+<<set $d0_npc_haeth to true>>
+<<set $statWIS += 1>>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+<<set $hasMoonflower to true>>
+<<addItem "pressed_moonflower" "Pressed Moonflower" "A centuries-old dried moonflower, kept by Haeth for forty-three years, waiting for someone who needed it.">>
+
+<div class="scene-end">
+  [[Continue → |day0_library]]
+</div>

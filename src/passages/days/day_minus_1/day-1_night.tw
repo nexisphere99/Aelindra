@@ -1,0 +1,58 @@
+:: day-1_night [nobr]
+<div class="scene-image"><<locationImage "palace_chambers_night" "Edrin's Chambers, Night">></div>
+
+<h2>Edrin's Chambers   The Last Night</h2>
+
+<p>The fire is embers. The wine is a memory warming my blood. The room is very still.</p>
+
+<p>I stand before the mirror. Not the polished silver above the desk   the full-length mirror, gilded frame, ancient glass that has reflected the faces of princes and princesses for three centuries. The glass is slightly warped with age, giving everything a faintly liquid quality, as if the reflection is underwater.</p>
+
+<p>I undress. Deliberately. Slowly. Not seduction   inventory. If this is the last time I stand here in this body, I want to know it the way you know a room you've lived in your whole life: every corner, every crack, every imperfection that makes it yours.</p>
+
+<p>My jerkin. Over the chair. My shirt. Folded   I don't fold it usually, but tonight everything feels like ceremony. My boots, side by side. My trousers. My smallclothes.</p>
+
+<p>I stand bare before the mirror.</p>
+
+<p>Lean. The muscle defined but not heavy   a runner's body, a fencer's body, built for speed rather than power. A scar on my left ribcage, four inches long, pale and smooth   a sparring accident at sixteen, when a practice blade found a gap in borrowed armour and opened me up like a letter. Aldric had carried me to the healer. I'd bled on his white tabard and he'd been more upset about my blood than his laundry.</p>
+
+<p>Body hair. Dark. Fine. Across my chest in a pattern I never chose and never considered   just there, the way freckles are there, the way moles are there. A trail down my stomach, thickening below the navel. Under my arms. On my legs. The small, unconscious markers of maleness that I've never thought about because I've never had to.</p>
+
+<p>My shoulders. Broad. Not enormously so   I'm lean, not hulking   but broad enough that shirts sit squarely on them, that a cape falls properly, that when I stand in a doorway I fill the frame. Tomorrow, Ilara said, they would narrow.</p>
+
+<p>My chest. Flat. The pectoral muscle visible when I flex, the sternum a vertical ridge, the ribs countable when I inhale deep. Tomorrow, she said, breast tissue would begin.</p>
+
+<p>My waist. Straight. Hip-to-waist ratio essentially one-to-one, the rectangular torso of a male body. Tomorrow, she said, the waist would narrow, the hips would widen.</p>
+
+<p>My cock. I look at it. I don't look away. It hangs soft against my thigh   warm, familiar, unremarkable. The weight of it, the way it shifts when I move, the way it thickens when I'm aroused and the way the arousal builds from somewhere behind my navel and spreads downward in a warm rush. I've had this body for twenty years. I've touched myself since I was thirteen. I know how the pleasure builds, the rhythm, the peak. I know the way my balls tighten and draw up before I come. I know the pulse of it, the release, the spreading warmth.</p>
+
+<p>I hold myself. Not sexually. The way you hold something precious that you're about to surrender. My hand around my cock and my cock warm in my palm and the weight of it   the specific, irreplaceable weight of being male.</p>
+
+<p>I let go.</p>
+
+<p>I step back from the mirror. The man in the glass steps back too. We look at each other   same grey-blue eyes, same dark hair, same sharp jaw and shadowed hollows and stubble that I still haven't shaved.</p>
+
+<p>I try to see her. The woman I'll become. I try to imagine this face softened, this jaw rounded, this body curved and shortened and remade. I can't. The imagination fails. It's like trying to picture a colour you've never seen   the concept is there but the image won't form.</p>
+
+<p>Tomorrow I will walk to the Moonspire Tower. I will lie on the stone altar. I will drink a potion made of moonflower and silver and my own blood. And six hours later, when I wake   if I wake   the man in this mirror will be gone, and someone else will be looking back at me, and she will have my eyes but nothing else that I recognise, and I will have to learn to call her <em>me.</em></p>
+
+<p>I get into bed. The sheets are cold, then warm. The fire clicks and settles. Outside, the palace sleeps around me   guards on their posts, servants in their quarters, my mother in her sickbed with her grey-blue eyes and her iron will and her absolute, unshakeable conviction that this is the only way.</p>
+
+<p>Tomorrow. The word sits in the dark like a stone.</p>
+
+<p>I sleep. Finally. From exhaustion, from wine, from the particular surrender of a body that has fought so hard against the inevitable that it has nothing left.</p>
+
+<p>I dream of the tapestries in the Moonspire. The serpent becoming the river. The tree becoming the woman. The bird becoming the song.</p>
+
+<p>In the dream, the bird is me. And the song is beautiful. And I can't remember what wings felt like.</p>
+
+<!-- --- STATE CHANGES --- -->
+<<set $d1_night to true>>
+<<set $energy to 0>>
+<<completeObjective "mirror_last">>
+<<addObjective "sleep_d1" "Sleep" "MAIN">>
+
+<div class="scene-end">
+  <<link "Sleep →" "day-1_sleep_transition">>
+    <<completeObjective "sleep_d1">>
+  <</link>>
+</div>

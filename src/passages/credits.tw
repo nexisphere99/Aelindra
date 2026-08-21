@@ -1,0 +1,8 @@
+:: credits
+<div class="credits-screen">
+  <h2>Credits</h2>
+  <p>AELINDRA: The Rite of Becoming</p>
+  <p>Written &amp; designed by the Aelindra team.<br>
+  Built with Twine / SugarCube 2.</p>
+  <p class="nav-return"><<link "◄ Back to Title" "title-screen">><</link>></p>
+</div>

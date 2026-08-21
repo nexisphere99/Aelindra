@@ -1,0 +1,38 @@
+:: day-2_gardens_hub [nobr]
+<<locationImage "royal_gardens" "Royal Gardens">>
+<h2>🌿 Royal Gardens</h2>
+<p>Dusk. Jasmine and woodsmoke. The fountain splashes softly.</p>
+
+<<if not $d2_npc_wynn>>
+<div class="interaction-card side">
+  <<npcPortrait "wynn" "Old Wynn">>
+  <h4>🌹 The Old Gardener</h4>
+  <p>A bent figure pruning winter roses with metronomic precision.</p>
+  [[Approach|day-2_npc_wynn]]
+</div>
+<</if>>
+
+<<if not $d2_npc_harwick>>
+<div class="interaction-card side">
+  <<npcPortrait "harwick" "Lady Harwick">>
+  <h4>💎 Movement Behind the Topiary</h4>
+  <p>A rustle of silk. A wave of perfume. Someone is lying in wait.</p>
+  [[Investigate|day-2_npc_harwick]]
+</div>
+<</if>>
+
+<<if not $d2_gardens>>
+<div class="interaction-card main">
+  <h4>🎵 The Stone Bench   Lute Music</h4>
+  <p>Someone familiar is playing. The melody wanders, finds something beautiful.</p>
+  [[Follow the music|day-2_gardens]]
+</div>
+<</if>>
+
+<<if $d2_npc_wynn and $d2_npc_harwick and $d2_gardens>>
+  <p class="empty-note">The garden has gone quiet. Just the fountain, the jasmine, and the stars coming out.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

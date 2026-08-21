@@ -1,0 +1,11 @@
+:: inventory-system [script nobr]
+/*
+  INVENTORY SYSTEM
+  ------------------------------------------------------------
+  The core add/has widgets already live in src/ui/widgets.tw
+  (<<addItem>>, <<hasItem>>). $inventory is initialized in
+  StoryInit.tw as []. This file is reserved for inventory
+  logic that grows beyond simple add/check   item usage,
+  stacking/quantities, or an inventory display passage  
+  once day content needs it.
+*/

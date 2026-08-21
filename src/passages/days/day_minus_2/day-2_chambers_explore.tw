@@ -1,0 +1,55 @@
+:: day-2_chambers_explore [nobr]
+<<set _chamberImg to ($timeSlot is "NIGHT") ? "palace_chambers_night" : "palace_chambers">>
+<<locationImage _chamberImg "Edrin's Chambers">>
+<h2>🛏 Edrin's Chambers</h2>
+<p>Your room. Bookshelves, maps, the training sword on the wall.</p>
+
+<<completeObjective "examine_chambers">>
+
+<<if not $d2_npc_letter>>
+<div class="interaction-card side">
+  <h4>📜 The Half-Written Letter</h4>
+  <p>Three weeks old. The ink has dried in the nib.</p>
+  [[Read it|day-2_npc_letter]]
+</div>
+<</if>>
+
+<<if not $d2_npc_brin and $timeSlot is "MORNING">>
+<div class="interaction-card side">
+  <<npcPortrait "brin" "Brin">>
+  <h4>🧑 The Lingering Servant</h4>
+  <p>The boy who brought breakfast is hovering near the door. New hire, clearly.</p>
+  [[Speak with him|day-2_npc_brin]]
+</div>
+<</if>>
+
+<<if $timeSlot is "NIGHT" and not $d2_npc_perrin>>
+<div class="interaction-card side">
+  <<npcPortrait "perrin" "Perrin">>
+  <h4>🚪 The Door</h4>
+  <p>The room is warm from the rebuilt fire. You could use some air.</p>
+  [[Step into the corridor|day-2_npc_perrin]]
+</div>
+<</if>>
+
+<<if $timeSlot is "NIGHT" and not $d2_npc_masturbation>>
+<div class="interaction-card side">
+  <h4>🔥 The Body   Restless</h4>
+  <p>You can't sleep. The sheets are warm. Your body is wound tight with stress and something else   something familiar, something the body wants when the mind won't quiet.</p>
+  [[Give in → |day-2_scene_masturbation]]
+</div>
+<</if>>
+
+<div class="interaction-card">
+  <h4>🪞 The Mirror</h4>
+  <p>Polished silver in a dark wood frame.</p>
+  <<if $timeSlot is "NIGHT">>
+    [[Stand before it|day-2_night]]
+  <<else>>
+    <p class="flavor-dim">A quick glance. Dark hair, grey-blue eyes, sharp jaw. You don't linger   not yet.</p>
+  <</if>>
+</div>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

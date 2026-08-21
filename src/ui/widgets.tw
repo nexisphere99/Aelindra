@@ -1,0 +1,102 @@
+:: widgets [widget nobr]
+
+/* ===== OBJECTIVE SYSTEM ===== */
+
+<<widget "addObjective">>
+  <<set _obj to {id: _args[0], text: _args[1], type: (_args[2] || "MAIN"), done: false}>>
+  <<run $objectives.push(_obj)>>
+<</widget>>
+
+<<widget "completeObjective">>
+  <<set _id to _args[0]>>
+  <<set _newObjs to []>>
+  <<for _i, _obj range $objectives>>
+    <<if _obj.id is _id>>
+      <<set _obj.done to true>>
+      <<run $completedObjectives.push(_obj)>>
+    <<else>>
+      <<run _newObjs.push(_obj)>>
+    <</if>>
+  <</for>>
+  <<set $objectives to _newObjs>>
+<</widget>>
+
+<<widget "clearObjectives">>
+  <<set $objectives to []>>
+<</widget>>
+
+/* ===== STAT CHANGE WITH TOAST ===== */
+
+<<widget "statChange">>
+  /* Usage: <<statChange "statPRO" 2 "Prowess">> or <<statChange "stress" -5 "Stress">> */
+  <<set _varName to _args[0]>>
+  <<set _amount to _args[1]>>
+  <<set _label to (_args[2] || _varName)>>
+  <<set State.variables[_varName] to State.variables[_varName] + _amount>>
+  /* Clamp resource stats */
+  <<if _varName is "energy" or _varName is "stress" or _varName is "arousal">>
+    <<set State.variables[_varName] to Math.max(0, Math.min(100, State.variables[_varName]))>>
+  <</if>>
+  <<run showStatToast((_amount > 0 ? '+' : '') + _amount + ' ' + _label, _amount < 0 && (_varName is 'energy' || _varName is 'gold'))>>
+<</widget>>
+
+/* ===== UPDATE MC PORTRAIT ===== */
+
+<<widget "updatePortrait">>
+  <<set $mcPortrait to getPortraitForState()>>
+<</widget>>
+
+/* ===== INVENTORY ===== */
+
+<<widget "addItem">>
+  <<run $inventory.push({id: _args[0], name: _args[1], desc: (_args[2] || "")})>>
+<</widget>>
+
+<<widget "hasItem">>
+  <<set _result to false>>
+  <<for _item range $inventory>>
+    <<if _item.id is _args[0]>><<set _result to true>><</if>>
+  <</for>>
+<</widget>>
+
+/* ===== DIALOGUE FORMATTER ===== */
+
+<<widget "speak">>
+  /* Usage: <<speak "ALDRIC">>Dialogue text here.<</speak>> */
+  <div class="dialogue">
+    <span class="speaker"><<print _args[0]>></span>
+    _contents
+  </div>
+<</widget>>
+
+/* ===== TIME DISPLAY HELPER ===== */
+
+<<widget "advanceTime">>
+  <<set $timeSlot to _args[0]>>
+<</widget>>
+
+/* ===== IMAGES =====
+   <<locationImage>> and <<npcPortrait>> are NOT defined here.
+   Raw <img> markup built as text (via a backtick naked expression,
+   or via <<print>> string concatenation) proved unreliable inside
+   a <<widget>> body - see script.js for the full writeup. They're
+   defined there instead, as real JavaScript macros (Macro.add),
+   which build the <img> element directly via the DOM API and so
+   never touch HTML-as-text at all. */
+
+/* ===== END-OF-CONTENT NOTICE =====
+   Shared between day1_hub.tw (female route) and day1_hub_futa.tw
+   (futa route) - both branches currently end here, so the notice
+   lives once as a widget rather than being pasted into both files
+   and drifting out of sync later. Update the version label in one
+   place when a new public build ships. */
+<<widget "endOfContentNotice">>
+  <div class="end-of-content">
+    <h3>End of Public Version v0.1</h3>
+    <p>You've reached the end of AELINDRA's current free public release. Thank you for playing this far into Edrin's — Aelindra's — story.</p>
+    <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
+    <p class="patreon-cta">
+      <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>
+    </p>
+  </div>
+<</widget>>

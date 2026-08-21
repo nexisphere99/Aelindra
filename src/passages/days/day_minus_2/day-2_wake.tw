@@ -1,0 +1,63 @@
+:: day-2_wake [nobr]
+<div class="scene-image"><<locationImage "palace_chambers" "Edrin's Chambers">></div>
+
+<h2>Edrin's Chambers   Morning</h2>
+
+<p>I wake with water still in my lungs.</p>
+
+<p>Not real water   I know that before I'm even fully awake, before my eyes have found the ceiling or my hands have found the edge of the blanket. But for one raw, disoriented second it's absolute: the pressure of it, the cold, the black closing over my head like a lid coming down. Then it's gone, and I'm just a man in a bed, heart going too hard for a dream I can't hold onto.</p>
+
+<p>I don't remember any of it. I never do. Just the water, and the specific, useless terror of not knowing whether I was sinking or rising.</p>
+
+<p>She's coughing now. Not that I can hear it from here. I just know. The way you know rain is coming when the air goes heavy and the birds stop singing.</p>
+
+<p>Grey light pushes through the arrow-slit windows. Dawn in Aethermere is never generous   it doesn't flood in, doesn't announce itself with warmth. It seeps. A slow invasion of pale nothing that turns everything the colour of old iron.</p>
+
+<p>I swing my legs off the bed. Stone floor. Cold enough to make me hiss through my teeth. Someone let the fire die   no, I told the servants not to tend it overnight. I don't like people in my rooms while I sleep. A prince's paranoia, Aldric calls it. A reasonable precaution, I call it. Not like anyone's tried to kill me. Yet.</p>
+
+<p>My chambers are... modest, for a prince. That's what the courtiers whisper, anyway, in that tone that makes "modest" sound like a disease. Bookshelves line two walls   histories, treatises on statecraft, a worn collection of Thornridge campaign journals that belonged to my grandmother. A training sword hangs above the desk, blade dull but grip worn smooth from years of evening drills when the yard was occupied. Maps pinned to the wall   the kingdom, the neighbouring territories, a crude sketch of the Ashborne lands I drew myself when I was seventeen and furious about something I can't remember now.</p>
+
+<p>The half-finished letter on the desk catches my eye. I started writing to Rowan three weeks ago. Got as far as <em>"The court is suffocating and I'm considering taking up goat herding as an alternative career"</em> before I lost the energy to be funny. The ink has dried in the nib.</p>
+
+<p>I dress. Linen shirt, leather jerkin   the good one, with the reinforced shoulders, because I'm sparring this morning and last time I wore the thin one Aldric's practice blade left a bruise the shape of a crescent moon on my collarbone. Dark trousers. Boots. The boots are getting worn at the heels. I should have the cobbler replace them. I won't. I've broken them in perfectly and new boots are a betrayal of the feet.</p>
+
+<p>The mirror.</p>
+
+<p>I don't know why I stop in front of it today. I pass it every morning   it's bolted to the wall beside the wardrobe, a sheet of polished silver in a dark wood frame. Most days I glance. Today I look.</p>
+
+<p>A lean man stares back. Dark hair falling over grey-blue eyes that my mother calls "storm-coloured," which is a kind way of saying they can't decide what they are. Sharp jaw, a little too sharp   I haven't been eating enough, and it shows in the hollows beneath my cheekbones. Shadows under my eyes because I slept four hours, maybe five. Handsome, supposedly. Rosalind Thorne told me once I had "the face of a man who doesn't know he's beautiful, which is either charming or infuriating depending on my mood." I didn't know what to do with that then. Still don't.</p>
+
+<p>My shoulders are broad from six years of swordwork. Arms ropey rather than bulky   I'm fast, not strong, and Aldric has trained me accordingly. I run my hand through my hair. It flops back immediately. I don't bother trying again.</p>
+
+<p>This is me. These bones and muscles and the rough scrape of stubble under my jaw that I should shave but won't because there's a petty satisfaction in looking slightly unkempt when the courtiers expect polish.</p>
+
+<p>I don't know why I catalogue it all this morning. Some instinct, maybe. The way you unconsciously memorize a room you're about to leave.</p>
+
+<p>A knock. The door opens   a servant, young, nervous, carrying a tray. Bread, hard cheese, cold venison from last night's roast. A cup of something steaming that smells like it's trying to be tea and failing.</p>
+
+<div class="dialogue"><span class="speaker">SERVANT</span>"Your Highness. Breakfast."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"On the table."</div>
+
+<p>He sets it down. Lingers.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Something else?"</div>
+
+<div class="dialogue"><span class="speaker">SERVANT</span>"The Queen's Healer was summoned at first light, Your Highness. Captain Vane asked me to tell you Her Majesty has requested your presence. At your convenience, he said, but..." He falters. "He said it the way he says things that aren't actually at your convenience."</div>
+
+<p>My stomach clenches. I nod. The servant leaves.</p>
+
+<p>I eat standing at the window. The bread is yesterday's   slightly stale, the way I prefer it, because fresh bread is too soft and tears when you try to spread anything on it. Below, the courtyard is busy. Guards changing shift. Stable hands leading horses. A merchant's cart being inspected at the inner gate. Normal. Everything looks so bloody normal.</p>
+
+<p>The cheese tastes like nothing. I eat it anyway. Energy is energy.</p>
+
+<!-- --- STATE CHANGES --- -->
+<<set $d2_woke to true>>
+<<completeObjective "wake_up">>
+<<addObjective "train_aldric" "Report to the Training Yard   morning sparring with Captain Vane" "MAIN">>
+<<addObjective "examine_chambers" "Examine your chambers" "SIDE">>
+<<addObjective "visit_kitchen_am" "Visit the Kitchens   breakfast is better hot" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-2_hub]]
+</div>

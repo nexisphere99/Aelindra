@@ -1,0 +1,131 @@
+:: day-1_moonspire [nobr]
+<div class="scene-image"><<locationImage "moonspire_tower" "Moonspire Tower">></div>
+
+<h2>Moonspire Tower   Meeting Ilara</h2>
+
+<p>The covered bridge is thirty paces long and feels like three hundred.</p>
+
+<p>Below me, the river crashes through the chasm with a sound like the world clearing its throat. The wind funnels through the gap and hits me broadside   cold, sharp, carrying spray that tastes of mineral and deep earth. I grip the stone railing. The stone is ancient, worn smooth by centuries of hands that have crossed this bridge for the same reason: because the tower holds answers that the palace cannot.</p>
+
+<p>The Moonspire Tower rises from the eastern cliff like a single pale bone pointing at the sky. It's white stone   not painted, not plastered, but quarried from something that naturally holds light. Even now, in the grey midday overcast, the tower has a faint luminescence, as if moonlight has been trapped in its walls and leaks out slowly, perpetually, regardless of the hour. It shouldn't be beautiful. It is.</p>
+
+<p>The door is arched, carved with symbols I don't recognise   spiralling forms that could be letters or could be the visual representation of magic itself, frozen in stone. It opens before I touch it. I choose not to find that alarming.</p>
+
+<p>Inside: cool air, a temperature drop that has nothing to do with season and everything to do with whatever enchantments keep this place. The smell is layered   dried herbs, old parchment, beeswax candles, and beneath it all something electric, something that makes the hairs on my forearms stand up and the back of my teeth itch. Magic. I've been around it my whole life   the Silverveil maintain the palace wards, heal the soldiers, advise the crown on matters of the arcane   but I've never been inside their tower. I've never been this close to the source.</p>
+
+<p>Stairs spiral upward, hugging the inner wall. Tapestries hang between sconces   scenes of transformation, not all of them human. A serpent becoming a river. A tree becoming a woman. A bird becoming a song. The images shift slightly when I'm not looking directly at them, as if they're being retold each time the viewer blinks.</p>
+
+<p>I climb. My boots echo on stone that seems to absorb the sound and release it back half a second later, a faint auditory shadow that makes every step feel doubled. One flight. Two. Three. The stairs open onto a landing, and she's there.</p>
+
+<p>Archsorceress Ilara.</p>
+
+<p><<npcPortrait "ilara" "Archsorceress Ilara">>She's standing in the doorway of what must be the Ritual Chamber   I can see, beyond her, a round room with a domed ceiling painted in stars and a stone altar at the center, low and wide, draped in silvery cloth. She's framed by the doorway like a portrait, and the effect is clearly intentional. Everything about Ilara feels intentional.</p>
+
+<p>Thirty-eight, according to the palace records. She looks it and she doesn't   her face is sharp-featured, high-cheekboned, the kind of face that will look essentially the same at sixty as it does now because the bones are doing all the work. Dark hair shot through with silver, pulled back from her face and falling to her shoulder blades. Her eyes are the colour of rain on slate   grey with a coldness that isn't unfriendly, just precise. She's wearing the Silverveil robes   deep purple, silver-edged, fitted close to a body that is lean and straight-backed and radiates the particular calm of someone who has seen things that would break most people and chose not to break.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You're here to ask questions," she says. Her voice is low, measured, the voice of someone who chooses every word and wastes none. "Not to commit."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"How do you know?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Because you're standing in the doorway. People who've decided walk in."</div>
+
+<p>I look down. I am, in fact, standing precisely on the threshold   one foot on the landing, one foot on the chamber floor, my body caught between entry and retreat. I step inside. It feels like a concession.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Sit." She gestures to a chair near a small table where a teapot steams. The tea is poured before I've settled   herbal, faintly sweet, with an undertone of something I can't identify.</div>
+
+<p>My first sip and the vice-grip in my chest loosens by a fraction. I look at the cup suspiciously.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"It's lightly enchanted," she says, reading my expression. "Not to influence your decision. To lower your cortisol. You're vibrating like a bowstring and I'd like to have a conversation with a human being, not a panic response."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm not panicking."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You're breathing twelve times a minute and your jaw is clenched so hard I can hear your teeth grinding. In my professional experience, that qualifies."</div>
+
+<p>I unclench my jaw. Deliberately. She notices, and something that might be amusement crosses her face   not a smile, exactly, but the ghost of one. The shadow a smile casts before the smile itself arrives.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Ask your questions."</div>
+
+<p>I ask. She answers. Clinically at first   the mechanics of the Rite, the preparation, the procedure, the timeline.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The ritual takes approximately six hours to perform. You'll drink a preparation   a potion brewed from moonflower essence, silverveil silk, and your own blood. The blood component is what personalises the magic   it reads your body's current template and writes the new one. You'll lie on the altar." She nods toward it. "I and four sister sorceresses will channel transformation magic through your body over those six hours."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The pain." It's not a question.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Is significant. Not unbearable   we manage it with enchantments, dampening fields that reduce the sensation to approximately forty percent of its actual intensity. Without the dampening, it would be unsurvivable   the nervous system would shut down in self-preservation. With the dampening, it's... intense. Lord Aldren described it as 'being reforged on an anvil by the gods.' Prince Castien said it was 'the worst night of his life, followed by the first morning of his real one.'"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That second one sounds like propaganda."</div>
+
+<p>That ghost-smile again.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Castien lived as Princess Casta for forty-seven years. She was beloved. She was powerful. She was, by all accounts, happy. You can decide for yourself whether that's propaganda or outcome data."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Tell me about the physical changes. Specifically."</div>
+
+<p>She sets down her tea. Her hands fold in her lap   long fingers, silver rings on three of them, nails trimmed short and practical. She speaks the way a surgeon explains a procedure: without hesitation, without euphemism, without apology.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Your height will decrease by approximately five to six inches. Your skeletal frame will narrow at the shoulders and widen at the pelvis. Your musculature will soften and redistribute   less mass in the upper body, more in the hips and thighs. Your facial bone structure will shift: jawline softens, cheekbones lift, brow ridge smooths, lips become fuller. Your hair will grow   both in length and in density. Your body hair will thin considerably; your facial hair will cease entirely.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Your skin will change   thinner, softer, with increased sensitivity. Your fat distribution will shift to the breasts, hips, buttocks, and thighs. Your voice will rise   the larynx will reshape, the vocal cords will thin and tighten.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Your reproductive organs will change completely."</div>
+
+<p>She pauses here   not for effect, but to give me a moment. I don't take it. I stare at her and wait. She continues.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Your testes will be absorbed by the body. Your penis will reconfigure into a clitoris and labia   the tissue is homologous, so the magic works with existing structures rather than creating from nothing. A vaginal canal will form, along with a cervix, uterus, and ovaries. You will be capable of menstruation and pregnancy.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Breast tissue will begin developing during the ritual and will continue growing naturally over the following weeks and months. You'll wake from the Rite at approximately a large A-cup. Growth from there follows a roughly natural timeline, accelerated somewhat by the residual magic."</div>
+
+<p>My tea is cold. I'm not sure when that happened. My hands are wrapped around the cup, gripping it the way you grip something to prove you're still in control of your fingers.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The transformation is permanent," she says. "There is no reversal. The magic rewrites you at the level of blood and bone. Your chromosomes will change. You will be female   not a man made to resemble a female, not an illusion, not a disguise. Female. Indistinguishable from any woman born as one."</div>
+
+<p>Silence. The candles in the chamber burn without flickering   enchanted flames, steady, unbothered by the chaos in my chest.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The previous subjects," I manage. "They survived."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"All three."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And after. Were they... themselves? Still?"</div>
+
+<p>She looks at me. For the first time, something in her expression shifts   the clinical precision softens, just slightly, and I see what might be compassion. Or might be the memory of something she's seen before in this room, in those eyes, in the face of someone sitting where I'm sitting and asking the question I'm asking.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You will still be you. Your mind, your memories, your personality, your preferences, your humour, your stubbornness"   yes, she says that deliberately   "will remain unchanged. You will think the same thoughts. You will recognise yourself. The body will be different. The person wearing it will be the same."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"She chose it to escape," I say. "Casta. She didn't choose it to be happy."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"No. She chose it to survive. And then she lived. As we all do   making something of what we didn't choose."</div>
+
+<p>I set the cup down. Stand. My legs hold me, which feels like more of an accomplishment than it should.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I haven't decided."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The door is always open." She walks me to the landing. At the top of the stairs, she stops. "Until it isn't. The next lunar alignment is tomorrow night. After that, three months. By then "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"By then my mother is dead and Vareth is king."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Yes."</div>
+
+<p>I descend the stairs. The tapestries shift as I pass   the serpent becoming the river, the tree becoming the woman, the bird becoming the song. The images feel less like illustrations and more like previews.</p>
+
+<p>The bridge is colder on the way back. The river below sounds louder. Everything sounds louder when the world is narrowing to a single point.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $statWIS += 3>>
+<<set $stress += 5>>
+<<set $ilaraFamiliarity += 5>>
+<<set $riteKnowledge += 3>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "AFTERNOON">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_moonspire to true>>
+<<completeObjective "moonspire_ilara">>
+<<addObjective "training_rage" "Burn it off   the Training Yard" "MAIN">>
+<<addObjective "moonspire_explore" "Explore the Moonspire Tower   apprentice quarters, apothecary" "SIDE">>
+<<addObjective "library_vaelin" "Brother Vaelin may have found something" "SIDE">>
+<<addObjective "servants_alva" "Below Stairs   Mistress Alva" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-1_moonspire_hub]]
+</div>

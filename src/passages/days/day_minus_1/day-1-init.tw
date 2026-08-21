@@ -1,0 +1,62 @@
+:: day-1-init [widget nobr]
+
+/* ============================================================
+   DAY -1 ("The Arguments")   SCENE & NPC FLAG INIT
+   Called once, from day-2_sleep_transition.tw, mirroring
+   day_minus_2/day-2-init.tw. Day-specific flags live here, not
+   in StoryInit.tw, so they stay a clean record of what happened
+   this day rather than bleeding into any future day/replay.
+
+   CONVENTION for every future day{N}Init widget: always open with
+   <<clearObjectives>>. Without it, any side objective the player
+   never completed the previous day (e.g. skipped the Servant
+   Quarters) survives in $objectives forever - the passage that
+   could complete it isn't reachable once the next day's hub takes
+   over, so it becomes a permanently stuck sidebar entry. Missed
+   side content is meant to just quietly go away at day's end, the
+   same way it does in most day-loop games - not linger as a dead
+   quest marker.
+   ============================================================ */
+<<widget "day1Init">>
+  <<clearObjectives>>
+
+  /* --- Day -1 Scene Flags --- */
+  <<set $d1_queen to false>>
+  <<set $d1_moonspire to false>>
+  <<set $d1_training to false>>
+  <<set $d1_rowan to false>>
+  <<set $d1_night to false>>
+
+  /* --- Day -1 NPC Flags --- */
+  <<set $d1_npc_aldwyn to false>>
+  <<set $d1_npc_messenger to false>>
+  <<set $d1_npc_nara to false>>
+  <<set $d1_npc_vael to false>>
+  <<set $d1_npc_tamsin2 to false>>
+  <<set $d1_npc_voss to false>>
+  <<set $d1_npc_marta2 to false>>
+  <<set $d1_npc_vaelin2 to false>>
+  <<set $d1_npc_haeth to false>>
+  <<set $d1_npc_wynn2 to false>>
+  <<set $d1_npc_perrin2 to false>>
+  <<set $d1_npc_alva2 to false>>
+
+  /* --- Day -1 sexual-content flags (which scene fired) --- */
+  <<set $d1_npc_lastjerk to false>>
+  <<set $d1_npc_sera to false>>
+  <<set $d1_npc_fantasy to false>>
+  <<set $d1_npc_rowan_desire to false>>
+  /* $penetrationAnxiety lives in StoryInit.tw - it's a persistent
+     payoff flag referenced by Day 1+ scenes, not reset per day */
+
+  /* --- Day framing (day-2_sleep_transition.tw already sets these
+       same values; kept here too so this passage is the single
+       source of truth for "start of Day -1," matching day2Init) --- */
+  <<set $dayNumber to -1>>
+  <<set $dayLabel to "The Arguments">>
+  <<set $timeSlot to "MORNING">>
+
+  <<addObjective "queen_round2" "Confront the Queen   you have a list" "MAIN">>
+  <<addObjective "corridor_aldwyn" "A physician in the corridor   he's moving fast" "SIDE">>
+  <<addObjective "visit_kitchen_d1" "Visit the Kitchens   Marta is baking at crisis tempo" "SIDE">>
+<</widget>>

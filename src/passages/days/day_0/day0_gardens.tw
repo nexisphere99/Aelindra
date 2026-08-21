@@ -1,0 +1,19 @@
+:: day0_gardens [nobr]
+<<locationImage "royal_gardens" "Royal Gardens">>
+<h2>🌿 Royal Gardens</h2>
+<p>Morning light. The jasmine has been uncovered. New growth.</p>
+
+<<if not $d0_npc_wynn3>>
+<div class="interaction-card main">
+  <<npcPortrait "wynn" "Old Wynn">>
+  <h4>🌸 The Jasmine Survived</h4>
+  <p>Wynn stands beside it, trowel in hand, looking at the new growth.</p>
+  [[Approach|day0_npc_wynn3]]
+</div>
+<<else>>
+  <p class="empty-note">The garden is quiet. The jasmine catches the morning light.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

@@ -1,0 +1,78 @@
+:: day-1_training [nobr]
+<div class="scene-image"><<locationImage "training_yard" "Training Yard">></div>
+
+<h2>Training Yard   Rage Session</h2>
+
+<p>I don't go to the training yard to train. I go to the training yard to break things.</p>
+
+<p>The practice dummy stands where it always stands   a post wrapped in leather and stuffed with straw, shaped vaguely like a torso, with arms that swing when struck. It's been replaced a hundred times. I've destroyed a handful myself, on bad days. Today is a bad day.</p>
+
+<p>I grab a practice sword from the rack. Not the light one I use for sparring   the heavy one, the one weighted with lead in the pommel that Aldric uses for endurance drills. It's too heavy for finesse. It's perfect for what I need.</p>
+
+<p>The first strike cracks across the dummy's left arm with a sound like a branch snapping. Straw erupts from a split in the leather. Good.</p>
+
+<p>I hit it again. Backhand. The dummy's head whips sideways, wobbles, comes back. I hit it before it's settled. Forehand, overhand, a diagonal strike that catches the torso and gouges a furrow through the leather. Straw bleeds out like intestines from a wound.</p>
+
+<p>I'm not sparring. Sparring requires technique, discipline, the careful architecture of offence and defence that Aldric has spent six years drilling into my muscles. This is the opposite of that. This is demolition. Every swing is the argument I can't win. Every impact is a door closing. The adoption   crack. The bastard claim   crack. The legal reform   crack. The military option   CRACK. The crumpled list in my pocket with every item crossed off   CRACK CRACK CRACK.</p>
+
+<p>The dummy's left arm hangs by a thread. I sever it completely. It falls to the flagstones with a soft thump and lies there, straw leaking, pathetic.</p>
+
+<p>I keep going. The practice sword is heavier with every swing but I don't stop because stopping means thinking and thinking means the Moonspire and Ilara's voice saying <em>your testes will be absorbed</em> and <em>your penis will reconfigure</em> and <em>permanent, no reversal, blood and bone</em> and I cannot think about that right now. I cannot hold those words in my head and remain upright. So I hit things.</p>
+
+<p>Two hours.</p>
+
+<p>I know it's been two hours because the light has changed   the midday overcast has broken and afternoon sun slants across the yard, catching the dust and straw I've launched into the air. My arms burn. The muscles from shoulder to wrist are screaming, not the productive burn of good training but the ragged, tearing protest of tissue pushed past its limits. Blisters have formed on my palms, split open, wept, and crusted. My grip is bloody. The practice sword is bloody. The dummy is gutted   a skeleton of post and nails, straw scattered across ten feet of flagstones like the aftermath of a small, pointless war.</p>
+
+<p>I drop the sword. It clangs on the stone and the sound is very loud in the sudden silence.</p>
+
+<p>I sit. Right there, in the dirt, among the straw and the wreckage. My back against the empty weapon rack. My legs stretched out in front of me. My hands in my lap, palms up   raw, blistered, streaked with blood and straw dust. My breath comes in ragged pulls. My heart is hammering so hard I can feel it in my throat, my wrists, the hollows behind my ears.</p>
+
+<p>These hands. I stare at them. Broad palms. Long fingers. Sword calluses built over six years of daily practice. The scar on the left forearm from the hunting knife. The ridge of tendon that stands up when I flex my wrist. Strong hands. A man's hands.</p>
+
+<p>In forty-eight hours, they could be different hands.</p>
+
+<p><<npcPortrait "aldric" "Aldric">>I don't look up when Aldric approaches. I hear him   his boots on the flagstones have a particular cadence, heavy and even, the walk of a man who has never been in a hurry because he's always already where he needs to be. He sits down next to me without being invited. The fact that he's sitting on the ground at all   Aldric, who treats military protocol the way priests treat scripture   tells me he knows this is bad.</p>
+
+<p>He doesn't say anything for a while. We sit in the wreckage together. The afternoon sun warms the stone. A pigeon investigates the scattered straw with the blind optimism of a bird that has never considered the possibility that the world might not provide.</p>
+
+<p>He hands me a waterskin. I drink. The water is tepid and tastes of leather and it's the best thing I've ever put in my mouth.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I don't know what's troubling you, Your Highness." His voice is careful. Aldric's version of careful   which means direct but gentle, like a sword sheathed in soft leather. "But I've served your mother for twelve years, and I know that look. It's the look of someone being asked to carry something too heavy."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What if the weight is... everything I am?"</div>
+
+<p>He considers this. Aldric considers things the way he fights   thoroughly, without rushing, with the understanding that a wrong response is worse than a slow one.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Then you carry it until your legs learn it. That's all any of us do."</div>
+
+<p>Simple. Aldric is always simple   not because he's stupid, but because he's stripped away everything that isn't essential. He sees the world as a series of duties, loyalties, and the spaces between them. He doesn't know what I'm considering. He doesn't need to. He sees a man in pain, and he sits beside him, and he offers water.</p>
+
+<p>It helps. Not enough. But it helps.</p>
+
+<p>He stands first. Offers his hand. I take it   his grip is warm and calloused and strong and absolutely, utterly certain. He pulls me up.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I'll have someone replace the dummy," he says, looking at the wreckage with the expression of a man surveying a battlefield.</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I think I owe the armoury an apology."</div>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"You owe the armoury three dummies. I'll add it to the requisition." The ghost of something warm in his voice. "Get some food. And wrap those hands   the blisters will get infected if you leave them."</div>
+
+<p>He walks away. His back is straight, his stride is even, and watching him cross the training yard I think: <em>that man would follow me into fire. And I'm about to become something he may not recognise.</em></p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $statPRO += 2>>
+<<set $stress -= 10>>
+<<set $affAldric += 3>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "EVENING">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_training to true>>
+<<completeObjective "training_rage">>
+<<addObjective "chambers_rowan" "Evening approaches   return to your chambers" "MAIN">>
+<<addObjective "gardens_wynn" "The gardens   Old Wynn is covering the roses" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-1_training_hub]]
+</div>

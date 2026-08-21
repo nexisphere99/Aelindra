@@ -1,0 +1,133 @@
+:: StoryInit [nobr]
+
+/* ============================================================
+   AELINDRA   GLOBAL VARIABLE INITIALIZATION
+   All variables declared here. Day-specific flags are set
+   in each day's transition passage, NOT here.
+   ============================================================ */
+
+/* --- META --- */
+<<set $gamePath to "none">>             /* "female" or "futa"   NOT chosen upfront. Stays
+                                             "none" through the shared Day -2/-1/0
+                                             prologue; Day 0 content sets this based
+                                             on the choices the player actually makes. */
+<<set $dayNumber to -2>>
+<<set $dayLabel to "The Summons">>
+<<set $timeSlot to "MORNING">>          /* MORNING, MIDDAY, AFTERNOON, EVENING, NIGHT */
+<<set $gameStarted to false>>
+
+/* --- PRIMARY STATS (0-100) --- */
+<<set $statGRA to 0>>       /* Grace */
+<<set $statAUT to 0>>       /* Authority */
+<<set $statALL to 0>>       /* Allure */
+<<set $statPRO to 0>>       /* Prowess */
+<<set $statWIS to 0>>       /* Wisdom */
+<<set $statRES to 0>>       /* Resolve */
+
+/* --- RESOURCE STATS --- */
+<<set $energy to 100>>
+<<set $stress to 30>>
+<<set $arousal to 0>>
+<<set $gold to 500>>
+
+/* --- HIDDEN STATS --- */
+<<set $corruption to 0>>
+<<set $devotion to 0>>
+<<set $maternal to 0>>
+<<set $dominance to 0>>
+<<set $submission to 0>>
+
+/* --- LORE / KNOWLEDGE --- */
+<<set $loreSuc to 0>>            /* Succession law knowledge */
+<<set $libraryLore to false>>
+<<set $riteKnowledge to 0>>
+
+/* --- SEXUAL CONTENT TRACKING (pre-transformation baseline) ---
+   Not day-specific   persists across Day -2, -1, and into Day 1+,
+   where post-transformation body-discovery scenes reference it for
+   contrast. Day-specific flags for which individual scenes fired
+   ($d2_npc_masturbation, $d1_npc_lastjerk, $d1_npc_sera, etc.) live
+   in each day's own init widget instead. */
+<<set $maleBaselineEstablished to false>>
+<<set $seraEncountered to false>>
+<<set $seraIntimate to false>>
+<<set $lissaraEncountered to false>>
+<<set $penetrationAnxiety to false>>
+<<set $queensGiftAccepted to false>>
+<<set $veylaEncountered to false>>
+<<set $sennaEncountered to false>>
+
+/* --- AFFINITY (Romance NPCs) --- */
+<<set $affAldric to 0>>
+<<set $affRosalind to 0>>
+<<set $affRowan to 0>>
+<<set $affKael to 0>>
+<<set $affLyra to 0>>
+
+/* --- AFFINITY (Key NPCs) --- */
+<<set $affSeraphina to 0>>
+<<set $ilaraFamiliarity to 0>>
+<<set $silverveilFamiliarity to 0>>
+
+/* --- REPUTATION --- */
+<<set $repStaff to 0>>
+<<set $repMilitary to 0>>
+<<set $repCourt to 0>>
+<<set $repSilverveil to 0>>
+<<set $repCommon to 0>>
+
+/* --- POLITICAL --- */
+<<set $ashborneThreat to 0>>
+<<set $queenHealth to 100>>       /* Decreases over 120 days */
+<<set $guardLoyalty to 0>>
+<<set $householdReady to 0>>
+
+/* --- BODY (pre-transformation defaults   male) --- */
+<<set $mcName to "Edrin">>
+<<set $mcTitle to "Prince of Aethermere">>
+<<set $mcHeight to "5'11\"">>
+<<set $mcBust to " ">>
+<<set $mcWaist to "31\"">>
+<<set $mcHips to "31\"">>
+<<set $mcSensitivity to "Normal">>
+<<set $mcBreastSize to " ">>
+<<set $mcPortrait to "edrin_default">>
+<<set $bodyStatusVisible to false>>
+
+/* --- FUTANARI-ROUTE BODY DETAIL ---
+   Stay at these defaults on the female route. Set for real in
+   day0_void_futa.tw once $gamePath is "futa". Declared here (rather
+   than only inside that passage) so they're never undefined/unset
+   on the female route. */
+<<set $cockPresent to false>>
+<<set $cockLength to "">>
+<<set $vaginaPresent to false>>
+<<set $dualAnatomy to false>>
+<<set $concealmentDifficulty to 0>>
+
+/* --- OUTFIT --- */
+<<set $currentOutfit to "Leather jerkin, dark trousers, boots">>
+<<set $outfitGRA to 0>>
+<<set $outfitALL to 0>>
+<<set $outfitAUT to 0>>
+<<set $wardrobeUnlocked to false>>
+
+/* --- OBJECTIVES --- */
+<<set $objectives to []>>
+<<set $completedObjectives to []>>
+
+/* --- INVENTORY --- */
+<<set $inventory to []>>
+<<set $hasVelthamLetter to false>>
+
+/* --- QUEST FLAGS --- */
+<<set $vaelinQuestActive to false>>
+
+/* --- PREGNANCY (future) --- */
+<<set $pregnant to false>>
+<<set $conceptionDay to -1>>
+<<set $trimester to 0>>
+
+/* --- RELATIONSHIP STATUS --- */
+<<set $romancePrimary to "none">>
+<<set $relationshipsVisible to false>>

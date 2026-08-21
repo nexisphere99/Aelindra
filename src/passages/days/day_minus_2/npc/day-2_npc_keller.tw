@@ -1,0 +1,45 @@
+:: day-2_npc_keller [nobr]
+<<npcPortrait "keller" "Guardsman Keller">>
+<h3>Guardsman Keller   The Gate Veteran</h3>
+
+<p>Keller is sharpening his actual sword   not a practice blade   at the bench near the yard entrance. He's forty, weathered, with the kind of face that looks like it was carved from the same stone as the castle walls. Twenty years in the Royal Guard. He fought in the border skirmish. He has opinions about everything and shares them with the restraint of a man who has been told many times to keep his opinions to himself and has decided that advice is for other people.</p>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"Your Highness. You sparred with the Captain this morning."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I did."</div>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"How'd it go?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"He disarmed me twice."</div>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"Only twice? You're improving." He tests the blade's edge with his thumb. A tiny bead of blood appears. He nods, satisfied. "I heard something interesting this morning."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"From the Sarrow Coast merchant?"</div>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"How do you   never mind. No, not the merchant. From the east wing guards. They're on double rotation. The Queen's chambers are locked to all visitors except family and the Royal Healer."</div>
+
+<p>He looks at me. Keller doesn't do subtlety   it's not in his skillset.</p>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"If something's happening, the Guard should know. We can't protect what we don't understand."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Nothing's happening, Keller."</div>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"With respect, Your Highness, when a prince says 'nothing's happening,' something is always happening. I've served three royals. I know the pattern."</div>
+
+<p>He sheathes the sword. The motion is practiced   twenty years of muscle memory.</p>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"The men are loyal, Your Highness. Whatever comes. I want you to know that."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I do know that."</div>
+
+<div class="dialogue"><span class="speaker">KELLER</span>"Good. Because loyalty is easier when it's acknowledged."</div>
+
+<p>He stands. Bows. Walks toward the gate, where a junior guard is struggling with the merchant's confiscated cart. Keller doesn't look back, but the message was clear: <em>we're watching, we're worried, and we're ready.</em></p>
+
+<<set $d2_npc_keller to true>>
+<<set $affAldric += 1>>
+<<set $statRES += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-2_training_hub]]
+</div>

@@ -1,0 +1,34 @@
+:: day-1_npc_marta2 [nobr]
+<<npcPortrait "marta" "Marta">>
+<h3>Marta's Worry   Kitchen Redux</h3>
+
+<p>The kitchen is running at what Marta calls "crisis tempo"   the particular accelerated rhythm that occurs when the Head Cook senses institutional distress and responds by cooking more aggressively. The output is staggering: bread in three varieties, two soups, a roast being turned on the spit by a sweating pot-boy, pastries cooling on wire racks, and what appears to be the beginning of a multi-layered cake of the kind usually reserved for state occasions.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're baking a siege supply," I say from the doorway.</div>
+
+<p>Marta wheels around, wooden spoon raised like a mace. She lowers it when she sees me   not entirely.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"I'm baking because this palace is going to need fed, and I've never once seen a problem made worse by pastry." She points the spoon at the stool. It's the same stool from yesterday. I suspect it has been designated My Stool by permanent decree. "Sit. You didn't eat breakfast."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"How do you "</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Your tray came back untouched. The bread, the cheese, the meat   all still there. Even Brin noticed, and Brin notices very little that isn't directly in front of his face."</div>
+
+<p>I sit. She puts food in front of me   bread torn from a warm loaf, a bowl of thick soup that smells of onion and thyme and the kind of slow-cooked patience that can't be rushed. I eat because refusing Marta's food would require more energy than I have.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"The Queen's quarters went through four changes of linen last night," she says, not looking at me, stirring a pot that doesn't need stirring   her thinking gesture, unchanged since yesterday. "Aldwyn ordered fortified broth at midnight. The extra guards on the east wing are rotating on four-hour shifts instead of eight."</div>
+
+<p>She's telling me what the numbers look like. The human cost, measured in laundry and soup and guard schedules. Marta doesn't deal in politics. She deals in the logistics of feeding and maintaining a palace, and the logistics tell a story that's harder to argue with than any legal brief.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Whatever you're deciding, Your Highness," she says, finally turning to face me, her flour-dusted face set in an expression that's half maternal fury and half something gentler that she'd never admit to, "decide soon. The palace can feel it. When the crown is uncertain, the whole building holds its breath. And I can't cook on held breath."</div>
+
+<p>The soup is excellent. The bread is warm. The world is ending and Marta is baking a fortress of carbohydrates against the dark, and somehow this is the most rational response anyone has had to the crisis.</p>
+
+<<set $d1_npc_marta2 to true>>
+<<set $energy += 15>>
+<<set $stress -= 5>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Continue → |day-1_kitchen]]
+</div>

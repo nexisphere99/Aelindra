@@ -1,0 +1,19 @@
+:: day0_kitchen [nobr]
+<<locationImage "kitchens" "Palace Kitchens">>
+<h2>🍞 Palace Kitchens</h2>
+<p>Every surface covered. She's been baking since midnight.</p>
+
+<<if not $d0_npc_marta3>>
+<div class="interaction-card main">
+  <<npcPortrait "marta" "Marta">>
+  <h4>🥧 The Last Pastry</h4>
+  <p>She sees you in the doorway and stops.</p>
+  [[Enter|day0_npc_marta3]]
+</div>
+<<else>>
+  <p class="empty-note">Marta is back to commanding her kitchen. She's said what she needed to say.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

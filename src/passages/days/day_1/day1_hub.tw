@@ -1,0 +1,27 @@
+:: day1_hub [nobr]
+<!--
+  PLACEHOLDER — pipeline test only, AND the current end of the
+  public build's content.
+  This is the FEMALE-route Day 1 hub. Replace with the real Day 1
+  content (its own day1Init flag block, mirroring day-1-init.tw /
+  day0-init.tw) when it's written — at that point, move the
+  <<endOfContentNotice>> call below down to wherever the new
+  content's own final passage ends, rather than deleting it.
+
+  Per the "two branches, never merge" instruction: this passage is
+  reachable ONLY from the female path ($gamePath = "female"). The
+  futa path lands on the separate day1_hub_futa.tw instead. Real
+  Day 1 content should branch the same way — this hub and its futa
+  counterpart should stay two independent files, not one hub with
+  internal <<if $gamePath>> branches, since the body-discovery
+  content diverges too much to share passages cleanly (per
+  day0_ritual_futa.md's own integration note).
+-->
+<div class="day-transition">
+  <h2><<print formatDayNumber($dayNumber)>> — Someone New</h2>
+  <p>Someone new opens her eyes.</p>
+  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
+  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+</div>
+
+<<endOfContentNotice>>

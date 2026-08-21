@@ -1,0 +1,36 @@
+:: day0_npc_brin [nobr]
+<<npcPortrait "brin" "Brin">>
+<h3>Servant Brin — Last Breakfast</h3>
+
+<p>The knock comes at the usual time. Brin with the tray — bread, cheese, cold meat, the not-quite-tea. He enters with marginally more confidence than three days ago. His livery still doesn't fit. His hair still stands up on one side.</p>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"Morning, Your Highness. Marta sent the fresh loaves today — she said you'd want them. Also cheese pastries. She's been baking since midnight and I think the kitchen staff are staging an intervention."</div>
+
+<p>He sets the tray down. The cheese pastries are there — golden, steaming faintly, the smell of rosemary and melted cheese cutting through every other scent in the room. Marta. Even now. Especially now.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Brin."</div>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"Your Highness?"</div>
+
+<p>I look at him. Sixteen. Sandy hair. Too-big livery. A boy from the tanner's family in the Lower Market who got a palace job because the crown offers patronage to common families. He's been bringing my breakfast for three weeks. He knows how I take my bread — stale, if possible. He knows I eat standing at the window. He remembers the pastry compliment and relayed it to Marta and it made her day.</p>
+
+<p>In three days, a woman will be sitting in this room. Brin will bring her breakfast. He'll be confused. He'll adapt — servants always adapt, it's the job — but the prince he's been learning to serve will be gone, replaced by a princess he doesn't know, and the small, specific intimacy of remembering someone's breakfast preferences will have to be rebuilt from scratch.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Thank you," I say. It comes out weighted — too much meaning for two words, too much goodbye for a boy who doesn't know it's a goodbye.</div>
+
+<p>He blinks.</p>
+
+<div class="dialogue"><span class="speaker">BRIN</span>"You're welcome, Your Highness. Are you... is everything alright?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Everything's fine. The pastries are perfect."</div>
+
+<p>He smiles. He leaves. The door closes. The pastries are, in fact, perfect. I eat two of them standing at the window, looking down at the courtyard, and the cheese is hot and the rosemary is sharp and the last breakfast I eat as a man tastes like a childhood I didn't appreciate until it was over.</p>
+
+<<set $d0_npc_brin to true>>
+<<set $energy += 10>>
+<<set $stress -= 3>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Continue → |day0_chambers]]
+</div>

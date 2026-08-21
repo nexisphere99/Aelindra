@@ -1,0 +1,18 @@
+:: stat-checks-system [script nobr]
+/*
+  STAT CHECK RESOLUTION
+  ------------------------------------------------------------
+  Reserved for the dice/threshold logic day content will call
+  to resolve stat checks, e.g.:
+
+    window.resolveStatCheck = function (statName, difficulty) {
+      var val = State.variables[statName] || 0;
+      var roll = Math.floor(Math.random() * 20) + 1;
+      return (val + roll) >= difficulty;
+    };
+
+  and a matching <<statCheck "statGRA" 12>> widget that branches
+  passage output on success/failure. Left as a stub until the
+  first day content that needs a check defines the exact rules
+  (flat vs. opposed, roll vs. threshold, etc.).
+*/

@@ -1,0 +1,45 @@
+:: day0_chambers [nobr]
+<<locationImage "palace_chambers" "Edrin's Chambers">>
+<h2>🛏 Edrin's Chambers</h2>
+<p>Your room. For the last time as this person.</p>
+
+<<if not $d0_queens_gift>>
+<div class="interaction-card main">
+  <h4>👑 A Knock — Not a Servant's</h4>
+  <p>Two knocks. Soft. Deliberate. A sealed note slides under the door. The Queen's seal. Inside: two words. "My gift."</p>
+  [[Open the door → |day0_scene_queens_gift]]
+</div>
+<</if>>
+
+<<if not $d0_npc_morningwood>>
+<div class="interaction-card side">
+  <h4>🔥 Morning — The Body's Goodbye</h4>
+  <p>You woke hard. The body doesn't know about the Rite. The body only knows it's morning and the blood goes where the blood goes.</p>
+  [[Acknowledge it → |day0_scene_morningwood]]
+</div>
+<</if>>
+
+<<if not $d0_npc_brin>>
+<div class="interaction-card side">
+  <<npcPortrait "brin" "Brin">>
+  <h4>🧑 Breakfast Tray</h4>
+  <p>Brin, with the tray. Marta sent the fresh loaves.</p>
+  [[Speak with him|day0_npc_brin]]
+</div>
+<</if>>
+
+<<if not $d0_npc_sword>>
+<div class="interaction-card side">
+  <h4>⚔ The Training Sword on the Wall</h4>
+  <p>Mounted above the desk. Dull blade, worn grip.</p>
+  [[Take it down|day0_npc_sword]]
+</div>
+<</if>>
+
+<<if $d0_queens_gift and $d0_npc_morningwood and $d0_npc_brin and $d0_npc_sword>>
+  <p class="empty-note">The room has said what it needed to say. Nothing else here needs you.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day0_hub]]
+</div>

@@ -1,0 +1,40 @@
+:: day-2_library_hub [nobr]
+<<locationImage "grand_library" "Grand Library">>
+<h2>📚 Grand Library</h2>
+<p>Three stories of books. Dust motes in slanted light. Haeth watches from his desk.</p>
+
+<<if not $d2_library>>
+  <div class="interaction-card main">
+    <h4>📖 Eastern Alcove   The Rite of Becoming</h4>
+    <p>Haeth directed you here. Three sources on the top shelf.</p>
+    [[Research|day-2_library]]
+  </div>
+<</if>>
+
+<<if $d2_library>>
+  <<if not $d2_npc_elise>>
+  <div class="interaction-card side">
+    <<npcPortrait "elise_librarian" "Elise">>
+    <h4>📜 A Voice Between the Shelves</h4>
+    <p>Someone is sorting books nearby. Ink-stained fingers, sliding spectacles.</p>
+    [[Investigate|day-2_npc_elise]]
+  </div>
+  <</if>>
+
+  <<if not $d2_npc_vaelin>>
+  <div class="interaction-card side">
+    <<npcPortrait "vaelin" "Brother Vaelin">>
+    <h4>📿 Scholar on the Floor</h4>
+    <p>A young man in temple robes, surrounded by a fortress of open books, muttering about divine mandate.</p>
+    [[Approach|day-2_npc_vaelin]]
+  </div>
+  <</if>>
+
+  <<if $d2_npc_elise and $d2_npc_vaelin>>
+    <p class="empty-note">The library has settled back into its usual hush. Nothing else here needs you today.</p>
+  <</if>>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day-2_hub]]
+</div>

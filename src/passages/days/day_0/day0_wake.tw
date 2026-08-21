@@ -1,0 +1,44 @@
+:: day0_wake [nobr]
+<div class="scene-image"><<locationImage "palace_chambers" "Edrin's Chambers">></div>
+
+<h2>Edrin's Chambers — The Decision</h2>
+
+<p>I'm awake before dawn. I know this because the arrow-slit windows show nothing — not the grey seep of early morning, not the pale iron of overcast sky. Nothing. Black. The hour between the last star and the first light, when the world holds its breath and pretends it might not bother existing today.</p>
+
+<p>I've been lying here for an hour. Maybe longer. Time has become unreliable — it moves in lurches, freezing for what feels like centuries while I stare at the crack in the ceiling, then leaping forward so that suddenly the darkness at the windows is fractionally less dark and an hour has vanished into the space between one breath and the next.</p>
+
+<p>The ceiling hasn't changed. Same crack. Same smoke-stain. Three days ago I mapped it because I couldn't sleep. Now I know it the way I know my own hands — which is to say, with the desperate intimacy of someone who understands they're about to lose it.</p>
+
+<p>I get up. The stone floor is cold. My feet know this cold. They've known it for twenty years of mornings — the sharp bite that travels up through the soles and settles in the ankles, the way the body protests and the mind overrides. Tomorrow morning, these feet will be smaller. The cold will feel different. Everything will feel different.</p>
+
+<p>I dress. For the last time, in these clothes, as this person.</p>
+
+<p>Linen shirt. I pull it over my head and feel it settle across my shoulders — broad shoulders, shoulders that fill the shirt the way they've filled every shirt since I stopped growing at seventeen. The fabric lies flat across my chest. Flat. Tomorrow there will be something there that isn't flat, and the shirt will hang differently, and the person wearing it will have to learn an entirely new relationship with linen.</p>
+
+<p>Leather jerkin. The good one, with the reinforced shoulders. I tighten the laces. My fingers know the pattern — cross, loop, pull. These fingers. Long. Calloused at the grip-line. Tomorrow they'll be narrower. The calluses will remain — the magic changes biology, not history — but the hands that carry them will be hands I don't recognise.</p>
+
+<p>Dark trousers. Boots. The worn ones, broken in perfectly, that I refused to replace because new boots are a betrayal of the feet. Tomorrow my feet will be two sizes smaller and these boots will be relics.</p>
+
+<p>I buckle my sword belt. Then unbuckle it. Then buckle it again. The sword won't help where I'm going. But the weight of it at my hip is the most familiar thing in the world right now, and I need familiar things the way a drowning man needs air — not rationally, not with dignity, but with the blind gasping urgency of a body that knows it's going under.</p>
+
+<p>The mirror.</p>
+
+<p>I stop in front of it. The polished silver catches the first thin suggestion of dawn — not light yet, just the memory of light, enough to see the shape of the man standing before it.</p>
+
+<p>I look at myself. I look at myself the way you look at someone you're saying goodbye to at a dock, knowing the ship is leaving and the distance about to open between you is the kind that doesn't close. I catalogue everything. The sharp jaw. The dark hair falling over grey-blue eyes. The stubble I never shaved. The line of my neck, Adam's apple prominent, the column of tendon that stands out when I turn my head. My shoulders. My chest. The lean architecture of a body built by six years of swordwork and a metabolism that doesn't believe in excess.</p>
+
+<p>I press my hand flat against the mirror. The silver is cold. My reflection presses back — same hand, same calloused palm, same scarred knuckle from a training accident I can't remember. Two hands touching across the glass, the real and the reflected, and in a few hours one of them will be gone and the other will belong to someone I haven't met yet.</p>
+
+<p>"Remember this," I whisper. My voice. The baritone I've had since sixteen, the one that cracks when I'm angry and drops low when I'm tired. The voice that will be higher by midnight. Thinner. Unfamiliar in my own throat.</p>
+
+<p>I drop my hand. Step back. The man in the mirror steps back too. We look at each other one last time.</p>
+
+<p>Then I turn away. I open the door. I step into the corridor. My boots echo on stone — heavy, solid, the sound of a man walking. I listen to it. I memorise it.</p>
+
+<p>By tomorrow, even the sound of my footsteps will be different.</p>
+
+<<set $d0_wake to true>>
+
+<div class="scene-end">
+  [[Continue → |day0_hub]]
+</div>

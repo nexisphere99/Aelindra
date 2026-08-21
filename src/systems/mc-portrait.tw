@@ -1,0 +1,16 @@
+:: mc-portrait-system [script nobr]
+/*
+  MC PORTRAIT MANAGER
+  ------------------------------------------------------------
+  The actual state->filename logic lives in
+  window.getPortraitForState() (src/ui/script.js), and the
+  <<updatePortrait>> widget that applies it to $mcPortrait
+  lives in src/ui/widgets.tw. Call <<updatePortrait>> at the
+  end of any passage where stress, day number, or gamePath
+  changes in a way that should update the right-sidebar
+  portrait.
+
+  This file is reserved for portrait logic that outgrows a
+  single function   e.g. outfit-layered portraits, expression
+  variants keyed off $arousal, or per-scene portrait overrides.
+*/

@@ -1,0 +1,59 @@
+:: day-2-init [widget nobr]
+
+/* ============================================================
+   DAY -2 ("The Summons")   SCENE & NPC FLAG INIT
+   Called once, from title-screen.tw's "Begin" link, when the
+   game actually starts. There is no upfront path choice   Day -2
+   is a shared prologue, identical regardless of $gamePath, which
+   stays "none" until Day 0 content sets it based on the player's
+   actual choices. Per the initial-setup prompt's rule, day-specific
+   flags live in the day's own transition passage   not in
+   StoryInit.tw   so they reset cleanly if this structure is ever
+   reused for a later replay or NG+ system.
+
+   CONVENTION for every day{N}Init widget (see day-1-init.tw for the
+   full rationale): always open with <<clearObjectives>>, so a
+   missed side objective from a previous day/run can never survive
+   as a permanently stuck sidebar entry. Redundant here at true game
+   start ($objectives is already []), but keeps the pattern
+   consistent and replay-safe.
+   ============================================================ */
+<<widget "day2Init">>
+  <<clearObjectives>>
+
+  /* --- Day -2 Scene Flags --- */
+  <<set $d2_woke to false>>
+  <<set $d2_sparred to false>>
+  <<set $d2_queen to false>>
+  <<set $d2_library to false>>
+  <<set $d2_gardens to false>>
+  <<set $d2_night to false>>
+
+  /* --- Day -2 NPC Flags --- */
+  <<set $d2_npc_brin to false>>
+  <<set $d2_npc_letter to false>>
+  <<set $d2_npc_maids to false>>
+  <<set $d2_npc_caedric to false>>
+  <<set $d2_npc_marta to false>>
+  <<set $d2_npc_joss to false>>
+  <<set $d2_npc_keller to false>>
+  <<set $d2_npc_tamsin to false>>
+  <<set $d2_npc_elise to false>>
+  <<set $d2_npc_vaelin to false>>
+  <<set $d2_npc_wynn to false>>
+  <<set $d2_npc_harwick to false>>
+  <<set $d2_npc_alva to false>>
+  <<set $d2_npc_perrin to false>>
+  <<set $d2_npc_masturbation to false>>
+  <<set $d2_npc_bath to false>>
+
+  /* --- Day framing (StoryInit already sets dayNumber/-Label/timeSlot
+       to these same values by default, but setting them explicitly
+       here keeps this passage the single source of truth for
+       "start of Day -2") --- */
+  <<set $dayNumber to -2>>
+  <<set $dayLabel to "The Summons">>
+  <<set $timeSlot to "MORNING">>
+
+  <<addObjective "wake_up" "Wake up   it's morning in Crown's Rest" "MAIN">>
+<</widget>>

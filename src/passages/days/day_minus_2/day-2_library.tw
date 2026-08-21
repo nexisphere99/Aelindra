@@ -1,0 +1,75 @@
+:: day-2_library [nobr]
+<div class="scene-image"><<locationImage "grand_library" "Grand Library">></div>
+
+<h2>Grand Library   Research</h2>
+
+<p>The Grand Library of Crown's Rest is three stories of accumulated knowledge, stacked in shelves of dark wood that reach toward vaulted ceilings where painted constellations wheel across plaster skies. Dust motes drift in the slanted afternoon light like slow, aimless snow. The air smells of old paper, binding glue, leather, and the particular dry warmth of a room that has been closed for too long and opened too rarely.</p>
+
+<p>I come here more often than any prince should. That's according to Lord Merrick, the Master of Ceremonies, who believes a prince's time is better spent hunting, jousting, and "projecting vigour"   whatever the hell that means. I come here because books don't bow, don't lie, and don't look at me like I'm a problem to be solved through strategic marriage.</p>
+
+<p><<npcPortrait "haeth" "Haeth">>The librarian, Haeth, watches me from his desk near the entrance. He's ancient   seventy, maybe eighty, hunched like a question mark, with eyes sharp enough to read footnotes across the room. He doesn't speak unless spoken to, which makes him the best conversationalist in the palace.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Haeth. I need everything you have on the Rite of Becoming. The Silverveil's transformation ritual."</div>
+
+<p>One white eyebrow rises. It's the most expressive I've ever seen him.</p>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Section nine, eastern alcove, top shelf. Three sources   the Chronicle of Fairsworn, the Silverveil Compendium, and an anonymous account bound in blue leather that I've never been able to properly attribute. The succession law codices are in section three if you need those as well."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I do."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"They haven't changed since the last time you looked. Neither has the Founding Charter."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I know."</div>
+
+<div class="dialogue"><span class="speaker">HAETH</span>"Yet you're looking again."</div>
+
+<p>I don't answer. He nods, as if my silence told him something, and returns to cataloguing whatever obscure manuscript has claimed his attention today.</p>
+
+<p>I find the books. The eastern alcove is quiet   tucked behind a pillar, lit by a single tall window that faces the inner courtyard. A reading desk, scarred by centuries of scholars' elbows, sits beneath it.</p>
+
+<p>I start with the Chronicle of Fairsworn.</p>
+
+<p>Lord Aldren Fairsworn. Two hundred and eighty years ago. A minor lord from the coastal provinces, last male of a matrilineal line. His mother was dying. His sisters had been killed in a plague. The house would fall without a female heir. Aldren went to the Silverveil. The Rite was performed over seven days. Complete biological transformation. Aldren became Aldra. She bore two daughters in the following decade. Ruled for forty years. Died at seventy-one. The chronicle describes her as "a woman of formidable will who wore her second nature as though it had always been her first."</p>
+
+<p>The language is clinical in the sections describing the transformation itself. <em>The subject's physical form was reshaped in accordance with the ancient patterns   height diminished, musculature softened, skeletal structure adjusted, reproductive organs replaced in totality.</em> In totality. I read that phrase four times. Each time it means the same thing and each time I understand it less.</p>
+
+<p>The anonymous account in blue leather is stranger. Less clinical, more   poetic isn't the word. Raw. Written by someone who either experienced the Rite or spoke directly to someone who did:</p>
+
+<p><em>On the third day, I woke and my hands were not my hands. Smaller. The knuckles less pronounced. I held them before my face and thought: whose are these? Then, mine. These are mine and the grief was not for what I had lost but for how quickly the new thing began to feel like it had always been there, as if my body was a house and someone had rearranged the furniture and I hated it and also could not deny that the room made more sense this way.</em></p>
+
+<p>I close the book. My hands are shaking. I open them on the desk   my hands, my current hands, sword-calloused and large, knuckles scarred from a hundred small injuries in the training yard. I flex my fingers. They respond. They're mine.</p>
+
+<p>For now.</p>
+
+<p>The Silverveil Compendium is drier   magical theory, ritual components, success conditions. The Rite requires the subject's genuine consent ("coercion invalidates the pattern and the magic will not hold"), a lunar alignment that occurs every three months (the next one is in two days   not a coincidence, I realize; Mother planned this), and seven days of sustained ritual during which the subject must remain within the Moonspire Tower.</p>
+
+<p>The succession law codices tell me what I already know: there is no loophole. No precedent for exception. No clever legal argument waiting to be discovered. Seven queens tried. Seven failed. The Charter is absolute.</p>
+
+<p>I sit among the books for a long time. The light shifts   afternoon moving toward evening, the shadows of the shelves lengthening across the floor like dark fingers. At some point a junior librarian comes by with a candle and sets it on the desk without speaking. I don't remember thanking her. I hope I did.</p>
+
+<p>The facts are these: my mother is dying. Without a female heir, the kingdom falls to a man who will strip it to the bone. Every alternative has been tried and has failed. There is one option remaining, and it involves surrendering the body I was born in for one I cannot imagine.</p>
+
+<p>I close the last book. I stack them neatly. Haeth will notice if I don't.</p>
+
+<p>The walk back through the library feels longer than the walk in. The painted constellations on the ceiling turn slowly in the candlelight   an old enchantment, Haeth told me once, cast by a Silverveil sorceress two centuries ago because the Head Librarian at the time liked the idea of stars indoors.</p>
+
+<p>Stars indoors. Magic that rearranges the sky because someone thought it would be pleasant.</p>
+
+<p>Magic that rearranges a body because someone thinks it's necessary.</p>
+
+<p>I push through the library doors into the corridor. The evening air is cooler. Somewhere, someone is playing a lute.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $statWIS += 2>>
+<<set $d2_library to true>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "EVENING">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<completeObjective "research_library">>
+<<addObjective "follow_music" "The Royal Gardens   someone is playing music" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day-2_hub]]
+</div>
