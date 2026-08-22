@@ -35,6 +35,14 @@
   <<set $d1_moonspire2 to false>>
   <<set $d1_queen2 to false>>
 
+  /* --- Which way Edrin is leaning, chosen at the day-1_night mirror
+       scene once $d1_moonspire2 is true. Read by day0_queen.tw's
+       "Which?" exchange the next morning - see
+       AELINDRA_Day0_Revisions.md. Not the actual $gamePath choice
+       (that's still made fresh at day0_path_choice.tw and can differ
+       from the lean), just what Seraphina's goodbye reacts to. --- */
+  <<set $d1_leaning to "undecided">>
+
   /* --- Day -1 NPC Flags --- */
   <<set $d1_npc_aldwyn to false>>
   <<set $d1_npc_messenger to false>>

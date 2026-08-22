@@ -58,7 +58,23 @@
 <<addObjective "sleep_d1" "Sleep" "MAIN">>
 
 <div class="scene-end">
+  <<if $d1_moonspire2>>
+  <p class="path-intro">Sleep, finally   but not before the mind settles somewhere.</p>
+  <<link "Let it go completely →" "day-1_sleep_transition">>
+    <<set $d1_leaning to "female">>
+    <<completeObjective "sleep_d1">>
+  <</link>>
+  <<link "Hold on to this →" "day-1_sleep_transition">>
+    <<set $d1_leaning to "futa">>
+    <<completeObjective "sleep_d1">>
+  <</link>>
+  <<link "I still don't know →" "day-1_sleep_transition">>
+    <<set $d1_leaning to "undecided">>
+    <<completeObjective "sleep_d1">>
+  <</link>>
+  <<else>>
   <<link "Sleep →" "day-1_sleep_transition">>
     <<completeObjective "sleep_d1">>
   <</link>>
+  <</if>>
 </div>

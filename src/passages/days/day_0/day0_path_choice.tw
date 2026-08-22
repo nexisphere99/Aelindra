@@ -1,15 +1,15 @@
 :: day0_path_choice [nobr]
-<h2>The Rite Has Two Forms</h2>
+<h2>Which Form</h2>
 
 <<locationImage "moonspire_ritual_chamber_prepared" "The Ritual Chamber, prepared for the Rite">>
 
-<p>At the top of the stairs, Ilara stops me. The Ritual Chamber door is open behind her   I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.</p>
+<p>At the top of the stairs, Ilara stops me. Silver robes. The four sorceresses stand behind her, hooded. The Ritual Chamber door is open past her shoulder   I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.</p>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"Before we proceed." Her voice is formal now   the voice of the Archsorceress, not the woman who gave me tea and spoke with controlled compassion. "The Rite has two forms."</div>
+<p>She doesn't ask if I'm sure. My presence is the answer to that question. She asks the only one that's left.</p>
 
-<p>She explains. The complete transformation   every aspect of the body changed. Total biological conversion. Or the partial form   the body becomes female in most aspects, but certain male anatomy remains alongside the new. Both forms are equally valid in the eyes of the law. Both secure the succession.</p>
+<div class="dialogue"><span class="speaker">ILARA</span>"Which form?"</div>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"The choice is yours. It is the last choice that will be entirely your own for the next six hours."</div>
+<p>No preamble. No explanation. No menu. She told me yesterday, in this same tower, twice. I've had the night. She respects me enough to expect an answer, not a discussion.</p>
 
 <p class="path-intro">This is the last choice that is entirely your own. It will never be revisited   the two paths from here never merge again.</p>
 
@@ -17,7 +17,7 @@
   <div class="path-cards">
     <div class="path-card">
       <h3>🌙 Complete Transformation</h3>
-      <p class="path-desc">"Complete. All of it. If I'm going to do this, I'm not doing it halfway."</p>
+      <p class="path-desc">"Complete." One word. The cleanest wound.</p>
       <ul class="path-notes">
         <li>Every aspect of the body changed</li>
         <li>Total biological conversion</li>
@@ -32,7 +32,7 @@
 
     <div class="path-card">
       <h3>⚔ Partial Transformation</h3>
-      <p class="path-desc">"Both. I want to be... both."</p>
+      <p class="path-desc">"Partial." One word. The preserved wound.</p>
       <ul class="path-notes">
         <li>A fully female body   and a preserved, strengthened cock</li>
         <li>Dual anatomy, both systems functional</li>

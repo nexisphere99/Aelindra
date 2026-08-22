@@ -97,6 +97,15 @@ After building, open `index.html` directly in a browser to play.
   1 landing hubs (`day1_hub.tw` for the female route, `day1_hub_futa.tw`
   for the futa route), by design, per the source material's own note that
   post-transformation content can't be a find-and-replace between routes.
+  Also carries the Day 0 half of the Partial Rite insert
+  (`AELINDRA_Day0_Revisions.md`): Queen Seraphina's goodbye now asks
+  "which?" and reacts to `$d1_leaning` (set the night before, at the
+  day-1_night mirror scene); the tower-entrance scene no longer has
+  Ilara explain the two forms from scratch   Edrin just delivers the
+  one-word decision, since Day -1 already covered it; and both ritual
+  scenes gain an internal-monologue beat ("I chose this" / "stay with
+  me") threaded into the existing genital-transformation prose, unchanged
+  otherwise.
 - **Day 1 ("Wrong")   female route only**   fully built. The architecture
   changes again: Aelindra doesn't leave the Moonspire Tower, so the open
   world shrinks from a location grid to a single **room hub**

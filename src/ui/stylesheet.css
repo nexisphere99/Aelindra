@@ -700,6 +700,19 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   margin-bottom: 2px;
 }
 
+/* Internal monologue - distinct from spoken <<dialogue>>, used for
+   thoughts during the Day 0 Rite scenes (e.g. the "I chose this"
+   goodbye beat woven into the genital transformation). Centered,
+   dimmer than body prose, no left border so it doesn't read as
+   another character speaking. */
+.internal-thought {
+  text-align: center;
+  color: var(--text-dim);
+  max-width: 480px;
+  margin: 12px auto;
+  line-height: 1.7;
+}
+
 /* Emphasis */
 #passages em {
   color: var(--text-bright);

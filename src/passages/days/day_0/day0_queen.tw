@@ -39,6 +39,32 @@
 
 <p>She smells like lavender and illness. The two scents have become inseparable   the herb she uses to mask the other smell, the other smell that no amount of herb can fully cover. I breathe it in. I memorise it.</p>
 
+<p>She pulls back just enough to read my face before I say anything.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"You've decided."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Which?"</div>
+
+<<if $d1_leaning is "female">>
+<div class="dialogue"><span class="speaker">EDRIN</span>"Complete. The clean wound."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you walk in as my son and walk out as my daughter." Her eyes are wet, but her voice stays steady. "And I will love her the way I loved him. Completely."</div>
+<<elseif $d1_leaning is "futa">>
+<div class="dialogue"><span class="speaker">EDRIN</span>"Partial. I keep... I'm keeping it."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you walk in as my son and walk out as something the world has never seen." A breath   relief, or acceptance, or something too complicated to name. "And I will love her   all of her   the way I loved him."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Even the cock?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Especially the cock." The thin smile, the dying queen's last joke to her son. "It's going to save the kingdom's treasury in concealment-garment commissions."</div>
+<<else>>
+<div class="dialogue"><span class="speaker">EDRIN</span>"I don't know yet. I'll know when I'm standing at the altar."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you'll know." She holds my face a moment longer. "The body knows what it needs. Trust it   even when the mind hasn't caught up."</div>
+<</if>>
+
 <div class="dialogue"><span class="speaker">EDRIN</span>"Will you visit?" My voice is rough. "After?"</div>
 
 <div class="dialogue"><span class="speaker">SERAPHINA</span>"Every day." She pulls back. Holds my face again. "I'll teach you everything I know. You'll be a better queen than I ever was."</div>

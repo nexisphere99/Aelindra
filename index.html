@@ -806,6 +806,19 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   margin-bottom: 2px;
 }
 
+/* Internal monologue - distinct from spoken <<dialogue>>, used for
+   thoughts during the Day 0 Rite scenes (e.g. the "I chose this"
+   goodbye beat woven into the genital transformation). Centered,
+   dimmer than body prose, no left border so it doesn't read as
+   another character speaking. */
+.internal-thought {
+  text-align: center;
+  color: var(--text-dim);
+  max-width: 480px;
+  margin: 12px auto;
+  line-height: 1.7;
+}
+
 /* Emphasis */
 #passages em {
   color: var(--text-bright);
@@ -2827,17 +2840,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day0_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="day0_path_choice" tags="nobr" position="600,225" size="100,100">&lt;h2&gt;The Rite Has Two Forms&lt;/h2&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="day0_path_choice" tags="nobr" position="600,225" size="100,100">&lt;h2&gt;Which Form&lt;/h2&gt;
 
 &lt;&lt;locationImage &quot;moonspire_ritual_chamber_prepared&quot; &quot;The Ritual Chamber, prepared for the Rite&quot;&gt;&gt;
 
-&lt;p&gt;At the top of the stairs, Ilara stops me. The Ritual Chamber door is open behind her   I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.&lt;/p&gt;
+&lt;p&gt;At the top of the stairs, Ilara stops me. Silver robes. The four sorceresses stand behind her, hooded. The Ritual Chamber door is open past her shoulder   I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Before we proceed.&quot; Her voice is formal now   the voice of the Archsorceress, not the woman who gave me tea and spoke with controlled compassion. &quot;The Rite has two forms.&quot;&lt;/div&gt;
+&lt;p&gt;She doesn&#39;t ask if I&#39;m sure. My presence is the answer to that question. She asks the only one that&#39;s left.&lt;/p&gt;
 
-&lt;p&gt;She explains. The complete transformation   every aspect of the body changed. Total biological conversion. Or the partial form   the body becomes female in most aspects, but certain male anatomy remains alongside the new. Both forms are equally valid in the eyes of the law. Both secure the succession.&lt;/p&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Which form?&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The choice is yours. It is the last choice that will be entirely your own for the next six hours.&quot;&lt;/div&gt;
+&lt;p&gt;No preamble. No explanation. No menu. She told me yesterday, in this same tower, twice. I&#39;ve had the night. She respects me enough to expect an answer, not a discussion.&lt;/p&gt;
 
 &lt;p class=&quot;path-intro&quot;&gt;This is the last choice that is entirely your own. It will never be revisited   the two paths from here never merge again.&lt;/p&gt;
 
@@ -2845,7 +2858,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;div class=&quot;path-cards&quot;&gt;
     &lt;div class=&quot;path-card&quot;&gt;
       &lt;h3&gt;🌙 Complete Transformation&lt;/h3&gt;
-      &lt;p class=&quot;path-desc&quot;&gt;&quot;Complete. All of it. If I&#39;m going to do this, I&#39;m not doing it halfway.&quot;&lt;/p&gt;
+      &lt;p class=&quot;path-desc&quot;&gt;&quot;Complete.&quot; One word. The cleanest wound.&lt;/p&gt;
       &lt;ul class=&quot;path-notes&quot;&gt;
         &lt;li&gt;Every aspect of the body changed&lt;/li&gt;
         &lt;li&gt;Total biological conversion&lt;/li&gt;
@@ -2860,7 +2873,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     &lt;div class=&quot;path-card&quot;&gt;
       &lt;h3&gt;⚔ Partial Transformation&lt;/h3&gt;
-      &lt;p class=&quot;path-desc&quot;&gt;&quot;Both. I want to be... both.&quot;&lt;/p&gt;
+      &lt;p class=&quot;path-desc&quot;&gt;&quot;Partial.&quot; One word. The preserved wound.&lt;/p&gt;
       &lt;ul class=&quot;path-notes&quot;&gt;
         &lt;li&gt;A fully female body   and a preserved, strengthened cock&lt;/li&gt;
         &lt;li&gt;Dual anatomy, both systems functional&lt;/li&gt;
@@ -2913,6 +2926,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;She smells like lavender and illness. The two scents have become inseparable   the herb she uses to mask the other smell, the other smell that no amount of herb can fully cover. I breathe it in. I memorise it.&lt;/p&gt;
 
+&lt;p&gt;She pulls back just enough to read my face before I say anything.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;You&#39;ve decided.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Yes.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Which?&quot;&lt;/div&gt;
+
+&lt;&lt;if $d1_leaning is &quot;female&quot;&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Complete. The clean wound.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you walk in as my son and walk out as my daughter.&quot; Her eyes are wet, but her voice stays steady. &quot;And I will love her the way I loved him. Completely.&quot;&lt;/div&gt;
+&lt;&lt;elseif $d1_leaning is &quot;futa&quot;&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Partial. I keep... I&#39;m keeping it.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you walk in as my son and walk out as something the world has never seen.&quot; A breath   relief, or acceptance, or something too complicated to name. &quot;And I will love her   all of her   the way I loved him.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Even the cock?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Especially the cock.&quot; The thin smile, the dying queen&#39;s last joke to her son. &quot;It&#39;s going to save the kingdom&#39;s treasury in concealment-garment commissions.&quot;&lt;/div&gt;
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I don&#39;t know yet. I&#39;ll know when I&#39;m standing at the altar.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you&#39;ll know.&quot; She holds my face a moment longer. &quot;The body knows what it needs. Trust it   even when the mind hasn&#39;t caught up.&quot;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Will you visit?&quot; My voice is rough. &quot;After?&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Every day.&quot; She pulls back. Holds my face again. &quot;I&#39;ll teach you everything I know. You&#39;ll be a better queen than I ever was.&quot;&lt;/div&gt;
@@ -2943,6 +2982,26 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;run document.getElementById(&#39;mc-portrait-frame&#39;).style.opacity = &#39;0.3&#39;&gt;&gt;
 &lt;&lt;run document.getElementById(&#39;mc-name&#39;).textContent = &#39;...&#39;&gt;&gt;
 &lt;&lt;run document.getElementById(&#39;mc-title&#39;).textContent = &#39;Transforming&#39;&gt;&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Complete.&quot; My voice is steady   the steadiness of a man who made this decision at three in the morning, staring at the ceiling, and has spent every hour since making peace with it.&lt;/div&gt;
+
+&lt;p&gt;One word. The cleanest wound.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The Complete Rite. Total transformation. No male anatomy will remain.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I know what it means. I&#39;ve had all night to know.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Then come.&quot;&lt;/div&gt;
+
+&lt;p&gt;I start toward the doorway, toward the chamber beyond her. I pause.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ilara. Last night   I held my cock in the dark for an hour. Saying goodbye. This morning I let go.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;That&#39;s the bravest version of this choice.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;It&#39;s the only version I could live with. If I kept it, I&#39;d spend every day carrying the ghost of who I was. I&#39;d rather mourn once and be free.&quot;&lt;/div&gt;
+
+&lt;p&gt;The stairs behind me are the same. The man who climbed them has chosen to stop being one.&lt;/p&gt;
 
 &lt;p&gt;The Ritual Chamber is a circle. Perfect, mathematically exact, as if drawn by a compass the size of the room. The walls are white stone   the same luminous material as the tower&#39;s exterior   curved inward to meet a domed ceiling painted with stars. Not decorative stars. Enchanted ones. They move   slow, stately orbits that mirror the actual sky above, as if the dome is transparent and I&#39;m looking through it at the heavens. The effect is disorienting and beautiful. I&#39;m inside and outside simultaneously. I&#39;m standing in a room and standing under an infinite sky.&lt;/p&gt;
 
@@ -3018,6 +3077,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;I feel my cock begin to change. The shaft retracting   not painfully, not like a wound, but with a deep, pulling sensation, a drawing-inward, as if the tissue is being called somewhere specific by something that knows exactly where it needs to go. The head reshapes   compressing, concentrating, the nerve endings that were spread across the glans condensing into a smaller, infinitely more sensitive structure. The foreskin reconfigures into folds   soft, delicate, forming around the shrinking shaft.&lt;/p&gt;
 
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;I said goodbye last night. I held you and I said goodbye. And now you&#39;re leaving. I can feel you leaving   shrinking, reshaping, becoming something else. Something I chose to let you become. I chose this. I chose the clean wound. I chose to let go.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;Goodbye.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;Goodbye, Edrin&#39;s cock. Hello, Aelindra&#39;s clit. You were the same flesh all along. Just... rearranged.&lt;/em&gt;&lt;/p&gt;
+
 &lt;p&gt;My balls draw upward into my body. The testes ascending, the sensation of fullness and pressure and internal rearrangement   organs forming, repositioning, the architecture of male reproduction dismantled and rebuilt into something else entirely. Ovaries. I can feel them settling into position   small, deep, flanking the uterus that is forming even now in the space where nothing existed before.&lt;/p&gt;
 
 &lt;p&gt;The vaginal canal. It opens   not like a wound, not like a tear. Like a door. A deep internal unfolding, tissue separating and shaping and becoming hollow where there was solid, creating a passage, a channel, a space that I have never had and that now exists inside me with an immediacy that is staggering. The cervix forms at the far end   a small, firm gate. The uterus behind it. The sensation is indescribable   a profound internal emptiness that is not absence but architecture, not loss but creation.&lt;/p&gt;
@@ -3069,25 +3134,41 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;run document.getElementById(&#39;mc-name&#39;).textContent = &#39;...&#39;&gt;&gt;
 &lt;&lt;run document.getElementById(&#39;mc-title&#39;).textContent = &#39;Transforming&#39;&gt;&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The partial transformation is more complex,&quot; she says. &quot;The magic must reshape the body while preserving existing structures and integrating new ones alongside them. The pain will be comparable. The result will be... unprecedented, in your case. The two previous partial Rites were performed on subjects with different circumstances.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Partial.&quot; My voice comes out rough   the roughness of a man who didn&#39;t sleep, who lay in the dark for six hours holding the answer in one hand and his cock in the other.&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Unprecedented.&quot;&lt;/div&gt;
+&lt;p&gt;One word. The preserved wound.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;You will have a fully female body   breasts, hips, feminine facial structure, the complete exterior presentation. You will also retain your penis, though it may change in proportion and you will gain a vagina   positioned beneath the retained anatomy. Both sets of reproductive organs will be functional. You will be capable of both penetration and pregnancy.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The Partial Rite. Female transformation with penile preservation.&quot; Something in her eyes that might be recognition   an Archsorceress who has studied the vael&#39;kirin texts for decades, finally seeing one about to be born.&lt;/div&gt;
 
-&lt;p&gt;The words land like stones. Each one specific. Each one impossible. Each one the future.&lt;/p&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I know what it means.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The court will have questions,&quot; Ilara continues. &quot;The succession law requires a daughter &#39;who carries the Mother&#39;s form.&#39; The interpretation of whether your form qualifies will be debated. Your political path will be harder.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Then you know the complications. The concealment. The &quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;My political path was never going to be easy.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I know all of it. I&#39;ve spent the whole night with your complications and my mother&#39;s advice and my own hands and the understanding that if I let go of everything, the person who walks out of this tower won&#39;t have a single physical thread connecting her to the person who walked in.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;No. But this makes it harder. You should know that.&quot;&lt;/div&gt;
+&lt;p&gt;I look at her directly.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I know it.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m not keeping it because I&#39;m afraid to lose it. I&#39;m keeping it because it&#39;s MINE. The one piece of this body I&#39;m choosing to carry rather than surrender. My mother said the question isn&#39;t what&#39;s easier   it&#39;s what weight I&#39;m strong enough to bear. This is my weight. I&#39;ll bear it.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Then let&#39;s confirm what you&#39;re carrying   plainly, once more, so there&#39;s no part of it you&#39;re agreeing to blind.&quot; Her voice returns to something clinical, but gentler than yesterday&#39;s first telling. &quot;A fully female body. Breasts, hips, feminine facial structure, the complete exterior presentation. And beneath it: the penis, preserved, though it may change in proportion. A vagina, positioned beneath the retained anatomy. Both systems functional. You will be capable of both penetration and pregnancy.&quot;&lt;/div&gt;
+
+&lt;p&gt;None of it is new. All of it still lands like stones.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The court will have questions,&quot; she says. &quot;The succession law requires a daughter &#39;who carries the Mother&#39;s form.&#39; Whether your form qualifies will be debated. Your political path will be harder than your brother&#39;s.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;It was never going to be easy.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;No. But this makes it harder. You should know that   again.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I know it. Still.&quot;&lt;/div&gt;
 
 &lt;p&gt;A pause. The candles burn without flickering. The magic hums.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Then we proceed.&quot; She turns toward the chamber. &quot;The Rite of Becoming   Partial Form.&quot;&lt;/div&gt;
+
+&lt;p class=&quot;path-intro&quot;&gt;Behind me, as I start toward the doorway, I hear her say it   quiet, almost to herself, a word I don&#39;t fully understand yet.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&lt;em&gt;&quot;Vael&#39;kirin.&quot;&lt;/em&gt;&lt;/div&gt;
 
 &lt;p&gt;I follow her in.&lt;/p&gt;
 
@@ -3144,6 +3225,12 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;p&gt;But here, it diverges.&lt;/p&gt;
 
 &lt;p&gt;My cock begins to change   but not to disappear. The shaft does not retract. The head does not compress into a clitoris. Instead, the tissue shifts differently   the cock lengthening, thickening marginally, the proportions adjusting as the magic floods it with the same transformative energy that&#39;s rewriting everything else. The shaft gains perhaps an inch   six inches becoming seven   and the skin becomes softer, more sensitive, the nerve density doubling without reducing the structure. The head reshapes   smoother, more refined, the frenulum becoming exquisitely sensitive. It&#39;s growing, not shrinking. The magic is not diminishing this part of me   it&#39;s enhancing it, as if the preservation spell interprets &quot;keep&quot; as &quot;strengthen.&quot;&lt;/p&gt;
+
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;There. THERE. I can feel it   the magic touching and pulling back. Like a hand reaching for something and being stopped by a ward. The preservation holds. The cock stays.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;I chose this. I chose to keep you. Not from fear   from love. You are the bridge. The thread. The last piece of the man I was, carried into the body of the woman I&#39;m becoming.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;internal-thought&quot;&gt;&lt;em&gt;Stay. Stay with me. We&#39;re going to need each other.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The foreskin softens. The skin of the entire shaft becomes finer, smoother   the same hypersensitive quality that the rest of my skin has acquired, so that the cock is simultaneously the same and entirely different. Mine. Still mine. But translated into a new dialect of the same language.&lt;/p&gt;
 
@@ -4993,6 +5080,14 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;set $d1_moonspire2 to false&gt;&gt;
   &lt;&lt;set $d1_queen2 to false&gt;&gt;
 
+  /* --- Which way Edrin is leaning, chosen at the day-1_night mirror
+       scene once $d1_moonspire2 is true. Read by day0_queen.tw&#39;s
+       &quot;Which?&quot; exchange the next morning - see
+       AELINDRA_Day0_Revisions.md. Not the actual $gamePath choice
+       (that&#39;s still made fresh at day0_path_choice.tw and can differ
+       from the lean), just what Seraphina&#39;s goodbye reacts to. --- */
+  &lt;&lt;set $d1_leaning to &quot;undecided&quot;&gt;&gt;
+
   /* --- Day -1 NPC Flags --- */
   &lt;&lt;set $d1_npc_aldwyn to false&gt;&gt;
   &lt;&lt;set $d1_npc_messenger to false&gt;&gt;
@@ -5707,9 +5802,25 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;&lt;addObjective &quot;sleep_d1&quot; &quot;Sleep&quot; &quot;MAIN&quot;&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
+  &lt;&lt;if $d1_moonspire2&gt;&gt;
+  &lt;p class=&quot;path-intro&quot;&gt;Sleep, finally   but not before the mind settles somewhere.&lt;/p&gt;
+  &lt;&lt;link &quot;Let it go completely →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
+    &lt;&lt;set $d1_leaning to &quot;female&quot;&gt;&gt;
+    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+  &lt;&lt;link &quot;Hold on to this →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
+    &lt;&lt;set $d1_leaning to &quot;futa&quot;&gt;&gt;
+    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+  &lt;&lt;link &quot;I still don&#39;t know →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
+    &lt;&lt;set $d1_leaning to &quot;undecided&quot;&gt;&gt;
+    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
+  &lt;&lt;/link&gt;&gt;
+  &lt;&lt;else&gt;&gt;
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_queen" tags="nobr" position="225,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   Round Two&lt;/h2&gt;
