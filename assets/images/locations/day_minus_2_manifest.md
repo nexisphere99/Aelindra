@@ -7,6 +7,17 @@ runs fine without these files (they fail silently, see `src/ui/script.js` /
 widget) into this folder and it'll appear automatically, no code changes
 needed.
 
+**Location vs. scene split:** this folder is for reusable physical places  
+rooms and backdrops that appear on a hub card, a sub-hub, and/or a scene
+banner, generically, regardless of which specific narrative beat is
+happening there. Art tied to one specific passage/story moment instead
+(a character-specific illustration, something abstract/impressionistic,
+anything that wouldn't make sense reused elsewhere) lives in
+`assets/images/scenes/` instead, via the sibling `<<sceneImage>>` macro  
+identical mechanics, different folder, so this one doesn't fill up with
+one-off art that isn't actually a place. See `assets/images/scenes/day_minus_2_manifest.md`
+for that folder's per-day structure.
+
 | Filename | Used by | Prompt |
 |---|---|---|
 | `palace_chambers.png` | day-2_hub card, day-2_wake banner, day-2_chambers_explore (day) | Interior of a medieval prince's bedchamber at grey dawn. Stone walls, arrow-slit windows with pale light seeping in. Bookshelves lining walls, a training sword mounted above a desk covered in maps and papers. A half-finished letter on the desk. Dying embers in a stone fireplace. Simple bed with rumpled linen. Atmosphere: austere, lived-in, scholarly rather than royal. Color palette: greys, muted browns, cold blue-white dawn light. |
@@ -15,8 +26,11 @@ needed.
 | `queen_chambers.png` | day-2_hub card, day-2_queen banner | Dimly lit royal bedchamber. A regal woman (50s, gaunt but striking, grey-blue eyes burning with intelligence) sits propped against pillows, a writing desk across her lap covered in documents and sealed letters. Drawn curtains, candlelight. Medicinal bottles and herb bundles on a bedside table. Rich furnishings made somber by the darkness. Atmosphere: power and illness coexisting, a dying queen still governing. |
 | `grand_library.png` | day-2_hub card, day-2_library_hub, day-2_library banner | Three-story medieval fantasy library. Dark wood shelves reaching toward vaulted ceilings painted with slowly moving constellations (enchanted). Dust motes in slanted afternoon light from tall windows. A young man sits at a scarred reading desk piled with ancient books, hands trembling, expression stricken. An elderly hunched librarian visible in the background. Atmosphere: vast accumulated knowledge, isolation, dawning horror. |
 | `royal_gardens.png` | Hub cards and sub-hubs across Day -2/-1/0 (day-2_hub, day-2_gardens_hub, day-1_hub, day-1_gardens_hub, day0_hub, day0_gardens   generic reuses, no Ash in frame) | Castle gardens at twilight. Stone paths between night-blooming jasmine and winter roses. A silver stag fountain catches the last copper light. Empty bench, no figures. First stars appearing. Atmosphere: fleeting beauty, fragile comfort, the calm before upheaval. |
-| `royal_gardens_ash_male.png` | day-2_gardens banner (male Ash / default) | Same garden, same fountain and jasmine and first stars. Two figures on the stone bench   a dark-haired prince and a half-elf bard (male presentation, soft features, silver rings, travel-worn leather) with a lute, pointed ears, honey-coloured eyes. |
-| `royal_gardens_ash_female.png` | day-2_gardens banner, only if the player chose a female Ash | Same scene, same composition   the bard on the bench is the female presentation instead: sharper/angular features, same dark copper-toned hair, same honey-coloured eyes, pointed ears, same travel-worn leather and lute. Everything else identical to royal_gardens_ash_male.png. |
+
+The day-2_gardens.tw arrival banner (Ash on the bench, male/female variants)
+moved to `assets/images/scenes/day_minus_2_manifest.md`   it's a single-passage
+narrative beat wired via `<<sceneImage>>`, not a reusable place, so it lives
+with the other scene art instead of cluttering this location-only folder.
 | `kitchens.png` | day-2_hub card, day-2_kitchen | Massive medieval palace kitchen. Multiple hearths blazing, pots on ceiling hooks, steam and flour in the air. A stout, formidable woman (50s, flour in hair, wooden spoon in hand) watches a young dark-haired prince eating a pastry on a stool. Around them, kitchen staff in organized chaos. Warm amber light. Atmosphere: warmth, comfort, a sanctuary of routine. |
 | `corridors.png` | day-2_hub card, day-2_corridors | Long stone palace corridor lined with portraits of warrior queens across centuries. An elderly knight (70s, gnarled hands, rusted sword at hip) sits on a worn stone bench in an alcove, looking up at a young dark-haired prince standing before him with an expression of gruff fondness. Atmosphere: accumulated wisdom, institutional memory, generational continuity. |
 | `servant_quarters.png` | day-2_hub card, day-2_servants | Clean, plain stone corridors beneath a medieval palace   the servants' level. Pressed linens on shelves, polished silver, candles in neat rows. A severe grey-haired woman in a white cap stands with ramrod posture, overseeing the quiet, orderly bustle of household staff. Atmosphere: honest work, quiet competence, the invisible machinery that keeps a royal household running. |
