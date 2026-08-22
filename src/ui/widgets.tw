@@ -85,11 +85,19 @@
    never touch HTML-as-text at all. */
 
 /* ===== END-OF-CONTENT NOTICE =====
-   Shared between day1_hub.tw (female route) and day1_hub_futa.tw
-   (futa route) - both branches currently end here, so the notice
-   lives once as a widget rather than being pasted into both files
-   and drifting out of sync later. Update the version label in one
-   place when a new public build ships. */
+   Shared across every passage where a branch's public build currently
+   stops, so the notice lives once as a widget rather than being pasted
+   into each file and drifting out of sync later. Update the version
+   label in one place when a new public build ships.
+
+   On v0.1 specifically: the public build is gated to end at Day 0
+   (day0_void.tw / day0_void_futa.tw) - Day 1 and Day 2 are fully written
+   in this branch's codebase (carried forward for future merges into
+   v0.2/v0.3) but intentionally not linked from Day 0 on this branch, so
+   day1_hub_futa.tw's and day2_hub.tw's own <<endOfContentNotice>> calls
+   are currently unreachable dead code on v0.1 - left in place rather
+   than removed, since deleting them would just have to be redone by
+   hand on the next merge. */
 <<widget "endOfContentNotice">>
   <div class="end-of-content">
     <h3>End of Public Version v0.1</h3>

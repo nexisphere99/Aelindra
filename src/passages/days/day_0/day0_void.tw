@@ -35,5 +35,13 @@
 <div class="day-transition">
   <p>The darkness holds. The heartbeat strengthens. Light gathers at the edges.</p>
   <p class="transition-morning"><em>Tomorrow, someone new opens her eyes.</em></p>
-  [[Wake → |day1_wake]]
 </div>
+
+<!--
+  v0.1 GATE: this branch's public build ends here. Day 1 (day1_wake and
+  everything downstream) is fully written in this branch's codebase - kept
+  intact so future merges into v0.2/v0.3 carry it forward cleanly - but it
+  is intentionally NOT linked from here on v0.1. Do not restore
+  [[Wake → |day1_wake]] on this branch; that link is what v0.2+ uses.
+-->
+<<endOfContentNotice>>

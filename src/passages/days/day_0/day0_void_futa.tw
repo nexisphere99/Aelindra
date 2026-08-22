@@ -40,5 +40,13 @@
   <p>The darkness holds. Two threads of light   silver and amber   run parallel through the void.</p>
   <p>A heartbeat where they converge. Yours. Both.</p>
   <p class="transition-morning"><em>Tomorrow, someone new opens her eyes. She carries everything.</em></p>
-  [[Wake → |day1_hub_futa]]
 </div>
+
+<!--
+  v0.1 GATE: this branch's public build ends here. day1_hub_futa is a
+  placeholder stub on this branch (real futa Day 1 lives on v0.3) - kept
+  intact so future merges carry it forward cleanly - but it is
+  intentionally NOT linked from here on v0.1. Do not restore
+  [[Wake → |day1_hub_futa]] on this branch.
+-->
+<<endOfContentNotice>>
