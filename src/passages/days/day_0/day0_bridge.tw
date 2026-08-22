@@ -1,5 +1,5 @@
 :: day0_bridge [nobr]
-<<set _bridgeImg to ($bardGender is "female") ? "moonspire_bridge_ash_female" : "moonspire_bridge">>
+<<set _bridgeImg to ($bardGender is "female") ? "moonspire_bridge_ash_female" : "moonspire_bridge_ash_male">>
 <div class="scene-image"><<locationImage _bridgeImg "The Bridge">></div>
 
 <h2>The Bridge   Crossing</h2>

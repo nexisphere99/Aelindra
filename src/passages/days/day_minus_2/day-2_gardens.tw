@@ -1,5 +1,5 @@
 :: day-2_gardens [nobr]
-<<set _gardensImg to ($bardGender is "female") ? "royal_gardens_ash_female" : "royal_gardens">>
+<<set _gardensImg to ($bardGender is "female") ? "royal_gardens_ash_female" : "royal_gardens_ash_male">>
 <div class="scene-image"><<locationImage _gardensImg "Royal Gardens">></div>
 
 <h2>Royal Gardens   Ash's Arrival</h2>
