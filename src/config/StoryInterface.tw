@@ -115,7 +115,7 @@
            ships"). Update this line the same way, on the same
            occasions, when this branch's public version number
            advances. -->
-      <div id="version-badge">Version 0.1</div>
+      <div id="version-badge">Version 0.2</div>
 
       <!-- MC Portrait Frame -->
       <div id="mc-portrait-frame">
