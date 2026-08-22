@@ -700,6 +700,40 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   margin-bottom: 2px;
 }
 
+/* In-passage click choice (e.g. day0_queen.tw's "Which?" moment) -
+   two <<link>> options sharing one container id, each replacing that
+   container's content with its own outcome via <<replace>>, so
+   picking one removes both links and only the chosen dialogue
+   remains. Styled as stacked pill buttons, matching .scene-end a but
+   left-aligned since this sits mid-dialogue rather than at a scene
+   boundary. */
+.inline-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 12px 16px;
+}
+
+.inline-choice a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid var(--border-stone);
+  border-radius: 2px;
+  display: inline-block;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.inline-choice a:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-glow-gold);
+}
+
 /* Internal monologue - distinct from spoken <<dialogue>>, used for
    thoughts during the Day 0 Rite scenes (e.g. the "I chose this"
    goodbye beat woven into the genital transformation). Centered,

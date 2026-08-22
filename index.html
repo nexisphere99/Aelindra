@@ -806,6 +806,40 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   margin-bottom: 2px;
 }
 
+/* In-passage click choice (e.g. day0_queen.tw's "Which?" moment) -
+   two <<link>> options sharing one container id, each replacing that
+   container's content with its own outcome via <<replace>>, so
+   picking one removes both links and only the chosen dialogue
+   remains. Styled as stacked pill buttons, matching .scene-end a but
+   left-aligned since this sits mid-dialogue rather than at a scene
+   boundary. */
+.inline-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 12px 16px;
+}
+
+.inline-choice a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid var(--border-stone);
+  border-radius: 2px;
+  display: inline-block;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.inline-choice a:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-glow-gold);
+}
+
 /* Internal monologue - distinct from spoken <<dialogue>>, used for
    thoughts during the Day 0 Rite scenes (e.g. the "I chose this"
    goodbye beat woven into the genital transformation). Centered,
@@ -2934,23 +2968,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Which?&quot;&lt;/div&gt;
 
-&lt;&lt;if $d1_leaning is &quot;female&quot;&gt;&gt;
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Complete. The clean wound.&quot;&lt;/div&gt;
+&lt;div id=&quot;queen-choice&quot; class=&quot;inline-choice&quot;&gt;
+&lt;&lt;link &quot;\&quot;Complete. The clean wound.\&quot;&quot;&gt;&gt;
+&lt;&lt;replace &quot;#queen-choice&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Complete. The clean wound.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you walk in as my son and walk out as my daughter.&quot; Her eyes are wet, but her voice stays steady. &quot;And I will love her the way I loved him. Completely.&quot;&lt;/div&gt;
-&lt;&lt;elseif $d1_leaning is &quot;futa&quot;&gt;&gt;
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Partial. I keep... I&#39;m keeping it.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you walk in as my son and walk out as my daughter.&quot; Her eyes are wet, but her voice stays steady. &quot;And I will love her the way I loved him. Completely.&quot;&lt;/div&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;set $d1_leaning to &quot;female&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;link &quot;\&quot;Partial. I&#39;m keeping it.\&quot;&quot;&gt;&gt;
+&lt;&lt;replace &quot;#queen-choice&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Partial. I keep... I&#39;m keeping it.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you walk in as my son and walk out as something the world has never seen.&quot; A breath   relief, or acceptance, or something too complicated to name. &quot;And I will love her   all of her   the way I loved him.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Even the cock?&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Especially the cock.&quot; The thin smile, the dying queen&#39;s last joke to her son. &quot;It&#39;s going to save the kingdom&#39;s treasury in concealment-garment commissions.&quot;&lt;/div&gt;
-&lt;&lt;else&gt;&gt;
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I don&#39;t know yet. I&#39;ll know when I&#39;m standing at the altar.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Then you&#39;ll know.&quot; She holds my face a moment longer. &quot;The body knows what it needs. Trust it   even when the mind hasn&#39;t caught up.&quot;&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Especially the cock.&quot; The thin smile, the dying queen&#39;s last joke to her son. &quot;It&#39;s going to save the kingdom&#39;s treasury in concealment-garment commissions.&quot;&lt;/div&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;set $d1_leaning to &quot;futa&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Will you visit?&quot; My voice is rough. &quot;After?&quot;&lt;/div&gt;
 
@@ -5080,12 +5116,13 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;set $d1_moonspire2 to false&gt;&gt;
   &lt;&lt;set $d1_queen2 to false&gt;&gt;
 
-  /* --- Which way Edrin is leaning, chosen at the day-1_night mirror
-       scene once $d1_moonspire2 is true. Read by day0_queen.tw&#39;s
-       &quot;Which?&quot; exchange the next morning - see
-       AELINDRA_Day0_Revisions.md. Not the actual $gamePath choice
-       (that&#39;s still made fresh at day0_path_choice.tw and can differ
-       from the lean), just what Seraphina&#39;s goodbye reacts to. --- */
+  /* --- Which way Edrin is leaning (&quot;female&quot;/&quot;futa&quot;), set live by an
+       in-scene click choice at day0_queen.tw&#39;s &quot;Which?&quot; exchange - see
+       AELINDRA_Day0_Revisions.md. Declared here only as a safe default
+       in case that passage is ever reached before the choice fires.
+       Not the actual $gamePath choice (that&#39;s still made fresh at
+       day0_path_choice.tw and can differ from the lean), just what
+       Seraphina&#39;s goodbye reacts to. --- */
   &lt;&lt;set $d1_leaning to &quot;undecided&quot;&gt;&gt;
 
   /* --- Day -1 NPC Flags --- */
@@ -5805,25 +5842,9 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;&lt;addObjective &quot;sleep_d1&quot; &quot;Sleep&quot; &quot;MAIN&quot;&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
-  &lt;&lt;if $d1_moonspire2&gt;&gt;
-  &lt;p class=&quot;path-intro&quot;&gt;Sleep, finally   but not before the mind settles somewhere.&lt;/p&gt;
-  &lt;&lt;link &quot;Let it go completely →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
-    &lt;&lt;set $d1_leaning to &quot;female&quot;&gt;&gt;
-    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Hold on to this →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
-    &lt;&lt;set $d1_leaning to &quot;futa&quot;&gt;&gt;
-    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;I still don&#39;t know →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
-    &lt;&lt;set $d1_leaning to &quot;undecided&quot;&gt;&gt;
-    &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
-  &lt;&lt;/link&gt;&gt;
-  &lt;&lt;else&gt;&gt;
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_queen" tags="nobr" position="225,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   Round Two&lt;/h2&gt;

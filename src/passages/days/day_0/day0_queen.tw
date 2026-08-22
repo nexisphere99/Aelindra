@@ -47,23 +47,25 @@
 
 <div class="dialogue"><span class="speaker">SERAPHINA</span>"Which?"</div>
 
-<<if $d1_leaning is "female">>
-<div class="dialogue"><span class="speaker">EDRIN</span>"Complete. The clean wound."</div>
+<div id="queen-choice" class="inline-choice">
+<<link "\"Complete. The clean wound.\"">>
+<<replace "#queen-choice">><div class="dialogue"><span class="speaker">EDRIN</span>"Complete. The clean wound."</div>
 
-<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you walk in as my son and walk out as my daughter." Her eyes are wet, but her voice stays steady. "And I will love her the way I loved him. Completely."</div>
-<<elseif $d1_leaning is "futa">>
-<div class="dialogue"><span class="speaker">EDRIN</span>"Partial. I keep... I'm keeping it."</div>
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you walk in as my son and walk out as my daughter." Her eyes are wet, but her voice stays steady. "And I will love her the way I loved him. Completely."</div><</replace>>
+<<set $d1_leaning to "female">>
+<</link>>
+
+<<link "\"Partial. I'm keeping it.\"">>
+<<replace "#queen-choice">><div class="dialogue"><span class="speaker">EDRIN</span>"Partial. I keep... I'm keeping it."</div>
 
 <div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you walk in as my son and walk out as something the world has never seen." A breath   relief, or acceptance, or something too complicated to name. "And I will love her   all of her   the way I loved him."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Even the cock?"</div>
 
-<div class="dialogue"><span class="speaker">SERAPHINA</span>"Especially the cock." The thin smile, the dying queen's last joke to her son. "It's going to save the kingdom's treasury in concealment-garment commissions."</div>
-<<else>>
-<div class="dialogue"><span class="speaker">EDRIN</span>"I don't know yet. I'll know when I'm standing at the altar."</div>
-
-<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then you'll know." She holds my face a moment longer. "The body knows what it needs. Trust it   even when the mind hasn't caught up."</div>
-<</if>>
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Especially the cock." The thin smile, the dying queen's last joke to her son. "It's going to save the kingdom's treasury in concealment-garment commissions."</div><</replace>>
+<<set $d1_leaning to "futa">>
+<</link>>
+</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Will you visit?" My voice is rough. "After?"</div>
 
