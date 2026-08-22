@@ -1,4 +1,6 @@
 :: day1_exam [nobr]
+<div class="scene-image"><<locationImage "day1f_mirror" "The mirror">></div>
+
 <h2>Ilara's Examination</h2>
 
 <p>She arrives within minutes. She was monitoring from the next room   I know this because I heard movement beyond the wall, the careful sounds of someone staying close without intruding, and because Ilara is the kind of person who would never be more than thirty seconds away from a patient who just underwent a body-rewriting magical procedure.</p>
@@ -92,6 +94,8 @@
 <p>The name again. The name that isn't mine. Except it is   because the body it's attached to is mine, and the body is female, and the name is a woman's name, and the logic chain terminates in a place I'm not ready to stand.</p>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"I want clothes."</div>
+
+<<locationImage "day1f_clothes" "Ill-fitting">>
 
 <p>She provides them. A breast band   soft linen, wrapping around the new tissue. The contact is overwhelming. Linen smallclothes   fitted differently, shaped for anatomy I'm still refusing to fully acknowledge. She offers a dress. I refuse the dress. I take a loose shirt and trousers instead. They fit wrong   too big at the shoulders, too tight at the hips, gaping at the chest where the breasts push the fabric outward. I look like a woman wearing a man's clothes.</p>
 
