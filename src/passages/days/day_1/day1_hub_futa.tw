@@ -1,7 +1,8 @@
 :: day1_hub_futa [nobr]
 <!--
   PLACEHOLDER   pipeline test only, AND the current end of the
-  public build's content.
+  public build's content for the futa route (v0.2 - female route's
+  Day 1 is real content now, see day1_hub.tw / day2_hub.tw).
   This is the FUTANARI-route Day 1 hub   a separate file from
   day1_hub.tw by design, not an <<if $gamePath>> branch inside it.
   Per day0_ritual_futa.md's own integration note, the waking scene,

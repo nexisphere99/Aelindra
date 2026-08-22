@@ -85,15 +85,17 @@
    never touch HTML-as-text at all. */
 
 /* ===== END-OF-CONTENT NOTICE =====
-   Shared between day1_hub.tw (female route) and day1_hub_futa.tw
-   (futa route) - both branches currently end here, so the notice
-   lives once as a widget rather than being pasted into both files
-   and drifting out of sync later. Update the version label in one
-   place when a new public build ships. */
+   As of v0.2, futa-route only: the female route's Day 1 is now fully
+   written and flows straight into day2_hub.tw's placeholder without
+   any "end of content" interruption (see the comment there). The
+   futa route's Day 1 (day1_hub_futa.tw) is still unwritten, so it's
+   the only remaining call site. Kept as a widget rather than pasted
+   inline so the version label only needs updating in one place next
+   release. */
 <<widget "endOfContentNotice">>
   <div class="end-of-content">
-    <h3>End of Public Version v0.1</h3>
-    <p>You've reached the end of AELINDRA's current free public release. Thank you for playing this far into Edrin's   Aelindra's   story.</p>
+    <h3>Futanari Route   Not Yet Written</h3>
+    <p>In this v0.2 release, Day 1 content for the futanari route hasn't been added yet. The female route is fully playable end to end through Day 1   the futa route's own Day 1 is still in progress.</p>
     <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
     <p class="patreon-cta">
       <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>

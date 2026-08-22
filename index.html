@@ -4516,7 +4516,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="day1_hub_futa" tags="nobr" position="350,600" size="100,100">&lt;!--
   PLACEHOLDER   pipeline test only, AND the current end of the
-  public build&#39;s content.
+  public build&#39;s content for the futa route (v0.2 - female route&#39;s
+  Day 1 is real content now, see day1_hub.tw / day2_hub.tw).
   This is the FUTANARI-route Day 1 hub   a separate file from
   day1_hub.tw by design, not an &lt;&lt;if $gamePath&gt;&gt; branch inside it.
   Per day0_ritual_futa.md&#39;s own integration note, the waking scene,
@@ -5066,10 +5067,14 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="day2_hub" tags="nobr" position="1225,725" size="100,100">&lt;!--
   PLACEHOLDER   pipeline test only, AND the current end of the
   public build&#39;s content (female route).
+  As of v0.2, this route deliberately does NOT show
+  &lt;&lt;endOfContentNotice&gt;&gt; - Day 1 is real, playable content now, so
+  the female route flows straight through it without an &quot;end of
+  public build&quot; interruption; it just quietly runs out of content
+  here until Day 2 is written. (The futa route still shows the
+  notice, at day1_hub_futa.tw, since its Day 1 doesn&#39;t exist yet.)
   Replace with real Day 2 (&quot;Body&quot;) content and its own day2fInit
-  flag block (mirroring day1f-init.tw) when written. At that
-  point, move the &lt;&lt;endOfContentNotice&gt;&gt; call below down to
-  wherever the new content&#39;s own final passage ends.
+  flag block (mirroring day1f-init.tw) when written.
 --&gt;
 &lt;div class=&quot;day-transition&quot;&gt;
   &lt;h2&gt;&lt;&lt;print formatDayNumber($dayNumber)&gt;&gt;   Body&lt;/h2&gt;
@@ -5079,9 +5084,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   before it.)&lt;/p&gt;
   &lt;p&gt;&lt;&lt;print $mcName&gt;&gt;, &lt;&lt;print $mcTitle&gt;&gt;. Height &lt;&lt;print $mcHeight&gt;&gt;,
   bust &lt;&lt;print $mcBust&gt;&gt;. Stress: &lt;&lt;print $stress&gt;&gt; | Energy: &lt;&lt;print $energy&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;&lt;endOfContentNotice&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="day-1-init" tags="widget nobr" position="100,850" size="100,100">/* ============================================================
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="day-1-init" tags="widget nobr" position="100,850" size="100,100">/* ============================================================
    DAY -1 (&quot;The Arguments&quot;)   SCENE &amp; NPC FLAG INIT
    Called once, from day-2_sleep_transition.tw, mirroring
    day_minus_2/day-2-init.tw. Day-specific flags live here, not
@@ -8930,15 +8933,17 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
    never touch HTML-as-text at all. */
 
 /* ===== END-OF-CONTENT NOTICE =====
-   Shared between day1_hub.tw (female route) and day1_hub_futa.tw
-   (futa route) - both branches currently end here, so the notice
-   lives once as a widget rather than being pasted into both files
-   and drifting out of sync later. Update the version label in one
-   place when a new public build ships. */
+   As of v0.2, futa-route only: the female route&#39;s Day 1 is now fully
+   written and flows straight into day2_hub.tw&#39;s placeholder without
+   any &quot;end of content&quot; interruption (see the comment there). The
+   futa route&#39;s Day 1 (day1_hub_futa.tw) is still unwritten, so it&#39;s
+   the only remaining call site. Kept as a widget rather than pasted
+   inline so the version label only needs updating in one place next
+   release. */
 &lt;&lt;widget &quot;endOfContentNotice&quot;&gt;&gt;
   &lt;div class=&quot;end-of-content&quot;&gt;
-    &lt;h3&gt;End of Public Version v0.1&lt;/h3&gt;
-    &lt;p&gt;You&#39;ve reached the end of AELINDRA&#39;s current free public release. Thank you for playing this far into Edrin&#39;s   Aelindra&#39;s   story.&lt;/p&gt;
+    &lt;h3&gt;Futanari Route   Not Yet Written&lt;/h3&gt;
+    &lt;p&gt;In this v0.2 release, Day 1 content for the futanari route hasn&#39;t been added yet. The female route is fully playable end to end through Day 1   the futa route&#39;s own Day 1 is still in progress.&lt;/p&gt;
     &lt;p&gt;Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.&lt;/p&gt;
     &lt;p class=&quot;patreon-cta&quot;&gt;
       &lt;a href=&quot;https://www.patreon.com/c/teamaelindra&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Support AELINDRA on Patreon →&lt;/a&gt;
