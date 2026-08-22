@@ -28,9 +28,10 @@
 <<set $mcBreastSize to "A-B">>
 <<set $mcPortrait to "aelindra_day1">>
 <<set $bodyStatusVisible to true>>
+<<day1fInit>>
 
 <div class="day-transition">
   <p>The darkness holds. The heartbeat strengthens. Light gathers at the edges.</p>
   <p class="transition-morning"><em>Tomorrow, someone new opens her eyes.</em></p>
-  [[Wake → |day1_hub]]
+  [[Wake → |day1_wake]]
 </div>

@@ -1,0 +1,20 @@
+:: day2_hub [nobr]
+<!--
+  PLACEHOLDER — pipeline test only, AND the current end of the
+  public build's content (female route).
+  Replace with real Day 2 ("Body") content and its own day2fInit
+  flag block (mirroring day1f-init.tw) when written. At that
+  point, move the <<endOfContentNotice>> call below down to
+  wherever the new content's own final passage ends.
+-->
+<div class="day-transition">
+  <h2><<print formatDayNumber($dayNumber)>> — Body</h2>
+  <p>(Day 2 content not yet written. Days -2 through Day 1 are
+  fully playable end to end on the female route — the Rite, the
+  first day of recovery in the Moonspire Tower, and everything
+  before it.)</p>
+  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
+  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+</div>
+
+<<endOfContentNotice>>

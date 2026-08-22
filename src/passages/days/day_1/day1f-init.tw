@@ -1,0 +1,49 @@
+:: day1f-init [widget nobr]
+
+/* ============================================================
+   DAY 1 ("Wrong") — FEMALE ROUTE — SCENE & OBJECT FLAG INIT
+   Called once, from day0_void.tw, mirroring day0-init.tw etc.
+   Opens with <<clearObjectives>> per the established convention.
+
+   NAMING: widget is "day1fInit" (not "day1Init") and every flag
+   is prefixed d1f_ (not d1_), because Day -1 already owns the
+   name "day1Init" and the d1_ prefix. Day 1 forward is a genuine
+   fork — female route content lives here; the futa route (not
+   yet written) will need its own day1tInit/d1t_ or similar,
+   called from day0_void_futa.tw instead, once it exists.
+
+   ARCHITECTURE: Day 1 is a single confined room, not a location
+   grid - see day1_hub.tw. Aelindra does not leave the Moonspire
+   Tower. Visitors come to her at the door instead.
+   ============================================================ */
+<<widget "day1fInit">>
+  <<clearObjectives>>
+
+  /* --- Day 1 Scene Flags --- */
+  <<set $d1f_wake to false>>
+  <<set $d1f_exam to false>>
+  <<set $d1f_alone to false>>
+  <<set $d1f_rowan to false>>
+  <<set $d1f_night to false>>
+
+  /* --- Day 1 NPC / Object Flags --- */
+  <<set $d1f_npc_items to false>>
+  <<set $d1f_npc_nightgown to false>>
+  <<set $d1f_npc_queen_message to false>>
+  <<set $d1f_npc_aldric_door to false>>
+  <<set $d1f_npc_nara3 to false>>
+  <<set $d1f_npc_vael3 to false>>
+  <<set $d1f_npc_window to false>>
+  <<set $d1f_npc_body to false>>
+  <<set $d1f_npc_marta_tray to false>>
+
+  /* --- Body exploration (referenced by future content; not yet
+       tied to a specific player choice in the current scenes) --- */
+  <<set $d1f_touched to false>>
+  <<set $d1f_explored_vulva to false>>
+
+  /* --- Day framing --- */
+  <<set $dayNumber to 1>>
+  <<set $dayLabel to "Wrong">>
+  <<set $timeSlot to "MORNING">>
+<</widget>>

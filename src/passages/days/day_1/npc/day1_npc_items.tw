@@ -1,0 +1,24 @@
+:: day1_npc_items [nobr]
+<h3>The Items You Carried</h3>
+
+<p>On the table beside the bed: the things I carried to the tower. Someone — Ilara, probably, or one of the sorceresses — placed them here while I was unconscious. Arranged neatly, as if they matter, because they do.</p>
+
+<p>The pressed moonflower. Haeth's gift. I pick it up. It's as light as I remember — lighter, even, because my fingers are smaller and the contrast makes the flower seem even more impossibly delicate. A flower from another transformation, another body, another person who lay on that altar and woke up different. I hold it against my palm. The petals don't crumble. They survived the night. So did I.</p>
+
+<p>The jasmine sprig. Wynn's cutting. The flowers have closed — jasmine closes during the day and opens at night, which I know because Wynn told me once and I remember everything Wynn tells me about plants. The scent is still there. Faint. Sweet. The same scent. I bring it to my nose and the smell triggers something — a memory of the garden at dusk, the fountain, the first stars. A memory that belongs to the person I was. A memory that's still mine.</p>
+
+<p>Aldric's letter. Folded. I open it and read it again. <em>The grip is for a smaller hand. The weight is adjusted for a lighter frame.</em> My eyes blur. The handwriting hasn't changed. Aldric's precise, military script. The words were for a person who didn't exist when he wrote them — a person he couldn't see, couldn't imagine, but prepared for anyway. That's what love looks like when it's expressed in leather and steel.</p>
+
+<p>The ginger root. Vael's practicality. I didn't need it — the potion stayed down. But she thought of it. She thought of vomiting, and then she thought of how to prevent it, and then she gave me the solution wrapped in a cloth pouch with no ceremony and no sentiment. Vael doesn't do sentiment. She does chemistry. It amounts to the same thing.</p>
+
+<p>The monogrammed handkerchief. Alva's last gift. The initial — E — embroidered in gold thread. The wrong initial, now. Or the old initial. Or the initial that connects this body to the body that carried it yesterday, a thread of thread.</p>
+
+<p>I spread them on the table. Five items. Five people who cared enough to give me something to carry through the Rite. Five anchors to a world that still exists beyond these four walls.</p>
+
+<<set $d1f_npc_items to true>>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+
+<div class="scene-end">
+  [[Continue → |day1_table_hub]]
+</div>

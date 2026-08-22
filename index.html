@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://5AF0ED76-8990-4492-89C7-1A2C87D727BB// --><tw-storydata name="AELINDRA: The Rite of Becoming" startnode="107" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5AF0ED76-8990-4492-89C7-1A2C87D727BB" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ================================================================
+	<!-- UUID://5AF0ED76-8990-4492-89C7-1A2C87D727BB// --><tw-storydata name="AELINDRA: The Rite of Becoming" startnode="127" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5AF0ED76-8990-4492-89C7-1A2C87D727BB" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ================================================================
    AELINDRA   MASTER STYLESHEET
    Medieval Dark Fantasy Theme
    Color Palette: Deep purples, golds, dark stone, candlelight amber, blood red
@@ -836,6 +836,40 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 14px;
   padding: 16px 0;
+}
+
+/* Room layout — replaces the location grid on confined days (Day 1's
+   Moonspire recovery room): a single vertical column of zones rather
+   than a multi-column grid, since there's only ever one "location" */
+.room-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.room-zone {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+
+.room-zone:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+}
+
+.room-zone h3 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--text-bright);
+  margin: 0 0 4px;
+}
+
+.room-header h2 {
+  font-size: 1.2rem;
 }
 
 .loc-card {
@@ -1863,7 +1897,10 @@ window.updateSidebars = function () {
       + buildStatRow('ALL', 'Allure', sv.statALL)
       + buildStatRow('PRO', 'Prowess', sv.statPRO)
       + buildStatRow('WIS', 'Wisdom', sv.statWIS)
-      + buildStatRow('RES', 'Resolve', sv.statRES);
+      + buildStatRow('RES', 'Resolve', sv.statRES)
+      // FEM only exists post-transformation - hidden before Day 1
+      // the same way the arousal bar is hidden before Day 1 below.
+      + (sv.dayNumber >= 1 ? buildStatRow('FEM', 'Femininity', sv.statFEM) : '');
   }
 
   // Objectives
@@ -2021,6 +2058,10 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $statPRO to 0&gt;&gt;       /* Prowess */
 &lt;&lt;set $statWIS to 0&gt;&gt;       /* Wisdom */
 &lt;&lt;set $statRES to 0&gt;&gt;       /* Resolve */
+&lt;&lt;set $statFEM to 0&gt;&gt;       /* Femininity awareness - involuntary, post-
+                               transformation only (Day 1+). Stays 0 and
+                               hidden from the sidebar before then; see
+                               updateSidebars() in script.js. */
 
 /* --- RESOURCE STATS --- */
 &lt;&lt;set $energy to 100&gt;&gt;
@@ -3212,11 +3253,12 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $mcBreastSize to &quot;A-B&quot;&gt;&gt;
 &lt;&lt;set $mcPortrait to &quot;aelindra_day1&quot;&gt;&gt;
 &lt;&lt;set $bodyStatusVisible to true&gt;&gt;
+&lt;&lt;day1fInit&gt;&gt;
 
 &lt;div class=&quot;day-transition&quot;&gt;
   &lt;p&gt;The darkness holds. The heartbeat strengthens. Light gathers at the edges.&lt;/p&gt;
   &lt;p class=&quot;transition-morning&quot;&gt;&lt;em&gt;Tomorrow, someone new opens her eyes.&lt;/em&gt;&lt;/p&gt;
-  [[Wake → |day1_hub]]
+  [[Wake → |day1_wake]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="day0_void_futa" tags="nobr" position="225,350" size="100,100">&lt;h2&gt;Void — Two Channels&lt;/h2&gt;
 
 &lt;p&gt;Nothing.&lt;/p&gt;
@@ -4024,32 +4066,314 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day0_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="day1_hub" tags="nobr" position="1100,475" size="100,100">&lt;!--
-  PLACEHOLDER — pipeline test only, AND the current end of the
-  public build&#39;s content.
-  This is the FEMALE-route Day 1 hub. Replace with the real Day 1
-  content (its own day1Init flag block, mirroring day-1-init.tw /
-  day0-init.tw) when it&#39;s written — at that point, move the
-  &lt;&lt;endOfContentNotice&gt;&gt; call below down to wherever the new
-  content&#39;s own final passage ends, rather than deleting it.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="day1_alone" tags="nobr" position="1100,475" size="100,100">&lt;h2&gt;Alone&lt;/h2&gt;
 
-  Per the &quot;two branches, never merge&quot; instruction: this passage is
-  reachable ONLY from the female path ($gamePath = &quot;female&quot;). The
-  futa path lands on the separate day1_hub_futa.tw instead. Real
-  Day 1 content should branch the same way — this hub and its futa
-  counterpart should stay two independent files, not one hub with
-  internal &lt;&lt;if $gamePath&gt;&gt; branches, since the body-discovery
-  content diverges too much to share passages cleanly (per
-  day0_ritual_futa.md&#39;s own integration note).
---&gt;
-&lt;div class=&quot;day-transition&quot;&gt;
-  &lt;h2&gt;&lt;&lt;print formatDayNumber($dayNumber)&gt;&gt; — Someone New&lt;/h2&gt;
-  &lt;p&gt;Someone new opens her eyes.&lt;/p&gt;
-  &lt;p&gt;&lt;&lt;print $mcName&gt;&gt;, &lt;&lt;print $mcTitle&gt;&gt;. Height &lt;&lt;print $mcHeight&gt;&gt;,
-  bust &lt;&lt;print $mcBust&gt;&gt;. Stress: &lt;&lt;print $stress&gt;&gt; | Energy: &lt;&lt;print $energy&gt;&gt;&lt;/p&gt;
+&lt;p&gt;Ilara leaves. She&#39;s a corridor away. She&#39;ll check in every hour. She&#39;s given me broth, bread, pain tincture, and the quiet, necessary gift of solitude.&lt;/p&gt;
+
+&lt;p&gt;I sit on the bed. I stare at my hands. I open and close them. The fingers are deft, quick, responsive. They curl and spread with a precision that my old hands had but these hands seem to have amplified — finer motor control, more sensitive tips, a tactile awareness that makes every surface I touch a symphony of texture and temperature.&lt;/p&gt;
+
+&lt;p&gt;I stand. Walk the room. Four paces one way, four the other. My hips sway. I&#39;m not doing it — the body is doing it, the wider pelvis and the angled femurs creating a lateral shift with each step that I can feel in my lower back and core. I try to suppress it. Walk like a man. Shoulders square, stride long, heel-strike. The result is a grotesque parody — a woman stomping across a room in ill-fitting trousers, hips fighting the forced stride, breasts bouncing with each heavy step.&lt;/p&gt;
+
+&lt;p&gt;I stop trying. I walk and the hips sway and the body moves the way the body moves and I hate it and it doesn&#39;t care.&lt;/p&gt;
+
+&lt;p&gt;I need to piss. I stand at the chamber pot. I reach for myself — the automatic gesture of a man who has been urinating standing up for twenty years. My hand finds nothing to hold. My fingers brush the mound, the folds, and I jerk away.&lt;/p&gt;
+
+&lt;p&gt;I sit. I sit on the chamber pot and I piss and the act is different in every particular — the position, the angle, the sensation, the sound. The stream is different. The release is different. The muscle I engage is different. I am doing one of the most basic biological functions a body performs and I&#39;m relearning it from scratch.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t look down while I do it.&lt;/p&gt;
+
+&lt;p&gt;Afternoon. I eat the bread and broth. My jaw chews differently — the muscles are smaller, the motion narrower. My throat swallows differently — the absence of the Adam&#39;s apple changes the mechanics. The broth tastes the same. I hold on to that. The broth tastes the same.&lt;/p&gt;
+
+&lt;p&gt;I lie on the bed. Curled on my side, because lying on my back puts the breast weight directly on my ribcage and the awareness of it is maddening, and lying on my stomach presses them into the mattress with a sensitivity that makes me gasp. On my side, they settle against each other — the upper one resting on the lower — and I can live with that. I can live with a lot, apparently.&lt;/p&gt;
+
+&lt;p&gt;My thighs press together. The warmth between them is constant. The vulva is there — soft, warm, present with every shift, every breath, every minute adjustment of position. I can feel the folds against each other. I can feel the clitoris, a small persistent throb of awareness, a nerve centre that didn&#39;t exist yesterday and now sits at the junction of everything and notices everything and will not shut up.&lt;/p&gt;
+
+&lt;p&gt;I do not touch myself. The arousal that flickers when fabric slides across a nipple, when my thighs shift, when I roll and the breast tissue moves with a liquid inertia that sends sensation radiating — I smother it. I refuse it. This body does not get to feel pleasure. Not yet. Not until I&#39;ve decided whether it&#39;s mine. And I have not decided. I haven&#39;t decided anything. I&#39;m lying in a tower room in a body that was inflicted on me and the body is responding to its own stimuli without consulting me and I am holding on to the last thing I have, which is the choice not to enjoy it.&lt;/p&gt;
+
+&lt;&lt;set $d1f_alone to true&gt;&gt;
+&lt;&lt;set $statFEM += 1&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+&lt;&lt;set $timeSlot to &quot;EVENING&quot;&gt;&gt;
+
+&lt;&lt;completeObjective &quot;alone&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;rowan_evening&quot; &quot;Wait for evening — someone will come&quot; &quot;MAIN&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_door_hub" tags="nobr" position="1225,475" size="100,100">&lt;h2&gt;🚪 The Door&lt;/h2&gt;
+&lt;p&gt;Heavy oak. Corridor sounds filter through.&lt;/p&gt;
+
+&lt;&lt;set _aldricCard to ($d1f_exam and not $d1f_npc_aldric_door and $timeSlot === &quot;AFTERNOON&quot;)&gt;&gt;
+&lt;&lt;set _naraCard to ($d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara)&gt;&gt;
+&lt;&lt;set _queenCard to ($timeSlot === &quot;EVENING&quot; and not $d1f_npc_queen_message)&gt;&gt;
+&lt;&lt;set _rowanCard to ($timeSlot === &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_rowan)&gt;&gt;
+&lt;&lt;set _martaCard to ($d1f_rowan and not $d1f_npc_marta_tray)&gt;&gt;
+
+&lt;&lt;if _aldricCard&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;&lt;npcPortrait &quot;aldric&quot; &quot;Aldric&quot;&gt;&gt;
+  &lt;h4&gt;🗡 Familiar Footsteps&lt;/h4&gt;
+  &lt;p&gt;Heavy. Even. The cadence of a man who has never been in a hurry. He stops outside.&lt;/p&gt;
+  [[Listen → |day1_npc_aldric_door]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if _naraCard&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;&lt;npcPortrait &quot;nara&quot; &quot;Nara&quot;&gt;&gt;
+  &lt;h4&gt;🎵 Three Notes Repeating&lt;/h4&gt;
+  &lt;p&gt;A music box. A tentative knock. &quot;I brought tea because tea helps everything...&quot;&lt;/p&gt;
+  [[Open the door → |day1_npc_nara3]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if _queenCard&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;h4&gt;📜 A Soft Knock — Sealed Note&lt;/h4&gt;
+  &lt;p&gt;Not Rowan&#39;s knock. Formal. A hand extends through the gap. The royal seal.&lt;/p&gt;
+  [[Take the note → |day1_npc_queen_message]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if _rowanCard&gt;&gt;
+&lt;div class=&quot;interaction-card main&quot;&gt;
+  &lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;
+  &lt;h4&gt;🎵 Three Taps. Pause. Two More.&lt;/h4&gt;
+  &lt;p&gt;Rowan. Playing softly through the door. Not forcing entry. Just... there.&lt;/p&gt;
+  [[Open the door → |day1_rowan]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if _martaCard&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
+  &lt;h4&gt;🍞 A Tray on the Floor&lt;/h4&gt;
+  &lt;p&gt;It wasn&#39;t there before. Covered with a clean cloth. The smell of Marta&#39;s soup.&lt;/p&gt;
+  [[Pick it up → |day1_npc_marta_tray]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if not (_aldricCard or _naraCard or _queenCard or _rowanCard or _martaCard)&gt;&gt;
+  &lt;p class=&quot;empty-note&quot;&gt;The corridor is quiet. No footsteps. No knocks. Just stone and silence.&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;nav-return&quot;&gt;
+  [[← Back to room → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="day1_exam" tags="nobr" position="100,600" size="100,100">&lt;h2&gt;Ilara&#39;s Examination&lt;/h2&gt;
+
+&lt;p&gt;She arrives within minutes. She was monitoring from the next room — I know this because I heard movement beyond the wall, the careful sounds of someone staying close without intruding, and because Ilara is the kind of person who would never be more than thirty seconds away from a patient who just underwent a body-rewriting magical procedure.&lt;/p&gt;
+
+&lt;p&gt;&lt;&lt;npcPortrait &quot;ilara&quot; &quot;Archsorceress Ilara&quot;&gt;&gt;She brings broth. Bread. A cup of something that steams. And a clinical calm that is either genuinely steady or such an extraordinary performance of composure that it amounts to the same thing.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;You&#39;re awake. Good.&quot; She sets the tray on the bedside table. &quot;How do you feel?&quot;&lt;/div&gt;
+
+&lt;p&gt;The question is so vast, so inadequate, that I almost laugh. Almost. The laugh mechanics work — I can feel the breath engage, the diaphragm contract, the sound start to build — but it dies before it reaches my mouth because my mouth is not the mouth that laughs and the sound that would emerge is not a sound I know.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;How do I FEEL?&quot; My voice. Higher. Softer. With a rasp from screaming during the ritual — the vocal cords were reshaped and then used to scream for six hours, and they&#39;re protesting. The sound coming from my throat is a stranger&#39;s voice, a woman&#39;s voice, and hearing it exit my own mouth is like hearing someone else speak from inside my chest. &quot;I feel like someone took me apart and put me back wrong.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Not wrong. Different.&quot; Ilara pulls a chair to the bedside. Sits. Her posture is precise — back straight, hands folded, the posture of a healer about to deliver a report. &quot;Your body is performing exactly as expected. The transformation is complete and successful. All indicators are within normal parameters.&quot;&lt;/div&gt;
+
+&lt;p&gt;Normal parameters. My body has been replaced and she&#39;s talking about &lt;em&gt;parameters.&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;I need to examine you.&quot; Her voice shifts — warmer, gentler, the clinical precision softened by something deliberately human. &quot;A full examination. To confirm that everything has formed correctly and that there are no complications. I&#39;ll explain every step. You can stop me at any time. But I need to do this.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;No.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Aelindra—&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t call me that.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;That&#39;s the name your mother chose for you.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;My mother chose a lot of things for me.&quot;&lt;/div&gt;
+
+&lt;p&gt;A silence. Ilara&#39;s rain-grey eyes hold mine. She doesn&#39;t blink. She doesn&#39;t press. She waits — the patience of a woman who has spent two decades working with magic and bodies and the complicated intersection of the two.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;I need to examine you,&quot; she repeats. &quot;Not because I doubt the Rite. Because your body is new, and new bodies need monitoring. You&#39;re twenty years old and you are experiencing the equivalent of a second puberty compressed into twenty-four hours. Your hormone levels are fluctuating. Your tissue is still settling. If something is wrong — and I don&#39;t believe anything is — I need to find it now, while I can still address it.&quot;&lt;/div&gt;
+
+&lt;p&gt;The logic is sound. The logic was always going to be sound. Logic is how they get you — the people who need you to do things you don&#39;t want to do. They make it reasonable. They make it necessary. They make the compliance feel like your idea.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Fine.&quot;&lt;/div&gt;
+
+&lt;p&gt;She asks me to remove the nightgown. I refuse. She waits. I comply. Because Ilara&#39;s tone makes it clear this isn&#39;t optional, and it isn&#39;t sexual, and the body I&#39;m removing the gown from is one I&#39;ve had for approximately twelve hours and have no attachment to whatsoever.&lt;/p&gt;
+
+&lt;p&gt;That&#39;s what I tell myself. The attachment I feel when the linen slides over my nipples — the sharp, electric sensitivity, the involuntary gasp — isn&#39;t attachment. It&#39;s nerve endings. Nothing more.&lt;/p&gt;
+
+&lt;p&gt;Naked. I&#39;m naked in front of a woman I&#39;ve met three times, in a body I&#39;ve inhabited for half a day, and the vulnerability is total. Not because of the nudity — I stood naked in this room yesterday, before the Rite, and the nudity was exposure, not vulnerability. Today the vulnerability comes from the fact that the body being seen is one I haven&#39;t consented to know yet. Ilara is seeing me before I&#39;ve seen myself. She&#39;s mapping territory I haven&#39;t explored.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The mirror,&quot; she says. &quot;You should look.&quot;&lt;/div&gt;
+
+&lt;p&gt;The mirror is across the room. Full-length. Polished silver. The same unforgiving reflective surface that every important moment in this story seems to require.&lt;/p&gt;
+
+&lt;p&gt;I walk to it. My gait is wrong — the hips sway, the centre of gravity is low, the steps are shorter. I try to walk the way I walked yesterday and the muscles refuse — they&#39;re configured differently, the pelvis tilts differently, the femurs are angled inward, and the result is a walk that is feminine not by choice but by physics.&lt;/p&gt;
+
+&lt;p&gt;The mirror.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m beautiful.&lt;/p&gt;
+
+&lt;p&gt;That&#39;s the first thought. It arrives without permission, without context, without the emotional infrastructure to support it. A raw, involuntary assessment delivered by the part of the brain that evaluates bodies and doesn&#39;t care about the politics of who&#39;s looking.&lt;/p&gt;
+
+&lt;p&gt;I hate myself for having it.&lt;/p&gt;
+
+&lt;p&gt;Five foot six. Dark wavy hair to the shoulders — it&#39;ll grow longer, Ilara says, over the coming weeks. Grey-blue eyes. Unchanged. The same eyes. My eyes, in a face that is and isn&#39;t mine. Soft jaw, full lips, graceful neck. Narrow shoulders. The collarbones stand out — delicate ridges that cast small shadows.&lt;/p&gt;
+
+&lt;p&gt;Breasts. Small, firm, high. Large A pushing toward B. The nipples — dark pink, wide, slightly puffy, clearly still developing. They&#39;re hard. From the cold, from the scrutiny, from the sheer overwhelm of existing in air.&lt;/p&gt;
+
+&lt;p&gt;Waist. Narrow. A curve inward that I&#39;ve only ever seen on other bodies. The ribcage is smaller. The waist tapers. The hips flare. An hourglass drawn by a hand that knew exactly what it was creating.&lt;/p&gt;
+
+&lt;p&gt;Between my legs. I force myself to look. A smooth mound. A neat line. The faintest shadow of dark hair beginning. The absence is deafening — the space where my cock hung is now a geography of folds and softness and a throb of awareness I don&#39;t want to acknowledge.&lt;/p&gt;
+
+&lt;p&gt;My ass. Fuller. Rounder. My thighs. Thicker, pressing together. My legs. Shorter. My feet. Smaller.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s not me.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;That is you. A new you, but you.&quot; Ilara&#39;s reflection appears behind mine in the mirror. &quot;Your eyes haven&#39;t changed. Look at them.&quot;&lt;/div&gt;
+
+&lt;p&gt;I look at them. Grey-blue. Storm-coloured, my mother called them. The same eyes that stared at me from a hundred mirrors in a hundred mornings in a body that was lean and angular and male. The same eyes. The last thread.&lt;/p&gt;
+
+&lt;p&gt;I look away.&lt;/p&gt;
+
+&lt;p&gt;The examination. I won&#39;t describe all of it. I&#39;ll describe enough.&lt;/p&gt;
+
+&lt;p&gt;Ilara examines me with the methodical precision of someone who has performed examinations on bodies she herself helped create. She explains each step. She asks permission before touching. She narrates what she finds.&lt;/p&gt;
+
+&lt;p&gt;The pelvic exam is the worst. Not painful — Ilara is gentle, her hands are warm, and the slim speculum she uses is lubricated and designed for comfort. The worst part is the intimacy of it — someone looking into a part of my body that didn&#39;t exist yesterday, assessing the architecture of organs I never asked for, confirming that yes, the vaginal canal is fully formed, yes, the cervix is healthy, yes, the uterus and ovaries are functional.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;Your first period will arrive within two to four weeks,&quot; she says, removing the speculum with the smooth confidence of a woman who has said this sentence before, possibly to someone in this exact situation.&lt;/div&gt;
+
+&lt;p&gt;My first period. Because I am now a person who will have periods. Because this body — this body that was a man&#39;s body twelve hours ago — now possesses the full machinery of female reproduction, and that machinery will begin operating on its own schedule regardless of my feelings about it.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ILARA&lt;/span&gt;&quot;The Rite was successful,&quot; Ilara says, washing her hands in the basin. &quot;Your body is entirely, functionally female. Chromosomally, hormonally, anatomically.&quot; She turns. Her expression is carefully balanced — professional respect and something warmer beneath. &quot;You&#39;re a woman, Aelindra.&quot;&lt;/div&gt;
+
+&lt;p&gt;The name again. The name that isn&#39;t mine. Except it is — because the body it&#39;s attached to is mine, and the body is female, and the name is a woman&#39;s name, and the logic chain terminates in a place I&#39;m not ready to stand.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I want clothes.&quot;&lt;/div&gt;
+
+&lt;p&gt;She provides them. A breast band — soft linen, wrapping around the new tissue. The contact is overwhelming. Linen smallclothes — fitted differently, shaped for anatomy I&#39;m still refusing to fully acknowledge. She offers a dress. I refuse the dress. I take a loose shirt and trousers instead. They fit wrong — too big at the shoulders, too tight at the hips, gaping at the chest where the breasts push the fabric outward. I look like a woman wearing a man&#39;s clothes.&lt;/p&gt;
+
+&lt;p&gt;Which is exactly what I am.&lt;/p&gt;
+
+&lt;&lt;set $d1f_exam to true&gt;&gt;
+&lt;&lt;set $statWIS += 2&gt;&gt;
+&lt;&lt;set $stress += 10&gt;&gt;
+&lt;&lt;set $statFEM += 2&gt;&gt;
+&lt;&lt;set $ilaraFamiliarity += 3&gt;&gt;
+&lt;&lt;set $timeSlot to &quot;AFTERNOON&quot;&gt;&gt;
+
+&lt;&lt;completeObjective &quot;exam&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;alone&quot; &quot;You need time. Be alone with it.&quot; &quot;MAIN&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;aldric_door&quot; &quot;Footsteps in the corridor&quot; &quot;SIDE&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;body_explore&quot; &quot;This body — notice things&quot; &quot;SIDE&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="day1_hub" tags="nobr" position="225,600" size="100,100">&lt;div class=&quot;hub-header room-header&quot;&gt;
+  &lt;&lt;locationImage &quot;moonspire_recovery_room&quot; &quot;Recovery Room&quot;&gt;&gt;
+  &lt;h2&gt;Moonspire Tower — Recovery Room&lt;/h2&gt;
+  &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
+  &lt;p class=&quot;energy-display&quot;&gt;Energy: &lt;&lt;print $energy&gt;&gt; | Stress: &lt;&lt;print $stress&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;&lt;endOfContentNotice&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_hub_futa" tags="nobr" position="1225,475" size="100,100">&lt;!--
+&lt;div class=&quot;room-layout&quot;&gt;
+
+&lt;!-- ========== THE BED ========== --&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🛏 The Bed&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Soft linens, white stone walls, sunlight through narrow windows. This is where you woke up.&lt;/p&gt;
+  &lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1f_rowan and not $d1f_night&gt;&gt;
+    &lt;span class=&quot;badge main&quot;&gt;⚔ Try to sleep&lt;/span&gt;
+    [[Lie down → |day1_night]]
+  &lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+
+&lt;!-- ========== THE MIRROR ========== --&gt;
+&lt;&lt;if not $d1f_exam&gt;&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🪞 The Mirror&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Full-length polished silver. You haven&#39;t looked. Not properly. Ilara says you should.&lt;/p&gt;
+  &lt;span class=&quot;badge main&quot;&gt;⚔ Ilara is waiting to examine you&lt;/span&gt;
+  [[Face the mirror → |day1_exam]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;!-- ========== THE WINDOW ========== --&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🪟 The Window&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Narrow. A slice of sky and the distant sounds of the palace below.&lt;/p&gt;
+  &lt;&lt;if not $d1f_npc_window&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 Listen to the world outside&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  [[Approach → |day1_window_hub]]
+&lt;/div&gt;
+
+&lt;!-- ========== THE DOOR ========== --&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🚪 The Door&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Heavy oak. The corridor beyond. The outside world — held at bay.&lt;/p&gt;
+  &lt;&lt;if $d1f_exam and not $d1f_npc_aldric_door and $timeSlot is &quot;AFTERNOON&quot;&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 Footsteps outside — familiar ones&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 Three notes repeating — a music box&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and not $d1f_npc_queen_message&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 A soft knock — and a sealed note&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_rowan&gt;&gt;
+    &lt;span class=&quot;badge main&quot;&gt;⚔ Three taps, pause, two more — Rowan&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $d1f_rowan and not $d1f_npc_marta_tray&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 A tray on the floor outside&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  [[Check the door → |day1_door_hub]]
+&lt;/div&gt;
+
+&lt;!-- ========== BEDSIDE TABLE ========== --&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;📦 Bedside Table&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Items from yesterday. Someone placed them here while you slept.&lt;/p&gt;
+  &lt;&lt;if not $d1f_npc_items&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 The things you carried&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $d1f_exam and not $d1f_npc_vael3&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 Vael left prescriptions&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  [[Examine → |day1_table_hub]]
+&lt;/div&gt;
+
+&lt;!-- ========== THE NIGHTGOWN ========== --&gt;
+&lt;&lt;if not $d1f_npc_nightgown&gt;&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;👗 The Nightgown&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;White linen. Someone dressed you while you were unconscious.&lt;/p&gt;
+  &lt;span class=&quot;badge side&quot;&gt;🗡 Who put this on me?&lt;/span&gt;
+  [[Examine → |day1_npc_nightgown]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;!-- ========== YOUR BODY ========== --&gt;
+&lt;&lt;if $d1f_exam&gt;&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🫀 Yourself&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;This body. These hands. This skin. There are discoveries waiting.&lt;/p&gt;
+  &lt;&lt;if not $d1f_npc_body&gt;&gt;
+    &lt;span class=&quot;badge side&quot;&gt;🗡 Notice things&lt;/span&gt;
+  &lt;&lt;/if&gt;&gt;
+  [[Examine → |day1_npc_body_discoveries]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;!-- ========== ALONE TIME (MAIN SCENE) ========== --&gt;
+&lt;&lt;if $d1f_exam and not $d1f_alone&gt;&gt;
+&lt;div class=&quot;room-zone&quot;&gt;
+  &lt;h3&gt;🕯 Be Alone&lt;/h3&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;Ilara left. The room is yours. The body is yours. You need to sit with both.&lt;/p&gt;
+  &lt;span class=&quot;badge main&quot;&gt;⚔ Process&lt;/span&gt;
+  [[Sit with it → |day1_alone]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="day1_hub_futa" tags="nobr" position="350,600" size="100,100">&lt;!--
   PLACEHOLDER — pipeline test only, AND the current end of the
   public build&#39;s content.
   This is the FUTANARI-route Day 1 hub — a separate file from
@@ -4070,7 +4394,553 @@ document.addEventListener('DOMContentLoaded', function () {
   bust &lt;&lt;print $mcBust&gt;&gt;. Stress: &lt;&lt;print $stress&gt;&gt; | Energy: &lt;&lt;print $energy&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;&lt;endOfContentNotice&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="day-1-init" tags="widget nobr" position="100,600" size="100,100">/* ============================================================
+&lt;&lt;endOfContentNotice&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="day1_night" tags="nobr" position="475,600" size="100,100">&lt;h2&gt;First Night in the New Body&lt;/h2&gt;
+
+&lt;p&gt;Night. The tower is quiet. Beyond the walls, the faint sound of the river in the chasm and the wind on the bridge. Inside, candles and stone and a body I&#39;m going to have to sleep in.&lt;/p&gt;
+
+&lt;p&gt;The nightgown Ilara left — I put it on because the room is cold and the shirt and trousers are uncomfortable and the nightgown is the softest thing available. It&#39;s silk. Or something close to silk. A Silverveil fabric, maybe, enchanted for comfort.&lt;/p&gt;
+
+&lt;p&gt;It slides over my skin and the sensation is overwhelming. Silk on new skin. On nipples that are tender and swollen, the fabric brushing across them like a tongue. On thighs that are smooth and sensitive, the hem whispering against them. Across a stomach that&#39;s soft, across a back that&#39;s narrower, over hips that flare and catch the fabric so it drapes differently than any garment I&#39;ve ever worn.&lt;/p&gt;
+
+&lt;p&gt;I pull the blankets up. Lie on my back. My breasts settle against my chest — round and warm, small but undeniably present, the nipples pointing toward the ceiling through the silk. I feel them. Not with my hands. With the rest of my body — the weight, the warmth, the way they shift when I breathe, rising and falling on the tide of my ribs.&lt;/p&gt;
+
+&lt;p&gt;I shift to my side. They shift with me. The upper one rests on the lower. They press together. The sensation of breast touching breast is — I don&#39;t have a word. Intimate. Private. A conversation my body is having with itself that I wasn&#39;t invited to.&lt;/p&gt;
+
+&lt;p&gt;Between my legs, the warmth is constant. The silk of the nightgown rests against the vulva. Every microscopic shift creates sensation. The fabric catches on moisture — because there is moisture, a faint slickness that I didn&#39;t ask for and don&#39;t want and that my body is producing regardless of my feelings, a biological function of tissue that is doing what healthy tissue does.&lt;/p&gt;
+
+&lt;p&gt;I think about my cock. I lie in the dark and I think about it. Specifically: the way it would press against the mattress when I slept on my stomach. The solid, comfortable weight. The way I&#39;d wake up hard sometimes, warm and thick against my thigh, and the arousal was simple and familiar and mine.&lt;/p&gt;
+
+&lt;p&gt;I reach down. Not to touch — to confirm. My hand passes over the soft mound. My fingers brush the folds. I flinch — not because it hurts. Because it feels good. A bright, sharp spark of sensation from the clitoris that radiates outward like a dropped stone in still water.&lt;/p&gt;
+
+&lt;p&gt;I pull my hand away. I don&#39;t touch again.&lt;/p&gt;
+
+&lt;p&gt;I roll onto my stomach. My breasts press into the mattress. The nipples flatten against the silk-covered linen and the pressure is... not unpleasant. Present. Aggressively, insistently, uncomfortably present. I can feel them squished beneath me, two small cushions of tissue that didn&#39;t exist yesterday and that now occupy the space between my chest and the bed with the calm inevitability of something that has always been there.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t sleep for hours. When I do, I dream of the mirror. In the dream, my reflection moves independently. She smiles at me. I don&#39;t smile back. She reaches through the glass, touches my face, and her fingers are warm.&lt;/p&gt;
+
+&lt;p&gt;I wake. I don&#39;t remember waking. I just am — awake, in the dark, in a body that breathes differently and lies differently and takes up different space in a bed that was the same bed yesterday and isn&#39;t anymore.&lt;/p&gt;
+
+&lt;p&gt;The teeth are the same. I press my tongue against the chipped canine. Still there. Still mine.&lt;/p&gt;
+
+&lt;p&gt;I hold on to that. A chipped tooth in the dark. An anchor in a body made of open water.&lt;/p&gt;
+
+&lt;&lt;set $d1f_night to true&gt;&gt;
+&lt;&lt;set $statFEM += 1&gt;&gt;
+&lt;&lt;set $energy to 30&gt;&gt;
+&lt;&lt;completeObjective &quot;night&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Sleep → |day1_sleep_transition]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="day1_rowan" tags="nobr" position="600,600" size="100,100">&lt;h2&gt;Rowan&#39;s Visit&lt;/h2&gt;
+
+&lt;p&gt;Evening. The light through the narrow windows has gone amber, then copper, then the bruised purple of dusk. Someone lit candles while I was not-sleeping — enchanted ones, steady-flamed, filling the room with warm light that is gentler than daylight and therefore easier to exist in.&lt;/p&gt;
+
+&lt;p&gt;A knock. Three taps, a pause, two more.&lt;/p&gt;
+
+&lt;p&gt;Rowan.&lt;/p&gt;
+
+&lt;p&gt;I almost don&#39;t answer. The thought of being seen — of someone looking at this body, this face, these breasts, these hips — makes something in my chest contract. But then I hear the lute. Rowan playing softly through the door, not forcing entry, not knocking again, just being there. The melody is something gentle, wandering, with the quality of a conversation being held with no expectation of response.&lt;/p&gt;
+
+&lt;p&gt;I open the door. A crack. Just enough.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t stare.&quot;&lt;/div&gt;
+
+&lt;p&gt;&lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;They don&#39;t. They look at me — a flicker of something crosses their face, surprise or adjustment or the rapid recalibration of someone seeing a friend in a shape they didn&#39;t expect — and then it&#39;s gone, replaced by warmth. The warmth is genuine. I know Rowan&#39;s performance face, and this isn&#39;t it.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You look like you.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I look like a stranger.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Your eyes are the same. Your eyes were always the best part.&quot;&lt;/div&gt;
+
+&lt;p&gt;I open the door wider. They come in. They sit on the floor. The lute is in their lap. They don&#39;t comment on the body. They don&#39;t use a name — not Edrin, not Aelindra. They just sit and play and talk about nothing.&lt;/p&gt;
+
+&lt;p&gt;A story from the road. A goat in Velmara that ate their lute case — the entire case, leather and buckles and all, and then looked at Rowan with the blank satisfaction of an animal that has achieved its life&#39;s purpose. A baron in the Iron Reach who cried at a sad song and then tried to have Rowan arrested for causing emotional distress to a nobleman, which is apparently a crime in the Iron Reach if the nobleman is drunk enough and the magistrate is bored enough.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;What happened?&quot; I ask. My voice. The stranger&#39;s voice. But the question is mine, and the curiosity is mine, and the habit of listening to Rowan&#39;s stories and asking &lt;em&gt;what happened next&lt;/em&gt; is a habit that belongs to the person I&#39;ve always been regardless of the body I&#39;m being it in.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I played a happy song. The baron laughed. The magistrate dismissed the case. I left town before anyone changed their mind.&quot;&lt;/div&gt;
+
+&lt;p&gt;I almost smile. The muscles for it work the same. The pull at the corners of the mouth, the slight narrowing of the eyes — the same. The smile lives in the same muscles, and the muscles are in a different face, but the smile is the smile.&lt;/p&gt;
+
+&lt;p&gt;Rowan stays for an hour. They play. They talk. They don&#39;t ask about the body. They don&#39;t ask about the examination. They don&#39;t ask how I feel, because Rowan understands that &lt;em&gt;how do you feel&lt;/em&gt; is the worst question you can ask someone who is drowning and hasn&#39;t decided whether to swim.&lt;/p&gt;
+
+&lt;p&gt;At the door, leaving:&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You&#39;re still you. The rest is just... wardrobe.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Wardrobe doesn&#39;t usually come with breasts.&quot;&lt;/div&gt;
+
+&lt;p&gt;The grin. Full, unreserved, the grin of someone who has decided that solemnity is not going to help and irreverence might.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You&#39;d be surprised. I once wore a corset for three weeks because a duchess paid me to pretend to be her sister. Very informative experience.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Informative.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I learned that underwires are either a miracle of engineering or a torture device, depending on the hour. Good night.&quot;&lt;/div&gt;
+
+&lt;p&gt;They leave. The room is quieter but warmer. The lute echoes in the stone walls for a moment after they&#39;re gone, a ghost of music dissolving into silence.&lt;/p&gt;
+
+&lt;&lt;set $d1f_rowan to true&gt;&gt;
+&lt;&lt;set $stress -= 15&gt;&gt;
+&lt;&lt;set $affRowan += 5&gt;&gt;
+&lt;&lt;set $statRES += 2&gt;&gt;
+&lt;&lt;set $timeSlot to &quot;NIGHT&quot;&gt;&gt;
+
+&lt;&lt;completeObjective &quot;rowan_evening&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;night&quot; &quot;Try to sleep&quot; &quot;MAIN&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="day1_sleep_transition" tags="nobr" position="725,600" size="100,100">&lt;&lt;set $dayNumber to 2&gt;&gt;
+&lt;&lt;set $dayLabel to &quot;Body&quot;&gt;&gt;
+&lt;&lt;set $timeSlot to &quot;MORNING&quot;&gt;&gt;
+&lt;&lt;set $energy to 50&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+&lt;&lt;clearObjectives&gt;&gt;
+
+&lt;div class=&quot;day-transition&quot;&gt;
+  &lt;h2&gt;Night passes. You dream of the mirror.&lt;/h2&gt;
+  &lt;p&gt;In the dream, your reflection smiles. You don&#39;t smile back. She reaches through the glass and her fingers are warm.&lt;/p&gt;
+  &lt;p&gt;You wake. The chipped canine is still there. The grey-blue eyes are still yours.&lt;/p&gt;
+  &lt;p class=&quot;transition-morning&quot;&gt;&lt;em&gt;Day 2. The body is still here. So are you.&lt;/em&gt;&lt;/p&gt;
+  [[Dawn → |day2_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="day1_table_hub" tags="nobr" position="850,600" size="100,100">&lt;h2&gt;📦 Bedside Table&lt;/h2&gt;
+&lt;p&gt;Items and prescriptions. The material evidence of being cared for.&lt;/p&gt;
+
+&lt;&lt;if not $d1f_npc_items&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;h4&gt;🌸 The Things You Carried&lt;/h4&gt;
+  &lt;p&gt;Moonflower. Jasmine. A letter. A handkerchief. A ginger root. Five gifts from five people.&lt;/p&gt;
+  [[Examine → |day1_npc_items]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $d1f_exam and not $d1f_npc_vael3&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
+  &lt;h4&gt;⚗ Vael&#39;s Prescriptions&lt;/h4&gt;
+  &lt;p&gt;Four vials in a wooden case. A knock, three raps, no patience.&lt;/p&gt;
+  [[Answer → |day1_npc_vael3]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $d1f_npc_items and (not $d1f_exam or $d1f_npc_vael3)&gt;&gt;
+  &lt;p class=&quot;empty-note&quot;&gt;Just the table now, quiet. Nothing else here needs you.&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;nav-return&quot;&gt;
+  [[← Back to room → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="day1_wake" tags="nobr" position="975,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_recovery_room&quot; &quot;Recovery Room&quot;&gt;&gt;&lt;/div&gt;
+
+&lt;h2&gt;Recovery Room — Waking&lt;/h2&gt;
+
+&lt;p&gt;Something is wrong.&lt;/p&gt;
+
+&lt;p&gt;I know this before I open my eyes. I know it the way you know you&#39;re falling before you hit the ground — a full-body wrongness, a vibration in every nerve that says &lt;em&gt;this is not what you were.&lt;/em&gt; My body is lying on a surface that should be familiar — a bed, linens, a pillow — but the way I&#39;m lying on it is different. My weight distributes differently. My hips are pressing into the mattress at an angle I don&#39;t recognise. My chest has weight on it — small, warm, settling against my ribcage with a foreign gravity.&lt;/p&gt;
+
+&lt;p&gt;I open my eyes.&lt;/p&gt;
+
+&lt;p&gt;Ceiling. Not mine. Not the cracked stone of my chambers with the smoke-stain halo and the mapped constellation of imperfections I&#39;ve known since I was twelve. This ceiling is white — the luminous white stone of the Moonspire Tower, faintly glowing even in daylight. Smooth. Unmarked. The ceiling of a room that belongs to no one and everyone who has ever needed it.&lt;/p&gt;
+
+&lt;p&gt;Sunlight through narrow windows. The medicinal smell of the Silverveil — dried herbs, beeswax, that electric-ozone undertone of ambient magic. My mouth tastes like copper and flowers. The potion. I remember the potion. I remember the taste of it — moonlight and blood — and then the pain, the grinding restructuring of bone and tissue and the sound of my own scream changing pitch—&lt;/p&gt;
+
+&lt;p&gt;My hair.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s everywhere. Dark waves spread across the pillow, across my shoulders, across my face. I didn&#39;t have this much hair. I had hair that fell over my forehead and needed pushing back and wouldn&#39;t stay behind my ears. This is different — longer, thicker, heavier, cascading over everything with the undiscriminating enthusiasm of hair that doesn&#39;t know it wasn&#39;t here yesterday.&lt;/p&gt;
+
+&lt;p&gt;I push it away. My hand is wrong.&lt;/p&gt;
+
+&lt;p&gt;I stare at it. The fingers are slender where they were thick, the knuckles smooth where they were knobbed and scarred. The palm is narrower. The nail beds are wider, the nails themselves longer — clean, oval, pink. No calluses. Six years of sword work, six years of gripping a practice blade until the leather wrapping wore smooth, and the calluses are gone. The magic took them. The magic took everything.&lt;/p&gt;
+
+&lt;p&gt;I make a fist. The fist is smaller. The tendons that stand up along the back of the hand are finer, more delicate. I can see the veins — blue, close to the surface, the skin thinner and almost translucent. These are hands for threading needles, for playing harps, for resting on the arm of a throne. I cannot imagine them gripping a sword.&lt;/p&gt;
+
+&lt;p&gt;I sit up.&lt;/p&gt;
+
+&lt;p&gt;The motion is wrong. My core engages differently — the abdominal muscles shorter, the centre of gravity lower, and there is weight on my chest that shifts when I rise, pulling forward, settling against my ribcage with a soft, warm, undeniable presence. I look down.&lt;/p&gt;
+
+&lt;p&gt;Breasts.&lt;/p&gt;
+
+&lt;p&gt;They&#39;re small. Barely more than swelling — high on my chest, firm, the kind of breast that belongs to a young woman whose body is still building itself. But they&#39;re unmistakably breasts. The nightgown someone dressed me in — white linen, thin — drapes over them, and I can see the shape through the fabric: two small mounds, the nipples pressing against the linen, hard from the cold air and from the fact that everything is unbearably sensitive and my body is registering stimuli through nerve endings that didn&#39;t exist twenty-four hours ago.&lt;/p&gt;
+
+&lt;p&gt;I throw the blankets off. The motion sends ripples through the mattress and those ripples travel through the breasts and the breasts move — a small, barely perceptible bounce that I feel in the tissue and the skin and the nipples and every other square inch of new flesh that has apparently decided to be responsive to gravity, vibration, and the basic mechanics of existing in space.&lt;/p&gt;
+
+&lt;p&gt;I swing my legs over the side of the bed. My legs. They&#39;re shorter — the distance to the floor is different, my feet dangle where they used to reach. The thighs are thicker, rounder, the calves curved in a way I associate with women I&#39;ve watched walk across ballrooms but never with my own body crossing a room. The skin is smooth. No hair. None. Just skin, pale and soft and absurdly sensitive, registering the temperature differential between the warm bed and the cool air with a level of detail that seems excessive and unnecessary.&lt;/p&gt;
+
+&lt;p&gt;My feet. They&#39;re smaller. They look like they belong to someone else — narrow, arched, the toes shorter. I flex them. They respond. They&#39;re mine. Everything in this body responds to my commands. It&#39;s just that the body issuing the commands and the body executing them are no longer recognisable to each other.&lt;/p&gt;
+
+&lt;p&gt;I stand.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m short. The room hasn&#39;t changed. The window I looked through yesterday — the narrow one that framed the bridge and the palace beyond — now requires me to stretch. The table beside the bed is higher. The mirror across the room is hung at a height that no longer centres on my face. The world has grown, or I have shrunk, and the disorientation is absolute.&lt;/p&gt;
+
+&lt;p&gt;And between my legs — nothing.&lt;/p&gt;
+
+&lt;p&gt;Not nothing. But the absence of the familiar, which is worse than nothing because it occupies the same space. The familiar weight — the comfortable, unremarkable hang of cock and balls against my thigh, the warmth, the way they shifted when I walked and settled when I sat — is gone. Replaced by a smooth absence, a soft mound, folds I can feel pressing against each other with every motion, a warmth that comes from inside rather than outside. An architecture I don&#39;t have the vocabulary for yet.&lt;/p&gt;
+
+&lt;p&gt;I make it three steps before my knees give.&lt;/p&gt;
+
+&lt;p&gt;Not from weakness. The muscles work — they&#39;re different muscles, arranged differently, firing on slightly adjusted timelines, but they work. What fails is something deeper. The part of the brain that has spent twenty years building a model of the body it controls, calibrating every movement to a specific height, a specific weight, a specific distribution of mass — that model has been invalidated overnight, and the discrepancy between expectation and reality is enough to drop me.&lt;/p&gt;
+
+&lt;p&gt;I sit on the cold stone floor. The stone is colder than it should be — thinner skin, more nerve endings, less insulation. I put my head between my knees. My knees press together differently. My hips are wider. My thighs meet in a way they never did — higher, warmer, the inner surfaces touching along a greater length. I can feel the vulva between them. Soft. Warm. Present with an insistence that borders on aggressive.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t cry. The shock is too complete for tears. Tears require processing, and processing requires the engagement of emotional faculties that are currently standing at the edge of a cliff looking down and refusing to jump.&lt;/p&gt;
+
+&lt;p&gt;My hands are in my lap. Someone else&#39;s hands in someone else&#39;s lap. These aren&#39;t my hands. This isn&#39;t my—&lt;/p&gt;
+
+&lt;p&gt;I touch my face. The jaw is soft. The sharp angles I catalogued three days ago, standing before the mirror in my chambers — gone. Rounded, feminine, a jawline that curves where it used to cut. No stubble. The skin is smooth in a way that goes beyond shaving — there is no stubble, no grain, no subdermal roughness. The follicles are gone. My cheekbones are higher. My lips are fuller — I can feel them with my fingertips, the lower lip plumper, the bow of the upper lip more pronounced. My nose is smaller, narrower. My brow is smooth — the heavy ridge that sat above my eyes like a shelf is gone, the forehead rounded and open.&lt;/p&gt;
+
+&lt;p&gt;I run my tongue over my teeth. The same. The teeth are the same. The same slight overlap of the lower front teeth that I&#39;ve had since childhood. The same chip on the upper right canine from biting into an olive pit at twelve.&lt;/p&gt;
+
+&lt;p&gt;For some reason, this makes it worse. The teeth are the same. Everything else is different, rewritten, replaced, but the teeth — the most interior, most hidden part of the face — are unchanged. As if the magic decided the teeth were irrelevant, or the teeth decided they weren&#39;t participating, or some fundamental architectural element of who I am lives in the enamel and refused to be overwritten.&lt;/p&gt;
+
+&lt;p&gt;I am sitting on a cold floor in a tower room in a body I don&#39;t recognise, and the only thing connecting me to the person I was yesterday is a chipped canine and a pair of grey-blue eyes.&lt;/p&gt;
+
+&lt;&lt;set $d1f_wake to true&gt;&gt;
+&lt;&lt;addObjective &quot;exam&quot; &quot;Ilara will come soon — she&#39;s been monitoring. You need to be examined.&quot; &quot;MAIN&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="day1_window_hub" tags="nobr" position="1100,600" size="100,100">&lt;h2&gt;🪟 The Window&lt;/h2&gt;
+&lt;p&gt;Narrow. A hand&#39;s breadth of sky. The world beyond the tower.&lt;/p&gt;
+
+&lt;&lt;if not $d1f_npc_window&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;h4&gt;👂 Listen&lt;/h4&gt;
+  &lt;p&gt;The palace continues. Hammers, horses, laughter, children. A bread vendor&#39;s song.&lt;/p&gt;
+  [[Listen → |day1_npc_window_sounds]]
+&lt;/div&gt;
+&lt;&lt;else&gt;&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;A slice of sky. The bridge railing. The far palace wall. The sound of a world that doesn&#39;t know you&#39;ve changed.&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;nav-return&quot;&gt;
+  [[← Back to room → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="day1f-init" tags="widget nobr" position="1225,600" size="100,100">/* ============================================================
+   DAY 1 (&quot;Wrong&quot;) — FEMALE ROUTE — SCENE &amp; OBJECT FLAG INIT
+   Called once, from day0_void.tw, mirroring day0-init.tw etc.
+   Opens with &lt;&lt;clearObjectives&gt;&gt; per the established convention.
+
+   NAMING: widget is &quot;day1fInit&quot; (not &quot;day1Init&quot;) and every flag
+   is prefixed d1f_ (not d1_), because Day -1 already owns the
+   name &quot;day1Init&quot; and the d1_ prefix. Day 1 forward is a genuine
+   fork — female route content lives here; the futa route (not
+   yet written) will need its own day1tInit/d1t_ or similar,
+   called from day0_void_futa.tw instead, once it exists.
+
+   ARCHITECTURE: Day 1 is a single confined room, not a location
+   grid - see day1_hub.tw. Aelindra does not leave the Moonspire
+   Tower. Visitors come to her at the door instead.
+   ============================================================ */
+&lt;&lt;widget &quot;day1fInit&quot;&gt;&gt;
+  &lt;&lt;clearObjectives&gt;&gt;
+
+  /* --- Day 1 Scene Flags --- */
+  &lt;&lt;set $d1f_wake to false&gt;&gt;
+  &lt;&lt;set $d1f_exam to false&gt;&gt;
+  &lt;&lt;set $d1f_alone to false&gt;&gt;
+  &lt;&lt;set $d1f_rowan to false&gt;&gt;
+  &lt;&lt;set $d1f_night to false&gt;&gt;
+
+  /* --- Day 1 NPC / Object Flags --- */
+  &lt;&lt;set $d1f_npc_items to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_nightgown to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_queen_message to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_aldric_door to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_nara3 to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_vael3 to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_window to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_body to false&gt;&gt;
+  &lt;&lt;set $d1f_npc_marta_tray to false&gt;&gt;
+
+  /* --- Body exploration (referenced by future content; not yet
+       tied to a specific player choice in the current scenes) --- */
+  &lt;&lt;set $d1f_touched to false&gt;&gt;
+  &lt;&lt;set $d1f_explored_vulva to false&gt;&gt;
+
+  /* --- Day framing --- */
+  &lt;&lt;set $dayNumber to 1&gt;&gt;
+  &lt;&lt;set $dayLabel to &quot;Wrong&quot;&gt;&gt;
+  &lt;&lt;set $timeSlot to &quot;MORNING&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="day1_npc_aldric_door" tags="nobr" position="100,725" size="100,100">&lt;&lt;npcPortrait &quot;aldric&quot; &quot;Aldric&quot;&gt;&gt;
+&lt;h3&gt;Aldric&#39;s Voice Through the Door&lt;/h3&gt;
+
+&lt;p&gt;I hear him before I recognise him. Boots on stone — heavy, even, the cadence of a man who has never been in a hurry. The specific footstep pattern of Sir Aldric Vane, which I have been hearing since I was fourteen and which my brain identifies with the speed and certainty of a body recognising its own heartbeat.&lt;/p&gt;
+
+&lt;p&gt;He stops outside my door. I know it&#39;s him the way I know the ceiling crack and the morning cold — through accumulated data, the slow geological formation of familiarity.&lt;/p&gt;
+
+&lt;p&gt;He doesn&#39;t knock.&lt;/p&gt;
+
+&lt;p&gt;He stands outside the door for what must be three minutes. I can hear him breathing — the steady, measured breathing of a man who controls his respiration the way he controls his sword arm: deliberately, with discipline, as a matter of professional practice.&lt;/p&gt;
+
+&lt;p&gt;Then his voice. Low. Through the oak.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ALDRIC&lt;/span&gt;&quot;Your Highness.&quot;&lt;/div&gt;
+
+&lt;p&gt;Two words. The same two words he&#39;s said to me a thousand times — in the training yard, in the corridor, at the palace gate. The same intonation, the same respectful formality. He hasn&#39;t changed the address. He hasn&#39;t adjusted the register. He&#39;s calling me &lt;em&gt;Your Highness&lt;/em&gt; the way he always has, because the rank hasn&#39;t changed even if the person holding it has, and Aldric&#39;s loyalty is to the title and the person and neither requires a specific set of chromosomes.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ALDRIC&lt;/span&gt;&quot;I&#39;m told you&#39;re resting.&quot; His voice through the door. I&#39;m standing on the other side. My hand is on the wood. I can feel the vibration of his voice through the oak. &quot;I won&#39;t disturb you. I only wanted you to know — the practice sword is on the yard rack. It&#39;ll be there when you&#39;re ready. No rush.&quot;&lt;/div&gt;
+
+&lt;p&gt;A pause. The breathing.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ALDRIC&lt;/span&gt;&quot;You&#39;re still my prince.&quot; Another pause. He corrects himself — not because someone told him to, but because he&#39;s working it out in real time, standing in a corridor talking to a door. &quot;My princess. My... you&#39;re still mine to protect. Whatever you need. I&#39;m down the corridor.&quot;&lt;/div&gt;
+
+&lt;p&gt;His boots. Walking away. Heavy, even, certain. The sound fades.&lt;/p&gt;
+
+&lt;p&gt;I stand with my hand on the door. The wood is warm where I&#39;ve been pressing. My hand — this new hand, slender and small — flat against the oak, and on the other side, three minutes ago, Aldric&#39;s hand might have been doing the same thing.&lt;/p&gt;
+
+&lt;p&gt;He called me his. He stumbled on the word — prince to princess, the linguistic adjustment lagging behind the emotional one — and the stumble was the most genuine thing I&#39;ve heard today because it meant he was trying, in real time, to meet me where I am, and where I am is a place he&#39;s never been and can&#39;t fully understand and he&#39;s coming anyway.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_aldric_door to true&gt;&gt;
+&lt;&lt;set $affAldric += 3&gt;&gt;
+&lt;&lt;set $statRES += 2&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+&lt;&lt;completeObjective &quot;aldric_door&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_door_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="day1_npc_body_discoveries" tags="nobr" position="225,725" size="100,100">&lt;h3&gt;The Body — Unprompted Discoveries&lt;/h3&gt;
+
+&lt;p&gt;The discoveries don&#39;t come all at once. They come in waves, across the day, each one a small earthquake in the ongoing seismic event of living in this body.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hair.&lt;/strong&gt; I keep finding it everywhere. On the pillow, across my shoulders, falling in front of my eyes. It&#39;s heavier than it should be — thicker, denser, with a wave pattern that I didn&#39;t have before. When I push it behind my ears, it stays briefly, then slides free. I need something to hold it back. I don&#39;t have anything. I twist it into a knot at the back of my head. It holds. The motion is instinctive — a gesture I&#39;ve seen women make a thousand times and never thought about.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;My voice.&lt;/strong&gt; Every time I speak, it surprises me. The pitch is wrong — higher, softer, with less resonance. The words are mine but the instrument producing them is a stranger&#39;s. I test it: humming, then singing a line from one of Rowan&#39;s songs. The melody is the same. The timbre is completely different. A woman&#39;s voice singing a man&#39;s song in a woman&#39;s body in a tower room at noon.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Walking.&lt;/strong&gt; I practice. Four paces, turn, four paces back. The sway doesn&#39;t stop. The hips move. The body moves the way it moves. But by the tenth lap, the stumbling is gone. By the twentieth, the motion is almost fluid. The body learns faster than the mind. It&#39;s already adjusting, already finding its own efficient gait, and the mind is just along for the ride.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sitting.&lt;/strong&gt; My thighs press together when I sit. The vulva is between them — always, constantly, a warm presence that I&#39;m aware of the way you&#39;re aware of your heartbeat when someone tells you to listen for it. If I cross my legs (I try it — one knee over the other, the feminine cross, the legs-together default), the sensation changes. Pressure on the mound. A repositioning of the folds. I uncross them immediately.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Crying.&lt;/strong&gt; I don&#39;t cry on Day 1. But late in the afternoon, standing at the window, listening to the world go on without me, my eyes fill. The tears don&#39;t fall. They sit on the lower lids like water on a leaf, gathering weight, threatening. I blink them back. The tears are the same — salt water, the same composition, the same mechanism. Even the tear ducts survived the rewrite. The body changed everything except the capacity to grieve.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_body to true&gt;&gt;
+&lt;&lt;set $statFEM += 2&gt;&gt;
+&lt;&lt;set $statRES += 1&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+&lt;&lt;completeObjective &quot;body_explore&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="day1_npc_items" tags="nobr" position="350,725" size="100,100">&lt;h3&gt;The Items You Carried&lt;/h3&gt;
+
+&lt;p&gt;On the table beside the bed: the things I carried to the tower. Someone — Ilara, probably, or one of the sorceresses — placed them here while I was unconscious. Arranged neatly, as if they matter, because they do.&lt;/p&gt;
+
+&lt;p&gt;The pressed moonflower. Haeth&#39;s gift. I pick it up. It&#39;s as light as I remember — lighter, even, because my fingers are smaller and the contrast makes the flower seem even more impossibly delicate. A flower from another transformation, another body, another person who lay on that altar and woke up different. I hold it against my palm. The petals don&#39;t crumble. They survived the night. So did I.&lt;/p&gt;
+
+&lt;p&gt;The jasmine sprig. Wynn&#39;s cutting. The flowers have closed — jasmine closes during the day and opens at night, which I know because Wynn told me once and I remember everything Wynn tells me about plants. The scent is still there. Faint. Sweet. The same scent. I bring it to my nose and the smell triggers something — a memory of the garden at dusk, the fountain, the first stars. A memory that belongs to the person I was. A memory that&#39;s still mine.&lt;/p&gt;
+
+&lt;p&gt;Aldric&#39;s letter. Folded. I open it and read it again. &lt;em&gt;The grip is for a smaller hand. The weight is adjusted for a lighter frame.&lt;/em&gt; My eyes blur. The handwriting hasn&#39;t changed. Aldric&#39;s precise, military script. The words were for a person who didn&#39;t exist when he wrote them — a person he couldn&#39;t see, couldn&#39;t imagine, but prepared for anyway. That&#39;s what love looks like when it&#39;s expressed in leather and steel.&lt;/p&gt;
+
+&lt;p&gt;The ginger root. Vael&#39;s practicality. I didn&#39;t need it — the potion stayed down. But she thought of it. She thought of vomiting, and then she thought of how to prevent it, and then she gave me the solution wrapped in a cloth pouch with no ceremony and no sentiment. Vael doesn&#39;t do sentiment. She does chemistry. It amounts to the same thing.&lt;/p&gt;
+
+&lt;p&gt;The monogrammed handkerchief. Alva&#39;s last gift. The initial — E — embroidered in gold thread. The wrong initial, now. Or the old initial. Or the initial that connects this body to the body that carried it yesterday, a thread of thread.&lt;/p&gt;
+
+&lt;p&gt;I spread them on the table. Five items. Five people who cared enough to give me something to carry through the Rite. Five anchors to a world that still exists beyond these four walls.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_items to true&gt;&gt;
+&lt;&lt;set $statRES += 2&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_table_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="day1_npc_marta_tray" tags="nobr" position="475,725" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
+&lt;h3&gt;A Meal Tray — From Marta&lt;/h3&gt;
+
+&lt;p&gt;A tray appears at my door. Not brought by a servant — just there, set on the floor outside, when I open the door after Rowan leaves. A palace kitchen tray, covered with a clean cloth.&lt;/p&gt;
+
+&lt;p&gt;Under the cloth: soup (thick, onion and thyme, the same recipe Marta has been making since I was nine). Bread (warm, fresh, the good kind). Two cheese pastries (golden, rosemary). An apple pastry (cinnamon, sugar, the childhood recipe). And a folded note.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Eat everything. You&#39;re thin.&lt;br&gt;
+Same stool. Same pastries. Same Marta.&lt;br&gt;
+— M.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;She&#39;s not allowed in the tower. The Silverveil restrict access during post-ritual recovery. So she sent a tray. Through channels — probably Alva arranged the logistics, probably Brin carried it to the bridge, probably a Silverveil apprentice brought it the rest of the way.&lt;/p&gt;
+
+&lt;p&gt;The food is perfect. It tastes the same. Everything Marta makes tastes the same regardless of the body eating it, because Marta&#39;s cooking transcends the merely physical and operates on the level of the soul.&lt;/p&gt;
+
+&lt;p&gt;I eat everything. I&#39;m still hungry afterward, because Vael was right about the metabolism. But the hunger is manageable and the soup is warm in my stomach and the note is under my pillow beside the Queen&#39;s letter and for the first time today I feel something that is not horror or grief or clinical detachment.&lt;/p&gt;
+
+&lt;p&gt;I feel fed. Which is Marta&#39;s magic, and it is the most powerful magic in this tower.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_marta_tray to true&gt;&gt;
+&lt;&lt;set $energy += 15&gt;&gt;
+&lt;&lt;set $stress -= 8&gt;&gt;
+&lt;&lt;set $repStaff += 1&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_door_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="day1_npc_nara3" tags="nobr" position="600,725" size="100,100">&lt;&lt;npcPortrait &quot;nara&quot; &quot;Nara&quot;&gt;&gt;
+&lt;h3&gt;Apprentice Nara — Checking In&lt;/h3&gt;
+
+&lt;p&gt;The music box. Three notes, repeating. The sympathetic resonance experiment, still broken, still playing its fragment of melody on a loop. I hear it through the door — and then a soft knock, tentative, the knock of someone who isn&#39;t sure they should be here.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;NARA&lt;/span&gt;&quot;It&#39;s Nara. You probably don&#39;t want visitors but I brought — um — Ilara asked me to bring fresh candles and I also brought tea because tea helps everything, my grandmother says, and she survived three plagues and a bad marriage so she&#39;d know.&quot;&lt;/div&gt;
+
+&lt;p&gt;I open the door. Nara is there — holding a tray with a teapot, two cups, and a small plate of biscuits. The music box is clipped to her belt, playing its three-note fragment. She&#39;s looking at the floor. At the wall. At the tray. At everything except me.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You can look,&quot; I say.&lt;/div&gt;
+
+&lt;p&gt;She looks. Her brown eyes are wide, taking me in — the face, the body, the shirt-and-trousers that fit wrong, the hair that&#39;s everywhere. Her expression does something complicated — surprise, adjustment, curiosity, sympathy — and lands on warmth.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;NARA&lt;/span&gt;&quot;You look like a girl who could use tea.&quot; She holds out the tray. &quot;Also biscuits. They&#39;re terrible. I baked them myself and I&#39;m a much better enchanter than baker. But they&#39;re warm and the gesture matters more than the flavour, that&#39;s what my grandmother says.&quot;&lt;/div&gt;
+
+&lt;p&gt;I take the tray. The biscuits are, as advertised, terrible — dry, slightly burnt, crumbling into sad fragments. The tea is excellent. Silverveil blend, something herbal with a calming enchantment that I can feel smoothing the jagged edges of my nervous system like a warm hand on a rough surface.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Does the music box work yet?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;NARA&lt;/span&gt;&quot;No.&quot; She brightens, the way she always does when asked about her work. &quot;But I&#39;ve narrowed the degradation problem to the sympathetic frequency. The bond holds across a room but the frequency drifts over distance — like two tuning forks that start in harmony and one of them slowly goes flat. I need to stabilise the base frequency. Ilara says I&#39;m overthinking it. I say she&#39;s underthinking it.&quot;&lt;/div&gt;
+
+&lt;p&gt;She talks about music boxes and sympathetic resonance and the magical properties of moonstone for frequency anchoring. I listen. Not because I understand the magical theory but because the sound of someone talking enthusiastically about something that has nothing to do with my body or my transformation or my future is the most restful sound I&#39;ve heard all day.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;NARA&lt;/span&gt;&quot;Can I ask you something?&quot; she says, when the tea is half gone. &quot;You don&#39;t have to answer.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Go ahead.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;NARA&lt;/span&gt;&quot;When I had my hand fixed — the webbed fingers — I couldn&#39;t stop opening and closing my new hand. For days. Just... watching the fingers separate. Because they&#39;d never done that before and I couldn&#39;t believe they could. Does it feel like that? New things doing new things?&quot;&lt;/div&gt;
+
+&lt;p&gt;I consider this. My hand. The slender fingers. The smooth knuckles. I open and close my fist — the motion smooth, precise, the fingers spreading and curling with an ease that seems impossible for structures that are twelve hours old.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Yes,&quot; I say. &quot;Exactly like that. Except everything.&quot;&lt;/div&gt;
+
+&lt;p&gt;She nods. She doesn&#39;t say anything wise or comforting. She just nods, and takes a terrible biscuit, and bites into it with a crunch, and the three-note music box plays on.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_nara3 to true&gt;&gt;
+&lt;&lt;set $stress -= 8&gt;&gt;
+&lt;&lt;set $silverveilFamiliarity += 2&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_door_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="day1_npc_nightgown" tags="nobr" position="725,725" size="100,100">&lt;h3&gt;The Nightgown&lt;/h3&gt;
+
+&lt;p&gt;Someone dressed me while I was unconscious. That thought arrives late — hours after waking, when the initial shock has subsided enough for secondary details to register. Someone removed my clothes — the jerkin, the shirt, the trousers, the smallclothes — from a body that was in the process of being rewritten, and replaced them with this nightgown. White linen. Thin. Fitted to a body that didn&#39;t fully exist when it was put on.&lt;/p&gt;
+
+&lt;p&gt;The nightgown is Silverveil-made — the fabric has that faint enchanted quality, slightly warmer than it should be, slightly softer than any linen I&#39;ve ever felt. It has a drawstring at the neckline. Whoever put it on me pulled the drawstring loose, probably because my chest was still changing and a tight neckline would have been painful.&lt;/p&gt;
+
+&lt;p&gt;The breast band was not on when I woke. The breasts were loose under the nightgown. Someone made the decision that a breast band was unnecessary for an unconscious woman whose breast tissue was still developing. Someone handled these breasts while I wasn&#39;t aware of it — clinically, for medical purposes, as part of post-operative care. But someone touched them. Someone saw them before I did.&lt;/p&gt;
+
+&lt;p&gt;The thought is not violating, exactly. Ilara is a healer. The sorceresses are medical professionals. But the intimacy of it — the fact that my new body was known by others before it was known by me — adds to the fundamental off-balance feeling that defines this day.&lt;/p&gt;
+
+&lt;p&gt;Where are my old clothes? I look around. Not in the room. Someone removed them. The jerkin with the reinforced shoulders. The boots, broken in perfectly. The sword belt. Gone. Probably folded and stored somewhere, relics of a body that no longer fits them, artifacts of a person who walked into this tower yesterday and didn&#39;t walk out.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_nightgown to true&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="day1_npc_queen_message" tags="nobr" position="850,725" size="100,100">&lt;h3&gt;The Queen&#39;s Message&lt;/h3&gt;
+
+&lt;p&gt;A knock at the door. Not Rowan&#39;s knock — softer, more formal. I consider not answering. The door opens a crack — a handmaiden, young, wearing Silverveil grey rather than palace livery. She doesn&#39;t enter. She extends a hand through the gap. A sealed parchment. The royal seal — silver stag, crescent moon.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;HANDMAIDEN&lt;/span&gt;&quot;From the Queen, my lady.&quot;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;My lady.&lt;/em&gt; The first time anyone has addressed me with a feminine honorific. The words hit my eardrums and detonate somewhere behind my sternum. I take the note. The handmaiden curtsies — I see her knees bend through the gap — and retreats.&lt;/p&gt;
+
+&lt;p&gt;I break the seal. Mother&#39;s handwriting — the elegant, controlled script of a woman who was taught penmanship as a form of statecraft.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Rest. I&#39;ll come to you tomorrow. I love you.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Seven words. Eight, if you count contractions honestly. And every one of them is a blade and a bandage simultaneously.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Rest.&lt;/em&gt; Because she knows I won&#39;t. Because she knows I&#39;m lying in this room cataloguing every wrong thing about this body and rest is the last thing I&#39;m capable of. The instruction is not advice — it&#39;s a mother&#39;s magic, the kind that doesn&#39;t work but is cast anyway because the alternative is silence.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I&#39;ll come to you tomorrow.&lt;/em&gt; Not today. Today she&#39;s giving me the gift of not being seen. Today she knows that being looked at by the woman who asked me to do this would be too much. She&#39;s managing me. She&#39;s always been managing me. She&#39;s doing it from a sickbed with blood in her lungs and she&#39;s still better at it than anyone else alive.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I love you.&lt;/em&gt; Three words that don&#39;t change anything and change everything. Three words that are true regardless of the body they&#39;re delivered to, regardless of the name attached to that body, regardless of the jaw shape and the chest size and the presence or absence of a cock.&lt;/p&gt;
+
+&lt;p&gt;I crumple the note. Throw it at the wall. Watch it bounce off the white stone and land on the floor, a small wadded ball of parchment and maternal love.&lt;/p&gt;
+
+&lt;p&gt;Then I pick it up. Smooth it. Read it again. Put it under the pillow.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_queen_message to true&gt;&gt;
+&lt;&lt;set $stress += 5&gt;&gt;
+&lt;&lt;set $stress -= 5&gt;&gt;
+&lt;&lt;set $affSeraphina += 2&gt;&gt;
+&lt;&lt;addItem &quot;queens_letter&quot; &quot;The Queen&#39;s Letter&quot; &quot;Rest. I&#39;ll come to you tomorrow. I love you.&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_door_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="day1_npc_vael3" tags="nobr" position="975,725" size="100,100">&lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
+&lt;h3&gt;Mistress Vael — Medical Follow-Up&lt;/h3&gt;
+
+&lt;p&gt;A knock. Purposeful. Three raps, no pause.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Open the door. I have your prescriptions and I&#39;m not standing in the corridor.&quot;&lt;/div&gt;
+
+&lt;p&gt;Vael. She enters before I&#39;ve fully opened the door — a professional woman with a professional schedule and no time for reluctant patients.&lt;/p&gt;
+
+&lt;p&gt;She carries a wooden case. Inside: four glass vials, labelled in precise handwriting.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Blue vial. Pain management. Take one spoonful at morning and night. The bone aches will last three to four days — your skeleton is still settling into its new configuration.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Green vial. Hormonal stabiliser. One spoonful at morning. Your oestrogen is spiking — normal, expected, but the emotional turbulence can be significant. This smooths the peaks.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Clear vial. Sensitivity reducer. Apply topically to the breasts and... other areas if the nerve response is overwhelming. Which it will be. For the first week, everything down there is going to feel like touching a live wire. The reducer brings it down to a manageable level.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Amber vial. Sleep aid. Two drops on the tongue before bed. You need to sleep. Real sleep, not the anxious half-consciousness of someone lying awake cataloguing everything they&#39;ve lost.&quot;&lt;/div&gt;
+
+&lt;p&gt;She closes the case. Looks at me. Her gaze is assessing — not the warm assessment of a friend but the hard assessment of a medical professional evaluating a patient.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Your posture is compensating. You&#39;re hunching forward to hide the breasts. Stop. You&#39;ll develop back problems within a week. Stand straight. Let them exist.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Easy for you to say.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;I&#39;ve had breasts for forty-five years. They&#39;re not a burden — they&#39;re a feature. You&#39;ll adjust.&quot; She softens, fractionally. &quot;The body is working. I checked the potion&#39;s residual markers this morning — the transformation is complete, stable, no anomalies. Whatever discomfort you&#39;re feeling is psychological, not physical. Which doesn&#39;t make it less real — but it means the timeline is yours. The body will wait for you to catch up.&quot;&lt;/div&gt;
+
+&lt;p&gt;She leaves the case on the table, nods once, and walks out. At the door she pauses.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;VAEL&lt;/span&gt;&quot;Eat something. The hormonal shifts burn calories. You&#39;ll be hungry.&quot;&lt;/div&gt;
+
+&lt;p&gt;She&#39;s right. I&#39;m starving. The broth wasn&#39;t enough. The biscuits — Nara&#39;s terrible biscuits — were barely food. My metabolism, apparently, has been reset along with everything else, and it&#39;s demanding fuel with the urgency of a furnace newly lit.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_vael3 to true&gt;&gt;
+&lt;&lt;set $energy += 10&gt;&gt;
+&lt;&lt;set $statWIS += 2&gt;&gt;
+&lt;&lt;set $stress -= 3&gt;&gt;
+&lt;&lt;addItem &quot;recovery_vials&quot; &quot;Recovery Vials&quot; &quot;Blue (pain), green (hormonal stabiliser), clear (sensitivity reducer), amber (sleep aid) — Vael&#39;s prescriptions.&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_table_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="day1_npc_window_sounds" tags="nobr" position="1100,725" size="100,100">&lt;h3&gt;Sounds Through the Window&lt;/h3&gt;
+
+&lt;p&gt;The window is narrow — an arrow-slit widened to a hand&#39;s breadth by some renovation. I can&#39;t see much through it. A slice of sky. The top of the bridge railing. The far edge of the palace wall.&lt;/p&gt;
+
+&lt;p&gt;But I can hear.&lt;/p&gt;
+
+&lt;p&gt;The palace is continuing without me. Through the window, sounds drift up from the world below: the clang of the blacksmith&#39;s hammer (distant, rhythmic, the heartbeat of industry). A guard calling shift change. Horses in the courtyard. The creak of the merchant gate. Someone laughing — a woman, bright and high, the kind of unselfconscious laughter that happens in kitchens and gardens and places where people aren&#39;t locked in towers processing the loss of their entire physical identity.&lt;/p&gt;
+
+&lt;p&gt;Children playing. Somewhere near the palace walls, the shrieks and clamour of children who are running and chasing and being gloriously unaware that the prince who lived in the palace above them is now a princess who doesn&#39;t know how to walk without her hips swaying.&lt;/p&gt;
+
+&lt;p&gt;A dog barking. Someone selling something in the market — the voice carries, &lt;em&gt;fresh bread, fresh bread, get your bread,&lt;/em&gt; the sing-song of a vendor who has said these words ten thousand times and will say them ten thousand more.&lt;/p&gt;
+
+&lt;p&gt;The world is going on. The same world, the same sounds, the same bread and laughter and hammering and children. Nothing has changed out there. The sun rose. The market opened. The guards changed shift. The baker baked. Nobody in that world below knows that Prince Edrin is gone and a woman called Aelindra is standing at a narrow window, listening to the sounds of a life that used to be hers, in a body that isn&#39;t.&lt;/p&gt;
+
+&lt;p&gt;The wind carries the scent of the garden — jasmine, faint, sweet. Wynn&#39;s jasmine. The one that survived the frost.&lt;/p&gt;
+
+&lt;p&gt;Same roots. Same scent. New branches.&lt;/p&gt;
+
+&lt;&lt;set $d1f_npc_window to true&gt;&gt;
+&lt;&lt;set $statRES += 1&gt;&gt;
+&lt;&lt;set $stress -= 3&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_window_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="day2_hub" tags="nobr" position="1225,725" size="100,100">&lt;!--
+  PLACEHOLDER — pipeline test only, AND the current end of the
+  public build&#39;s content (female route).
+  Replace with real Day 2 (&quot;Body&quot;) content and its own day2fInit
+  flag block (mirroring day1f-init.tw) when written. At that
+  point, move the &lt;&lt;endOfContentNotice&gt;&gt; call below down to
+  wherever the new content&#39;s own final passage ends.
+--&gt;
+&lt;div class=&quot;day-transition&quot;&gt;
+  &lt;h2&gt;&lt;&lt;print formatDayNumber($dayNumber)&gt;&gt; — Body&lt;/h2&gt;
+  &lt;p&gt;(Day 2 content not yet written. Days -2 through Day 1 are
+  fully playable end to end on the female route — the Rite, the
+  first day of recovery in the Moonspire Tower, and everything
+  before it.)&lt;/p&gt;
+  &lt;p&gt;&lt;&lt;print $mcName&gt;&gt;, &lt;&lt;print $mcTitle&gt;&gt;. Height &lt;&lt;print $mcHeight&gt;&gt;,
+  bust &lt;&lt;print $mcBust&gt;&gt;. Stress: &lt;&lt;print $stress&gt;&gt; | Energy: &lt;&lt;print $energy&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;&lt;endOfContentNotice&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="day-1-init" tags="widget nobr" position="100,850" size="100,100">/* ============================================================
    DAY -1 (&quot;The Arguments&quot;)   SCENE &amp; NPC FLAG INIT
    Called once, from day-2_sleep_transition.tw, mirroring
    day_minus_2/day-2-init.tw. Day-specific flags live here, not
@@ -4129,7 +4999,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;addObjective &quot;queen_round2&quot; &quot;Confront the Queen   you have a list&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;corridor_aldwyn&quot; &quot;A physician in the corridor   he&#39;s moving fast&quot; &quot;SIDE&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;visit_kitchen_d1&quot; &quot;Visit the Kitchens   Marta is baking at crisis tempo&quot; &quot;SIDE&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="day-1_chambers_explore" tags="nobr" position="225,600" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="day-1_chambers_explore" tags="nobr" position="225,850" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
 &lt;&lt;locationImage _chamberImg &quot;Edrin&#39;s Chambers&quot;&gt;&gt;
 &lt;h2&gt;🛏 Edrin&#39;s Chambers&lt;/h2&gt;
 &lt;p&gt;Your room. The half-written letter is gone from the desk. The mirror waits.&lt;/p&gt;
@@ -4163,7 +5033,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="day-1_corridors" tags="nobr" position="350,600" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="day-1_corridors" tags="nobr" position="350,850" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
 &lt;h2&gt;🏛 Palace Corridors&lt;/h2&gt;
 &lt;p&gt;The usual traffic   servants, guards, courtiers   and an unusual tension beneath it all.&lt;/p&gt;
 
@@ -4199,7 +5069,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="day-1_gardens_hub" tags="nobr" position="475,600" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="day-1_gardens_hub" tags="nobr" position="475,850" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
 &lt;h2&gt;🌿 Royal Gardens&lt;/h2&gt;
 &lt;p&gt;Dusk again. The jasmine is covered tonight   frost warning.&lt;/p&gt;
 
@@ -4220,7 +5090,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="day-1_hub" tags="nobr" position="600,600" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="day-1_hub" tags="nobr" position="600,850" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
   &lt;h2&gt;Crown&#39;s Rest   &lt;&lt;print formatDayNumber($dayNumber)&gt;&gt;: The Arguments&lt;/h2&gt;
   &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
   &lt;p class=&quot;energy-display&quot;&gt;Energy: &lt;&lt;print $energy&gt;&gt; | Stress: &lt;&lt;print $stress&gt;&gt;&lt;/p&gt;
@@ -4361,7 +5231,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="day-1_kitchen" tags="nobr" position="725,600" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="day-1_kitchen" tags="nobr" position="725,850" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
 &lt;h2&gt;🍞 Palace Kitchens&lt;/h2&gt;
 &lt;p&gt;The output is staggering. Marta is baking like the world is ending. She might not be wrong.&lt;/p&gt;
 
@@ -4382,7 +5252,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="day-1_library_hub" tags="nobr" position="850,600" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="day-1_library_hub" tags="nobr" position="850,850" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
 &lt;h2&gt;📚 Grand Library&lt;/h2&gt;
 &lt;p&gt;Three stories of answers. Some of them might even be useful today.&lt;/p&gt;
 
@@ -4412,7 +5282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="day-1_moonspire" tags="nobr" position="975,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="day-1_moonspire" tags="nobr" position="975,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Moonspire Tower   Meeting Ilara&lt;/h2&gt;
 
@@ -4541,7 +5411,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_moonspire_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="day-1_moonspire_hub" tags="nobr" position="1100,600" size="100,100">&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="day-1_moonspire_hub" tags="nobr" position="1100,850" size="100,100">&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;
 &lt;h2&gt;🌙 Moonspire Tower&lt;/h2&gt;
 &lt;p class=&quot;moonspire-flavor&quot;&gt;White stone walls. Enchanted candles. Tapestries that shift when you&#39;re not looking. The air tastes electric.&lt;/p&gt;
 
@@ -4587,7 +5457,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Cross the bridge back|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="day-1_night" tags="nobr" position="1225,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="day-1_night" tags="nobr" position="1225,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   The Last Night&lt;/h2&gt;
 
@@ -4643,7 +5513,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="day-1_queen" tags="nobr" position="100,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="day-1_queen" tags="nobr" position="100,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   Round Two&lt;/h2&gt;
 
@@ -4757,7 +5627,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="day-1_rowan" tags="nobr" position="225,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_rowan" tags="nobr" position="225,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   Telling Rowan&lt;/h2&gt;
 
@@ -4875,7 +5745,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="day-1_servants" tags="nobr" position="350,725" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="day-1_servants" tags="nobr" position="350,975" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
 &lt;h2&gt;🔑 Servant Quarters   Below Stairs&lt;/h2&gt;
 &lt;p&gt;Alva&#39;s intelligence network. The machinery runs. It sees everything.&lt;/p&gt;
 
@@ -4896,7 +5766,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="day-1_sleep_transition" tags="nobr" position="475,725" size="100,100">&lt;&lt;day0Init&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="day-1_sleep_transition" tags="nobr" position="475,975" size="100,100">&lt;&lt;day0Init&gt;&gt;
 &lt;&lt;set $energy to 60&gt;&gt;
 &lt;&lt;set $stress += 10&gt;&gt;
 
@@ -4908,7 +5778,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;p class=&quot;transition-morning&quot;&gt;Dawn comes. The morning of Day Zero.&lt;/p&gt;
   &lt;p class=&quot;transition-morning&quot;&gt;&lt;em&gt;Today you walk to the tower. Today the Rite begins.&lt;/em&gt;&lt;/p&gt;
   [[Dawn → |day0_wake]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="day-1_training" tags="nobr" position="600,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="day-1_training" tags="nobr" position="600,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Training Yard   Rage Session&lt;/h2&gt;
 
@@ -4984,7 +5854,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="day-1_training_hub" tags="nobr" position="725,725" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="day-1_training_hub" tags="nobr" position="725,975" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
 &lt;h2&gt;⚔ Training Yard&lt;/h2&gt;
 &lt;p&gt;Chalk and iron. The weapon rack. The training dummies stand like silent witnesses.&lt;/p&gt;
 
@@ -5031,7 +5901,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="day-1_npc_aldwyn" tags="nobr" position="850,725" size="100,100">&lt;&lt;npcPortrait &quot;aldwyn&quot; &quot;Master Aldwyn&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="day-1_npc_aldwyn" tags="nobr" position="850,975" size="100,100">&lt;&lt;npcPortrait &quot;aldwyn&quot; &quot;Master Aldwyn&quot;&gt;&gt;
 &lt;h3&gt;The Royal Healer   Master Aldwyn&lt;/h3&gt;
 
 &lt;p&gt;I nearly collide with him at the junction where the east wing corridor meets the central staircase. Master Aldwyn   the Royal Healer   is moving fast for a man of sixty, his robes billowing behind him like he&#39;s being chased by his own urgency. He carries a leather satchel that clinks with glass vials, and his face has the particular expression of a physician who has bad news and is trying to outrun it.&lt;/p&gt;
@@ -5067,7 +5937,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="day-1_npc_alva2" tags="nobr" position="975,725" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="day-1_npc_alva2" tags="nobr" position="975,975" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
 &lt;h3&gt;Mistress Alva   Intelligence Update&lt;/h3&gt;
 
 &lt;p&gt;Alva is reviewing shift schedules at her desk   a plain oak table in a plain room that serves as the nerve center of palace household operations. She looks up when I enter with the expression of a woman who expected me and has already prepared.&lt;/p&gt;
@@ -5104,7 +5974,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_servants]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="day-1_npc_haeth" tags="nobr" position="1100,725" size="100,100">&lt;&lt;npcPortrait &quot;haeth&quot; &quot;Haeth&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="day-1_npc_haeth" tags="nobr" position="1100,975" size="100,100">&lt;&lt;npcPortrait &quot;haeth&quot; &quot;Haeth&quot;&gt;&gt;
 &lt;h3&gt;Librarian Haeth   Quiet Wisdom&lt;/h3&gt;
 
 &lt;p&gt;Haeth is at his desk. He&#39;s always at his desk. I&#39;m beginning to suspect the desk is a part of him   that if you removed Haeth from the Grand Library, the library would dim, the constellations on the ceiling would stop turning, and the books would close themselves in mourning.&lt;/p&gt;
@@ -5147,7 +6017,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="day-1_npc_marta2" tags="nobr" position="1225,725" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="day-1_npc_marta2" tags="nobr" position="1225,975" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
 &lt;h3&gt;Marta&#39;s Worry   Kitchen Redux&lt;/h3&gt;
 
 &lt;p&gt;The kitchen is running at what Marta calls &quot;crisis tempo&quot;   the particular accelerated rhythm that occurs when the Head Cook senses institutional distress and responds by cooking more aggressively. The output is staggering: bread in three varieties, two soups, a roast being turned on the spit by a sweating pot-boy, pastries cooling on wire racks, and what appears to be the beginning of a multi-layered cake of the kind usually reserved for state occasions.&lt;/p&gt;
@@ -5179,7 +6049,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_kitchen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="day-1_npc_messenger" tags="nobr" position="100,850" size="100,100">&lt;h3&gt;Messenger from Lord Veltham&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="day-1_npc_messenger" tags="nobr" position="100,1100" size="100,100">&lt;h3&gt;Messenger from Lord Veltham&lt;/h3&gt;
 
 &lt;p&gt;A palace runner intercepts me near the stairwell   a lean boy of sixteen whose entire purpose is to carry messages at speed through the palace&#39;s labyrinthine corridors. He&#39;s breathing hard. He&#39;s also terrified, because delivering messages to the prince apparently ranks somewhere between &quot;thrilling&quot; and &quot;potentially fatal&quot; in the servant hierarchy.&lt;/p&gt;
 
@@ -5227,7 +6097,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="day-1_npc_nara" tags="nobr" position="225,850" size="100,100">&lt;&lt;npcPortrait &quot;nara&quot; &quot;Nara&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="day-1_npc_nara" tags="nobr" position="225,1100" size="100,100">&lt;&lt;npcPortrait &quot;nara&quot; &quot;Nara&quot;&gt;&gt;
 &lt;h3&gt;Silverveil Apprentice   Nara&lt;/h3&gt;
 
 &lt;p&gt;The tower&#39;s lower levels are where the apprentices live and study. I discover this by taking a wrong turn on the spiral staircase   down instead of up, toward the bridge   and ending up in a corridor lined with doors, each painted a different colour, each radiating a faint warmth that suggests personal enchantment.&lt;/p&gt;
@@ -5280,7 +6150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_moonspire_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="day-1_npc_perrin2" tags="nobr" position="350,850" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="day-1_npc_perrin2" tags="nobr" position="350,1100" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
 &lt;h3&gt;Night Guard Perrin   Final Watch&lt;/h3&gt;
 
 &lt;p&gt;The corridor is quiet. Perrin is at his post. He looks up when I open the door   not startled, but attentive, the way a good night guard should be.&lt;/p&gt;
@@ -5328,7 +6198,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="day-1_npc_tamsin2" tags="nobr" position="475,850" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="day-1_npc_tamsin2" tags="nobr" position="475,1100" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
 &lt;h3&gt;Recruit Tamsin   Return Visit&lt;/h3&gt;
 
 &lt;p&gt;She&#39;s at the dummies again. This time, her form is marginally better   the short backswing I showed her yesterday has taken root, and the left side isn&#39;t opening up as badly. Marginally is still marginally, but the improvement is visible.&lt;/p&gt;
@@ -5372,7 +6242,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="day-1_npc_vael" tags="nobr" position="600,850" size="100,100">&lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="day-1_npc_vael" tags="nobr" position="600,1100" size="100,100">&lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
 &lt;h3&gt;The Apothecary   Mistress Vael&lt;/h3&gt;
 
 &lt;p&gt;The Apothecary occupies a room on the tower&#39;s third level   a circular chamber with walls lined floor to ceiling with shelves of glass bottles, ceramic jars, dried plant bundles, mineral samples, and things I cannot identify and am not certain I want to. The air is thick with competing scents: lavender, something acrid, something sweet enough to make my back teeth ache, and an undertone of alcohol used as a solvent.&lt;/p&gt;
@@ -5422,7 +6292,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_moonspire_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="day-1_npc_vaelin2" tags="nobr" position="725,850" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="day-1_npc_vaelin2" tags="nobr" position="725,1100" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
 &lt;h3&gt;Brother Vaelin   Theological Update&lt;/h3&gt;
 
 &lt;p&gt;He&#39;s still on the floor. I think he may have been here all night   the book fortress has grown, and there are crumbs near his left knee suggesting he ate at some point but didn&#39;t bother standing up to do it.&lt;/p&gt;
@@ -5461,7 +6331,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="day-1_npc_voss" tags="nobr" position="850,850" size="100,100">&lt;&lt;npcPortrait &quot;voss&quot; &quot;Sergeant Voss&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="day-1_npc_voss" tags="nobr" position="850,1100" size="100,100">&lt;&lt;npcPortrait &quot;voss&quot; &quot;Sergeant Voss&quot;&gt;&gt;
 &lt;h3&gt;Aldric&#39;s Second   Sergeant Voss&lt;/h3&gt;
 
 &lt;p&gt;Sergeant Voss is Aldric&#39;s second-in-command   a compact, broad woman of thirty with shoulders like a bull and a voice that could strip paint from a wall at fifty paces. She runs the guard training rotations when Aldric is on duty with the royal family. The recruits are terrified of her. The veterans respect her. Both are correct.&lt;/p&gt;
@@ -5509,7 +6379,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="day-1_npc_wynn2" tags="nobr" position="975,850" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="day-1_npc_wynn2" tags="nobr" position="975,1100" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
 &lt;h3&gt;Old Wynn   The Gardener&#39;s Night&lt;/h3&gt;
 
 &lt;p&gt;Wynn is covering the rose beds with burlap. The temperature is dropping   a clear night, which means frost, and frost means vulnerable plants need protecting. He works with the unhurried precision of a man who has been covering rose beds for longer than most of the roses have been alive.&lt;/p&gt;
@@ -5544,7 +6414,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="day-1_scene_fantasy" tags="nobr" position="1100,850" size="100,100">&lt;h3&gt;Intrusive Thoughts&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="day-1_scene_fantasy" tags="nobr" position="1100,1100" size="100,100">&lt;h3&gt;Intrusive Thoughts&lt;/h3&gt;
 
 &lt;p&gt;I&#39;m sitting in the training yard. The dummy is destroyed. My hands are blistered. My body is wrung out, emptied by two hours of violence against straw, and in the vacuum the exhaustion creates, my mind — unguarded, undefended — goes where I don&#39;t want it to go.&lt;/p&gt;
 
@@ -5593,7 +6463,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="day-1_scene_masturbation" tags="nobr" position="1225,850" size="100,100">&lt;h3&gt;The Last Time Knowing&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="day-1_scene_masturbation" tags="nobr" position="1225,1100" size="100,100">&lt;h3&gt;The Last Time Knowing&lt;/h3&gt;
 
 &lt;p&gt;Rowan is gone. The wine is a warm ghost in my blood. The fire is embers. Tomorrow I walk to the tower. Tomorrow the Rite begins. Tomorrow this body   this specific body, with this specific cock and these specific hands and this specific way of feeling pleasure   will be rewritten.&lt;/p&gt;
 
@@ -5637,7 +6507,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="day-1_scene_rowan_desire" tags="nobr" position="100,975" size="100,100">&lt;h3&gt;The Question&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="day-1_scene_rowan_desire" tags="nobr" position="100,1225" size="100,100">&lt;h3&gt;The Question&lt;/h3&gt;
 
 &lt;p&gt;The fire is low. The wine is almost gone. Rowan is still on the floor, lute silent in their lap, their body warm against the side of the bed where I&#39;m sitting. The conversation has been about goats and barons and magistrates. Normal things. Safe things.&lt;/p&gt;
 
@@ -5698,7 +6568,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_scene_sera_approach" tags="nobr" position="225,975" size="100,100">&lt;&lt;npcPortrait &quot;sera&quot; &quot;Sera&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="day-1_scene_sera_approach" tags="nobr" position="225,1225" size="100,100">&lt;&lt;npcPortrait &quot;sera&quot; &quot;Sera&quot;&gt;&gt;
 &lt;h3&gt;The Approach&lt;/h3&gt;
 
 &lt;p&gt;She&#39;s in the corridor near the guest wing. Sera. Twenty-four. Dark hair braided and pinned under the white cap that all the senior handmaidens wear. Dark eyes that have been finding mine across rooms and corridors for six months   across the breakfast hall, across the laundry corridor, once across the throne room when she was replacing the cushions and I was pretending to review petitions and we held eye contact for four seconds too long and neither of us said anything afterward.&lt;/p&gt;
@@ -5739,7 +6609,7 @@ document.addEventListener('DOMContentLoaded', function () {
     &lt;p&gt;Not tonight. Not like this   desperate, terrified, using her body as an anchor.&lt;/p&gt;
     [[→ |day-1_corridors]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="day-1_scene_sera_sex" tags="nobr" position="350,975" size="100,100">&lt;h3&gt;The Encounter&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="day-1_scene_sera_sex" tags="nobr" position="350,1225" size="100,100">&lt;h3&gt;The Encounter&lt;/h3&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Come with me.&quot;&lt;/div&gt;
 
@@ -5831,7 +6701,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="day-2-init" tags="widget nobr" position="475,975" size="100,100">/* ============================================================
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="day-2-init" tags="widget nobr" position="475,1225" size="100,100">/* ============================================================
    DAY -2 (&quot;The Summons&quot;)   SCENE &amp; NPC FLAG INIT
    Called once, from title-screen.tw&#39;s &quot;Begin&quot; link, when the
    game actually starts. There is no upfront path choice   Day -2
@@ -5887,7 +6757,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;set $timeSlot to &quot;MORNING&quot;&gt;&gt;
 
   &lt;&lt;addObjective &quot;wake_up&quot; &quot;Wake up   it&#39;s morning in Crown&#39;s Rest&quot; &quot;MAIN&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="day-2_chambers_explore" tags="nobr" position="600,975" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="day-2_chambers_explore" tags="nobr" position="600,1225" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
 &lt;&lt;locationImage _chamberImg &quot;Edrin&#39;s Chambers&quot;&gt;&gt;
 &lt;h2&gt;🛏 Edrin&#39;s Chambers&lt;/h2&gt;
 &lt;p&gt;Your room. Bookshelves, maps, the training sword on the wall.&lt;/p&gt;
@@ -5940,7 +6810,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="day-2_corridors" tags="nobr" position="725,975" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="day-2_corridors" tags="nobr" position="725,1225" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
 &lt;h2&gt;🏛 Palace Corridors&lt;/h2&gt;
 &lt;p&gt;Long stone hallways. Portraits of queens. Echoing footsteps.&lt;/p&gt;
 
@@ -5969,7 +6839,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="day-2_gardens" tags="nobr" position="850,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="day-2_gardens" tags="nobr" position="850,1225" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Royal Gardens   Rowan&#39;s Arrival&lt;/h2&gt;
 
@@ -6046,7 +6916,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="day-2_gardens_hub" tags="nobr" position="975,975" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="day-2_gardens_hub" tags="nobr" position="975,1225" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
 &lt;h2&gt;🌿 Royal Gardens&lt;/h2&gt;
 &lt;p&gt;Dusk. Jasmine and woodsmoke. The fountain splashes softly.&lt;/p&gt;
 
@@ -6082,7 +6952,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="day-2_hub" tags="nobr" position="1100,975" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_hub" tags="nobr" position="1100,1225" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
   &lt;h2&gt;Crown&#39;s Rest - &lt;&lt;print formatDayNumber($dayNumber)&gt;&gt;: The Summons&lt;/h2&gt;
   &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
   &lt;p class=&quot;energy-display&quot;&gt;Energy: &lt;&lt;print $energy&gt;&gt; | Stress: &lt;&lt;print $stress&gt;&gt;&lt;/p&gt;
@@ -6232,7 +7102,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="day-2_kitchen" tags="nobr" position="1225,975" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="day-2_kitchen" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
 &lt;h2&gt;🍞 Palace Kitchens&lt;/h2&gt;
 &lt;p&gt;Heat, steam, chaos. Three hearths blazing. The smell of fresh bread and rosemary.&lt;/p&gt;
 
@@ -6262,7 +7132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="day-2_library" tags="nobr" position="100,1100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="day-2_library" tags="nobr" position="100,1350" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Grand Library   Research&lt;/h2&gt;
 
@@ -6335,7 +7205,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="day-2_library_hub" tags="nobr" position="225,1100" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="day-2_library_hub" tags="nobr" position="225,1350" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
 &lt;h2&gt;📚 Grand Library&lt;/h2&gt;
 &lt;p&gt;Three stories of books. Dust motes in slanted light. Haeth watches from his desk.&lt;/p&gt;
 
@@ -6373,7 +7243,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="day-2_night" tags="nobr" position="350,1100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="day-2_night" tags="nobr" position="350,1350" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   Night&lt;/h2&gt;
 
@@ -6422,7 +7292,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-2_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d2&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="day-2_queen" tags="nobr" position="475,1100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="day-2_queen" tags="nobr" position="475,1350" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   The Truth&lt;/h2&gt;
 
@@ -6542,7 +7412,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="day-2_servants" tags="nobr" position="600,1100" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="day-2_servants" tags="nobr" position="600,1350" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
 &lt;h2&gt;🔑 Servant Quarters   Below Stairs&lt;/h2&gt;
 &lt;p&gt;Clean corridors beneath the palace. The machinery of royal life.&lt;/p&gt;
 
@@ -6563,7 +7433,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="day-2_sleep_transition" tags="nobr" position="725,1100" size="100,100">&lt;&lt;day1Init&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="106" name="day-2_sleep_transition" tags="nobr" position="725,1350" size="100,100">&lt;&lt;day1Init&gt;&gt;
 &lt;&lt;set $energy to 80&gt;&gt;
 &lt;&lt;set $stress += 5&gt;&gt;
 
@@ -6571,7 +7441,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;h2&gt;Night passes. You don&#39;t sleep until the hour before dawn.&lt;/h2&gt;
   &lt;p class=&quot;transition-morning&quot;&gt;In that single hour, you dream of water   a deep, warm pool, and you&#39;re sinking into it, and it&#39;s closing over your head, and you can&#39;t tell if you&#39;re drowning or being born.&lt;/p&gt;
   [[Dawn breaks. → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="day-2_training" tags="nobr" position="850,1100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="day-2_training" tags="nobr" position="850,1350" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Training Yard   Morning Drill&lt;/h2&gt;
 
@@ -6643,7 +7513,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="day-2_training_hub" tags="nobr" position="975,1100" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="108" name="day-2_training_hub" tags="nobr" position="975,1350" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
 &lt;h2&gt;⚔ Training Yard&lt;/h2&gt;
 &lt;p&gt;Chalk-dusted flagstones. Practice blades on the rack. Morning light.&lt;/p&gt;
 
@@ -6682,7 +7552,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="day-2_wake" tags="nobr" position="1100,1100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="109" name="day-2_wake" tags="nobr" position="1100,1350" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   Morning&lt;/h2&gt;
 
@@ -6743,7 +7613,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="day-2_npc_alva" tags="nobr" position="1225,1100" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="110" name="day-2_npc_alva" tags="nobr" position="1225,1350" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
 &lt;h3&gt;The Head Housekeeper   Mistress Alva&lt;/h3&gt;
 
 &lt;p&gt;The servant quarters sit below the palace&#39;s main level   a network of clean, plain corridors where the machinery of royal life operates invisibly. Here is where the linen is pressed, the silver polished, the candles replaced, the fires laid. It&#39;s a world I&#39;m not supposed to see and rarely do, which is exactly why I come here sometimes. It&#39;s honest work. No one is performing.&lt;/p&gt;
@@ -6791,7 +7661,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_servants]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="day-2_npc_brin" tags="nobr" position="100,1225" size="100,100">&lt;&lt;npcPortrait &quot;brin&quot; &quot;Brin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="111" name="day-2_npc_brin" tags="nobr" position="100,1475" size="100,100">&lt;&lt;npcPortrait &quot;brin&quot; &quot;Brin&quot;&gt;&gt;
 &lt;h3&gt;The Servant   Brin&lt;/h3&gt;
 
 &lt;p&gt;The servant lingers near the door after setting down the tray. He&#39;s young   sixteen, maybe seventeen   with sandy hair that sticks up on one side like he slept on it wrong and didn&#39;t have time to fix it. His livery is slightly too large. New hire. The palace takes them from common families as a form of patronage   steady work, meals, a roof that doesn&#39;t leak.&lt;/p&gt;
@@ -6839,7 +7709,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="day-2_npc_caedric" tags="nobr" position="225,1225" size="100,100">&lt;&lt;npcPortrait &quot;caedric&quot; &quot;Ser Caedric&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="112" name="day-2_npc_caedric" tags="nobr" position="225,1475" size="100,100">&lt;&lt;npcPortrait &quot;caedric&quot; &quot;Ser Caedric&quot;&gt;&gt;
 &lt;h3&gt;Old Ser Caedric   The Retired Knight&lt;/h3&gt;
 
 &lt;p&gt;He&#39;s sitting in the alcove near the portrait gallery, where the old knights always sit   a stone bench with a worn cushion that&#39;s been here since before I was born. Ser Caedric. Seventy-three. Retired from the Royal Guard twelve years ago when his knees gave out. He still wears his sword, though the palace wags say it&#39;s rusted into the scabbard.&lt;/p&gt;
@@ -6886,7 +7756,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="day-2_npc_elise" tags="nobr" position="350,1225" size="100,100">&lt;&lt;npcPortrait &quot;elise_librarian&quot; &quot;Elise&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="113" name="day-2_npc_elise" tags="nobr" position="350,1475" size="100,100">&lt;&lt;npcPortrait &quot;elise_librarian&quot; &quot;Elise&quot;&gt;&gt;
 &lt;h3&gt;Junior Librarian   Elise&lt;/h3&gt;
 
 &lt;p&gt;She finds me between the shelves. Or I find her   hard to tell who was lost first. Elise is a junior librarian, one of Haeth&#39;s three apprentices, a nervous woman in her mid-twenties with ink-stained fingers and spectacles that keep sliding to the tip of her nose. She pushes them up approximately once every four seconds. I&#39;ve counted.&lt;/p&gt;
@@ -6940,7 +7810,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="day-2_npc_harwick" tags="nobr" position="475,1225" size="100,100">&lt;&lt;npcPortrait &quot;harwick&quot; &quot;Lady Harwick&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="114" name="day-2_npc_harwick" tags="nobr" position="475,1475" size="100,100">&lt;&lt;npcPortrait &quot;harwick&quot; &quot;Lady Harwick&quot;&gt;&gt;
 &lt;h3&gt;Lady Harwick   The Court Gossip&lt;/h3&gt;
 
 &lt;p&gt;Lady Harwick materialises from behind a topiary like a well-dressed ambush. She&#39;s sixty, perfumed to the point of weaponisation, draped in enough jewelry to furnish a small treasury, and possessed of a smile that could mean anything from &quot;delighted to see you&quot; to &quot;I&#39;m going to destroy your reputation at dinner.&quot;&lt;/p&gt;
@@ -6982,7 +7852,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="day-2_npc_joss" tags="nobr" position="600,1225" size="100,100">&lt;&lt;npcPortrait &quot;joss&quot; &quot;Joss&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="115" name="day-2_npc_joss" tags="nobr" position="600,1475" size="100,100">&lt;&lt;npcPortrait &quot;joss&quot; &quot;Joss&quot;&gt;&gt;
 &lt;h3&gt;Scullion Joss   Kitchen Gossip&lt;/h3&gt;
 
 &lt;p&gt;Joss is a scullion   fourteen, gap-toothed, perpetually smudged with soot, and possessed of the most efficient gossip network in Crown&#39;s Rest. He knows everything that happens in the palace because he delivers trays to every wing and nobody notices the pot-boy.&lt;/p&gt;
@@ -7014,7 +7884,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_kitchen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="day-2_npc_keller" tags="nobr" position="725,1225" size="100,100">&lt;&lt;npcPortrait &quot;keller&quot; &quot;Guardsman Keller&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="116" name="day-2_npc_keller" tags="nobr" position="725,1475" size="100,100">&lt;&lt;npcPortrait &quot;keller&quot; &quot;Guardsman Keller&quot;&gt;&gt;
 &lt;h3&gt;Guardsman Keller   The Gate Veteran&lt;/h3&gt;
 
 &lt;p&gt;Keller is sharpening his actual sword   not a practice blade   at the bench near the yard entrance. He&#39;s forty, weathered, with the kind of face that looks like it was carved from the same stone as the castle walls. Twenty years in the Royal Guard. He fought in the border skirmish. He has opinions about everything and shares them with the restraint of a man who has been told many times to keep his opinions to himself and has decided that advice is for other people.&lt;/p&gt;
@@ -7057,7 +7927,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="day-2_npc_letter" tags="nobr" position="850,1225" size="100,100">&lt;h3&gt;The Half-Written Letter&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="117" name="day-2_npc_letter" tags="nobr" position="850,1475" size="100,100">&lt;h3&gt;The Half-Written Letter&lt;/h3&gt;
 
 &lt;p&gt;I pick up the letter to Rowan. Three weeks old. The ink has crusted in the nib, and when I tap it, a flake of dried black drops onto the parchment.&lt;/p&gt;
 
@@ -7077,7 +7947,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="day-2_npc_maids" tags="nobr" position="975,1225" size="100,100">&lt;h3&gt;The Gossiping Maids&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="118" name="day-2_npc_maids" tags="nobr" position="975,1475" size="100,100">&lt;h3&gt;The Gossiping Maids&lt;/h3&gt;
 
 &lt;p&gt;Two handmaidens are pressed against the wall near the tapestry of the Battle of Thornridge, speaking in the urgent whisper that palace servants use when they think they&#39;re being quiet but are absolutely not.&lt;/p&gt;
 
@@ -7108,7 +7978,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_npc_marta" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_npc_marta" tags="nobr" position="1100,1475" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
 &lt;h3&gt;Head Cook Marta&lt;/h3&gt;
 
 &lt;p&gt;The palace kitchens are a realm unto themselves   a vast, low-ceilinged cavern of stone and iron where three massive hearths blaze day and night, filling the air with heat, smoke, and the complex layered aroma of twelve dishes being prepared simultaneously. Pots hang from ceiling hooks. Herbs dry in bundles above the doorways. A small army of kitchen workers   junior cooks, scullions, pot-boys, pastry apprentices   move in choreographed chaos that would make a military commander weep with envy.&lt;/p&gt;
@@ -7160,7 +8030,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_kitchen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="day-2_npc_perrin" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="120" name="day-2_npc_perrin" tags="nobr" position="1225,1475" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
 &lt;h3&gt;The Night Guard   Perrin&lt;/h3&gt;
 
 &lt;p&gt;I open the door to get air   the room is warm from the rebuilt fire and I can&#39;t breathe   and nearly walk into the night guard. Perrin. Young. Earnest. The kind of guard who takes the night shift seriously, which means he stands at rigid attention for eight hours even though no one is watching.&lt;/p&gt;
@@ -7212,7 +8082,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="day-2_npc_tamsin" tags="nobr" position="100,1350" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="121" name="day-2_npc_tamsin" tags="nobr" position="100,1600" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
 &lt;h3&gt;Young Recruit   Tamsin&lt;/h3&gt;
 
 &lt;p&gt;A young woman   recruit, by the uniform, which is too clean and too well-pressed to belong to anyone who&#39;s seen real duty   is methodically destroying a training dummy with a quarterstaff. Her form is wrong. Her grip is wrong. Her footwork is wrong. But the intensity is right. She&#39;s hitting the dummy like it said something about her mother.&lt;/p&gt;
@@ -7256,7 +8126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="day-2_npc_vaelin" tags="nobr" position="225,1350" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="day-2_npc_vaelin" tags="nobr" position="225,1600" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
 &lt;h3&gt;The Theology Student   Brother Vaelin&lt;/h3&gt;
 
 &lt;p&gt;A young man in temple robes is sitting cross-legged on the floor between the theology shelves, surrounded by a fortress of open books and looking like he hasn&#39;t moved in several hours. He has the pallid complexion and thousand-yard stare of someone who has been reading about divine succession law for too long.&lt;/p&gt;
@@ -7303,7 +8173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="day-2_npc_wynn" tags="nobr" position="350,1350" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="123" name="day-2_npc_wynn" tags="nobr" position="350,1600" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
 &lt;h3&gt;The Gardener   Old Wynn&lt;/h3&gt;
 
 &lt;p&gt;Old Wynn has been the palace gardener for longer than anyone can remember. He predates my mother&#39;s reign, my grandmother&#39;s reign, possibly the castle itself. He&#39;s a small, bent man who smells of soil and speaks to his plants with more affection than he shows to humans. I&#39;ve never seen him indoors. I&#39;m not convinced he &lt;em&gt;can&lt;/em&gt; go indoors   like a tree that would wither without sunlight.&lt;/p&gt;
@@ -7342,7 +8212,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="day-2_scene_bath" tags="nobr" position="475,1350" size="100,100">&lt;&lt;locationImage &quot;royal_baths&quot; &quot;Royal Baths&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="day-2_scene_bath" tags="nobr" position="475,1600" size="100,100">&lt;&lt;locationImage &quot;royal_baths&quot; &quot;Royal Baths&quot;&gt;&gt;
 &lt;h3&gt;The Royal Baths&lt;/h3&gt;
 
 &lt;p&gt;The Royal Baths are underground — carved from the bedrock beneath the palace, fed by a natural hot spring that the first queen channelled into stone pools three centuries ago. Steam hangs in the air like gauze. The walls are slick with condensation. Torchlight refracts through the mist, turning the space into something between a room and a dream.&lt;/p&gt;
@@ -7405,7 +8275,7 @@ document.addEventListener('DOMContentLoaded', function () {
     &lt;p&gt;Not today. The water is enough.&lt;/p&gt;
     [[→ |day-2_hub]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="day-2_scene_bath_sexual" tags="nobr" position="600,1350" size="100,100">&lt;h3&gt;Don&#39;t Stop&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="day-2_scene_bath_sexual" tags="nobr" position="600,1600" size="100,100">&lt;h3&gt;Don&#39;t Stop&lt;/h3&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t stop.&quot;&lt;/div&gt;
 
@@ -7472,7 +8342,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="106" name="day-2_scene_masturbation" tags="nobr" position="725,1350" size="100,100">&lt;h3&gt;The Body   One Last Familiar Thing&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="day-2_scene_masturbation" tags="nobr" position="725,1600" size="100,100">&lt;h3&gt;The Body   One Last Familiar Thing&lt;/h3&gt;
 
 &lt;p&gt;I can&#39;t sleep. The ceiling and I have exhausted our conversation. My mother&#39;s words loop in my skull   &lt;em&gt;become my daughter, become the heir, two days&lt;/em&gt;   and the loop tightens with every repetition until my jaw aches from clenching and my shoulders are granite and my body is so wound with tension that the sheets feel like restraints.&lt;/p&gt;
 
@@ -7524,7 +8394,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="title-screen" tags="" position="850,1350" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="title-screen" tags="" position="850,1600" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
   &lt;div class=&quot;title-art&quot;&gt;
     &lt;h1 class=&quot;title-main&quot;&gt;AELINDRA&lt;/h1&gt;
     &lt;p class=&quot;title-sub&quot;&gt;The Rite of Becoming&lt;/p&gt;
@@ -7540,7 +8410,7 @@ document.addEventListener('DOMContentLoaded', function () {
     [[Load Game|title-load]]
     [[Credits|credits]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="108" name="title-load" tags="" position="975,1350" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="title-load" tags="" position="975,1600" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
   &lt;h1 class=&quot;title-main&quot; style=&quot;font-size:2rem;&quot;&gt;Load Game&lt;/h1&gt;
   &lt;div class=&quot;title-menu&quot;&gt;
     &lt;&lt;link &quot;Open Load Menu&quot;&gt;&gt;
@@ -7548,7 +8418,7 @@ document.addEventListener('DOMContentLoaded', function () {
     &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
   &lt;p class=&quot;nav-return&quot;&gt;&lt;&lt;link &quot;◄ Back&quot; &quot;title-screen&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="109" name="widgets" tags="widget nobr" position="1100,1350" size="100,100">/* ===== OBJECTIVE SYSTEM ===== */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="widgets" tags="widget nobr" position="1100,1600" size="100,100">/* ===== OBJECTIVE SYSTEM ===== */
 
 &lt;&lt;widget &quot;addObjective&quot;&gt;&gt;
   &lt;&lt;set _obj to {id: _args[0], text: _args[1], type: (_args[2] || &quot;MAIN&quot;), done: false}&gt;&gt;

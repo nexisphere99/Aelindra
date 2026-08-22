@@ -88,8 +88,24 @@ After building, open `index.html` directly in a browser to play.
   1 landing hubs (`day1_hub.tw` for the female route, `day1_hub_futa.tw`
   for the futa route), by design, per the source material's own note that
   post-transformation content can't be a find-and-replace between routes.
-- **Day 1 onward** — placeholder hubs only (one per route), confirming the
-  pipeline lands correctly coming out of both versions of the Rite.
+- **Day 1 ("Wrong") — female route only** — fully built. The architecture
+  changes again: Aelindra doesn't leave the Moonspire Tower, so the open
+  world shrinks from a location grid to a single **room hub**
+  (`.room-layout`/`.room-zone` in place of `.location-grid`/`.loc-card`) —
+  the bed, the mirror, the window, the door, the bedside table, all within
+  four walls. Visitors come to *her* instead: Aldric through the door
+  (afternoon), Nara with tea (gated on having met her Day -1), a sealed
+  note from the Queen, then Rowan's knock, then a tray from Marta — in that
+  strict order. A wake scene with the full first-person body-shock prose,
+  Ilara's examination (first sight in the mirror, the pelvic exam), an
+  alone scene, Rowan's visit, and the first night, plus 9 optional
+  encounters. Introduces a new stat, `$statFEM`, that only appears in the
+  sidebar from Day 1 onward (same pattern as the arousal bar).
+- **Day 1 futa route, Day 2 onward** — placeholder hubs only, confirming
+  the pipeline lands correctly. The futa route's Day 1 still doesn't exist
+  as content — per the source material itself, it needs its own dedicated
+  writing (body discovery, NPCs, everything) rather than a find-and-replace
+  from the female version, same reasoning as the ritual scenes.
 
 Each day's own `day{N}Init` widget owns that day's scene/NPC flags and is
 called from the *previous* day's sleep-transition/bridge passage —

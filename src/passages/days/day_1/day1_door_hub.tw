@@ -1,0 +1,61 @@
+:: day1_door_hub [nobr]
+<h2>🚪 The Door</h2>
+<p>Heavy oak. Corridor sounds filter through.</p>
+
+<<set _aldricCard to ($d1f_exam and not $d1f_npc_aldric_door and $timeSlot === "AFTERNOON")>>
+<<set _naraCard to ($d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara)>>
+<<set _queenCard to ($timeSlot === "EVENING" and not $d1f_npc_queen_message)>>
+<<set _rowanCard to ($timeSlot === "EVENING" and $d1f_npc_queen_message and not $d1f_rowan)>>
+<<set _martaCard to ($d1f_rowan and not $d1f_npc_marta_tray)>>
+
+<<if _aldricCard>>
+<div class="interaction-card side">
+  <<npcPortrait "aldric" "Aldric">>
+  <h4>🗡 Familiar Footsteps</h4>
+  <p>Heavy. Even. The cadence of a man who has never been in a hurry. He stops outside.</p>
+  [[Listen → |day1_npc_aldric_door]]
+</div>
+<</if>>
+
+<<if _naraCard>>
+<div class="interaction-card side">
+  <<npcPortrait "nara" "Nara">>
+  <h4>🎵 Three Notes Repeating</h4>
+  <p>A music box. A tentative knock. "I brought tea because tea helps everything..."</p>
+  [[Open the door → |day1_npc_nara3]]
+</div>
+<</if>>
+
+<<if _queenCard>>
+<div class="interaction-card side">
+  <h4>📜 A Soft Knock — Sealed Note</h4>
+  <p>Not Rowan's knock. Formal. A hand extends through the gap. The royal seal.</p>
+  [[Take the note → |day1_npc_queen_message]]
+</div>
+<</if>>
+
+<<if _rowanCard>>
+<div class="interaction-card main">
+  <<npcPortrait "rowan" "Rowan">>
+  <h4>🎵 Three Taps. Pause. Two More.</h4>
+  <p>Rowan. Playing softly through the door. Not forcing entry. Just... there.</p>
+  [[Open the door → |day1_rowan]]
+</div>
+<</if>>
+
+<<if _martaCard>>
+<div class="interaction-card side">
+  <<npcPortrait "marta" "Marta">>
+  <h4>🍞 A Tray on the Floor</h4>
+  <p>It wasn't there before. Covered with a clean cloth. The smell of Marta's soup.</p>
+  [[Pick it up → |day1_npc_marta_tray]]
+</div>
+<</if>>
+
+<<if not (_aldricCard or _naraCard or _queenCard or _rowanCard or _martaCard)>>
+  <p class="empty-note">The corridor is quiet. No footsteps. No knocks. Just stone and silence.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Back to room → |day1_hub]]
+</div>

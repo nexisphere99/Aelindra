@@ -23,6 +23,10 @@
 <<set $statPRO to 0>>       /* Prowess */
 <<set $statWIS to 0>>       /* Wisdom */
 <<set $statRES to 0>>       /* Resolve */
+<<set $statFEM to 0>>       /* Femininity awareness - involuntary, post-
+                               transformation only (Day 1+). Stays 0 and
+                               hidden from the sidebar before then; see
+                               updateSidebars() in script.js. */
 
 /* --- RESOURCE STATS --- */
 <<set $energy to 100>>
