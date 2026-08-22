@@ -1,7 +1,7 @@
 :: day0_void [nobr]
 <h2>Void   Unconscious</h2>
 
-<<sceneImage "void" "The void between one self and the next">>
+<<sceneImage "day_0/void" "The void between one self and the next">>
 
 <p>Nothing.</p>
 

@@ -17,7 +17,7 @@ Every returning Day 0 location reuses its existing asset unchanged:
 | `moonspire_bridge.png` | day0_hub card (generic reuse, no Ash in frame) | A narrow stone bridge spanning a deep gorge. Wind howls through, spray rising from the river far below. Empty railing, no figures. Behind, a vast stone palace. Ahead, a white glowing tower. The sky shows the first blush of dawn. Atmosphere: the walk between two worlds, the point of no return. |
 | `moonspire_ritual_chamber_prepared.png` | day0_path_choice | A circular chamber at the top of a white tower. Domed ceiling painted with slowly spinning enchanted stars. A stone altar at center, carved with silver-glowing runes, draped in translucent silvery cloth. Hundreds of white candles in iron holders ring the room. Five robed sorceresses stand at cardinal points. Atmosphere: sacred dread, the moment before transformation, power held in check. |
 
-The rest of Day 0's art moved to `assets/images/scenes/day_0_manifest.md`  
+The rest of Day 0's art moved to `assets/images/scenes/day_0/day_0_manifest.md`  
 the bridge-crossing Ash banner (male/female), both transformation-moment
 illustrations, and both void banners are all single-passage narrative beats
 wired via `<<sceneImage>>`, not reusable places.

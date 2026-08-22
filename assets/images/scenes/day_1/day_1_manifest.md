@@ -1,7 +1,8 @@
 # Day 1   Scene Images
 
 Same `<<sceneImage>>` native macro as Day -2 (see
-`day_minus_2_manifest.md`)   fails silently if missing.
+`../day_minus_2/day_minus_2_manifest.md`)   fails silently if missing, one
+subfolder per day, slug includes the day folder (e.g. `day_1/slug`).
 
 | Filename | Used by | Prompt |
 |---|---|---|
