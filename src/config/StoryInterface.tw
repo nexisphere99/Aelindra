@@ -146,6 +146,11 @@
             <span id="bs-sensitivity" class="body-value"></span>
           </div>
           <!-- Futa-route only; toggled in updateSidebars() based on $dualAnatomy -->
+          <div id="cocklength-row" class="body-stat-row" style="display:none;">
+            <span class="body-label">Cock Length</span>
+            <span id="bs-cocklength" class="body-value"></span>
+          </div>
+          <!-- Futa-route only; toggled in updateSidebars() based on $dualAnatomy -->
           <div id="concealment-row" class="body-stat-row" style="display:none;">
             <span class="body-label">Concealment</span>
             <span id="bs-concealment" class="body-value"></span>

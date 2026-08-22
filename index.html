@@ -2023,6 +2023,13 @@ window.updateSidebars = function () {
   setTextById('bs-hips', sv.mcHips);
   setTextById('bs-sensitivity', sv.mcSensitivity);
 
+  // Cock Length (futa route only)
+  var cockRow = document.getElementById('cocklength-row');
+  if (cockRow) {
+    cockRow.style.display = sv.dualAnatomy ? '' : 'none';
+    setTextById('bs-cocklength', sv.cockLength);
+  }
+
   // Concealment (futa route only)
   var concRow = document.getElementById('concealment-row');
   if (concRow) {
@@ -2447,6 +2454,11 @@ document.addEventListener('DOMContentLoaded', function () {
           &lt;div class=&quot;body-stat-row&quot;&gt;
             &lt;span class=&quot;body-label&quot;&gt;Sensitivity&lt;/span&gt;
             &lt;span id=&quot;bs-sensitivity&quot; class=&quot;body-value&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;!-- Futa-route only; toggled in updateSidebars() based on $dualAnatomy --&gt;
+          &lt;div id=&quot;cocklength-row&quot; class=&quot;body-stat-row&quot; style=&quot;display:none;&quot;&gt;
+            &lt;span class=&quot;body-label&quot;&gt;Cock Length&lt;/span&gt;
+            &lt;span id=&quot;bs-cocklength&quot; class=&quot;body-value&quot;&gt;&lt;/span&gt;
           &lt;/div&gt;
           &lt;!-- Futa-route only; toggled in updateSidebars() based on $dualAnatomy --&gt;
           &lt;div id=&quot;concealment-row&quot; class=&quot;body-stat-row&quot; style=&quot;display:none;&quot;&gt;

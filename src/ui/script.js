@@ -260,6 +260,13 @@ window.updateSidebars = function () {
   setTextById('bs-hips', sv.mcHips);
   setTextById('bs-sensitivity', sv.mcSensitivity);
 
+  // Cock Length (futa route only)
+  var cockRow = document.getElementById('cocklength-row');
+  if (cockRow) {
+    cockRow.style.display = sv.dualAnatomy ? '' : 'none';
+    setTextById('bs-cocklength', sv.cockLength);
+  }
+
   // Concealment (futa route only)
   var concRow = document.getElementById('concealment-row');
   if (concRow) {
