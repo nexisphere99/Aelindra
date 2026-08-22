@@ -7317,8 +7317,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_gardens" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;day_minus_2/royal_gardens_ash_female&quot; : &quot;day_minus_2/royal_gardens_ash_male&quot;&gt;&gt;
-&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_gardens" tags="nobr" position="1100,1225" size="100,100">&lt;div id=&quot;ash-banner&quot; class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_minus_2/royal_gardens_ash_male&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Royal Gardens   Ash&#39;s Arrival&lt;/h2&gt;
 
@@ -7343,6 +7342,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;&lt;set $bardPronounCap to &quot;He&quot;&gt;&gt;
 &lt;&lt;set $bardPronounPosCap to &quot;His&quot;&gt;&gt;
 &lt;&lt;set $bardPortraitSlug to &quot;ash_male&quot;&gt;&gt;
+&lt;&lt;replace &quot;#ash-banner&quot;&gt;&lt;&lt;sceneImage &quot;day_minus_2/royal_gardens_ash_male&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
 
 &lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;He steps around the hedgerow, lute slung across his body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
@@ -7358,6 +7358,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;&lt;set $bardPronounCap to &quot;She&quot;&gt;&gt;
 &lt;&lt;set $bardPronounPosCap to &quot;Her&quot;&gt;&gt;
 &lt;&lt;set $bardPortraitSlug to &quot;ash_female&quot;&gt;&gt;
+&lt;&lt;replace &quot;#ash-banner&quot;&gt;&lt;&lt;sceneImage &quot;day_minus_2/royal_gardens_ash_female&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
 
 &lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;She steps around the hedgerow, lute slung across her body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;

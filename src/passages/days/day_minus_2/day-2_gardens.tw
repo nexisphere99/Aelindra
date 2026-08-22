@@ -1,6 +1,5 @@
 :: day-2_gardens [nobr]
-<<set _gardensImg to ($bardGender is "female") ? "day_minus_2/royal_gardens_ash_female" : "day_minus_2/royal_gardens_ash_male">>
-<div class="scene-image"><<sceneImage _gardensImg "Royal Gardens">></div>
+<div id="ash-banner" class="scene-image"><<sceneImage "day_minus_2/royal_gardens_ash_male" "Royal Gardens">></div>
 
 <h2>Royal Gardens   Ash's Arrival</h2>
 
@@ -25,6 +24,7 @@
 <<set $bardPronounCap to "He">>
 <<set $bardPronounPosCap to "His">>
 <<set $bardPortraitSlug to "ash_male">>
+<<replace "#ash-banner"><<sceneImage "day_minus_2/royal_gardens_ash_male" "Royal Gardens">><</replace>>
 <<replace "#ash-select">><div class="dialogue"><span class="speaker">EDRIN</span>"Ash."</div>
 
 <p><<npcPortrait $bardPortraitSlug "Ash">>He steps around the hedgerow, lute slung across his body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn't call me "Your Highness" and mean it.</p>
@@ -40,6 +40,7 @@
 <<set $bardPronounCap to "She">>
 <<set $bardPronounPosCap to "Her">>
 <<set $bardPortraitSlug to "ash_female">>
+<<replace "#ash-banner"><<sceneImage "day_minus_2/royal_gardens_ash_female" "Royal Gardens">><</replace>>
 <<replace "#ash-select">><div class="dialogue"><span class="speaker">EDRIN</span>"Ash."</div>
 
 <p><<npcPortrait $bardPortraitSlug "Ash">>She steps around the hedgerow, lute slung across her body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn't call me "Your Highness" and mean it.</p>
