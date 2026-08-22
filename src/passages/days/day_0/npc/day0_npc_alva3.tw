@@ -1,6 +1,6 @@
 :: day0_npc_alva3 [nobr]
 <<npcPortrait "alva" "Mistress Alva">>
-<h3>Mistress Alva — Operational Readiness</h3>
+<h3>Mistress Alva   Operational Readiness</h3>
 
 <p>Alva is standing at her desk, not sitting. Her spine is straighter than usual, which I didn't think was physically possible. Her iron-grey hair is pinned with mathematical precision. Her apron is spotless. She radiates the aura of a woman who has been preparing for something significant and has achieved a state of operational perfection.</p>
 
@@ -12,19 +12,19 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"A report."</div>
 
-<div class="dialogue"><span class="speaker">ALVA</span>"The Moonspire ritual chamber has been prepared. Fresh linens — the silver set. Candles replaced. Temperature regulated via warming enchantments. Recovery supplies staged: heated blankets, fortified broth, clean robes in three sizes because I was not given specific measurements for the post-ritual body and I refuse to be caught unprepared."</div>
+<div class="dialogue"><span class="speaker">ALVA</span>"The Moonspire ritual chamber has been prepared. Fresh linens   the silver set. Candles replaced. Temperature regulated via warming enchantments. Recovery supplies staged: heated blankets, fortified broth, clean robes in three sizes because I was not given specific measurements for the post-ritual body and I refuse to be caught unprepared."</div>
 
 <p>She pauses. Adjusts a pencil on her desk by two millimeters.</p>
 
-<div class="dialogue"><span class="speaker">ALVA</span>"The east wing has been alerted that the Queen may require additional support today. Emotional support, not medical — Aldwyn is handling the medical. The kitchen has been instructed to prepare light meals suitable for recovery — broth, bread, soft cheese. Marta has been baking since midnight, which I did not order but have chosen not to countermand because the woman processes trauma through pastry and the results are excellent."</div>
+<div class="dialogue"><span class="speaker">ALVA</span>"The east wing has been alerted that the Queen may require additional support today. Emotional support, not medical   Aldwyn is handling the medical. The kitchen has been instructed to prepare light meals suitable for recovery   broth, bread, soft cheese. Marta has been baking since midnight, which I did not order but have chosen not to countermand because the woman processes trauma through pastry and the results are excellent."</div>
 
-<div class="dialogue"><span class="speaker">EDRIN</span>"Alva—"</div>
+<div class="dialogue"><span class="speaker">EDRIN</span>"Alva "</div>
 
-<div class="dialogue"><span class="speaker">ALVA</span>"I'm not finished. The guest wing has been notified that your friend — the bard — will require extended accommodation. I've assigned them the corner room with the garden view because the room has good acoustics and they'll want to play, and playing near a window is better for the instrument and the player's mood. The laundry rotation has been adjusted to accommodate additional linen usage in the Moonspire. The guard rotation has been briefed by Captain Vane — I don't know what he told them specifically, but the east wing and Moonspire guards are all senior personnel, handpicked, trustworthy."</div>
+<div class="dialogue"><span class="speaker">ALVA</span>"I'm not finished. The guest wing has been notified that your friend   the bard   will require extended accommodation. I've assigned them the corner room with the garden view because the room has good acoustics and they'll want to play, and playing near a window is better for the instrument and the player's mood. The laundry rotation has been adjusted to accommodate additional linen usage in the Moonspire. The guard rotation has been briefed by Captain Vane   I don't know what he told them specifically, but the east wing and Moonspire guards are all senior personnel, handpicked, trustworthy."</div>
 
-<p>She stops. Looks at me. For one moment — one fraction of a second — the professional mask slips, and I see beneath it the face of a woman who has served this crown for thirty years and is watching the prince she's managed laundry for since he was an infant walk toward something that terrifies her.</p>
+<p>She stops. Looks at me. For one moment   one fraction of a second   the professional mask slips, and I see beneath it the face of a woman who has served this crown for thirty years and is watching the prince she's managed laundry for since he was an infant walk toward something that terrifies her.</p>
 
-<div class="dialogue"><span class="speaker">ALVA</span>"The household is ready, Your Highness. Whatever comes out of that tower — we're ready."</div>
+<div class="dialogue"><span class="speaker">ALVA</span>"The household is ready, Your Highness. Whatever comes out of that tower   we're ready."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Alva. You've thought of everything."</div>
 
@@ -34,11 +34,11 @@
 
 <div class="dialogue"><span class="speaker">ALVA</span>"I know. That's why I placed it now. So you'd have it. The last one."</div>
 
-<p>I don't know what to say. So I bow — a slight inclination, the kind a prince gives to an equal. Alva's eyes widen fractionally. In thirty years of service, no royal has bowed to her.</p>
+<p>I don't know what to say. So I bow   a slight inclination, the kind a prince gives to an equal. Alva's eyes widen fractionally. In thirty years of service, no royal has bowed to her.</p>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Thank you, Alva. For everything."</div>
 
-<div class="dialogue"><span class="speaker">ALVA</span>"Don't thank me. Come back alive. And eat sitting down."</div>
+<div class="dialogue"><span class="speaker">ALVA</span>"Don't thank me. Come back alive and eat sitting down."</div>
 
 <<set $d0_npc_alva3 to true>>
 <<set $statAUT += 1>>

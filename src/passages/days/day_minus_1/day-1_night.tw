@@ -25,15 +25,21 @@
 
 <p>My cock. I look at it. I don't look away. It hangs soft against my thigh   warm, familiar, unremarkable. The weight of it, the way it shifts when I move, the way it thickens when I'm aroused and the way the arousal builds from somewhere behind my navel and spreads downward in a warm rush. I've had this body for twenty years. I've touched myself since I was thirteen. I know how the pleasure builds, the rhythm, the peak. I know the way my balls tighten and draw up before I come. I know the pulse of it, the release, the spreading warmth.</p>
 
+<<if $d1_moonspire2>>
+<p>I hold myself. Not sexually. The way you hold something precious you might be about to surrender   or might not. My hand around my cock, warm in my palm, and for the first time since Ilara said the word <em>Rite</em>, the question isn't only grief. It's a choice. I could lose this by noon tomorrow. Or I could keep it, hidden under a gown, carried into a body that has no name of its own yet. <em>Vael'kirin.</em> The bridge between. I turn the word over. I turn the choice over. Neither answer arrives.</p>
+
+<p>I let go. Not of the choice   just of my grip, so I can sleep on it.</p>
+<<else>>
 <p>I hold myself. Not sexually. The way you hold something precious that you're about to surrender. My hand around my cock and my cock warm in my palm and the weight of it   the specific, irreplaceable weight of being male.</p>
 
 <p>I let go.</p>
+<</if>>
 
 <p>I step back from the mirror. The man in the glass steps back too. We look at each other   same grey-blue eyes, same dark hair, same sharp jaw and shadowed hollows and stubble that I still haven't shaved.</p>
 
 <p>I try to see her. The woman I'll become. I try to imagine this face softened, this jaw rounded, this body curved and shortened and remade. I can't. The imagination fails. It's like trying to picture a colour you've never seen   the concept is there but the image won't form.</p>
 
-<p>Tomorrow I will walk to the Moonspire Tower. I will lie on the stone altar. I will drink a potion made of moonflower and silver and my own blood. And six hours later, when I wake   if I wake   the man in this mirror will be gone, and someone else will be looking back at me, and she will have my eyes but nothing else that I recognise, and I will have to learn to call her <em>me.</em></p>
+<p>Tomorrow I will walk to the Moonspire Tower. I will lie on the stone altar. I will drink a potion made of moonflower and silver and my own blood and six hours later, when I wake   if I wake   the man in this mirror will be gone, and someone else will be looking back at me, and she will have my eyes but nothing else that I recognise, and I will have to learn to call her <em>me.</em></p>
 
 <p>I get into bed. The sheets are cold, then warm. The fire clicks and settles. Outside, the palace sleeps around me   guards on their posts, servants in their quarters, my mother in her sickbed with her grey-blue eyes and her iron will and her absolute, unshakeable conviction that this is the only way.</p>
 
@@ -43,7 +49,7 @@
 
 <p>I dream of the tapestries in the Moonspire. The serpent becoming the river. The tree becoming the woman. The bird becoming the song.</p>
 
-<p>In the dream, the bird is me. And the song is beautiful. And I can't remember what wings felt like.</p>
+<p>In the dream, the bird is me and the song is beautiful and I can't remember what wings felt like.</p>
 
 <!-- --- STATE CHANGES --- -->
 <<set $d1_night to true>>

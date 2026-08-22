@@ -1,4 +1,4 @@
-# AELINDRA — Day 0 Code Agent Prompt
+# AELINDRA   Day 0 Code Agent Prompt
 ## Open-World Hub → Point of No Return → Linear Ritual Sequence
 ### SugarCube 2.37+ | Twine Implementation
 
@@ -8,7 +8,7 @@
 
 Day 0 ("The Rite") has a **split architecture**: the morning is open-world exploration (farewell encounters), then crossing the bridge LOCKS the hub and triggers a linear sequence (bridge → path choice → ritual → void → Day 1). This is the first time the open-world closes mid-day, and the player must be warned clearly.
 
-**CRITICAL DESIGN PATTERN:** The bridge objective is ALWAYS visible from the start of Day 0 but marked with a warning. The player chooses when to cross. All side encounters are available only BEFORE crossing. This creates a natural "say your goodbyes" mechanic — the player knows the clock is ticking and explores accordingly.
+**CRITICAL DESIGN PATTERN:** The bridge objective is ALWAYS visible from the start of Day 0 but marked with a warning. The player chooses when to cross. All side encounters are available only BEFORE crossing. This creates a natural "say your goodbyes" mechanic   the player knows the clock is ticking and explores accordingly.
 
 ---
 
@@ -22,10 +22,10 @@ Day 0 ("The Rite") has a **split architecture**: the morning is open-world explo
 
 ---
 
-## NEW VARIABLES — DAY 0
+## NEW VARIABLES   DAY 0
 
 ```javascript
-// ===== DAY 0 INIT — Set in Day -1 sleep transition =====
+// ===== DAY 0 INIT   Set in Day -1 sleep transition =====
 
 <<set $dayNumber to 0>>
 <<set $dayLabel to "The Rite">>
@@ -34,7 +34,7 @@ Day 0 ("The Rite") has a **split architecture**: the morning is open-world explo
 <<set $stress += 10>>
 
 // --- Day 0 Scene Flags ---
-<<set $d0_wake to true>>              // Auto-true — waking is the transition
+<<set $d0_wake to true>>              // Auto-true   waking is the transition
 <<set $d0_queen to false>>            // Queen goodbye
 <<set $d0_bridge to false>>           // Crossed the bridge (POINT OF NO RETURN)
 <<set $d0_pathChosen to false>>       // Path selection made
@@ -68,7 +68,7 @@ Day 0 ("The Rite") has a **split architecture**: the morning is open-world explo
 
 ---
 
-## TIME SYSTEM — DAY 0
+## TIME SYSTEM   DAY 0
 
 Day 0 has only TWO effective time slots:
 
@@ -81,20 +81,20 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 ---
 
-## OBJECTIVE FLOW — DAY 0
+## OBJECTIVE FLOW   DAY 0
 
 ```
-[MORNING — On Wake / Transition In]
-  MAIN: "When you're ready — cross the bridge to the Moonspire Tower" ⚠
-  MAIN: "Say goodbye — the Queen's Chambers"
-  SIDE: "Your chambers — one last look"
-  SIDE: "The corridors — familiar faces"
-  SIDE: "The Training Yard — empty, but something was left for you"
-  SIDE: "The Kitchens — Marta has been baking since midnight"
-  SIDE: "The Grand Library — Haeth is waiting"
-  SIDE: "The Royal Gardens — the jasmine survived"
-  SIDE: "Below Stairs — Alva has a report"
-  SIDE: "The Moonspire — preparations underway"
+[MORNING   On Wake / Transition In]
+  MAIN: "When you're ready   cross the bridge to the Moonspire Tower" ⚠
+  MAIN: "Say goodbye   the Queen's Chambers"
+  SIDE: "Your chambers   one last look"
+  SIDE: "The corridors   familiar faces"
+  SIDE: "The Training Yard   empty, but something was left for you"
+  SIDE: "The Kitchens   Marta has been baking since midnight"
+  SIDE: "The Grand Library   Haeth is waiting"
+  SIDE: "The Royal Gardens   the jasmine survived"
+  SIDE: "Below Stairs   Alva has a report"
+  SIDE: "The Moonspire   preparations underway"
 
 [AFTER CROSSING BRIDGE]
   All objectives clear
@@ -103,7 +103,7 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 ---
 
-## LOCATION HUB — DAY 0
+## LOCATION HUB   DAY 0
 
 ### Hub Passage: `day0_hub`
 
@@ -111,7 +111,7 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 :: day0_hub
 
 <div class="hub-header">
-  <h2>Crown's Rest — Day 0: The Rite</h2>
+  <h2>Crown's Rest   Day 0: The Rite</h2>
   <p class="time-display"><<print $timeSlot>></p>
   <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
@@ -120,11 +120,11 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 <div class="location-grid">
 
-/* ========== THE BRIDGE — POINT OF NO RETURN ========== */
+/* ========== THE BRIDGE   POINT OF NO RETURN ========== */
 <div class="loc-card loc-final">
-  <h3>🌙 The Bridge — Moonspire Tower</h3>
+  <h3>🌙 The Bridge   Moonspire Tower</h3>
   <p class="loc-flavor">The covered bridge. Thirty paces between who you are and who you're about to become. Rowan is waiting at the near end.</p>
-  <span class="badge main">⚔ Cross the Bridge — When You're Ready</span>
+  <span class="badge main">⚔ Cross the Bridge   When You're Ready</span>
   <p class="loc-warning">⚠ <em>Once you cross, you cannot return. Complete any remaining business first.</em></p>
   <<link "Cross the Bridge">>
     <<if not $bridgeWarningAcknowledged>>
@@ -153,7 +153,7 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 <div class="loc-card">
   <h3>👑 Queen's Chambers</h3>
   <p class="loc-flavor">She's waiting. She didn't know if you'd come. She hoped.</p>
-  <span class="badge main">⚔ Say goodbye — as a son</span>
+  <span class="badge main">⚔ Say goodbye   as a son</span>
   [[Enter → |day0_queen]]
 </div>
 <</if>>
@@ -229,13 +229,13 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 /* ========== MOONSPIRE TOWER (PRE-BRIDGE) ========== */
 <div class="loc-card loc-new">
-  <h3>🌙 Moonspire Tower — Lower Levels</h3>
+  <h3>🌙 Moonspire Tower   Lower Levels</h3>
   <p class="loc-flavor">Accessible via the service stair, not the bridge. The preparations are underway.</p>
   <<if $d1_npc_nara and not $d0_npc_nara2>>
     <span class="badge side">🗡 Nara on the stairs, carrying candles</span>
   <</if>>
   <<if not $d0_npc_vael2>>
-    <span class="badge side">🗡 The Apothecary — the potion is ready</span>
+    <span class="badge side">🗡 The Apothecary   the potion is ready</span>
   <</if>>
   [[Enter → |day0_moonspire_lower]]
 </div>
@@ -245,7 +245,7 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 ---
 
-## BRIDGE CONFIRMATION — POINT OF NO RETURN
+## BRIDGE CONFIRMATION   POINT OF NO RETURN
 
 ```html
 :: day0_bridge_confirm
@@ -258,12 +258,12 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
   <div class="confirm-checklist">
     <h4>Farewells</h4>
     <ul>
-      <li class="<<if $d0_queen>>done<<else>>pending<</if>>">Queen Seraphina <<if $d0_queen>>✓<<else>>—<</if>></li>
-      <li class="<<if $d0_npc_caedric>>done<<else>>pending<</if>>">Ser Caedric <<if $d0_npc_caedric>>✓<<else>>—<</if>></li>
-      <li class="<<if $d0_npc_marta3>>done<<else>>pending<</if>>">Head Cook Marta <<if $d0_npc_marta3>>✓<<else>>—<</if>></li>
-      <li class="<<if $d0_npc_aldric_gift>>done<<else>>pending<</if>>">Aldric's gift <<if $d0_npc_aldric_gift>>✓<<else>>—<</if>></li>
-      <li class="<<if $d0_npc_haeth>>done<<else>>pending<</if>>">Librarian Haeth <<if $d0_npc_haeth>>✓<<else>>—<</if>></li>
-      <li class="<<if $d0_npc_wynn3>>done<<else>>pending<</if>>">Old Wynn <<if $d0_npc_wynn3>>✓<<else>>—<</if>></li>
+      <li class="<<if $d0_queen>>done<<else>>pending<</if>>">Queen Seraphina <<if $d0_queen>>✓<<else>> <</if>></li>
+      <li class="<<if $d0_npc_caedric>>done<<else>>pending<</if>>">Ser Caedric <<if $d0_npc_caedric>>✓<<else>> <</if>></li>
+      <li class="<<if $d0_npc_marta3>>done<<else>>pending<</if>>">Head Cook Marta <<if $d0_npc_marta3>>✓<<else>> <</if>></li>
+      <li class="<<if $d0_npc_aldric_gift>>done<<else>>pending<</if>>">Aldric's gift <<if $d0_npc_aldric_gift>>✓<<else>> <</if>></li>
+      <li class="<<if $d0_npc_haeth>>done<<else>>pending<</if>>">Librarian Haeth <<if $d0_npc_haeth>>✓<<else>> <</if>></li>
+      <li class="<<if $d0_npc_wynn3>>done<<else>>pending<</if>>">Old Wynn <<if $d0_npc_wynn3>>✓<<else>> <</if>></li>
     </ul>
   </div>
 
@@ -351,7 +351,7 @@ MIDDAY+ (linear)     → Bridge → Path Choice → Ritual → Void
 
 ---
 
-## LINEAR SEQUENCE — POST-BRIDGE
+## LINEAR SEQUENCE   POST-BRIDGE
 
 Once `day0_bridge` is entered, the game becomes linear:
 
@@ -364,7 +364,7 @@ day0_bridge → day0_path_choice → day0_ritual_female (or _futa) → day0_void
 ```html
 :: day0_path_choice
 
-/* === Prose from core content — Scene 3.5 === */
+/* === Prose from core content   Scene 3.5 === */
 
 <div class="path-choice-ritual">
   <h2>The Rite Has Two Forms</h2>
@@ -406,7 +406,7 @@ day0_bridge → day0_path_choice → day0_ritual_female (or _futa) → day0_void
 
 /* After bridge prose: */
 <<if $gamePath is "none">>
-  /* Player didn't choose on title screen — choose now */
+  /* Player didn't choose on title screen   choose now */
   <div class="scene-end">[[Continue → |day0_path_choice]]</div>
 <<elseif $gamePath is "female">>
   <div class="scene-end">[[Continue → |day0_ritual_female]]</div>
@@ -460,7 +460,7 @@ day0_bridge → day0_path_choice → day0_ritual_female (or _futa) → day0_void
 
 ---
 
-## MC PORTRAIT UPDATE — DAY 0
+## MC PORTRAIT UPDATE   DAY 0
 
 The right sidebar portrait should update during Day 0:
 
@@ -491,7 +491,7 @@ AELINDRA/
 │   ├── day_minus_1/
 │   └── day_0/                                ← NEW
 │       ├── day0_core_content.md              ← Core scenes (shared + female path)
-│       ├── day0_core_content_futa.md         ← (FUTURE — futa ritual variant)
+│       ├── day0_core_content_futa.md         ← (FUTURE   futa ritual variant)
 │       ├── day0_supplementary_npc.md         ← Morning encounters
 │       └── day0_code_agent_prompt.md         ← This file
 ├── engine/
@@ -510,7 +510,7 @@ AELINDRA/
 │       ├── day0_bridge.tw                    ← Bridge scene (LINEAR from here)
 │       ├── day0_path_choice.tw               ← Path selection (if not pre-selected)
 │       ├── day0_ritual_female.tw             ← Full female ritual scene
-│       ├── day0_ritual_futa.tw               ← (FUTURE — futa ritual)
+│       ├── day0_ritual_futa.tw               ← (FUTURE   futa ritual)
 │       ├── day0_void.tw                      ← Unconscious transition → Day 1
 │       └── npc/
 │           ├── day0_npc_brin.tw
@@ -528,7 +528,7 @@ AELINDRA/
 
 ---
 
-## CONTINUITY GATES — DAY 0
+## CONTINUITY GATES   DAY 0
 
 | Day 0 NPC | Requires |
 |---|---|
@@ -542,24 +542,24 @@ AELINDRA/
 | `d0_npc_haeth` | No gate (always available) |
 | `d0_npc_vael2` | No gate (always available) |
 
-Players who explored more on Days -2 and -1 get MORE farewell encounters on Day 0. This rewards exploration and creates emotional payoff — the NPCs you invested time in are the ones who say goodbye.
+Players who explored more on Days -2 and -1 get MORE farewell encounters on Day 0. This rewards exploration and creates emotional payoff   the NPCs you invested time in are the ones who say goodbye.
 
 ---
 
-## QUALITY CHECKLIST — DAY 0
+## QUALITY CHECKLIST   DAY 0
 
 - [ ] **Bridge card renders with red border and warning text**
 - [ ] **Bridge confirmation passage shows farewell checklist**
-- [ ] **Crossing bridge LOCKS all other locations** — hub is inaccessible after
+- [ ] **Crossing bridge LOCKS all other locations**   hub is inaccessible after
 - [ ] **Path choice only appears if `$gamePath` is still "none"** (skip if pre-selected)
 - [ ] **Ritual passage dims the MC portrait and changes name to "..."**
 - [ ] **Void passage sets ALL Day 1 body variables** (name, title, height, bust, etc.)
-- [ ] **Void passage sets `$bodyStatusVisible to true`** — right sidebar body stats appear on Day 1
+- [ ] **Void passage sets `$bodyStatusVisible to true`**   right sidebar body stats appear on Day 1
 - [ ] **Portrait updates to `aelindra_day1` on Day 1 transition**
 - [ ] **All 11 NPC encounters available ONLY in morning before bridge**
 - [ ] **Continuity-gated NPCs only appear if player met them on Days -2/-1**
 - [ ] **Items collected (moonflower, jasmine, ginger, letter, handkerchief) persist into Day 1**
-- [ ] **Queen goodbye scene is MAIN objective but not required** — player can cross bridge without it (emotional consequence, not mechanical gate)
+- [ ] **Queen goodbye scene is MAIN objective but not required**   player can cross bridge without it (emotional consequence, not mechanical gate)
 - [ ] **Stress and energy values carry correctly into ritual**
 - [ ] **Post-ritual stats: RES +5, Stress → 80, Energy → 0**
 - [ ] **Day 1 hub loads correctly from void transition**
@@ -570,7 +570,7 @@ Players who explored more on Days -2 and -1 get MORE farewell encounters on Day 
 
 1. Add Day 0 variables to Day -1 sleep transition
 2. Build `day0_hub` with the red-bordered bridge card and farewell locations
-3. Build `day0_bridge_confirm` — the point-of-no-return checklist
+3. Build `day0_bridge_confirm`   the point-of-no-return checklist
 4. Build all sub-hubs (chambers, corridors, training, kitchen, library, gardens, servants, moonspire-lower)
 5. Paste core content into main scene passages (queen, bridge, path choice, ritual, void)
 6. Paste NPC content into 11 NPC passages

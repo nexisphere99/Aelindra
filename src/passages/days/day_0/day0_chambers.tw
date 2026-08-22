@@ -5,7 +5,7 @@
 
 <<if not $d0_queens_gift>>
 <div class="interaction-card main">
-  <h4>👑 A Knock — Not a Servant's</h4>
+  <h4>👑 A Knock   Not a Servant's</h4>
   <p>Two knocks. Soft. Deliberate. A sealed note slides under the door. The Queen's seal. Inside: two words. "My gift."</p>
   [[Open the door → |day0_scene_queens_gift]]
 </div>
@@ -13,7 +13,7 @@
 
 <<if not $d0_npc_morningwood>>
 <div class="interaction-card side">
-  <h4>🔥 Morning — The Body's Goodbye</h4>
+  <h4>🔥 Morning   The Body's Goodbye</h4>
   <p>You woke hard. The body doesn't know about the Rite. The body only knows it's morning and the blood goes where the blood goes.</p>
   [[Acknowledge it → |day0_scene_morningwood]]
 </div>

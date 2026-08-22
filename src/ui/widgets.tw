@@ -93,7 +93,7 @@
 <<widget "endOfContentNotice">>
   <div class="end-of-content">
     <h3>End of Public Version v0.1</h3>
-    <p>You've reached the end of AELINDRA's current free public release. Thank you for playing this far into Edrin's — Aelindra's — story.</p>
+    <p>You've reached the end of AELINDRA's current free public release. Thank you for playing this far into Edrin's   Aelindra's   story.</p>
     <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
     <p class="patreon-cta">
       <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>

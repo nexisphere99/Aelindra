@@ -3,25 +3,25 @@
 
 <p>Ilara leaves. She's a corridor away. She'll check in every hour. She's given me broth, bread, pain tincture, and the quiet, necessary gift of solitude.</p>
 
-<p>I sit on the bed. I stare at my hands. I open and close them. The fingers are deft, quick, responsive. They curl and spread with a precision that my old hands had but these hands seem to have amplified — finer motor control, more sensitive tips, a tactile awareness that makes every surface I touch a symphony of texture and temperature.</p>
+<p>I sit on the bed. I stare at my hands. I open and close them. The fingers are deft, quick, responsive. They curl and spread with a precision that my old hands had but these hands seem to have amplified   finer motor control, more sensitive tips, a tactile awareness that makes every surface I touch a symphony of texture and temperature.</p>
 
-<p>I stand. Walk the room. Four paces one way, four the other. My hips sway. I'm not doing it — the body is doing it, the wider pelvis and the angled femurs creating a lateral shift with each step that I can feel in my lower back and core. I try to suppress it. Walk like a man. Shoulders square, stride long, heel-strike. The result is a grotesque parody — a woman stomping across a room in ill-fitting trousers, hips fighting the forced stride, breasts bouncing with each heavy step.</p>
+<p>I stand. Walk the room. Four paces one way, four the other. My hips sway. I'm not doing it   the body is doing it, the wider pelvis and the angled femurs creating a lateral shift with each step that I can feel in my lower back and core. I try to suppress it. Walk like a man. Shoulders square, stride long, heel-strike. The result is a grotesque parody   a woman stomping across a room in ill-fitting trousers, hips fighting the forced stride, breasts bouncing with each heavy step.</p>
 
 <p>I stop trying. I walk and the hips sway and the body moves the way the body moves and I hate it and it doesn't care.</p>
 
-<p>I need to piss. I stand at the chamber pot. I reach for myself — the automatic gesture of a man who has been urinating standing up for twenty years. My hand finds nothing to hold. My fingers brush the mound, the folds, and I jerk away.</p>
+<p>I need to piss. I stand at the chamber pot. I reach for myself   the automatic gesture of a man who has been urinating standing up for twenty years. My hand finds nothing to hold. My fingers brush the mound, the folds, and I jerk away.</p>
 
-<p>I sit. I sit on the chamber pot and I piss and the act is different in every particular — the position, the angle, the sensation, the sound. The stream is different. The release is different. The muscle I engage is different. I am doing one of the most basic biological functions a body performs and I'm relearning it from scratch.</p>
+<p>I sit. I sit on the chamber pot and I piss and the act is different in every particular   the position, the angle, the sensation, the sound. The stream is different. The release is different. The muscle I engage is different. I am doing one of the most basic biological functions a body performs and I'm relearning it from scratch.</p>
 
 <p>I don't look down while I do it.</p>
 
-<p>Afternoon. I eat the bread and broth. My jaw chews differently — the muscles are smaller, the motion narrower. My throat swallows differently — the absence of the Adam's apple changes the mechanics. The broth tastes the same. I hold on to that. The broth tastes the same.</p>
+<p>Afternoon. I eat the bread and broth. My jaw chews differently   the muscles are smaller, the motion narrower. My throat swallows differently   the absence of the Adam's apple changes the mechanics. The broth tastes the same. I hold on to that. The broth tastes the same.</p>
 
-<p>I lie on the bed. Curled on my side, because lying on my back puts the breast weight directly on my ribcage and the awareness of it is maddening, and lying on my stomach presses them into the mattress with a sensitivity that makes me gasp. On my side, they settle against each other — the upper one resting on the lower — and I can live with that. I can live with a lot, apparently.</p>
+<p>I lie on the bed. Curled on my side, because lying on my back puts the breast weight directly on my ribcage and the awareness of it is maddening, and lying on my stomach presses them into the mattress with a sensitivity that makes me gasp. On my side, they settle against each other   the upper one resting on the lower   and I can live with that. I can live with a lot, apparently.</p>
 
-<p>My thighs press together. The warmth between them is constant. The vulva is there — soft, warm, present with every shift, every breath, every minute adjustment of position. I can feel the folds against each other. I can feel the clitoris, a small persistent throb of awareness, a nerve centre that didn't exist yesterday and now sits at the junction of everything and notices everything and will not shut up.</p>
+<p>My thighs press together. The warmth between them is constant. The vulva is there   soft, warm, present with every shift, every breath, every minute adjustment of position. I can feel the folds against each other. I can feel the clitoris, a small persistent throb of awareness, a nerve centre that didn't exist yesterday and now sits at the junction of everything and notices everything and will not shut up.</p>
 
-<p>I do not touch myself. The arousal that flickers when fabric slides across a nipple, when my thighs shift, when I roll and the breast tissue moves with a liquid inertia that sends sensation radiating — I smother it. I refuse it. This body does not get to feel pleasure. Not yet. Not until I've decided whether it's mine. And I have not decided. I haven't decided anything. I'm lying in a tower room in a body that was inflicted on me and the body is responding to its own stimuli without consulting me and I am holding on to the last thing I have, which is the choice not to enjoy it.</p>
+<p>I do not touch myself. The arousal that flickers when fabric slides across a nipple, when my thighs shift, when I roll and the breast tissue moves with a liquid inertia that sends sensation radiating   I smother it. I refuse it. This body does not get to feel pleasure. Not yet. Not until I've decided whether it's mine and I have not decided. I haven't decided anything. I'm lying in a tower room in a body that was inflicted on me and the body is responding to its own stimuli without consulting me and I am holding on to the last thing I have, which is the choice not to enjoy it.</p>
 
 <<set $d1f_alone to true>>
 <<set $statFEM += 1>>
@@ -29,7 +29,7 @@
 <<set $timeSlot to "EVENING">>
 
 <<completeObjective "alone">>
-<<addObjective "rowan_evening" "Wait for evening — someone will come" "MAIN">>
+<<addObjective "rowan_evening" "Wait for evening   someone will come" "MAIN">>
 
 <div class="scene-end">
   [[Continue → |day1_hub]]

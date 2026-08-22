@@ -15,6 +15,15 @@
 <<if $d1_moonspire>>
   <<completeObjective "moonspire_explore">>
 
+  <<if $d1_training and not $d1_moonspire2>>
+  <div class="interaction-card main">
+    <<npcPortrait "ilara" "Archsorceress Ilara">>
+    <h4>🔮 The Ritual Chamber   One More Question</h4>
+    <p>Ilara is where she always is. She doesn't look surprised to see you again.</p>
+    [[Climb the stairs, again|day-1_moonspire2]]
+  </div>
+  <</if>>
+
   <<if not $d1_npc_nara>>
   <div class="interaction-card side">
     <<npcPortrait "nara" "Nara">>

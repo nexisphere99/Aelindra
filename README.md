@@ -60,23 +60,32 @@ After building, open `index.html` directly in a browser to play.
 
 ## Day content status
 
-- **Day -2 ("The Summons")** — fully built. Hub, 7 sub-hubs, 6 main scenes,
+- **Day -2 ("The Summons")**   fully built. Hub, 7 sub-hubs, 6 main scenes,
   14 optional NPC encounters, plus two pre-transformation sexual scenes: a
   solo scene and a bathhouse encounter with a new recurring NPC, Handmaiden
   Lissara (`npc/day-2_scene_masturbation.tw`, `npc/day-2_scene_bath.tw` →
   `day-2_scene_bath_sexual.tw`).
-- **Day -1 ("The Arguments")** — fully built. Hub, 8 sub-hubs (including the
+- **Day -1 ("The Arguments")**   fully built. Hub, 8 sub-hubs (including the
   Moonspire Tower, unlocked after the Queen scene, with its own purple
-  `.loc-new` accent), 5 main scenes, 12 optional NPC encounters (6 of them
+  `.loc-new` accent), 7 main scenes, 12 optional NPC encounters (6 of them
   gated behind whether the player met the matching Day -2 NPC), plus four
   pre-transformation sexual/anxiety scenes: a solo scene, a full encounter
   with a new recurring NPC (Handmaiden Sera), an intrusive-thought insert
   into the Queen argument, and a fantasy scene after the training-yard rage
   session, plus an added conversation with Rowan about desire across the
-  transformation.
-- **Day 0 ("The Rite")** — fully built. This is the day the open world
+  transformation. Also includes the Partial Rite introduction insert
+  (`AELINDRA_Supplementary_FutaChoice_DayNeg1.md`): a second Moonspire
+  visit after the training-yard rage session, where Ilara reveals the
+  Partial Rite for the first time (`day-1_moonspire2.tw`), followed by a
+  Seraphina "did you know?" follow-up (`day-1_queen2.tw`) before the
+  existing Rowan evening scene   both gate the EVENING time-slot the way
+  the training scene used to, and the last-night mirror scene
+  (`day-1_night.tw`) now carries different subtext if the player has
+  learned about the Partial Rite. The Day 0 tower-entrance choice itself
+  is unchanged   this only adds the context leading up to it.
+- **Day 0 ("The Rite")**   fully built. This is the day the open world
   closes: a morning hub (chambers, Queen's farewell, corridors, training
-  yard, kitchens, library, gardens, servants, Moonspire lower levels — 11
+  yard, kitchens, library, gardens, servants, Moonspire lower levels   11
   optional NPC farewells plus two solo body-anxiety scenes and a MAIN scene,
   the Queen's parting gift of two companions) followed by a **point-of-no-
   return bridge** with its own confirmation screen and unfinished-farewells
@@ -84,36 +93,36 @@ After building, open `index.html` directly in a browser to play.
   linear: bridge → an in-story path choice (Complete / Partial
   transformation) → the ritual scene itself → a void transition → Day 1.
   **The two paths permanently diverge at the path choice and never merge
-  again** — separate ritual scenes, separate void transitions, separate Day
+  again**   separate ritual scenes, separate void transitions, separate Day
   1 landing hubs (`day1_hub.tw` for the female route, `day1_hub_futa.tw`
   for the futa route), by design, per the source material's own note that
   post-transformation content can't be a find-and-replace between routes.
-- **Day 1 ("Wrong") — female route only** — fully built. The architecture
+- **Day 1 ("Wrong")   female route only**   fully built. The architecture
   changes again: Aelindra doesn't leave the Moonspire Tower, so the open
   world shrinks from a location grid to a single **room hub**
-  (`.room-layout`/`.room-zone` in place of `.location-grid`/`.loc-card`) —
+  (`.room-layout`/`.room-zone` in place of `.location-grid`/`.loc-card`)  
   the bed, the mirror, the window, the door, the bedside table, all within
   four walls. Visitors come to *her* instead: Aldric through the door
   (afternoon), Nara with tea (gated on having met her Day -1), a sealed
-  note from the Queen, then Rowan's knock, then a tray from Marta — in that
+  note from the Queen, then Rowan's knock, then a tray from Marta   in that
   strict order. A wake scene with the full first-person body-shock prose,
   Ilara's examination (first sight in the mirror, the pelvic exam), an
   alone scene, Rowan's visit, and the first night, plus 9 optional
   encounters. Introduces a new stat, `$statFEM`, that only appears in the
   sidebar from Day 1 onward (same pattern as the arousal bar).
-- **Day 1 futa route, Day 2 onward** — placeholder hubs only, confirming
+- **Day 1 futa route, Day 2 onward**   placeholder hubs only, confirming
   the pipeline lands correctly. The futa route's Day 1 still doesn't exist
-  as content — per the source material itself, it needs its own dedicated
+  as content   per the source material itself, it needs its own dedicated
   writing (body discovery, NPCs, everything) rather than a find-and-replace
   from the female version, same reasoning as the ritual scenes.
 
 Each day's own `day{N}Init` widget owns that day's scene/NPC flags and is
-called from the *previous* day's sleep-transition/bridge passage —
+called from the *previous* day's sleep-transition/bridge passage  
 `StoryInit.tw` only holds state that persists across the whole game (stats,
-affinities, and the sexual-content baseline flags —
+affinities, and the sexual-content baseline flags  
 `$maleBaselineEstablished`, `$seraEncountered`/`$seraIntimate`,
 `$lissaraEncountered`, `$penetrationAnxiety`, `$queensGiftAccepted`,
-`$veylaEncountered`/`$sennaEncountered` — since Day 1+ body-discovery scenes
+`$veylaEncountered`/`$sennaEncountered`   since Day 1+ body-discovery scenes
 are meant to reference them for contrast).
 
 ### Note on `StoryCaption.tw`

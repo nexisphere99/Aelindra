@@ -1,13 +1,13 @@
 :: day0_moonspire_lower [nobr]
 <<locationImage "moonspire_tower" "Moonspire Tower">>
-<h2>🌙 Moonspire Tower — Lower Levels</h2>
+<h2>🌙 Moonspire Tower   Lower Levels</h2>
 <p>Accessible via the service stair, not the bridge. The preparations are underway.</p>
 
 <<if $d1_npc_nara and not $d0_npc_nara2>>
 <div class="interaction-card side">
   <<npcPortrait "nara" "Nara">>
   <h4>🕯 Nara on the Stairs</h4>
-  <p>Carrying candles — an armful of white wax pillars she's struggling to balance.</p>
+  <p>Carrying candles   an armful of white wax pillars she's struggling to balance.</p>
   [[Approach|day0_npc_nara2]]
 </div>
 <</if>>
@@ -16,7 +16,7 @@
 <div class="interaction-card side">
   <<npcPortrait "vael" "Mistress Vael">>
   <h4>⚗ The Potion Is Ready</h4>
-  <p>The Apothecary smells different today. A single dominant aroma — silver and cold and floral.</p>
+  <p>The Apothecary smells different today. A single dominant aroma   silver and cold and floral.</p>
   [[Enter|day0_npc_vael2]]
 </div>
 <</if>>

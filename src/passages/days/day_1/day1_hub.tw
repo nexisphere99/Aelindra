@@ -1,7 +1,7 @@
 :: day1_hub [nobr]
 <div class="hub-header room-header">
   <<locationImage "moonspire_recovery_room" "Recovery Room">>
-  <h2>Moonspire Tower — Recovery Room</h2>
+  <h2>Moonspire Tower   Recovery Room</h2>
   <p class="time-display">Time: <<print $timeSlot>></p>
   <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
@@ -41,18 +41,18 @@
 <!-- ========== THE DOOR ========== -->
 <div class="room-zone">
   <h3>🚪 The Door</h3>
-  <p class="loc-flavor">Heavy oak. The corridor beyond. The outside world — held at bay.</p>
+  <p class="loc-flavor">Heavy oak. The corridor beyond. The outside world   held at bay.</p>
   <<if $d1f_exam and not $d1f_npc_aldric_door and $timeSlot is "AFTERNOON">>
-    <span class="badge side">🗡 Footsteps outside — familiar ones</span>
+    <span class="badge side">🗡 Footsteps outside   familiar ones</span>
   <</if>>
   <<if $d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara>>
-    <span class="badge side">🗡 Three notes repeating — a music box</span>
+    <span class="badge side">🗡 Three notes repeating   a music box</span>
   <</if>>
   <<if $timeSlot is "EVENING" and not $d1f_npc_queen_message>>
-    <span class="badge side">🗡 A soft knock — and a sealed note</span>
+    <span class="badge side">🗡 A soft knock   and a sealed note</span>
   <</if>>
   <<if $timeSlot is "EVENING" and $d1f_npc_queen_message and not $d1f_rowan>>
-    <span class="badge main">⚔ Three taps, pause, two more — Rowan</span>
+    <span class="badge main">⚔ Three taps, pause, two more   Rowan</span>
   <</if>>
   <<if $d1f_rowan and not $d1f_npc_marta_tray>>
     <span class="badge side">🗡 A tray on the floor outside</span>

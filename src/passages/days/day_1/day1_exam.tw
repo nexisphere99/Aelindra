@@ -1,25 +1,25 @@
 :: day1_exam [nobr]
 <h2>Ilara's Examination</h2>
 
-<p>She arrives within minutes. She was monitoring from the next room — I know this because I heard movement beyond the wall, the careful sounds of someone staying close without intruding, and because Ilara is the kind of person who would never be more than thirty seconds away from a patient who just underwent a body-rewriting magical procedure.</p>
+<p>She arrives within minutes. She was monitoring from the next room   I know this because I heard movement beyond the wall, the careful sounds of someone staying close without intruding, and because Ilara is the kind of person who would never be more than thirty seconds away from a patient who just underwent a body-rewriting magical procedure.</p>
 
-<p><<npcPortrait "ilara" "Archsorceress Ilara">>She brings broth. Bread. A cup of something that steams. And a clinical calm that is either genuinely steady or such an extraordinary performance of composure that it amounts to the same thing.</p>
+<p><<npcPortrait "ilara" "Archsorceress Ilara">>She brings broth. Bread. A cup of something that steams and a clinical calm that is either genuinely steady or such an extraordinary performance of composure that it amounts to the same thing.</p>
 
 <div class="dialogue"><span class="speaker">ILARA</span>"You're awake. Good." She sets the tray on the bedside table. "How do you feel?"</div>
 
-<p>The question is so vast, so inadequate, that I almost laugh. Almost. The laugh mechanics work — I can feel the breath engage, the diaphragm contract, the sound start to build — but it dies before it reaches my mouth because my mouth is not the mouth that laughs and the sound that would emerge is not a sound I know.</p>
+<p>The question is so vast, so inadequate, that I almost laugh. Almost. The laugh mechanics work   I can feel the breath engage, the diaphragm contract, the sound start to build   but it dies before it reaches my mouth because my mouth is not the mouth that laughs and the sound that would emerge is not a sound I know.</p>
 
-<div class="dialogue"><span class="speaker">EDRIN</span>"How do I FEEL?" My voice. Higher. Softer. With a rasp from screaming during the ritual — the vocal cords were reshaped and then used to scream for six hours, and they're protesting. The sound coming from my throat is a stranger's voice, a woman's voice, and hearing it exit my own mouth is like hearing someone else speak from inside my chest. "I feel like someone took me apart and put me back wrong."</div>
+<div class="dialogue"><span class="speaker">EDRIN</span>"How do I FEEL?" My voice. Higher. Softer. With a rasp from screaming during the ritual   the vocal cords were reshaped and then used to scream for six hours, and they're protesting. The sound coming from my throat is a stranger's voice, a woman's voice, and hearing it exit my own mouth is like hearing someone else speak from inside my chest. "I feel like someone took me apart and put me back wrong."</div>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"Not wrong. Different." Ilara pulls a chair to the bedside. Sits. Her posture is precise — back straight, hands folded, the posture of a healer about to deliver a report. "Your body is performing exactly as expected. The transformation is complete and successful. All indicators are within normal parameters."</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"Not wrong. Different." Ilara pulls a chair to the bedside. Sits. Her posture is precise   back straight, hands folded, the posture of a healer about to deliver a report. "Your body is performing exactly as expected. The transformation is complete and successful. All indicators are within normal parameters."</div>
 
 <p>Normal parameters. My body has been replaced and she's talking about <em>parameters.</em></p>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"I need to examine you." Her voice shifts — warmer, gentler, the clinical precision softened by something deliberately human. "A full examination. To confirm that everything has formed correctly and that there are no complications. I'll explain every step. You can stop me at any time. But I need to do this."</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"I need to examine you." Her voice shifts   warmer, gentler, the clinical precision softened by something deliberately human. "A full examination. To confirm that everything has formed correctly and that there are no complications. I'll explain every step. You can stop me at any time. But I need to do this."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"No."</div>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"Aelindra—"</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"Aelindra "</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Don't call me that."</div>
 
@@ -27,25 +27,25 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"My mother chose a lot of things for me."</div>
 
-<p>A silence. Ilara's rain-grey eyes hold mine. She doesn't blink. She doesn't press. She waits — the patience of a woman who has spent two decades working with magic and bodies and the complicated intersection of the two.</p>
+<p>A silence. Ilara's rain-grey eyes hold mine. She doesn't blink. She doesn't press. She waits   the patience of a woman who has spent two decades working with magic and bodies and the complicated intersection of the two.</p>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"I need to examine you," she repeats. "Not because I doubt the Rite. Because your body is new, and new bodies need monitoring. You're twenty years old and you are experiencing the equivalent of a second puberty compressed into twenty-four hours. Your hormone levels are fluctuating. Your tissue is still settling. If something is wrong — and I don't believe anything is — I need to find it now, while I can still address it."</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"I need to examine you," she repeats. "Not because I doubt the Rite. Because your body is new, and new bodies need monitoring. You're twenty years old and you are experiencing the equivalent of a second puberty compressed into twenty-four hours. Your hormone levels are fluctuating. Your tissue is still settling. If something is wrong   and I don't believe anything is   I need to find it now, while I can still address it."</div>
 
-<p>The logic is sound. The logic was always going to be sound. Logic is how they get you — the people who need you to do things you don't want to do. They make it reasonable. They make it necessary. They make the compliance feel like your idea.</p>
+<p>The logic is sound. The logic was always going to be sound. Logic is how they get you   the people who need you to do things you don't want to do. They make it reasonable. They make it necessary. They make the compliance feel like your idea.</p>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Fine."</div>
 
 <p>She asks me to remove the nightgown. I refuse. She waits. I comply. Because Ilara's tone makes it clear this isn't optional, and it isn't sexual, and the body I'm removing the gown from is one I've had for approximately twelve hours and have no attachment to whatsoever.</p>
 
-<p>That's what I tell myself. The attachment I feel when the linen slides over my nipples — the sharp, electric sensitivity, the involuntary gasp — isn't attachment. It's nerve endings. Nothing more.</p>
+<p>That's what I tell myself. The attachment I feel when the linen slides over my nipples   the sharp, electric sensitivity, the involuntary gasp   isn't attachment. It's nerve endings. Nothing more.</p>
 
-<p>Naked. I'm naked in front of a woman I've met three times, in a body I've inhabited for half a day, and the vulnerability is total. Not because of the nudity — I stood naked in this room yesterday, before the Rite, and the nudity was exposure, not vulnerability. Today the vulnerability comes from the fact that the body being seen is one I haven't consented to know yet. Ilara is seeing me before I've seen myself. She's mapping territory I haven't explored.</p>
+<p>Naked. I'm naked in front of a woman I've met three times, in a body I've inhabited for half a day, and the vulnerability is total. Not because of the nudity   I stood naked in this room yesterday, before the Rite, and the nudity was exposure, not vulnerability. Today the vulnerability comes from the fact that the body being seen is one I haven't consented to know yet. Ilara is seeing me before I've seen myself. She's mapping territory I haven't explored.</p>
 
 <div class="dialogue"><span class="speaker">ILARA</span>"The mirror," she says. "You should look."</div>
 
 <p>The mirror is across the room. Full-length. Polished silver. The same unforgiving reflective surface that every important moment in this story seems to require.</p>
 
-<p>I walk to it. My gait is wrong — the hips sway, the centre of gravity is low, the steps are shorter. I try to walk the way I walked yesterday and the muscles refuse — they're configured differently, the pelvis tilts differently, the femurs are angled inward, and the result is a walk that is feminine not by choice but by physics.</p>
+<p>I walk to it. My gait is wrong   the hips sway, the centre of gravity is low, the steps are shorter. I try to walk the way I walked yesterday and the muscles refuse   they're configured differently, the pelvis tilts differently, the femurs are angled inward, and the result is a walk that is feminine not by choice but by physics.</p>
 
 <p>The mirror.</p>
 
@@ -55,13 +55,13 @@
 
 <p>I hate myself for having it.</p>
 
-<p>Five foot six. Dark wavy hair to the shoulders — it'll grow longer, Ilara says, over the coming weeks. Grey-blue eyes. Unchanged. The same eyes. My eyes, in a face that is and isn't mine. Soft jaw, full lips, graceful neck. Narrow shoulders. The collarbones stand out — delicate ridges that cast small shadows.</p>
+<p>Five foot six. Dark wavy hair to the shoulders   it'll grow longer, Ilara says, over the coming weeks. Grey-blue eyes. Unchanged. The same eyes. My eyes, in a face that is and isn't mine. Soft jaw, full lips, graceful neck. Narrow shoulders. The collarbones stand out   delicate ridges that cast small shadows.</p>
 
-<p>Breasts. Small, firm, high. Large A pushing toward B. The nipples — dark pink, wide, slightly puffy, clearly still developing. They're hard. From the cold, from the scrutiny, from the sheer overwhelm of existing in air.</p>
+<p>Breasts. Small, firm, high. Large A pushing toward B. The nipples   dark pink, wide, slightly puffy, clearly still developing. They're hard. From the cold, from the scrutiny, from the sheer overwhelm of existing in air.</p>
 
 <p>Waist. Narrow. A curve inward that I've only ever seen on other bodies. The ribcage is smaller. The waist tapers. The hips flare. An hourglass drawn by a hand that knew exactly what it was creating.</p>
 
-<p>Between my legs. I force myself to look. A smooth mound. A neat line. The faintest shadow of dark hair beginning. The absence is deafening — the space where my cock hung is now a geography of folds and softness and a throb of awareness I don't want to acknowledge.</p>
+<p>Between my legs. I force myself to look. A smooth mound. A neat line. The faintest shadow of dark hair beginning. The absence is deafening   the space where my cock hung is now a geography of folds and softness and a throb of awareness I don't want to acknowledge.</p>
 
 <p>My ass. Fuller. Rounder. My thighs. Thicker, pressing together. My legs. Shorter. My feet. Smaller.</p>
 
@@ -77,19 +77,19 @@
 
 <p>Ilara examines me with the methodical precision of someone who has performed examinations on bodies she herself helped create. She explains each step. She asks permission before touching. She narrates what she finds.</p>
 
-<p>The pelvic exam is the worst. Not painful — Ilara is gentle, her hands are warm, and the slim speculum she uses is lubricated and designed for comfort. The worst part is the intimacy of it — someone looking into a part of my body that didn't exist yesterday, assessing the architecture of organs I never asked for, confirming that yes, the vaginal canal is fully formed, yes, the cervix is healthy, yes, the uterus and ovaries are functional.</p>
+<p>The pelvic exam is the worst. Not painful   Ilara is gentle, her hands are warm, and the slim speculum she uses is lubricated and designed for comfort. The worst part is the intimacy of it   someone looking into a part of my body that didn't exist yesterday, assessing the architecture of organs I never asked for, confirming that yes, the vaginal canal is fully formed, yes, the cervix is healthy, yes, the uterus and ovaries are functional.</p>
 
 <div class="dialogue"><span class="speaker">ILARA</span>"Your first period will arrive within two to four weeks," she says, removing the speculum with the smooth confidence of a woman who has said this sentence before, possibly to someone in this exact situation.</div>
 
-<p>My first period. Because I am now a person who will have periods. Because this body — this body that was a man's body twelve hours ago — now possesses the full machinery of female reproduction, and that machinery will begin operating on its own schedule regardless of my feelings about it.</p>
+<p>My first period. Because I am now a person who will have periods. Because this body   this body that was a man's body twelve hours ago   now possesses the full machinery of female reproduction, and that machinery will begin operating on its own schedule regardless of my feelings about it.</p>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"The Rite was successful," Ilara says, washing her hands in the basin. "Your body is entirely, functionally female. Chromosomally, hormonally, anatomically." She turns. Her expression is carefully balanced — professional respect and something warmer beneath. "You're a woman, Aelindra."</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"The Rite was successful," Ilara says, washing her hands in the basin. "Your body is entirely, functionally female. Chromosomally, hormonally, anatomically." She turns. Her expression is carefully balanced   professional respect and something warmer beneath. "You're a woman, Aelindra."</div>
 
-<p>The name again. The name that isn't mine. Except it is — because the body it's attached to is mine, and the body is female, and the name is a woman's name, and the logic chain terminates in a place I'm not ready to stand.</p>
+<p>The name again. The name that isn't mine. Except it is   because the body it's attached to is mine, and the body is female, and the name is a woman's name, and the logic chain terminates in a place I'm not ready to stand.</p>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"I want clothes."</div>
 
-<p>She provides them. A breast band — soft linen, wrapping around the new tissue. The contact is overwhelming. Linen smallclothes — fitted differently, shaped for anatomy I'm still refusing to fully acknowledge. She offers a dress. I refuse the dress. I take a loose shirt and trousers instead. They fit wrong — too big at the shoulders, too tight at the hips, gaping at the chest where the breasts push the fabric outward. I look like a woman wearing a man's clothes.</p>
+<p>She provides them. A breast band   soft linen, wrapping around the new tissue. The contact is overwhelming. Linen smallclothes   fitted differently, shaped for anatomy I'm still refusing to fully acknowledge. She offers a dress. I refuse the dress. I take a loose shirt and trousers instead. They fit wrong   too big at the shoulders, too tight at the hips, gaping at the chest where the breasts push the fabric outward. I look like a woman wearing a man's clothes.</p>
 
 <p>Which is exactly what I am.</p>
 
@@ -103,7 +103,7 @@
 <<completeObjective "exam">>
 <<addObjective "alone" "You need time. Be alone with it." "MAIN">>
 <<addObjective "aldric_door" "Footsteps in the corridor" "SIDE">>
-<<addObjective "body_explore" "This body — notice things" "SIDE">>
+<<addObjective "body_explore" "This body   notice things" "SIDE">>
 
 <div class="scene-end">
   [[Continue → |day1_hub]]

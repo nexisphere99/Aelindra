@@ -1,14 +1,14 @@
 :: day1f-init [widget nobr]
 
 /* ============================================================
-   DAY 1 ("Wrong") — FEMALE ROUTE — SCENE & OBJECT FLAG INIT
+   DAY 1 ("Wrong")   FEMALE ROUTE   SCENE & OBJECT FLAG INIT
    Called once, from day0_void.tw, mirroring day0-init.tw etc.
    Opens with <<clearObjectives>> per the established convention.
 
    NAMING: widget is "day1fInit" (not "day1Init") and every flag
    is prefixed d1f_ (not d1_), because Day -1 already owns the
    name "day1Init" and the d1_ prefix. Day 1 forward is a genuine
-   fork — female route content lives here; the futa route (not
+   fork   female route content lives here; the futa route (not
    yet written) will need its own day1tInit/d1t_ or similar,
    called from day0_void_futa.tw instead, once it exists.
 

@@ -32,6 +32,14 @@
   <span class="badge main">⚔ Confront the Queen</span>
   [[Enter → |day-1_queen]]
 </div>
+<<elseif $d1_moonspire2 and not $d1_queen2>>
+<div class="loc-card">
+  <<locationImage "queen_chambers" "Queen's Chambers">>
+  <h3>👑 Queen's Chambers   East Wing</h3>
+  <p class="loc-flavor">She should hear this too   what Ilara just told you.</p>
+  <span class="badge main">⚔ Tell your mother</span>
+  [[Enter → |day-1_queen2]]
+</div>
 <</if>>
 
 <!-- ========== PALACE CORRIDORS ========== -->
@@ -57,6 +65,9 @@
   <<if not $d1_moonspire>>
     <span class="badge main">⚔ Meet Archsorceress Ilara</span>
   <<else>>
+    <<if $d1_training and not $d1_moonspire2>>
+      <span class="badge main">⚔ Ilara has more to say</span>
+    <</if>>
     <<if not $d1_npc_nara>>
       <span class="badge side">🗡 Voices on the lower level</span>
     <</if>>

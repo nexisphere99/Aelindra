@@ -28,7 +28,7 @@
 
 <<if _queenCard>>
 <div class="interaction-card side">
-  <h4>📜 A Soft Knock — Sealed Note</h4>
+  <h4>📜 A Soft Knock   Sealed Note</h4>
   <p>Not Rowan's knock. Formal. A hand extends through the gap. The royal seal.</p>
   [[Take the note → |day1_npc_queen_message]]
 </div>

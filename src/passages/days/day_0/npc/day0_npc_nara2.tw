@@ -1,10 +1,10 @@
 :: day0_npc_nara2 [nobr]
 <<npcPortrait "nara" "Nara">>
-<h3>Apprentice Nara — Preparing the Chamber</h3>
+<h3>Apprentice Nara   Preparing the Chamber</h3>
 
-<p>She's on the stairs. Carrying candles — an armful of white wax pillars that she's struggling to balance. Her robe keeps catching under her feet. The enchanted music box is clipped to her belt, playing three notes on repeat — a fragment of the sympathetic resonance experiment, still not working right.</p>
+<p>She's on the stairs. Carrying candles   an armful of white wax pillars that she's struggling to balance. Her robe keeps catching under her feet. The enchanted music box is clipped to her belt, playing three notes on repeat   a fragment of the sympathetic resonance experiment, still not working right.</p>
 
-<div class="dialogue"><span class="speaker">NARA</span>"Your — oh! — Your Highness!" She wobbles. A candle slides. She catches it with her chin, which is both impressive and alarming. "I'm setting up the chamber. Ilara wants four hundred and twelve candles. Four hundred and twelve. Not four hundred, not four hundred and twenty — four hundred and TWELVE. Because apparently the magic cares about prime factors."</div>
+<div class="dialogue"><span class="speaker">NARA</span>"Your   oh!   Your Highness!" She wobbles. A candle slides. She catches it with her chin, which is both impressive and alarming. "I'm setting up the chamber. Ilara wants four hundred and twelve candles. Four hundred and twelve. Not four hundred, not four hundred and twenty   four hundred and TWELVE. Because apparently the magic cares about prime factors."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Four hundred and twelve isn't prime."</div>
 
@@ -20,9 +20,9 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Go ahead."</div>
 
-<div class="dialogue"><span class="speaker">NARA</span>"I was born with my left hand fused — the fingers webbed together. Couldn't grip, couldn't hold. The Silverveil fixed it when I was three. Transformation magic. Not the Rite — a smaller working, just the hand. But the principle is the same."</div>
+<div class="dialogue"><span class="speaker">NARA</span>"I was born with my left hand fused   the fingers webbed together. Couldn't grip, couldn't hold. The Silverveil fixed it when I was three. Transformation magic. Not the Rite   a smaller working, just the hand. But the principle is the same."</div>
 
-<p>She holds up her left hand. Five fingers, separate, functional. A faint silvery line runs between the ring and middle fingers — a scar, or a memory of one.</p>
+<p>She holds up her left hand. Five fingers, separate, functional. A faint silvery line runs between the ring and middle fingers   a scar, or a memory of one.</p>
 
 <div class="dialogue"><span class="speaker">NARA</span>"I don't remember having the webbed hand. I was too young. But my mother says I screamed for an hour after the working, and then I stopped, and I looked at my new hand, and I opened and closed my fingers for the rest of the day because I couldn't believe they moved separately. She says the first thing I gripped was a wooden spoon. Which is probably why I ended up in a tower full of tools and instruments."</div>
 

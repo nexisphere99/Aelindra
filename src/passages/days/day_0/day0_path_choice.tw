@@ -3,15 +3,15 @@
 
 <<locationImage "moonspire_ritual_chamber_prepared" "The Ritual Chamber, prepared for the Rite">>
 
-<p>At the top of the stairs, Ilara stops me. The Ritual Chamber door is open behind her — I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.</p>
+<p>At the top of the stairs, Ilara stops me. The Ritual Chamber door is open behind her   I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.</p>
 
-<div class="dialogue"><span class="speaker">ILARA</span>"Before we proceed." Her voice is formal now — the voice of the Archsorceress, not the woman who gave me tea and spoke with controlled compassion. "The Rite has two forms."</div>
+<div class="dialogue"><span class="speaker">ILARA</span>"Before we proceed." Her voice is formal now   the voice of the Archsorceress, not the woman who gave me tea and spoke with controlled compassion. "The Rite has two forms."</div>
 
-<p>She explains. The complete transformation — every aspect of the body changed. Total biological conversion. Or the partial form — the body becomes female in most aspects, but certain male anatomy remains alongside the new. Both forms are equally valid in the eyes of the law. Both secure the succession.</p>
+<p>She explains. The complete transformation   every aspect of the body changed. Total biological conversion. Or the partial form   the body becomes female in most aspects, but certain male anatomy remains alongside the new. Both forms are equally valid in the eyes of the law. Both secure the succession.</p>
 
 <div class="dialogue"><span class="speaker">ILARA</span>"The choice is yours. It is the last choice that will be entirely your own for the next six hours."</div>
 
-<p class="path-intro">This is the last choice that is entirely your own. It will never be revisited — the two paths from here never merge again.</p>
+<p class="path-intro">This is the last choice that is entirely your own. It will never be revisited   the two paths from here never merge again.</p>
 
 <div class="path-choice-ritual">
   <div class="path-cards">
@@ -34,7 +34,7 @@
       <h3>⚔ Partial Transformation</h3>
       <p class="path-desc">"Both. I want to be... both."</p>
       <ul class="path-notes">
-        <li>A fully female body — and a preserved, strengthened cock</li>
+        <li>A fully female body   and a preserved, strengthened cock</li>
         <li>Dual anatomy, both systems functional</li>
         <li>Unprecedented. Harder politically. Yours.</li>
       </ul>

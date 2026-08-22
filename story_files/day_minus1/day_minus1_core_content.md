@@ -82,7 +82,7 @@ The room is silent. The candles gutter. Somewhere in the palace, the clock chime
 
 A pause. Her eyes are wet. The fire in them is still there   nothing could extinguish that fire, not illness, not death, not the sight of her only child looking at her with something close to hatred   but the wetness is real. The tears she won't shed are real.
 
-"Yes." Her voice is iron wrapped in velvet. "I would. Because that's what queens do. And that's what I'm asking you to become."
+"Yes." Her voice is iron wrapped in velvet. "I would. Because that's what queens do and that's what I'm asking you to become."
 
 I stand. The parchment with my list is crumpled in my fist. Every item crossed off. Every door closed. Every escape route bricked shut by law, by politics, by military reality, by the simple vicious mathematics of power.
 
@@ -185,7 +185,7 @@ She looks at me. For the first time, something in her expression shifts   the cl
 
 "She chose it to escape," I say. "Casta. She didn't choose it to be happy."
 
-"No. She chose it to survive. And then she lived. As we all do   making something of what we didn't choose."
+"No. She chose it to survive and then she lived. As we all do   making something of what we didn't choose."
 
 I set the cup down. Stand. My legs hold me, which feels like more of an accomplishment than it should.
 
@@ -260,9 +260,9 @@ He stands first. Offers his hand. I take it   his grip is warm and calloused and
 
 "I think I owe the armoury an apology."
 
-"You owe the armoury three dummies. I'll add it to the requisition." The ghost of something warm in his voice. "Get some food. And wrap those hands   the blisters will get infected if you leave them."
+"You owe the armoury three dummies. I'll add it to the requisition." The ghost of something warm in his voice. "Get some food and wrap those hands   the blisters will get infected if you leave them."
 
-He walks away. His back is straight, his stride is even, and watching him cross the training yard I think: *that man would follow me into fire. And I'm about to become something he may not recognise.*
+He walks away. His back is straight, his stride is even, and watching him cross the training yard I think: *that man would follow me into fire and I'm about to become something he may not recognise.*
 
 **[PLAYER OBJECTIVE UNLOCKED: "Evening approaches   return to your chambers"]**
 
@@ -277,7 +277,7 @@ The knock is Rowan's knock   three taps, a pause, two more, our old signal from 
 
 "It's open."
 
-They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality. And cheese. A wedge of something sharp and crumbly, wrapped in cloth. And their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.
+They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality and cheese. A wedge of something sharp and crumbly, wrapped in cloth and their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.
 
 "You look like you lost a fight with a threshing machine," they say, dropping to the floor in front of the fire because Rowan has never, in the entirety of our friendship, sat in a chair when a floor was available. They claim furniture creates artificial hierarchy. I think they just like being on the ground.
 
@@ -398,7 +398,7 @@ I step back from the mirror. The man in the glass steps back too. We look at eac
 
 I try to see her. The woman I'll become. I try to imagine this face softened, this jaw rounded, this body curved and shortened and remade. I can't. The imagination fails. It's like trying to picture a colour you've never seen   the concept is there but the image won't form.
 
-Tomorrow I will walk to the Moonspire Tower. I will lie on the stone altar. I will drink a potion made of moonflower and silver and my own blood. And six hours later, when I wake   if I wake   the man in this mirror will be gone, and someone else will be looking back at me, and she will have my eyes but nothing else that I recognise, and I will have to learn to call her *me.*
+Tomorrow I will walk to the Moonspire Tower. I will lie on the stone altar. I will drink a potion made of moonflower and silver and my own blood and six hours later, when I wake   if I wake   the man in this mirror will be gone, and someone else will be looking back at me, and she will have my eyes but nothing else that I recognise, and I will have to learn to call her *me.*
 
 I get into bed. The sheets are cold, then warm. The fire clicks and settles. Outside, the palace sleeps around me   guards on their posts, servants in their quarters, my mother in her sickbed with her grey-blue eyes and her iron will and her absolute, unshakeable conviction that this is the only way.
 
@@ -408,7 +408,7 @@ I sleep. Finally. From exhaustion, from wine, from the particular surrender of a
 
 I dream of the tapestries in the Moonspire. The serpent becoming the river. The tree becoming the woman. The bird becoming the song.
 
-In the dream, the bird is me. And the song is beautiful. And I can't remember what wings felt like.
+In the dream, the bird is me and the song is beautiful and I can't remember what wings felt like.
 
 ---
 

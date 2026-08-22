@@ -1,0 +1,147 @@
+:: day-1_moonspire2 [nobr]
+<div class="scene-image"><<locationImage "moonspire_tower" "Moonspire Tower">></div>
+
+<h2>Moonspire Tower   One More Question</h2>
+
+<p>Late afternoon light, gone amber at the edges. I cross the covered bridge for the second time today. My arms ache from two hours of beating a training dummy into scrap. My palms sting where the blisters split. My shirt is still sweat-damp from the yard.</p>
+
+<p>I didn't announce myself this time. I don't send a page ahead, don't wait for an invitation. I just climb the stairs   one flight, two, three   and find her in the Archsorceress's quarters, writing at a desk, candles lit early against the coming dusk.</p>
+
+<p>She looks up. No surprise in her face. If anything, she looks like she's been expecting this exact moment since I left this morning.</p>
+
+<p><<npcPortrait "ilara" "Archsorceress Ilara">>I stay in the doorway. Standing, not entering. My voice comes out hoarser than I intend   exertion, or emotion, or both.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Is that the only way?"</div>
+
+<p>Ilara sets down her quill.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Sit down, Prince Edrin."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Just answer me. The Rite you described this morning   bones reshaping, the cock dissolving, the whole rewrite. Is that the ONLY form? Is there any version that doesn't require losing everything?"</div>
+
+<p>She studies me. The clinical composure shifts   just slightly   into something more careful. She's reading the blistered palms, the sweat, the hoarse voice. A man who spent an afternoon destroying a training dummy because he couldn't destroy the situation. A man who grieved with his fists and arrived, finally, at the question she's been waiting for.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Sit down. Please."</div>
+
+<p>I sit. She doesn't offer tea this time. This isn't a briefing. This is a lifeline, and we both know it.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"This morning I described the standard form of the Rite. The Complete transformation. That is the version performed on all three historical subjects. It is the simplest, the safest, and the most politically defensible."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"But it's not the only version."</div>
+
+<p>A pause. The decision to speak, visible on her face   the Archsorceress weighing exactly what she's about to offer.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"No. It's not."</div>
+
+<p>I go very still.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"There is a second form. Older. Not performed in the modern era at all, though the Silverveil texts describe it in detail. We call it the Partial Rite."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Partial."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"In the Partial form, the body is feminised   breasts, hips, facial structure, skin, voice, height. All the same changes. A uterus, ovaries, and vagina are formed. You would be capable of conception, pregnancy, and childbirth. You would satisfy the succession law's requirement for a female heir."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"But?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"But the penis is preserved. It changes   the magic touches everything it encounters. The skin softens, the sensitivity increases, it may narrow slightly. But the organ itself remains. Functional. Present. You would possess both sets of anatomy. Female reproductive capability, and the male organ."</div>
+
+<p>The information lands in stages   disbelief, then calculation, then something I don't expect: hope. A thin, sharp thread of it, and I distrust it immediately.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I could... keep it."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You could retain your penis while gaining the female anatomy required for succession. Yes."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And the law   the succession law would still "</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The law requires a female heir capable of bearing children. In the Partial form, you would possess a uterus and ovaries. You would be capable of pregnancy. The presence of additional anatomy   the retained penis   does not negate the required anatomy. Legally, the Charter's conditions would be met."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You knew this THIS MORNING. You sat across from me, watched me process losing my entire body, and you didn't mention I could keep part of it."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Yes."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"WHY?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Because if I'd told you this morning   in the same breath as the Complete form   you would have seized on it without understanding the cost. You'd have heard 'keep the cock' and stopped listening. I needed you to sit with the full loss first. To grieve it. To rage at it. To beat a training dummy until your hands bled." Her eyes flick to my palms. "And then to come back and ask the question you just asked. Because now you'll listen to the complications with the same seriousness you gave the Complete form. Now you understand what you're choosing between, not just what you're choosing."</div>
+
+<p>I want to be angry. I am angry. But the logic is impeccable, and the manipulation   if that's what it was   was in service of my understanding, not against it. She withheld hope until I was ready to hold it carefully instead of clutching it desperately.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I hate that you're right."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Most people do."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What complications?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Politically: if the Elder Council or House Ashborne learns of the retained anatomy, they may challenge the Rite's validity   argue you're not fully transformed, still male, that the Rite was incomplete. The legal argument is defensible; the Charter says 'female heir,' not 'only female.' But the debate would be vicious."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"So I'd have to hide it."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You would have to conceal it. Daily. In every public appearance, under every gown, during every examination anyone outside the Silverveil might witness. The concealment would be a constant burden   physical, emotional, political."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"And the other complications?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Physically: dual anatomy creates complexity. Two arousal systems in one body. Hormonal interactions between estrogenic and residual androgenic function. Menstruation, while possessing a penis. The body would be unprecedented   not in ancient history, but in modern history. No contemporary physician would understand it. The Silverveil would be your only medical resource."</div>
+
+<p>She pauses. Chooses her next words with visible care.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"And there is one more factor. The body the Partial Rite creates exists in no current social category. You would be neither the man the kingdom knew nor the woman it expects. You would be something the world doesn't have language for. The isolation of that   the loneliness of being the only person with your body   is a real cost. I would be failing you if I didn't name it."</div>
+
+<p>The hope hasn't vanished. It's been tempered   not the wild, desperate hope of <em>I can keep everything</em>, but the cautious, measured hope of <em>I can keep one thing. The thing that matters most. At a price.</em></p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You said the texts describe it. It's been done before?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The texts reference at least one subject   possibly more, the records are fragmentary. The old world had a word for the body the Partial Rite creates. <em>Vael'kirin.</em> The bridge between. In certain old traditions, the vael'kirin was considered sacred   a body that held both creative forces, the capacity to receive life and to project it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Sacred."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"To the old religion. The modern world is less generous in its interpretations."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The modern world would call me a freak." The words come out bitter, low.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The modern world doesn't know what to call you. That's different from 'freak.' The absence of a word isn't a judgement. It's an invitation to create one."</div>
+
+<p>She stands. Crosses to a shelf. Returns with a scroll   old, brittle, sealed with wax.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"I won't open this now. But if you choose the Partial Rite, this scroll holds everything the Silverveil knows about the vael'kirin body   the care, the management, the pleasure, the magic. You wouldn't be navigating blind. You would have guidance."</div>
+
+<p>She sets the scroll on the table between us.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"The choice between the Complete and Partial forms is yours. Both are valid. Both satisfy the law. Both will change your body in ways that cannot be undone. The Complete form takes everything and gives you a body the world understands. The Partial form takes almost everything and gives you a body the world doesn't   but lets you keep the one piece of yourself you're most afraid to lose."</div>
+
+<p>A long silence.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I need to think."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You have until tomorrow morning. The Rite is performed at the meridian hour   noon. Come to the tower by dawn to prepare. Tell me your choice then."</div>
+
+<p>I stand. My legs are unsteady. I walk to the door.</p>
+
+<p>At the threshold, I stop. Don't turn around.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"If I keep it   the cock   if I walk around with breasts and a vagina and also a cock   will I still be me?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You will be you, in a body no one has ever worn before. Whether that's still you depends entirely on whether you decide it is."</div>
+
+<p>I leave. The tapestries shift as I pass on the stairs   the serpent becoming the river, the tree becoming the woman, the bird becoming the song. I used to think they were illustrations. Now they feel like previews of a choice I haven't made.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $statWIS += 3>>
+<<set $stress += 5>>
+<<set $ilaraFamiliarity += 3>>
+<<set $riteKnowledge += 5>>
+
+<!-- --- ADVANCE TIME ---
+     Deliberately stays AFTERNOON, not EVENING - Edrin's Chambers'
+     "someone is knocking" badge on the hub triggers as soon as
+     timeSlot hits EVENING, and Seraphina's follow-up scene
+     (day-1_queen2) is meant to happen first. queen2 advances to
+     EVENING once that conversation actually happens. -->
+<<set $timeSlot to "AFTERNOON">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_moonspire2 to true>>
+<<completeObjective "moonspire_partial">>
+<<addObjective "queen_seraphina2" "She should hear this too   Queen's Chambers" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day-1_moonspire_hub]]
+</div>

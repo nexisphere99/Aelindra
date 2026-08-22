@@ -1,4 +1,4 @@
-# AELINDRA — Day 1 Code Agent Prompt (FEMALE ROUTE)
+# AELINDRA   Day 1 Code Agent Prompt (FEMALE ROUTE)
 ## Confined Open-World Hub | Moonspire Tower Recovery
 ### SugarCube 2.37+ | Twine Implementation
 
@@ -8,7 +8,7 @@
 
 Day 1 ("Wrong") takes place entirely within the Moonspire Tower. Aelindra does NOT leave. The open-world hub is dramatically reduced to the **Recovery Room** and its immediate surroundings. Instead of navigating between palace locations, the player interacts with objects in the room, responds to visitors who come to the door, and makes small exploratory choices within a constrained space.
 
-This is **intentional claustrophobia**. The reduced hub mirrors Aelindra's psychological state — the world has shrunk to four walls and a body she doesn't recognise.
+This is **intentional claustrophobia**. The reduced hub mirrors Aelindra's psychological state   the world has shrunk to four walls and a body she doesn't recognise.
 
 **ARCHITECTURE:** The hub is a SINGLE ROOM with interactive objects, timed visitor events, and body-awareness encounters that unlock throughout the day. The "locations" are areas within the room, objects, and the door.
 
@@ -24,10 +24,10 @@ This is **intentional claustrophobia**. The reduced hub mirrors Aelindra's psych
 
 ---
 
-## NEW VARIABLES — DAY 1
+## NEW VARIABLES   DAY 1
 
 ```javascript
-// ===== DAY 1 INIT — Set in Day 0 void transition =====
+// ===== DAY 1 INIT   Set in Day 0 void transition =====
 
 <<set $dayNumber to 1>>
 <<set $dayLabel to "Wrong">>
@@ -66,7 +66,7 @@ This is **intentional claustrophobia**. The reduced hub mirrors Aelindra's psych
 
 ---
 
-## TIME SYSTEM — DAY 1
+## TIME SYSTEM   DAY 1
 
 Day 1 uses a simplified time system. Main scenes advance the clock. Side encounters DON'T advance time (they're available within the current time window).
 
@@ -86,9 +86,9 @@ NIGHT      → First night (main), Sleep
 
 ---
 
-## ROOM HUB — THE RECOVERY ROOM
+## ROOM HUB   THE RECOVERY ROOM
 
-Instead of a location grid, Day 1 uses a **room layout** — interactive objects and zones within a single space.
+Instead of a location grid, Day 1 uses a **room layout**   interactive objects and zones within a single space.
 
 ### Hub Passage: `day1_hub`
 
@@ -96,7 +96,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 :: day1_hub
 
 <div class="hub-header room-header">
-  <h2>Moonspire Tower — Recovery Room</h2>
+  <h2>Moonspire Tower   Recovery Room</h2>
   <p class="time-display"><<print $timeSlot>></p>
   <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
@@ -138,18 +138,18 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
   /* ========== THE DOOR ========== */
   <div class="room-zone">
     <h3>🚪 The Door</h3>
-    <p class="loc-flavor">Heavy oak. The corridor beyond. The outside world — held at bay.</p>
+    <p class="loc-flavor">Heavy oak. The corridor beyond. The outside world   held at bay.</p>
     <<if $d1f_exam and not $d1f_npc_aldric_door and $timeSlot is "AFTERNOON">>
-      <span class="badge side">🗡 Footsteps outside — familiar ones</span>
+      <span class="badge side">🗡 Footsteps outside   familiar ones</span>
     <</if>>
     <<if $d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara>>
-      <span class="badge side">🗡 Three notes repeating — a music box</span>
+      <span class="badge side">🗡 Three notes repeating   a music box</span>
     <</if>>
     <<if $timeSlot is "EVENING" and not $d1f_npc_queen_message>>
-      <span class="badge side">🗡 A soft knock — and a sealed note</span>
+      <span class="badge side">🗡 A soft knock   and a sealed note</span>
     <</if>>
     <<if $timeSlot is "EVENING" and $d1f_npc_queen_message and not $d1f_rowan>>
-      <span class="badge main">⚔ Three taps, pause, two more — Rowan</span>
+      <span class="badge main">⚔ Three taps, pause, two more   Rowan</span>
     <</if>>
     <<if $d1f_rowan and not $d1f_npc_marta_tray>>
       <span class="badge side">🗡 A tray on the floor outside</span>
@@ -207,7 +207,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 
 ---
 
-## SUB-HUBS — ROOM ZONES
+## SUB-HUBS   ROOM ZONES
 
 ### Door Sub-Hub
 
@@ -234,7 +234,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 
 <<if $timeSlot is "EVENING" and not $d1f_npc_queen_message>>
 <div class="interaction-card side">
-  <h4>📜 A Soft Knock — Sealed Note</h4>
+  <h4>📜 A Soft Knock   Sealed Note</h4>
   <p>Not Rowan's knock. Formal. A hand extends through the gap. The royal seal.</p>
   [[Take the note → |day1_npc_queen_message]]
 </div>
@@ -337,7 +337,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 <<completeObjective "exam">>
 <<addObjective "alone" "You need time. Be alone with it." "MAIN">>
 <<addObjective "aldric_door" "Footsteps in the corridor" "SIDE">>
-<<addObjective "body_explore" "This body — notice things" "SIDE">>
+<<addObjective "body_explore" "This body   notice things" "SIDE">>
 
 <div class="scene-end">[[Continue → |day1_hub]]</div>
 ```
@@ -352,7 +352,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 <<set $timeSlot to "EVENING">>
 
 <<completeObjective "alone">>
-<<addObjective "rowan_evening" "Wait for evening — someone will come" "MAIN">>
+<<addObjective "rowan_evening" "Wait for evening   someone will come" "MAIN">>
 
 <div class="scene-end">[[Continue → |day1_hub]]</div>
 ```
@@ -410,7 +410,7 @@ Instead of a location grid, Day 1 uses a **room layout** — interactive objects
 
 ---
 
-## CSS ADDITIONS — ROOM LAYOUT
+## CSS ADDITIONS   ROOM LAYOUT
 
 ```css
 /* Room layout replaces location grid for confined days */
@@ -458,9 +458,9 @@ AELINDRA/
 │   ├── day_0/
 │   └── day_1/                                    ← NEW
 │       ├── day1_core_content_female.md           ← Female route scenes
-│       ├── day1_core_content_futa.md             ← (FUTURE — futa route)
+│       ├── day1_core_content_futa.md             ← (FUTURE   futa route)
 │       ├── day1_supplementary_npc_female.md      ← Female route encounters
-│       ├── day1_supplementary_npc_futa.md        ← (FUTURE — futa route)
+│       ├── day1_supplementary_npc_futa.md        ← (FUTURE   futa route)
 │       └── day1_code_agent_prompt_female.md      ← This file
 ├── engine/
 │   └── passages/
@@ -489,15 +489,15 @@ AELINDRA/
 
 ---
 
-## QUALITY CHECKLIST — DAY 1
+## QUALITY CHECKLIST   DAY 1
 
-- [ ] **Hub is a ROOM layout, not a location grid** — vertical list of room zones
-- [ ] **No location grid** — player stays in one room all day
-- [ ] **MC portrait shows `aelindra_day1`** — first female portrait
+- [ ] **Hub is a ROOM layout, not a location grid**   vertical list of room zones
+- [ ] **No location grid**   player stays in one room all day
+- [ ] **MC portrait shows `aelindra_day1`**   first female portrait
 - [ ] **Right sidebar body stats are NOW VISIBLE** (`bodyStatusVisible = true`)
 - [ ] **MC name shows "Aelindra"** in right sidebar
 - [ ] **MC title shows "Princess of Aethermere"**
-- [ ] **Visitors arrive at the DOOR at specific time slots** — Aldric (afternoon), Queen message (evening), Rowan (evening), Marta tray (after Rowan)
+- [ ] **Visitors arrive at the DOOR at specific time slots**   Aldric (afternoon), Queen message (evening), Rowan (evening), Marta tray (after Rowan)
 - [ ] **Nara only appears if met on Day -1** (continuity gate)
 - [ ] **Items from Day 0 inventory appear on bedside table**
 - [ ] **Body discoveries encounter is available after exam**
@@ -507,4 +507,4 @@ AELINDRA/
 - [ ] **Queen's message must arrive BEFORE Rowan** (evening sequencing)
 - [ ] **Marta's tray appears AFTER Rowan leaves** (post-visit discovery)
 - [ ] **CSS uses `.room-layout` instead of `.location-grid`**
-- [ ] **No palace locations accessible** — tower only
+- [ ] **No palace locations accessible**   tower only

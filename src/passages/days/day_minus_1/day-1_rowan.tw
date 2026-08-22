@@ -9,7 +9,7 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"It's open."</div>
 
-<p><<npcPortrait "rowan" "Rowan">>They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality. And cheese. A wedge of something sharp and crumbly, wrapped in cloth. And their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.</p>
+<p><<npcPortrait "rowan" "Rowan">>They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality and cheese. A wedge of something sharp and crumbly, wrapped in cloth and their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.</p>
 
 <div class="dialogue"><span class="speaker">ROWAN</span>"You look like you lost a fight with a threshing machine," they say, dropping to the floor in front of the fire because Rowan has never, in the entirety of our friendship, sat in a chair when a floor was available. They claim furniture creates artificial hierarchy. I think they just like being on the ground.</div>
 
@@ -33,7 +33,7 @@
 
 <p>The succession crisis. The Elder Council. Vareth's alliances, his lawyers, his army, his seven legal minds paid to seal every loophole shut. Mother's illness   worse than anyone outside the east wing knows, the blood in the handkerchief she doesn't hide quickly enough, the cough that racks her body like something inside is trying to claw its way out. The Founding Charter, unbreakable, un-amendable, a six-hundred-year-old cage. The list in my pocket, every item crossed off.</p>
 
-<p>And the Rite. The Moonspire. Ilara. The altar. The potion. The six hours of pain. The permanent, irreversible, total transformation. Bones reshaping. Height dropping. Organs... changing. Everything that I am, physically, replaced by something else. Something female. Something that can sit on the throne and bear an heir and satisfy the bloodless bureaucratic language of a law written by dead men in an age when dragons may or may not have been real.</p>
+<p>The Rite. The Moonspire. Ilara. The altar. The potion. The six hours of pain. The permanent, irreversible, total transformation. Bones reshaping. Height dropping. Organs... changing. Everything that I am, physically, replaced by something else. Something female. Something that can sit on the throne and bear an heir and satisfy the bloodless bureaucratic language of a law written by dead men in an age when dragons may or may not have been real.</p>
 
 <p>I tell them about the restricted diary in the library   <em>whose are these?</em> I tell them about Ilara's explanation   clinical, precise, devastating. I tell them about the training dummy, the two hours of hitting things because the alternative was screaming.</p>
 
@@ -73,7 +73,7 @@
 
 <div class="dialogue"><span class="speaker">ROWAN</span>"I'll still be here. You'll still be you. Just... more." They squeeze my arm. "Edrin. Listen. I have been remaking myself every day since I was old enough to understand that the world doesn't have a shape for what I am. Half-elf. Half-human. Neither thing completely. Every town I enter, I choose which part to lead with. Which ears to show. Which songs to play. It's not losing yourself. It's finding out which parts were always the real ones."</div>
 
-<div class="dialogue"><span class="speaker">EDRIN</span>"And which parts are the real ones?"</div>
+<div class="dialogue"><span class="speaker">EDRIN</span>"Which parts are the real ones?"</div>
 
 <div class="dialogue"><span class="speaker">ROWAN</span>"The ones that survive the change."</div>
 

@@ -150,7 +150,7 @@ body {
   padding: 40px 32px;
 }
 
-/* --- PASSAGE NAV BAR — Back / Forward + (mobile-only) sidebar toggles --- */
+/* --- PASSAGE NAV BAR   Back / Forward + (mobile-only) sidebar toggles --- */
 #passage-nav {
   display: flex;
   align-items: center;
@@ -732,7 +732,7 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   padding: 16px 0;
 }
 
-/* Room layout — replaces the location grid on confined days (Day 1's
+/* Room layout   replaces the location grid on confined days (Day 1's
    Moonspire recovery room): a single vertical column of zones rather
    than a multi-column grid, since there's only ever one "location" */
 .room-layout {
@@ -1224,11 +1224,11 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
 
 
 /* ================================================================
-   RESPONSIVE — MOBILE DRAWER SIDEBARS
+   RESPONSIVE   MOBILE DRAWER SIDEBARS
    Below the breakpoint, both sidebars leave the document flow
    entirely and become full-height off-canvas drawers (slid out via
    transform, toggled by the two nav-bar buttons + closed by tapping
-   the backdrop or navigating to a new passage — see script.js).
+   the backdrop or navigating to a new passage   see script.js).
    Above the breakpoint, the normal desktop three-panel layout
    (defined earlier in this file) applies unchanged.
    ================================================================ */
@@ -1368,7 +1368,7 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
 }
 
 /* ================================================================
-   PATH CHOICE (day0_path_choice.tw) — the permanent Female/Futa
+   PATH CHOICE (day0_path_choice.tw)   the permanent Female/Futa
    fork. Was originally an upfront title-screen choice; removed from
    there per an earlier revision (see README's "no upfront choice"
    note) and moved here, mid-ritual, where it actually lives now.

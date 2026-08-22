@@ -137,11 +137,11 @@ She seems to remember who she's talking to. The enthusiasm dims, replaced by an 
 
 "I'm sorry, Your Highness. You don't want to hear about music boxes. You're here for... important things."
 
-"I'm here because I took the wrong stairs. And the music box is considerably more interesting than the things I'm here for."
+"I'm here because I took the wrong stairs and the music box is considerably more interesting than the things I'm here for."
 
 Something in my voice   the flatness of it, maybe, or the weight beneath the words   makes her look at me more carefully. She's a Silverveil apprentice. She may not know the specifics of what Ilara and I discussed, but she knows the tower, she knows the Rite exists, and she's not stupid.
 
-"The tower looks scary from outside," she says, quietly. "All that white stone and the glowing and the wind on the bridge. But inside it's just... rooms. And people. And badly enchanted music boxes. It's not as frightening as it looks."
+"The tower looks scary from outside," she says, quietly. "All that white stone and the glowing and the wind on the bridge. But inside it's just... rooms and people and badly enchanted music boxes. It's not as frightening as it looks."
 
 "Is that wisdom or comfort?"
 
@@ -321,7 +321,7 @@ I sit. She puts food in front of me   bread torn from a warm loaf, a bowl of thi
 
 She's telling me what the numbers look like. The human cost, measured in laundry and soup and guard schedules. Marta doesn't deal in politics. She deals in the logistics of feeding and maintaining a palace, and the logistics tell a story that's harder to argue with than any legal brief.
 
-"Whatever you're deciding, Your Highness," she says, finally turning to face me, her flour-dusted face set in an expression that's half maternal fury and half something gentler that she'd never admit to, "decide soon. The palace can feel it. When the crown is uncertain, the whole building holds its breath. And I can't cook on held breath."
+"Whatever you're deciding, Your Highness," she says, finally turning to face me, her flour-dusted face set in an expression that's half maternal fury and half something gentler that she'd never admit to, "decide soon. The palace can feel it. When the crown is uncertain, the whole building holds its breath and I can't cook on held breath."
 
 The soup is excellent. The bread is warm. The world is ending and Marta is baking a fortress of carbohydrates against the dark, and somehow this is the most rational response anyone has had to the crisis.
 
@@ -358,9 +358,9 @@ I stare at him.
 
 "Have you shared this with anyone?"
 
-"No, Your Highness. Just you. And Elise, who helped me find it, but she doesn't know why I was looking."
+"No, Your Highness. Just you and Elise, who helped me find it, but she doesn't know why I was looking."
 
-"Keep it that way. And keep working. I want every reference, every gloss, every scrap of marginalia that mentions 'rite' in the context of succession. Compile it. Date it. Make it unassailable."
+"Keep it that way and keep working. I want every reference, every gloss, every scrap of marginalia that mentions 'rite' in the context of succession. Compile it. Date it. Make it unassailable."
 
 "Yes, Your Highness." He's already sinking back to the floor, hands reaching for books, his mind already three paragraphs ahead of his body. "I'll have it within two days."
 
@@ -437,7 +437,7 @@ Wynn is covering the rose beds with burlap. The temperature is dropping   a clea
 
 He moves to the next bed. I follow, because following Wynn through a garden at night is the closest thing to meditation I've found.
 
-"I cut the dead branches. Clean cuts. Sealed the wounds with wax. And you know what? Underneath the dead wood, the core was green. Alive. The frost killed the outside but the inside survived. It'll put out new branches in spring. Different directions, different shape, but the same jasmine. Same scent. Same roots."
+"I cut the dead branches. Clean cuts. Sealed the wounds with wax and you know what? Underneath the dead wood, the core was green. Alive. The frost killed the outside but the inside survived. It'll put out new branches in spring. Different directions, different shape, but the same jasmine. Same scent. Same roots."
 
 He looks at me. The same sharp gaze as yesterday   unsentimental, unblinking, the gaze of a man who speaks in plants because plants are more honest than people.
 

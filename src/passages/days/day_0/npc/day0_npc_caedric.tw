@@ -1,8 +1,8 @@
 :: day0_npc_caedric [nobr]
 <<npcPortrait "caedric" "Ser Caedric">>
-<h3>Ser Caedric — The Bench, One Last Time</h3>
+<h3>Ser Caedric   The Bench, One Last Time</h3>
 
-<p>He's on the bench. Of course he's on the bench. The bench is as much a part of Caedric as the rusted sword at his hip. I don't know what the palace would do without Ser Caedric on this bench — it would be like removing a load-bearing wall.</p>
+<p>He's on the bench. Of course he's on the bench. The bench is as much a part of Caedric as the rusted sword at his hip. I don't know what the palace would do without Ser Caedric on this bench   it would be like removing a load-bearing wall.</p>
 
 <div class="dialogue"><span class="speaker">CAEDRIC</span>"Prince Edrin." He doesn't stand. We stopped pretending years ago. "Early morning for you."</div>
 
@@ -10,13 +10,13 @@
 
 <div class="dialogue"><span class="speaker">CAEDRIC</span>"You haven't slept properly in three days. I can tell by the depth of the circles under your eyes. Day one: mild shadow. Day two: noticeable. Today: architectural."</div>
 
-<p>I sit beside him. The bench is warm — body heat, accumulated over what must be hours. Caedric arrives before dawn and stays until after dusk. It's not laziness. It's commitment. He's chosen his post and he holds it.</p>
+<p>I sit beside him. The bench is warm   body heat, accumulated over what must be hours. Caedric arrives before dawn and stays until after dusk. It's not laziness. It's commitment. He's chosen his post and he holds it.</p>
 
 <div class="dialogue"><span class="speaker">CAEDRIC</span>"You're going to the tower today." Not a question. Caedric deals in certainties.</div>
 
-<div class="dialogue"><span class="speaker">EDRIN</span>"How—"</div>
+<div class="dialogue"><span class="speaker">EDRIN</span>"How "</div>
 
-<div class="dialogue"><span class="speaker">CAEDRIC</span>"I'm seventy-three years old and I've been sitting on this bench watching this palace for twelve years. Ilara crossed the bridge at dawn in full ceremonial robes. The Queen's door has been closed since first light — no visitors, no ministers. The kitchen is running on crisis pastries. And you, Prince Edrin, are walking the corridors at an hour when you're usually still in bed, with the face of a man who is about to do something terrible and irreversible."</div>
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"I'm seventy-three years old and I've been sitting on this bench watching this palace for twelve years. Ilara crossed the bridge at dawn in full ceremonial robes. The Queen's door has been closed since first light   no visitors, no ministers. The kitchen is running on crisis pastries and you, Prince Edrin, are walking the corridors at an hour when you're usually still in bed, with the face of a man who is about to do something terrible and irreversible."</div>
 
 <p>He adjusts his sword belt. The leather creaks.</p>
 
@@ -24,11 +24,11 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Several times."</div>
 
-<div class="dialogue"><span class="speaker">CAEDRIC</span>"Then I'll tell you again, because old men repeat themselves and young princes humor them. Your grandmother took the throne at nineteen. She wasn't ready. She was terrified. She told me once — years later, when we were both old enough for honesty — that on coronation day, she looked in the mirror and saw a girl playing dress-up in her mother's crown. She felt like a fraud for the first five years."</div>
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Then I'll tell you again, because old men repeat themselves and young princes humor them. Your grandmother took the throne at nineteen. She wasn't ready. She was terrified. She told me once   years later, when we were both old enough for honesty   that on coronation day, she looked in the mirror and saw a girl playing dress-up in her mother's crown. She felt like a fraud for the first five years."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"When did she stop?"</div>
 
-<div class="dialogue"><span class="speaker">CAEDRIC</span>"She didn't. She just got better at ruling while feeling like a fraud. That's the secret, Your Highness. Nobody ever feels ready. Not for the crown, not for the throne, not for..." He pauses. Looks at me. Those bright old eyes seeing everything, as always. "Not for any of it. You just do it, and the doing becomes the being, and one morning you wake up and the person in the mirror isn't a fraud anymore — she's just you."</div>
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"She didn't. She just got better at ruling while feeling like a fraud. That's the secret, Your Highness. Nobody ever feels ready. Not for the crown, not for the throne, not for..." He pauses. Looks at me. Those bright old eyes seeing everything, as always. "Not for any of it. You just do it, and the doing becomes the being, and one morning you wake up and the person in the mirror isn't a fraud anymore   she's just you."</div>
 
 <p><em>She.</em> He said <em>she.</em> Deliberately. Knowingly. This old knight on his bench, with his rusted sword and his institutional memory, knows exactly what I'm walking toward this morning, and he's already adjusted his pronouns.</p>
 

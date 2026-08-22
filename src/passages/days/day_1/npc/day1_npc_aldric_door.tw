@@ -2,31 +2,31 @@
 <<npcPortrait "aldric" "Aldric">>
 <h3>Aldric's Voice Through the Door</h3>
 
-<p>I hear him before I recognise him. Boots on stone — heavy, even, the cadence of a man who has never been in a hurry. The specific footstep pattern of Sir Aldric Vane, which I have been hearing since I was fourteen and which my brain identifies with the speed and certainty of a body recognising its own heartbeat.</p>
+<p>I hear him before I recognise him. Boots on stone   heavy, even, the cadence of a man who has never been in a hurry. The specific footstep pattern of Sir Aldric Vane, which I have been hearing since I was fourteen and which my brain identifies with the speed and certainty of a body recognising its own heartbeat.</p>
 
-<p>He stops outside my door. I know it's him the way I know the ceiling crack and the morning cold — through accumulated data, the slow geological formation of familiarity.</p>
+<p>He stops outside my door. I know it's him the way I know the ceiling crack and the morning cold   through accumulated data, the slow geological formation of familiarity.</p>
 
 <p>He doesn't knock.</p>
 
-<p>He stands outside the door for what must be three minutes. I can hear him breathing — the steady, measured breathing of a man who controls his respiration the way he controls his sword arm: deliberately, with discipline, as a matter of professional practice.</p>
+<p>He stands outside the door for what must be three minutes. I can hear him breathing   the steady, measured breathing of a man who controls his respiration the way he controls his sword arm: deliberately, with discipline, as a matter of professional practice.</p>
 
 <p>Then his voice. Low. Through the oak.</p>
 
 <div class="dialogue"><span class="speaker">ALDRIC</span>"Your Highness."</div>
 
-<p>Two words. The same two words he's said to me a thousand times — in the training yard, in the corridor, at the palace gate. The same intonation, the same respectful formality. He hasn't changed the address. He hasn't adjusted the register. He's calling me <em>Your Highness</em> the way he always has, because the rank hasn't changed even if the person holding it has, and Aldric's loyalty is to the title and the person and neither requires a specific set of chromosomes.</p>
+<p>Two words. The same two words he's said to me a thousand times   in the training yard, in the corridor, at the palace gate. The same intonation, the same respectful formality. He hasn't changed the address. He hasn't adjusted the register. He's calling me <em>Your Highness</em> the way he always has, because the rank hasn't changed even if the person holding it has, and Aldric's loyalty is to the title and the person and neither requires a specific set of chromosomes.</p>
 
-<div class="dialogue"><span class="speaker">ALDRIC</span>"I'm told you're resting." His voice through the door. I'm standing on the other side. My hand is on the wood. I can feel the vibration of his voice through the oak. "I won't disturb you. I only wanted you to know — the practice sword is on the yard rack. It'll be there when you're ready. No rush."</div>
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I'm told you're resting." His voice through the door. I'm standing on the other side. My hand is on the wood. I can feel the vibration of his voice through the oak. "I won't disturb you. I only wanted you to know   the practice sword is on the yard rack. It'll be there when you're ready. No rush."</div>
 
 <p>A pause. The breathing.</p>
 
-<div class="dialogue"><span class="speaker">ALDRIC</span>"You're still my prince." Another pause. He corrects himself — not because someone told him to, but because he's working it out in real time, standing in a corridor talking to a door. "My princess. My... you're still mine to protect. Whatever you need. I'm down the corridor."</div>
+<div class="dialogue"><span class="speaker">ALDRIC</span>"You're still my prince." Another pause. He corrects himself   not because someone told him to, but because he's working it out in real time, standing in a corridor talking to a door. "My princess. My... you're still mine to protect. Whatever you need. I'm down the corridor."</div>
 
 <p>His boots. Walking away. Heavy, even, certain. The sound fades.</p>
 
-<p>I stand with my hand on the door. The wood is warm where I've been pressing. My hand — this new hand, slender and small — flat against the oak, and on the other side, three minutes ago, Aldric's hand might have been doing the same thing.</p>
+<p>I stand with my hand on the door. The wood is warm where I've been pressing. My hand   this new hand, slender and small   flat against the oak, and on the other side, three minutes ago, Aldric's hand might have been doing the same thing.</p>
 
-<p>He called me his. He stumbled on the word — prince to princess, the linguistic adjustment lagging behind the emotional one — and the stumble was the most genuine thing I've heard today because it meant he was trying, in real time, to meet me where I am, and where I am is a place he's never been and can't fully understand and he's coming anyway.</p>
+<p>He called me his. He stumbled on the word   prince to princess, the linguistic adjustment lagging behind the emotional one   and the stumble was the most genuine thing I've heard today because it meant he was trying, in real time, to meet me where I am, and where I am is a place he's never been and can't fully understand and he's coming anyway.</p>
 
 <<set $d1f_npc_aldric_door to true>>
 <<set $affAldric += 3>>

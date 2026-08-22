@@ -1,10 +1,10 @@
 :: day0_npc_wynn3 [nobr]
 <<npcPortrait "wynn" "Old Wynn">>
-<h3>Old Wynn — The Jasmine Survived</h3>
+<h3>Old Wynn   The Jasmine Survived</h3>
 
 <p>The jasmine survived.</p>
 
-<p>Wynn has uncovered it — the burlap pulled back, the branches exposed to the morning air. Three branches dead from the frost, cut clean and sealed with wax, exactly as he described. But beneath the dead wood: green. New shoots pushing outward from the core, finding light, reaching for the sky in directions the old branches never went.</p>
+<p>Wynn has uncovered it   the burlap pulled back, the branches exposed to the morning air. Three branches dead from the frost, cut clean and sealed with wax, exactly as he described. But beneath the dead wood: green. New shoots pushing outward from the core, finding light, reaching for the sky in directions the old branches never went.</p>
 
 <p>Wynn is standing beside it, trowel in hand, looking at the new growth with the quiet satisfaction of a man who bet on life and won.</p>
 
@@ -12,9 +12,9 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"You said it would."</div>
 
-<div class="dialogue"><span class="speaker">WYNN</span>"I said it might. Nature doesn't make promises. It makes attempts." He touches a new shoot — green, tender, pushing outward from where the dead branch was removed. "Different shape now. New directions. But smell it."</div>
+<div class="dialogue"><span class="speaker">WYNN</span>"I said it might. Nature doesn't make promises. It makes attempts." He touches a new shoot   green, tender, pushing outward from where the dead branch was removed. "Different shape now. New directions. But smell it."</div>
 
-<p>I lean close. The scent — jasmine, sweet, heavy, unmistakable. The same scent it's always had. The same scent that fills the garden on summer evenings and drifts through the palace windows.</p>
+<p>I lean close. The scent   jasmine, sweet, heavy, unmistakable. The same scent it's always had. The same scent that fills the garden on summer evenings and drifts through the palace windows.</p>
 
 <div class="dialogue"><span class="speaker">WYNN</span>"Same flower," Wynn says. "Same roots. Same scent. Just wearing a new shape."</div>
 
@@ -22,7 +22,7 @@
 
 <div class="dialogue"><span class="speaker">WYNN</span>"The frost was hard. Harder than I expected. But the core held. That's what matters, Your Highness. The core holds. Everything else is just branches."</div>
 
-<p>He hands me a sprig of jasmine — a fresh cutting from the surviving plant, three small white flowers still opening. The scent is immediate and overwhelming, a wave of sweetness that cuts through the morning cold.</p>
+<p>He hands me a sprig of jasmine   a fresh cutting from the surviving plant, three small white flowers still opening. The scent is immediate and overwhelming, a wave of sweetness that cuts through the morning cold.</p>
 
 <div class="dialogue"><span class="speaker">WYNN</span>"For the tower," he says. "Something alive, to take with you."</div>
 
@@ -30,7 +30,7 @@
 <<set $statRES += 3>>
 <<set $stress -= 8>>
 <<set $hasJasmine to true>>
-<<addItem "jasmine_sprig" "Jasmine Sprig" "A fresh cutting from Wynn's surviving jasmine — something alive to carry into the tower.">>
+<<addItem "jasmine_sprig" "Jasmine Sprig" "A fresh cutting from Wynn's surviving jasmine   something alive to carry into the tower.">>
 
 <div class="scene-end">
   [[Continue → |day0_gardens]]

@@ -1,17 +1,17 @@
 :: day1_npc_body_discoveries [nobr]
-<h3>The Body — Unprompted Discoveries</h3>
+<h3>The Body   Unprompted Discoveries</h3>
 
 <p>The discoveries don't come all at once. They come in waves, across the day, each one a small earthquake in the ongoing seismic event of living in this body.</p>
 
-<p><strong>Hair.</strong> I keep finding it everywhere. On the pillow, across my shoulders, falling in front of my eyes. It's heavier than it should be — thicker, denser, with a wave pattern that I didn't have before. When I push it behind my ears, it stays briefly, then slides free. I need something to hold it back. I don't have anything. I twist it into a knot at the back of my head. It holds. The motion is instinctive — a gesture I've seen women make a thousand times and never thought about.</p>
+<p><strong>Hair.</strong> I keep finding it everywhere. On the pillow, across my shoulders, falling in front of my eyes. It's heavier than it should be   thicker, denser, with a wave pattern that I didn't have before. When I push it behind my ears, it stays briefly, then slides free. I need something to hold it back. I don't have anything. I twist it into a knot at the back of my head. It holds. The motion is instinctive   a gesture I've seen women make a thousand times and never thought about.</p>
 
-<p><strong>My voice.</strong> Every time I speak, it surprises me. The pitch is wrong — higher, softer, with less resonance. The words are mine but the instrument producing them is a stranger's. I test it: humming, then singing a line from one of Rowan's songs. The melody is the same. The timbre is completely different. A woman's voice singing a man's song in a woman's body in a tower room at noon.</p>
+<p><strong>My voice.</strong> Every time I speak, it surprises me. The pitch is wrong   higher, softer, with less resonance. The words are mine but the instrument producing them is a stranger's. I test it: humming, then singing a line from one of Rowan's songs. The melody is the same. The timbre is completely different. A woman's voice singing a man's song in a woman's body in a tower room at noon.</p>
 
 <p><strong>Walking.</strong> I practice. Four paces, turn, four paces back. The sway doesn't stop. The hips move. The body moves the way it moves. But by the tenth lap, the stumbling is gone. By the twentieth, the motion is almost fluid. The body learns faster than the mind. It's already adjusting, already finding its own efficient gait, and the mind is just along for the ride.</p>
 
-<p><strong>Sitting.</strong> My thighs press together when I sit. The vulva is between them — always, constantly, a warm presence that I'm aware of the way you're aware of your heartbeat when someone tells you to listen for it. If I cross my legs (I try it — one knee over the other, the feminine cross, the legs-together default), the sensation changes. Pressure on the mound. A repositioning of the folds. I uncross them immediately.</p>
+<p><strong>Sitting.</strong> My thighs press together when I sit. The vulva is between them   always, constantly, a warm presence that I'm aware of the way you're aware of your heartbeat when someone tells you to listen for it. If I cross my legs (I try it   one knee over the other, the feminine cross, the legs-together default), the sensation changes. Pressure on the mound. A repositioning of the folds. I uncross them immediately.</p>
 
-<p><strong>Crying.</strong> I don't cry on Day 1. But late in the afternoon, standing at the window, listening to the world go on without me, my eyes fill. The tears don't fall. They sit on the lower lids like water on a leaf, gathering weight, threatening. I blink them back. The tears are the same — salt water, the same composition, the same mechanism. Even the tear ducts survived the rewrite. The body changed everything except the capacity to grieve.</p>
+<p><strong>Crying.</strong> I don't cry on Day 1. But late in the afternoon, standing at the window, listening to the world go on without me, my eyes fill. The tears don't fall. They sit on the lower lids like water on a leaf, gathering weight, threatening. I blink them back. The tears are the same   salt water, the same composition, the same mechanism. Even the tear ducts survived the rewrite. The body changed everything except the capacity to grieve.</p>
 
 <<set $d1f_npc_body to true>>
 <<set $statFEM += 2>>

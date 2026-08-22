@@ -1,18 +1,18 @@
 :: day0_hub [nobr]
 <div class="hub-header">
-  <h2>Crown's Rest — <<print formatDayNumber($dayNumber)>>: The Rite</h2>
+  <h2>Crown's Rest   <<print formatDayNumber($dayNumber)>>: The Rite</h2>
   <p class="time-display">Time: <<print $timeSlot>></p>
   <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
 
 <div class="location-grid">
 
-<!-- ========== THE BRIDGE — POINT OF NO RETURN ========== -->
+<!-- ========== THE BRIDGE   POINT OF NO RETURN ========== -->
 <div class="loc-card loc-final">
   <<locationImage "moonspire_bridge" "The Bridge to Moonspire Tower">>
-  <h3>🌙 The Bridge — Moonspire Tower</h3>
+  <h3>🌙 The Bridge   Moonspire Tower</h3>
   <p class="loc-flavor">The covered bridge. Thirty paces between who you are and who you're about to become. Rowan is waiting at the near end.</p>
-  <span class="badge main">⚔ Cross the Bridge — When You're Ready</span>
+  <span class="badge main">⚔ Cross the Bridge   When You're Ready</span>
   <p class="loc-warning">⚠ <em>Once you cross, you cannot return. Complete any remaining business first.</em></p>
   <<if $bridgeWarningAcknowledged>>
     [[Cross the Bridge → |day0_bridge]]
@@ -27,7 +27,7 @@
   <h3>🛏 Edrin's Chambers</h3>
   <p class="loc-flavor">Your room. For the last time as this person.</p>
   <<if not $d0_queens_gift>>
-    <span class="badge main">⚔ Someone is knocking — not a servant</span>
+    <span class="badge main">⚔ Someone is knocking   not a servant</span>
   <</if>>
   <<if not $d0_npc_brin>>
     <span class="badge side">🗡 Brin brought breakfast</span>
@@ -47,7 +47,7 @@
   <<locationImage "queen_chambers" "Queen's Chambers">>
   <h3>👑 Queen's Chambers</h3>
   <p class="loc-flavor">She's waiting. She didn't know if you'd come. She hoped.</p>
-  <span class="badge main">⚔ Say goodbye — as a son</span>
+  <span class="badge main">⚔ Say goodbye   as a son</span>
   [[Enter → |day0_queen]]
 </div>
 <</if>>
@@ -133,13 +133,13 @@
 <!-- ========== MOONSPIRE TOWER (PRE-BRIDGE, LOWER LEVELS) ========== -->
 <div class="loc-card loc-new">
   <<locationImage "moonspire_tower" "Moonspire Tower">>
-  <h3>🌙 Moonspire Tower — Lower Levels</h3>
+  <h3>🌙 Moonspire Tower   Lower Levels</h3>
   <p class="loc-flavor">Accessible via the service stair, not the bridge. The preparations are underway.</p>
   <<if $d1_npc_nara and not $d0_npc_nara2>>
     <span class="badge side">🗡 Nara on the stairs, carrying candles</span>
   <</if>>
   <<if not $d0_npc_vael2>>
-    <span class="badge side">🗡 The Apothecary — the potion is ready</span>
+    <span class="badge side">🗡 The Apothecary   the potion is ready</span>
   <</if>>
   [[Enter → |day0_moonspire_lower]]
 </div>

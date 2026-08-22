@@ -55,9 +55,9 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"I think I owe the armoury an apology."</div>
 
-<div class="dialogue"><span class="speaker">ALDRIC</span>"You owe the armoury three dummies. I'll add it to the requisition." The ghost of something warm in his voice. "Get some food. And wrap those hands   the blisters will get infected if you leave them."</div>
+<div class="dialogue"><span class="speaker">ALDRIC</span>"You owe the armoury three dummies. I'll add it to the requisition." The ghost of something warm in his voice. "Get some food and wrap those hands   the blisters will get infected if you leave them."</div>
 
-<p>He walks away. His back is straight, his stride is even, and watching him cross the training yard I think: <em>that man would follow me into fire. And I'm about to become something he may not recognise.</em></p>
+<p>He walks away. His back is straight, his stride is even, and watching him cross the training yard I think: <em>that man would follow me into fire and I'm about to become something he may not recognise.</em></p>
 
 <!-- --- STAT CHANGES --- -->
 <<set $statPRO += 2>>
@@ -65,12 +65,12 @@
 <<set $affAldric += 3>>
 
 <!-- --- ADVANCE TIME --- -->
-<<set $timeSlot to "EVENING">>
+<<set $timeSlot to "AFTERNOON">>
 
 <!-- --- UPDATE OBJECTIVES --- -->
 <<set $d1_training to true>>
 <<completeObjective "training_rage">>
-<<addObjective "chambers_rowan" "Evening approaches   return to your chambers" "MAIN">>
+<<addObjective "moonspire_partial" "One more question for Ilara   return to the Moonspire Tower" "MAIN">>
 <<addObjective "gardens_wynn" "The gardens   Old Wynn is covering the roses" "SIDE">>
 
 <div class="scene-end">

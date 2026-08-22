@@ -1,36 +1,36 @@
 :: day0_npc_marta3 [nobr]
 <<npcPortrait "marta" "Marta">>
-<h3>Marta — The Last Pastry</h3>
+<h3>Marta   The Last Pastry</h3>
 
-<p>She's been baking since midnight. The evidence is everywhere — every surface covered, every rack loaded, the output of a woman who processes anxiety through butter and flour. The kitchen staff move around her the way water moves around a boulder — with respect and without questioning the boulder's right to be there.</p>
+<p>She's been baking since midnight. The evidence is everywhere   every surface covered, every rack loaded, the output of a woman who processes anxiety through butter and flour. The kitchen staff move around her the way water moves around a boulder   with respect and without questioning the boulder's right to be there.</p>
 
 <p>She sees me in the doorway and stops. Sets down the rolling pin. Wipes her hands on her apron. She doesn't speak for a moment.</p>
 
-<div class="dialogue"><span class="speaker">MARTA</span>"Sit," she says. Her voice is different. Not softer — Marta doesn't do soft. But the usual declarative force is tempered by something. She points to the stool. My stool. The permanent one.</div>
+<div class="dialogue"><span class="speaker">MARTA</span>"Sit," she says. Her voice is different. Not softer   Marta doesn't do soft. But the usual declarative force is tempered by something. She points to the stool. My stool. The permanent one.</div>
 
-<p>I sit. She puts a plate in front of me. One pastry. Not cheese — apple, this time. Cinnamon and sugar and thin-sliced fruit in a latticed crust. She hasn't made apple pastries since I was twelve.</p>
+<p>I sit. She puts a plate in front of me. One pastry. Not cheese   apple, this time. Cinnamon and sugar and thin-sliced fruit in a latticed crust. She hasn't made apple pastries since I was twelve.</p>
 
 <div class="dialogue"><span class="speaker">MARTA</span>"I made your favourite," she says. "The one you used to beg for when you were little. Before you got too princely to beg."</div>
 
-<p>I look at the pastry. I look at Marta. Her eyes are red. She's been crying. Marta — who I have never, in twenty years, seen show anything other than volcanic confidence and wooden-spoon authority — has been crying in her kitchen at midnight while baking pastries from my childhood.</p>
+<p>I look at the pastry. I look at Marta. Her eyes are red. She's been crying. Marta   who I have never, in twenty years, seen show anything other than volcanic confidence and wooden-spoon authority   has been crying in her kitchen at midnight while baking pastries from my childhood.</p>
 
-<div class="dialogue"><span class="speaker">EDRIN</span>"Marta—"</div>
+<div class="dialogue"><span class="speaker">EDRIN</span>"Marta "</div>
 
 <div class="dialogue"><span class="speaker">MARTA</span>"Eat it. Don't talk. Just eat it."</div>
 
-<p>I eat it. The flavour is a time machine — twelve years old, sitting on this stool (it was taller then, or I was shorter), legs swinging, watching Marta roll pastry and telling her about my day in the breathless, overlapping sentences of a child who hasn't yet learned that adults don't always listen. She always listened. She listened the way she cooked — with full attention, with care, with the understanding that the thing being made deserved respect.</p>
+<p>I eat it. The flavour is a time machine   twelve years old, sitting on this stool (it was taller then, or I was shorter), legs swinging, watching Marta roll pastry and telling her about my day in the breathless, overlapping sentences of a child who hasn't yet learned that adults don't always listen. She always listened. She listened the way she cooked   with full attention, with care, with the understanding that the thing being made deserved respect.</p>
 
 <p>The pastry is perfect. The cinnamon is warm. The apple is sharp. The sugar is sweet.</p>
 
-<div class="dialogue"><span class="speaker">MARTA</span>"Whatever happens today," Marta says, her back to me, stirring the pot that doesn't need stirring, "whatever changes — you come to my kitchen. You hear me? You come and sit on that stool and I will feed you. I don't care what you look like. I don't care what name you carry. You sit on that stool and you are my boy. Always."</div>
+<div class="dialogue"><span class="speaker">MARTA</span>"Whatever happens today," Marta says, her back to me, stirring the pot that doesn't need stirring, "whatever changes   you come to my kitchen. You hear me? You come and sit on that stool and I will feed you. I don't care what you look like. I don't care what name you carry. You sit on that stool and you are my boy. Always."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"I might not be a boy anymore, Marta."</div>
 
 <div class="dialogue"><span class="speaker">MARTA</span>"Then you'll be my girl. Same stool. Same pastries. Same Marta."</div>
 
-<p>I stand. I walk around the prep table. I hug her. She's solid — barrel-built, flour-dusted, smelling of butter and yeast and the particular warmth of a woman who has fed a palace for thirty years. She hugs me back. Hard. The wooden spoon presses against my shoulder blade. She's still holding it. Of course she is.</p>
+<p>I stand. I walk around the prep table. I hug her. She's solid   barrel-built, flour-dusted, smelling of butter and yeast and the particular warmth of a woman who has fed a palace for thirty years. She hugs me back. Hard. The wooden spoon presses against my shoulder blade. She's still holding it. Of course she is.</p>
 
-<div class="dialogue"><span class="speaker">MARTA</span>"Go," she says, releasing me, turning away so I can't see her face. "Go do what you need to do. And come back hungry."</div>
+<div class="dialogue"><span class="speaker">MARTA</span>"Go," she says, releasing me, turning away so I can't see her face. "Go do what you need to do and come back hungry."</div>
 
 <<set $d0_npc_marta3 to true>>
 <<set $energy += 10>>

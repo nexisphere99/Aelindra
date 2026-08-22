@@ -1,28 +1,28 @@
 :: day0_npc_vael2 [nobr]
 <<npcPortrait "vael" "Mistress Vael">>
-<h3>Mistress Vael — The Potion Is Ready</h3>
+<h3>Mistress Vael   The Potion Is Ready</h3>
 
-<p>The Apothecary smells different today. The usual competing scents have been replaced by a single dominant aroma — silver and cold and floral and something underneath that smells like blood but isn't, quite. The moonflower essence.</p>
+<p>The Apothecary smells different today. The usual competing scents have been replaced by a single dominant aroma   silver and cold and floral and something underneath that smells like blood but isn't, quite. The moonflower essence.</p>
 
-<p>Vael is standing at her bench. Before her, a silver goblet. Ancient, plain, undecorated. Inside, the potion shifts between colours — silver, deep violet, near-black blue. It catches the light from the single window and refracts it into tiny rainbows on the stone walls.</p>
+<p>Vael is standing at her bench. Before her, a silver goblet. Ancient, plain, undecorated. Inside, the potion shifts between colours   silver, deep violet, near-black blue. It catches the light from the single window and refracts it into tiny rainbows on the stone walls.</p>
 
-<div class="dialogue"><span class="speaker">VAEL</span>"It's ready," she says. She doesn't turn around. "Brewed it overnight. Your blood was the last component — Ilara drew it while you were unconscious during your first visit." She pauses. "That sounds alarming. It was a small amount. Standard procedure. The magic needs to know who it's rewriting."</div>
+<div class="dialogue"><span class="speaker">VAEL</span>"It's ready," she says. She doesn't turn around. "Brewed it overnight. Your blood was the last component   Ilara drew it while you were unconscious during your first visit." She pauses. "That sounds alarming. It was a small amount. Standard procedure. The magic needs to know who it's rewriting."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"You could have mentioned the blood-drawing."</div>
 
 <div class="dialogue"><span class="speaker">VAEL</span>"You had enough to worry about. A missing tablespoon of blood was not going to improve your day."</div>
 
-<p>She picks up the goblet. Holds it to the light. The potion ripples — not from movement, but from the magic inside it, which is alive, or something close to alive, vibrating with contained potential.</p>
+<p>She picks up the goblet. Holds it to the light. The potion ripples   not from movement, but from the magic inside it, which is alive, or something close to alive, vibrating with contained potential.</p>
 
 <div class="dialogue"><span class="speaker">VAEL</span>"This is you," she says. "Your blood, your template, your body's latent potential, combined with moonflower and silverveil silk and three hundred years of accumulated magical knowledge. When you drink it, it won't feel like taking medicine. It'll feel like swallowing a decision."</div>
 
 <p>She sets the goblet back on the bench. Looks at me.</p>
 
-<div class="dialogue"><span class="speaker">VAEL</span>"I've brewed a lot of potions in twenty years. Healing draughts, sleeping tinctures, love philters — don't tell anyone about the love philters — fertility aids, contraceptives, hangover cures. This is the first one I've made that will change someone's entire life in a single swallow."</div>
+<div class="dialogue"><span class="speaker">VAEL</span>"I've brewed a lot of potions in twenty years. Healing draughts, sleeping tinctures, love philters   don't tell anyone about the love philters   fertility aids, contraceptives, hangover cures. This is the first one I've made that will change someone's entire life in a single swallow."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Does that scare you?"</div>
 
-<div class="dialogue"><span class="speaker">VAEL</span>"Yes." The bluntness. The honesty. Vael's gift. "But I checked it seven times. The ratios are perfect. The moonflower is peak potency. The blood integration is clean. If this potion doesn't work, it'll be because the magic failed, not because the brewing did. And I trust the magic."</div>
+<div class="dialogue"><span class="speaker">VAEL</span>"Yes." The bluntness. The honesty. Vael's gift. "But I checked it seven times. The ratios are perfect. The moonflower is peak potency. The blood integration is clean. If this potion doesn't work, it'll be because the magic failed, not because the brewing did and I trust the magic."</div>
 
 <p>She hands me a small cloth pouch.</p>
 
@@ -37,7 +37,7 @@
 <<set $stress += 3>>
 <<set $riteKnowledge += 2>>
 <<set $hasGingerRoot to true>>
-<<addItem "ginger_root" "Ginger Root" "A small pouch from Vael — chew it after the potion to keep from vomiting.">>
+<<addItem "ginger_root" "Ginger Root" "A small pouch from Vael   chew it after the potion to keep from vomiting.">>
 
 <div class="scene-end">
   [[Continue → |day0_moonspire_lower]]

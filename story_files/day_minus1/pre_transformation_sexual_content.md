@@ -157,7 +157,7 @@ Tomorrow I won't have this. This cock. This hand around it. This exact formula o
 
 I clean myself. The cum wipes away. The cock softens. The body cools.
 
-I stand. I walk to the mirror. And now   now, with the orgasm still fading, with the body wrung out and loose and temporary   I look at myself for the last time.
+I stand. I walk to the mirror and now   now, with the orgasm still fading, with the body wrung out and loose and temporary   I look at myself for the last time.
 
 The mirror scene that follows hits differently now. The body in the glass is not just a body being catalogued. It's a body that just came for the last time. The cum is cleaned but the ghost of it remains   the flushed skin, the softened cock, the heavy-lidded eyes of a man who has just performed his own funeral rite in the language of pleasure.
 
@@ -325,7 +325,7 @@ She leaves. The linens are still on the corridor bench. The room smells of sex. 
 
 I lie in the wreckage of the bed. Spent. The cum drying on my stomach. The warmth of her body fading from the sheets.
 
-Tomorrow I walk to the tower. Tomorrow this cock   this cock that just performed its oldest function inside the body of a woman who wanted it   will either disappear or be reshaped or be preserved alongside something new. And the man who used it, the man who felt what he felt, will be gone.
+Tomorrow I walk to the tower. Tomorrow this cock   this cock that just performed its oldest function inside the body of a woman who wanted it   will either disappear or be reshaped or be preserved alongside something new and the man who used it, the man who felt what he felt, will be gone.
 
 I get up. I walk to the mirror. The mirror scene follows   and the body in the glass is flushed, post-coital, still carrying the evidence of its last act as a man.
 

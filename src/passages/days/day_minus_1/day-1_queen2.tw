@@ -1,0 +1,97 @@
+:: day-1_queen2 [nobr]
+<div class="scene-image"><<locationImage "queen_chambers" "Queen's Chambers">></div>
+
+<h2>Queen's Chambers   What Ilara Didn't Say</h2>
+
+<p>I go to my mother. Not to argue   the arguments are exhausted, all of them crossed off a scrap of parchment I've since thrown away. I go to ask.</p>
+
+<p><<npcPortrait "seraphina" "Queen Seraphina">>She's awake, propped against her pillows, the candles lit early against the dusk. She looks at my face before I've said a word, and whatever she sees there, she doesn't look surprised.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Did you know? About the Partial form?"</div>
+
+<p>A pause. The pause tells me everything before she does.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Ilara told me when we first discussed the Rite. She presented both options."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You didn't mention it."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I was going to. Tomorrow, if you hadn't learned of it yourself."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Why not YESTERDAY? When I was tearing myself apart about losing "</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Because I wanted you to confront the full cost first. If I'd told you immediately that you could keep your cock, you'd have seized on it without understanding what the Complete form offers. Without grieving properly. Without sitting with the loss."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's manipulative."</div>
+
+<p>She doesn't flinch.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"That's parenting. Sometimes the same thing."</div>
+
+<p>I sit on the edge of her bed. The anger drains. I'm too tired for it.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What would you choose? If you were me?"</div>
+
+<p>She considers it   genuinely, not performing.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I can't answer that. I don't have a cock to lose."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Mother."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Fine." A pause. A cough, held back. "If I were a man being asked to become a woman to save a kingdom, and I were told I could keep one piece of the man I was... I think I'd agonise about it for exactly as long as you're going to agonise about it. And I think the choice would come down to one question."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What question?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Not 'what do I want to keep,' but 'what am I strong enough to carry.' The Complete form is simpler. Brutal, but simple   you lose everything, you grieve, you rebuild. The Partial form... you keep one thing, but you carry the weight of it. The hiding. The politics. The loneliness of being the only person in the world with your body. The Complete form is a clean wound. The Partial form is a wound that never quite closes   but also never quite bleeds. It stays with you."</div>
+
+<p>Silence.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"The question isn't which is easier. Neither is easy. The question is which weight you'd rather carry. The weight of total loss? Or the weight of something preserved that must be hidden?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I don't want to lose it. My body. My cock. It's the last piece of who I was born as. If I lose that, I lose everything. Even the woman I become will have no connection to the man I was."</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Your eyes won't change. Your mind won't change. Your soul "</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"My SOUL doesn't have a cock, Mother. But my body does. And the body is how I know myself. How I touch myself. How I exist in the physical world. If every physical trace of Edrin is erased   if the last physical thing connecting me to the prince I was dissolves into a clitoris   then Edrin is truly dead. Not transformed. Dead."</div>
+
+<p>I'm crying. Not dramatically   quietly, the tears rolling, my jaw clenched against the sound.</p>
+
+<p>She reaches for my hand. Her grip is weak, the illness eating her strength, but she holds on.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"Then keep it. If the cock is the thread that connects Aelindra to Edrin   if preserving it means preserving the person inside   then keep it. The political cost is real. The concealment will be constant. But the alternative   a child of mine who feels entirely erased   that cost is higher."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You'd support the Partial Rite?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"I'd support whatever lets my child survive this and still recognise themselves in the mirror. If that means hiding a cock under a gown for the rest of your reign... I've hidden worse under mine."</div>
+
+<p>She's smiling   thin, tired, genuine.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What have you hidden under a gown?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"A dagger. Three diplomatic pouches. Once, a very small cat." A pause. "And twenty-five years of doubt that I was worthy of the crown. That was heavier than any cock."</div>
+
+<p>A laugh escapes me   startled, wet, cracking through the tears.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"A CAT?"</div>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span>"It was a very important diplomatic cat. Don't ask."</div>
+
+<p>We laugh together. Mother and son, for the last time   or the last time in this configuration, at least. Tomorrow, whichever form I choose, the laughter will continue. But if I choose the Complete form, this is the last time a mother laughs with her son. Tomorrow she'd meet her daughter.</p>
+
+<p>Either way, the conversation has done what she intended. Not to choose for me   but to make both choices real. Weighted. Understood. So that whatever I carry into the tower tomorrow, I carry it with open eyes.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $stress -= 10>>
+<<set $statRES += 2>>
+<<set $affSeraphina += 8>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "EVENING">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<set $d1_queen2 to true>>
+<<completeObjective "queen_seraphina2">>
+<<addObjective "chambers_rowan" "Evening approaches   return to your chambers" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day-1_hub]]
+</div>

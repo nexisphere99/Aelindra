@@ -41,7 +41,7 @@ framing is enough since these render small (56px circular inline portrait).
 | `harwick.png` | Lady Harwick | Woman, 60s, elaborately perfumed and bejeweled, court gown, knowing performative smile. Garden topiary background. |
 | `alva.png` | Mistress Alva | Woman, 50, iron-grey hair in a severe bun under a white cap, ramrod posture, stern composed expression. Below-stairs servant corridor background. |
 | `perrin.png` | Night Guard Perrin | Young man, earnest, Royal Guard night-shift uniform, standing at rigid attention. Dim corridor, torchlight. |
-| `lissara.png` | Handmaiden Lissara | Woman, 26, blonde hair pinned up with damp curls escaping, blue eyes, full-figured, strong-shouldered. Bathing uniform. Royal Baths background, steam and torchlight. (Added later, for the pre-transformation sexual content — `pre_transformation_sexual_content.md`.) |
+| `lissara.png` | Handmaiden Lissara | Woman, 26, blonde hair pinned up with damp curls escaping, blue eyes, full-figured, strong-shouldered. Bathing uniform. Royal Baths background, steam and torchlight. (Added later, for the pre-transformation sexual content   `pre_transformation_sexual_content.md`.) |
 
 Not needed: the gossiping maids (ambient/unnamed) and the half-written letter
 (an object, not a character).
