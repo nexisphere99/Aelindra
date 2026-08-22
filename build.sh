@@ -20,11 +20,12 @@ cd "$(dirname "$0")"
 OUT="index.html"
 START="title-screen"
 FORMAT="sugarcube-2"
+HEAD="build-head.html"
 
 if [ "${1:-}" = "watch" ]; then
   echo "Watching src/ for changes... (Ctrl+C to stop)"
-  tweego -w -o "$OUT" -f "$FORMAT" -s "$START" src/
+  tweego -w -o "$OUT" -f "$FORMAT" -s "$START" --head="$HEAD" src/
 else
-  tweego -o "$OUT" -f "$FORMAT" -s "$START" src/
+  tweego -o "$OUT" -f "$FORMAT" -s "$START" --head="$HEAD" src/
   echo "Built $OUT"
 fi
