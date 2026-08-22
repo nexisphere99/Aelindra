@@ -1860,6 +1860,10 @@ jQuery(document).on(':passagestart', function () {
    ================================================================ */
 Macro.add('locationImage', {
   // Usage: <<locationImage "training_yard" "Training Yard">>
+  // For reusable place/room backdrops - see assets/images/locations/.
+  // Single-passage narrative-moment art belongs in <<sceneImage>>
+  // instead (assets/images/scenes/) - keeps locations/ from filling
+  // up with one-off illustrations that aren't actually places.
   handler: function () {
     var slug = this.args[0];
     var altText = this.args[1] || '';
@@ -1869,6 +1873,31 @@ Macro.add('locationImage', {
 
     var img = document.createElement('img');
     img.src = 'assets/images/locations/' + slug + '.png';
+    img.alt = altText;
+    img.onerror = function () {
+      wrap.style.display = 'none';
+    };
+
+    wrap.appendChild(img);
+    this.output.appendChild(wrap);
+  }
+});
+
+Macro.add('sceneImage', {
+  // Usage: <<sceneImage "transformation_abstract" "The transformation takes hold">>
+  // Identical mechanics to <<locationImage>>, different folder - for
+  // single-passage narrative-beat art (a specific story moment, often
+  // abstract/impressionistic, or a character-specific illustration)
+  // rather than a reusable physical location. See assets/images/scenes/.
+  handler: function () {
+    var slug = this.args[0];
+    var altText = this.args[1] || '';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'loc-image';
+
+    var img = document.createElement('img');
+    img.src = 'assets/images/scenes/' + slug + '.png';
     img.alt = altText;
     img.onerror = function () {
       wrap.style.display = 'none';
@@ -2518,8 +2547,8 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;addObjective &quot;queens_gift&quot; &quot;A knock at the door   not a servant&#39;s&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;farewell_queen&quot; &quot;Say goodbye   the Queen&#39;s Chambers&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;cross_bridge&quot; &quot;When you&#39;re ready   cross the bridge to the Moonspire Tower&quot; &quot;MAIN&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="day0_bridge" tags="nobr" position="725,100" size="100,100">&lt;&lt;set _bridgeImg to ($bardGender is &quot;female&quot;) ? &quot;moonspire_bridge_ash_female&quot; : &quot;moonspire_bridge_ash_male&quot;&gt;&gt;
-&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _bridgeImg &quot;The Bridge&quot;&gt;&gt;&lt;/div&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="day0_bridge" tags="nobr" position="725,100" size="100,100">&lt;&lt;set _bridgeImg to ($bardGender is &quot;female&quot;) ? &quot;day_0/moonspire_bridge_ash_female&quot; : &quot;day_0/moonspire_bridge_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _bridgeImg &quot;The Bridge&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;The Bridge   Crossing&lt;/h2&gt;
 
@@ -3140,7 +3169,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;hr&gt;
 
-&lt;&lt;locationImage &quot;transformation_abstract&quot; &quot;The transformation takes hold&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_0/transformation_abstract&quot; &quot;The transformation takes hold&quot;&gt;&gt;
 
 &lt;p&gt;It starts at my center. The core of me   the deep interior, the place where the body keeps its secrets. A knot of heat that tightens and expands simultaneously, like a fist closing inside a furnace. Not like a wound. Wounds are external. This is internal. This is my body arguing with itself, the structure that has held steady for twenty years suddenly receiving new instructions and protesting every single one.&lt;/p&gt;
 
@@ -3293,7 +3322,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;hr&gt;
 
-&lt;&lt;locationImage &quot;transformation_abstract_futa&quot; &quot;The transformation takes hold, dual-formed&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_0/transformation_abstract_futa&quot; &quot;The transformation takes hold, dual-formed&quot;&gt;&gt;
 
 &lt;p&gt;It begins the same. The core. The knot of heat. The body arguing with its new instructions.&lt;/p&gt;
 
@@ -3418,7 +3447,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [[← Return to Palace Hub|day0_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="day0_void" tags="nobr" position="100,350" size="100,100">&lt;h2&gt;Void   Unconscious&lt;/h2&gt;
 
-&lt;&lt;locationImage &quot;void&quot; &quot;The void between one self and the next&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_0/void&quot; &quot;The void between one self and the next&quot;&gt;&gt;
 
 &lt;p&gt;Nothing.&lt;/p&gt;
 
@@ -3455,7 +3484,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [[Wake → |day1_wake]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="day0_void_futa" tags="nobr" position="225,350" size="100,100">&lt;h2&gt;Void   Two Channels&lt;/h2&gt;
 
-&lt;&lt;locationImage &quot;void_futa&quot; &quot;Two threads of light, running parallel through the void&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_0/void_futa&quot; &quot;Two threads of light, running parallel through the void&quot;&gt;&gt;
 
 &lt;p&gt;Nothing.&lt;/p&gt;
 
@@ -4328,8 +4357,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub_futa]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="day1_ash" tags="nobr" position="100,600" size="100,100">&lt;&lt;set _ashVisitImg to ($bardGender is &quot;female&quot;) ? &quot;day1f_ash_female&quot; : &quot;day1f_ash_male&quot;&gt;&gt;
-&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _ashVisitImg &quot;Ash&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="day1_ash" tags="nobr" position="100,600" size="100,100">&lt;&lt;set _ashVisitImg to ($bardGender is &quot;female&quot;) ? &quot;day_1/day1f_ash_female&quot; : &quot;day_1/day1f_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _ashVisitImg &quot;Ash&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ash&#39;s Visit&lt;/h2&gt;
 
@@ -4392,7 +4421,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="day1_ash_futa" tags="nobr" position="225,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1ft_ash_paradox&quot; &quot;Paradox&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="day1_ash_futa" tags="nobr" position="225,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1ft_ash_paradox&quot; &quot;Paradox&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ash&#39;s Visit&lt;/h2&gt;
 
@@ -4532,7 +4561,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Back to room → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="day1_exam" tags="nobr" position="475,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_mirror&quot; &quot;The mirror&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="day1_exam" tags="nobr" position="475,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1f_mirror&quot; &quot;The mirror&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ilara&#39;s Examination&lt;/h2&gt;
 
@@ -4628,7 +4657,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I want clothes.&quot;&lt;/div&gt;
 
-&lt;&lt;locationImage &quot;day1f_clothes&quot; &quot;Ill-fitting&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_1/day1f_clothes&quot; &quot;Ill-fitting&quot;&gt;&gt;
 
 &lt;p&gt;She provides them. A breast band   soft linen, wrapping around the new tissue. The contact is overwhelming. Linen smallclothes   fitted differently, shaped for anatomy I&#39;m still refusing to fully acknowledge. She offers a dress. I refuse the dress. I take a loose shirt and trousers instead. They fit wrong   too big at the shoulders, too tight at the hips, gaping at the chest where the breasts push the fabric outward. I look like a woman wearing a man&#39;s clothes.&lt;/p&gt;
 
@@ -4648,7 +4677,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="day1_exam_futa" tags="nobr" position="600,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1ft_mirror_dual&quot; &quot;The mirror, both&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="day1_exam_futa" tags="nobr" position="600,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1ft_mirror_dual&quot; &quot;The mirror, both&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ilara&#39;s Examination   Both Parts&lt;/h2&gt;
 
@@ -4968,7 +4997,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="day1_night" tags="nobr" position="975,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_night&quot; &quot;The first night&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="day1_night" tags="nobr" position="975,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1f_night&quot; &quot;The first night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;First Night in the New Body&lt;/h2&gt;
 
@@ -5007,7 +5036,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Sleep → |day1_sleep_transition]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="day1_night_futa" tags="nobr" position="1100,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1ft_night_circuit&quot; &quot;The circuit&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="day1_night_futa" tags="nobr" position="1100,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1ft_night_circuit&quot; &quot;The circuit&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;First Night in the New Body   Both of It&lt;/h2&gt;
 
@@ -5115,7 +5144,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Back to room → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="day1_wake" tags="nobr" position="350,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_waking&quot; &quot;Waking&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="day1_wake" tags="nobr" position="350,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1f_waking&quot; &quot;Waking&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Recovery Room   Waking&lt;/h2&gt;
 
@@ -5188,7 +5217,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="day1_wake_futa" tags="nobr" position="475,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1ft_waking_both&quot; &quot;Waking, both&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="day1_wake_futa" tags="nobr" position="475,725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_1/day1ft_waking_both&quot; &quot;Waking, both&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Recovery Room   Waking, Both&lt;/h2&gt;
 
@@ -5674,7 +5703,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_door_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="day1_npc_vael3" tags="nobr" position="975,850" size="100,100">&lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
-&lt;&lt;locationImage &quot;day1f_vials&quot; &quot;Four vials&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_1/day1f_vials&quot; &quot;Four vials&quot;&gt;&gt;
 &lt;h3&gt;Mistress Vael   Medical Follow-Up&lt;/h3&gt;
 
 &lt;p&gt;A knock. Purposeful. Three raps, no pause.&lt;/p&gt;
@@ -5907,7 +5936,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1ft_door_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="day1ft_npc_smallclothes" tags="nobr" position="725,975" size="100,100">&lt;&lt;locationImage &quot;day1ft_smallclothes&quot; &quot;The clothing problem&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="day1ft_npc_smallclothes" tags="nobr" position="725,975" size="100,100">&lt;&lt;sceneImage &quot;day_1/day1ft_smallclothes&quot; &quot;The clothing problem&quot;&gt;&gt;
 &lt;h3&gt;The Smallclothes Problem&lt;/h3&gt;
 
 &lt;p&gt;The clothing situation is   illustrative.&lt;/p&gt;
@@ -5938,7 +5967,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub_futa]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="day1ft_npc_vael3" tags="nobr" position="850,975" size="100,100">&lt;&lt;npcPortrait &quot;vael&quot; &quot;Mistress Vael&quot;&gt;&gt;
-&lt;&lt;locationImage &quot;day1ft_vials&quot; &quot;Five vials&quot;&gt;&gt;
+&lt;&lt;sceneImage &quot;day_1/day1ft_vials&quot; &quot;Five vials&quot;&gt;&gt;
 &lt;h3&gt;Mistress Vael   Prescriptions, Modified&lt;/h3&gt;
 
 &lt;p&gt;The same purposeful knock. The same wooden case. But five vials, not four.&lt;/p&gt;
@@ -8237,8 +8266,8 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_gardens" tags="nobr" position="1100,1475" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;royal_gardens_ash_female&quot; : &quot;royal_gardens_ash_male&quot;&gt;&gt;
-&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_gardens" tags="nobr" position="1100,1475" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;day_minus_2/royal_gardens_ash_female&quot; : &quot;day_minus_2/royal_gardens_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Royal Gardens   Ash&#39;s Arrival&lt;/h2&gt;
 

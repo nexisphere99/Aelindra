@@ -97,6 +97,10 @@ jQuery(document).on(':passagestart', function () {
    ================================================================ */
 Macro.add('locationImage', {
   // Usage: <<locationImage "training_yard" "Training Yard">>
+  // For reusable place/room backdrops - see assets/images/locations/.
+  // Single-passage narrative-moment art belongs in <<sceneImage>>
+  // instead (assets/images/scenes/) - keeps locations/ from filling
+  // up with one-off illustrations that aren't actually places.
   handler: function () {
     var slug = this.args[0];
     var altText = this.args[1] || '';
@@ -106,6 +110,31 @@ Macro.add('locationImage', {
 
     var img = document.createElement('img');
     img.src = 'assets/images/locations/' + slug + '.png';
+    img.alt = altText;
+    img.onerror = function () {
+      wrap.style.display = 'none';
+    };
+
+    wrap.appendChild(img);
+    this.output.appendChild(wrap);
+  }
+});
+
+Macro.add('sceneImage', {
+  // Usage: <<sceneImage "transformation_abstract" "The transformation takes hold">>
+  // Identical mechanics to <<locationImage>>, different folder - for
+  // single-passage narrative-beat art (a specific story moment, often
+  // abstract/impressionistic, or a character-specific illustration)
+  // rather than a reusable physical location. See assets/images/scenes/.
+  handler: function () {
+    var slug = this.args[0];
+    var altText = this.args[1] || '';
+
+    var wrap = document.createElement('div');
+    wrap.className = 'loc-image';
+
+    var img = document.createElement('img');
+    img.src = 'assets/images/scenes/' + slug + '.png';
     img.alt = altText;
     img.onerror = function () {
       wrap.style.display = 'none';

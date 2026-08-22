@@ -1,5 +1,5 @@
 :: day1_ash_futa [nobr]
-<div class="scene-image"><<locationImage "day1ft_ash_paradox" "Paradox">></div>
+<div class="scene-image"><<sceneImage "day_1/day1ft_ash_paradox" "Paradox">></div>
 
 <h2>Ash's Visit</h2>
 

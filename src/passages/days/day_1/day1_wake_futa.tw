@@ -1,5 +1,5 @@
 :: day1_wake_futa [nobr]
-<div class="scene-image"><<locationImage "day1ft_waking_both" "Waking, both">></div>
+<div class="scene-image"><<sceneImage "day_1/day1ft_waking_both" "Waking, both">></div>
 
 <h2>Recovery Room   Waking, Both</h2>
 

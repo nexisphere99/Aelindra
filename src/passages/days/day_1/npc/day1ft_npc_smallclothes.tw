@@ -1,5 +1,5 @@
 :: day1ft_npc_smallclothes [nobr]
-<<locationImage "day1ft_smallclothes" "The clothing problem">>
+<<sceneImage "day_1/day1ft_smallclothes" "The clothing problem">>
 <h3>The Smallclothes Problem</h3>
 
 <p>The clothing situation is   illustrative.</p>

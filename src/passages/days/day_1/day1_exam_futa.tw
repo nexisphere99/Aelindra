@@ -1,5 +1,5 @@
 :: day1_exam_futa [nobr]
-<div class="scene-image"><<locationImage "day1ft_mirror_dual" "The mirror, both">></div>
+<div class="scene-image"><<sceneImage "day_1/day1ft_mirror_dual" "The mirror, both">></div>
 
 <h2>Ilara's Examination   Both Parts</h2>
 

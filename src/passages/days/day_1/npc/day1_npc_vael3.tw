@@ -1,6 +1,6 @@
 :: day1_npc_vael3 [nobr]
 <<npcPortrait "vael" "Mistress Vael">>
-<<locationImage "day1f_vials" "Four vials">>
+<<sceneImage "day_1/day1f_vials" "Four vials">>
 <h3>Mistress Vael   Medical Follow-Up</h3>
 
 <p>A knock. Purposeful. Three raps, no pause.</p>

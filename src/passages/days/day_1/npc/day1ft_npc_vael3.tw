@@ -1,6 +1,6 @@
 :: day1ft_npc_vael3 [nobr]
 <<npcPortrait "vael" "Mistress Vael">>
-<<locationImage "day1ft_vials" "Five vials">>
+<<sceneImage "day_1/day1ft_vials" "Five vials">>
 <h3>Mistress Vael   Prescriptions, Modified</h3>
 
 <p>The same purposeful knock. The same wooden case. But five vials, not four.</p>
