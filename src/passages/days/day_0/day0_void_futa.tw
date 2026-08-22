@@ -1,7 +1,7 @@
 :: day0_void_futa [nobr]
 <h2>Void   Two Channels</h2>
 
-<<sceneImage "day_0/void_futa" "Two threads of light, running parallel through the void">>
+<div class="scene-image"><<sceneImage "day_0/void_futa" "Two threads of light, running parallel through the void">></div>
 
 <p>Nothing.</p>
 
