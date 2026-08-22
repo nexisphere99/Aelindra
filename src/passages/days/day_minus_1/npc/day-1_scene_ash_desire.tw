@@ -1,0 +1,63 @@
+:: day-1_scene_ash_desire [nobr]
+<h3>The Question</h3>
+
+<p>The fire is low. The wine is almost gone. Ash is still on the floor, lute silent in <<print $bardPronounPos>> lap, <<print $bardPronounPos>> body warm against the side of the bed where I'm sitting. The conversation has been about goats and barons and magistrates. Normal things. Safe things.</p>
+
+<p>I break the safety.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ash. When I'm... different. When I have a woman's body. Will you still " I can't finish. The sentence has too many possible endings and all of them are terrifying.</div>
+
+<p>Ash looks at me. <<print $bardPronounPosCap>> honey eyes catch the firelight and hold it. <<print $bardPronounCap>>'s quiet for a long time   not because <<print $bardPronoun>> doesn't know the answer but because <<print $bardPronoun>>'s choosing how to say it.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"You're asking if I'll still want you."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I'm asking if " I gesture. At my body. At the broad shoulders and flat chest and the cock I'm sitting on. "If this is what you want, and this is going to be gone, then "</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Edrin." <<print $bardPronounCap>> sets the lute aside. Turns to face me fully. Cross-legged on the floor, close enough that <<print $bardPronounPos>> knee touches my calf. "I've been wanting you since I was sixteen and you choked on a candied apple and I thought it was the most endearing thing I'd ever seen. I wanted you when you were a gangly teenager with bad hair. I wanted you when you grew into a man with a sharp jaw and sad eyes and I will want you when you're a woman with those same eyes in a different face."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You don't know what the body will look like."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I don't care what the body looks like." <<print $bardPronounPosCap>> voice is firm. Certain. The rare moments when Ash stops performing and speaks from the bedrock. "I've fucked people with cocks and people with cunts and people who had both and people who had neither and the thing that makes me want someone has never, ever been about what's between their legs. It's about " <<print $bardPronounCap>> taps <<print $bardPronounPos>> chest. Heart. "This and yours hasn't changed. It can't change. The Rite rewrites bodies. It doesn't rewrite souls."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"But the sex. The sex will be "</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Different. Wonderfully, terrifyingly different." <<print $bardPronounCap>> leans forward. "Edrin. I once spent a night with a woman who had been a man. She told me the orgasms were different   not better, not worse, different. Deeper, she said. Less concentrated. Like the pleasure goes through you instead of shooting out of you. She said it was like learning a new instrument   the music is still music, but the technique is completely different."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's   that's exactly what I'm afraid of."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I know and it's exactly what I'm excited about." <<print $bardPronounCap>> grins   that specific Ash grin, the one that's tender and filthy simultaneously. "I'm a bard. I live for new instruments. New sounds. New ways to make someone sing."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Sing?"</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Moan. Scream. Whimper. The whole register. I want to learn yours. Whatever yours turns out to be."</div>
+
+<p>The warmth that floods through me isn't arousal   or it is, but it's bigger than arousal. It's the feeling of being wanted not despite the change but through it. Of someone looking at the transformation not as loss but as possibility. New territory. New music. New ways to make someone come.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ash."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Mmhm?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"If I have breasts   when I have breasts   are you going to stare at them?"</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Absolutely. Shamelessly. I'll write a sonnet about each one."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"There'll only be two."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I'll write a duet."</div>
+
+<p>I laugh. The sound is genuine and surprised and it comes from the same deep place as the fear, and somehow both can exist simultaneously   the terror of what's coming and the warmth of being wanted through it.</p>
+
+<p>Ash stays. <<print $bardPronounCap>> plays. The music is softer now   intimate, low, the kind of thing you play for one person in a room and no one else. The fire dies. The darkness grows.</p>
+
+<p><<print $bardPronounCap>> doesn't touch me. Not tonight. Tonight the intimacy is verbal   the confession of desire across the threshold of transformation, the promise that the body on the other side will be met with hunger, not horror.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I'll be here," <<print $bardPronoun>> says at the door. "On the other side and I'll want you. Whatever shape you're in."</div>
+
+<<set $d1_npc_ash_desire to true>>
+<<set $stress -= 10>>
+<<set $affAsh += 5>>
+<<set $arousal += 5>>
+
+<div class="scene-end">
+  [[Continue → |day-1_hub]]
+</div>

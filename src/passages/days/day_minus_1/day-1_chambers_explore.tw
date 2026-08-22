@@ -13,7 +13,7 @@
 </div>
 <</if>>
 
-<<if $timeSlot is "NIGHT" and $d1_rowan and not $d1_night and not $d1_npc_lastjerk>>
+<<if $timeSlot is "NIGHT" and $d1_ash and not $d1_night and not $d1_npc_lastjerk>>
 <div class="interaction-card side">
   <h4>🔥 The Body   You Know What This Is</h4>
   <p>Tomorrow you walk to the tower. Tomorrow the body changes. Tonight, for the last time, you know exactly how this works.</p>
@@ -24,7 +24,7 @@
 <div class="interaction-card">
   <h4>🪞 The Mirror</h4>
   <p>The full-length mirror. Gilded frame. Ancient, slightly warped glass.</p>
-  <<if $timeSlot is "NIGHT" and $d1_rowan>>
+  <<if $timeSlot is "NIGHT" and $d1_ash>>
     [[Stand before it   one last time|day-1_night]]
   <<else>>
     <p class="flavor-dim">Not yet. Not today. The mirror and you have said enough for now.</p>

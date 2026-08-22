@@ -2,8 +2,10 @@
 
 Same `<<locationImage>>` native macro as prior days. No new characters are
 introduced on Day 1   every NPC portrait reuses an existing file (Aldric,
-Rowan, Ilara, Nara, Vael, Marta), so there's no `npcs/day_1_manifest.md`;
-this is the only Day 1 art file.
+Ash, Ilara, Nara, Vael, Marta), so there's no `npcs/day_1_manifest.md`;
+this is the only Day 1 art file. Ash's portrait resolves via
+`$bardPortraitSlug` (`ash_male.png`/`ash_female.png`)   see
+`npcs/day_minus_2_manifest.md`.
 
 | Filename | Used by | Prompt |
 |---|---|---|

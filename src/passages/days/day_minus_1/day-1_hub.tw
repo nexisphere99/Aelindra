@@ -12,9 +12,9 @@
   <<locationImage "palace_chambers" "Edrin's Chambers">>
   <h3>🛏 Edrin's Chambers</h3>
   <p class="loc-flavor">Your room. The half-written letter is gone from the desk. The mirror waits.</p>
-  <<if $timeSlot is "EVENING" and not $d1_rowan>>
+  <<if $timeSlot is "EVENING" and not $d1_ash>>
     <span class="badge main">⚔ Someone is knocking</span>
-    [[Enter → |day-1_rowan]]
+    [[Enter → |day-1_ash]]
   <<elseif $timeSlot is "NIGHT" and not $d1_night>>
     <span class="badge main">⚔ The mirror. One last time.</span>
     [[Enter → |day-1_chambers_explore]]

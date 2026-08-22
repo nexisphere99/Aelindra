@@ -7,11 +7,11 @@
 
 <p>I step onto the bridge.</p>
 
-<p>Rowan is there.</p>
+<p>Ash is there.</p>
 
-<p><<npcPortrait "rowan" "Rowan">>They're leaning against the railing at the near end, lute absent for the first time I can remember. Their arms are crossed. Their honey-coloured eyes find mine immediately   they've been waiting. They said they would be. <em>I'll be in the courtyard. Before dawn. If you walk toward the tower, I'll walk with you.</em></p>
+<p><<npcPortrait $bardPortraitSlug "Ash">><<print $bardPronounCap>>'s leaning against the railing at the near end, lute absent for the first time I can remember. <<print $bardPronounPosCap>> arms are crossed. <<print $bardPronounPosCap>> honey-coloured eyes find mine immediately   <<print $bardPronoun>>'s been waiting. <<print $bardPronounCap>> said <<print $bardPronoun>> would be. <em>I'll be in the courtyard. Before dawn. If you walk toward the tower, I'll walk with you.</em></p>
 
-<p>They don't say anything. They push off the railing and fall into step beside me. Their shoulder brushes mine. The contact is deliberate and grounding   a tether, a reminder that the body walking this bridge is real and solid and present, not yet dissolved into the thing it's about to become.</p>
+<p><<print $bardPronounCap>> doesn't say anything. <<print $bardPronounCap>> pushes off the railing and falls into step beside me. <<print $bardPronounPosCap>> shoulder brushes mine. The contact is deliberate and grounding   a tether, a reminder that the body walking this bridge is real and solid and present, not yet dissolved into the thing it's about to become.</p>
 
 <p>We walk. The wind roars. The spray catches my face   cold, sharp, tasting of minerals and deep earth. Below, the river carves through the gorge with the patient violence of water that has been doing this for a thousand years and will continue for a thousand more, indifferent to the small human drama crossing above it.</p>
 
@@ -19,25 +19,25 @@
 
 <p>I look down. Not suicidal. Not considering it. Just... the vertigo. The dizziness of standing between who I am and who I'm about to become, with nothing below but a long fall and cold water and the implacable fact of gravity.</p>
 
-<p>Rowan stands beside me. Looking down too. Their hair catches the wind   dark with copper, whipping across their face.</p>
+<p>Ash stands beside me. Looking down too. <<print $bardPronounPosCap>> hair catches the wind   dark with copper, whipping across <<print $bardPronounPos>> face.</p>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"You don't have to watch me go in," I say.</div>
 
-<div class="dialogue"><span class="speaker">ROWAN</span>"I know."</div>
+<div class="dialogue"><span class="speaker">ASH</span>"I know."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Then why are you here?"</div>
 
-<div class="dialogue"><span class="speaker">ROWAN</span>"Because that's what friends do. They walk you to the places you're afraid to go, and they wait outside, and they're there when you come out the other side."</div>
+<div class="dialogue"><span class="speaker">ASH</span>"Because that's what friends do. They walk you to the places you're afraid to go, and they wait outside, and they're there when you come out the other side."</div>
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"What if what comes out isn't me?"</div>
 
-<p>Rowan turns. Looks at me. Their expression is something I've never seen on them before   not the easy warmth, not the performer's charm, not the gentle deflection of someone who's learned to keep the world at arm's length with humour and music. Something raw. Something that costs them.</p>
+<p>Ash turns. Looks at me. <<print $bardPronounPosCap>> expression is something I've never seen before   not the easy warmth, not the performer's charm, not the gentle deflection of someone who's learned to keep the world at arm's length with humour and music. Something raw. Something that costs <<print $bardPronounObj>>.</p>
 
-<div class="dialogue"><span class="speaker">ROWAN</span>"It'll be you. Different wrapping. Same person. I'll know you. I've always known you."</div>
+<div class="dialogue"><span class="speaker">ASH</span>"It'll be you. Different wrapping. Same person. I'll know you. I've always known you."</div>
 
-<p>They put their hand on my arm. The grip is firm. Lute-calloused fingers pressing through the leather of my jerkin, and I can feel the warmth of their palm and the slight tremor that tells me they're not as calm as they're performing and that undoes me more than anything else today   the knowledge that Rowan, who is never shaken, is shaking.</p>
+<p><<print $bardPronounCap>> puts <<print $bardPronounPos>> hand on my arm. The grip is firm. Lute-calloused fingers pressing through the leather of my jerkin, and I can feel the warmth of <<print $bardPronounPos>> palm and the slight tremor that tells me <<print $bardPronoun>>'s not as calm as <<print $bardPronoun>>'s performing and that undoes me more than anything else today   the knowledge that Ash, who is never shaken, is shaking.</p>
 
-<div class="dialogue"><span class="speaker">ROWAN</span>"Go. I'll be right here. Right here on this bridge. When you wake up."</div>
+<div class="dialogue"><span class="speaker">ASH</span>"Go. I'll be right here. Right here on this bridge. When you wake up."</div>
 
 <p>I nod. I can't speak. My throat has closed around every word I could possibly say and sealed them in like a tomb.</p>
 
@@ -61,7 +61,7 @@
 
 <div class="dialogue"><span class="speaker">EDRIN</span>"Good. I want to remember I didn't go willingly."</div>
 
-<p>I climb the stairs. Behind me, I hear Rowan's lute   they've produced it from somewhere, as they always do, and the first notes drift up the stairwell like a benediction. Something without words. Something that says <em>I'm here, I'm here, I'm here.</em></p>
+<p>I climb the stairs. Behind me, I hear Ash's lute   <<print $bardPronoun>>'s produced it from somewhere, as <<print $bardPronoun>> always does, and the first notes drift up the stairwell like a benediction. Something without words. Something that says <em>I'm here, I'm here, I'm here.</em></p>
 
 <p>The stairs spiral upward. The tapestries shift as I pass   the serpent becoming the river, the tree becoming the woman, the bird becoming the song. I've seen them before. Today they feel like prophecy.</p>
 

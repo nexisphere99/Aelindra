@@ -16,6 +16,25 @@
 <<set $timeSlot to "MORNING">>          /* MORNING, MIDDAY, AFTERNOON, EVENING, NIGHT */
 <<set $gameStarted to false>>
 
+/* --- ASH (formerly "Rowan") - selectable gender ---
+   Chosen once, at first appearance (day-2_gardens.tw, following the
+   music). $bardGender drives $bardPronoun/$bardPronounObj/
+   $bardPronounPos throughout every later Ash scene - always print
+   these instead of hardcoding "he"/"she"/"they", and always write
+   the verb right after in singular form (matching either pronoun),
+   never the "they + plural verb" construction the character used to
+   get. $bardPortraitSlug feeds every <<npcPortrait>> call for Ash;
+   only ash_male.png exists so far, so the female branch fails
+   gracefully (same as any other missing portrait) until ash_female.png
+   is added. */
+<<set $bardGender to "unset">>
+<<set $bardPronoun to "they">>
+<<set $bardPronounObj to "them">>
+<<set $bardPronounPos to "their">>
+<<set $bardPronounCap to "They">>       /* sentence-initial capitalised forms - */
+<<set $bardPronounPosCap to "Their">>   /* $bardPronoun/Pos never auto-capitalise */
+<<set $bardPortraitSlug to "ash_male">>
+
 /* --- PRIMARY STATS (0-100) --- */
 <<set $statGRA to 0>>       /* Grace */
 <<set $statAUT to 0>>       /* Authority */
@@ -64,7 +83,7 @@
 /* --- AFFINITY (Romance NPCs) --- */
 <<set $affAldric to 0>>
 <<set $affRosalind to 0>>
-<<set $affRowan to 0>>
+<<set $affAsh to 0>>
 <<set $affKael to 0>>
 <<set $affLyra to 0>>
 

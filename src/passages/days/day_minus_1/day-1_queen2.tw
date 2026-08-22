@@ -90,7 +90,7 @@
 <!-- --- UPDATE OBJECTIVES --- -->
 <<set $d1_queen2 to true>>
 <<completeObjective "queen_seraphina2">>
-<<addObjective "chambers_rowan" "Evening approaches   return to your chambers" "MAIN">>
+<<addObjective "chambers_ash" "Evening approaches   return to your chambers" "MAIN">>
 
 <div class="scene-end">
   [[Continue → |day-1_hub]]
