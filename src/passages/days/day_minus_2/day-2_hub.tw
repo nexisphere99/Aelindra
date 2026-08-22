@@ -107,7 +107,7 @@
 <</if>>
 
 <!-- ========== ROYAL BATHS ========== -->
-<<if $d2_queen and $timeSlot is "AFTERNOON" and not $d2_npc_bath>>
+<<if $d2_queen and not $d2_npc_bath>>
 <div class="loc-card">
   <<locationImage "royal_baths" "Royal Baths">>
   <h3>🛁 The Royal Baths</h3>

@@ -20,7 +20,7 @@
 </div>
 <</if>>
 
-<<if $d1_training and $timeSlot is "AFTERNOON" and not $d1_npc_sera>>
+<<if $d1_training and not $d1_npc_sera>>
 <div class="interaction-card side">
   <<npcPortrait "sera" "Sera">>
   <h4>🌹 A Familiar Face   The Corridor</h4>

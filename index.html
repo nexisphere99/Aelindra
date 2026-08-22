@@ -5175,7 +5175,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $d1_training and $timeSlot is &quot;AFTERNOON&quot; and not $d1_npc_sera&gt;&gt;
+&lt;&lt;if $d1_training and not $d1_npc_sera&gt;&gt;
 &lt;div class=&quot;interaction-card side&quot;&gt;
   &lt;&lt;npcPortrait &quot;sera&quot; &quot;Sera&quot;&gt;&gt;
   &lt;h4&gt;🌹 A Familiar Face   The Corridor&lt;/h4&gt;
@@ -5265,7 +5265,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;if not $d1_npc_messenger&gt;&gt;
     &lt;span class=&quot;badge side&quot;&gt;🗡 A messenger with a sealed letter&lt;/span&gt;
   &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $d1_training and $timeSlot is &quot;AFTERNOON&quot; and not $d1_npc_sera&gt;&gt;
+  &lt;&lt;if $d1_training and not $d1_npc_sera&gt;&gt;
     &lt;span class=&quot;badge side&quot;&gt;🌹 A familiar face, lingering&lt;/span&gt;
   &lt;&lt;/if&gt;&gt;
   [[Explore → |day-1_corridors]]
@@ -7466,7 +7466,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;!-- ========== ROYAL BATHS ========== --&gt;
-&lt;&lt;if $d2_queen and $timeSlot is &quot;AFTERNOON&quot; and not $d2_npc_bath&gt;&gt;
+&lt;&lt;if $d2_queen and not $d2_npc_bath&gt;&gt;
 &lt;div class=&quot;loc-card&quot;&gt;
   &lt;&lt;locationImage &quot;royal_baths&quot; &quot;Royal Baths&quot;&gt;&gt;
   &lt;h3&gt;🛁 The Royal Baths&lt;/h3&gt;
