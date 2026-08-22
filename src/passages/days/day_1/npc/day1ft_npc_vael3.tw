@@ -1,0 +1,49 @@
+:: day1ft_npc_vael3 [nobr]
+<<npcPortrait "vael" "Mistress Vael">>
+<<locationImage "day1ft_vials" "Five vials">>
+<h3>Mistress Vael   Prescriptions, Modified</h3>
+
+<p>The same purposeful knock. The same wooden case. But five vials, not four.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Blue vial. Pain management. Same as standard protocol.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Green vial. Hormonal stabiliser. Your profile is more complex   you're running predominantly estrogenic but with retained androgenic function. The stabiliser manages the oestrogen peaks without suppressing testosterone entirely. If it suppresses too much, you lose erectile function. If it suppresses too little, you masculinise. It's a balance."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're telling me my hormones are a negotiation."</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Every body's hormones are a negotiation. Yours just has more parties at the table." She sets down the blue and green. Picks up the next.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Clear vial. Sensitivity reducer. Topical. For the breasts and clitoris. Your penis sensitivity will manage itself   the nerve density is high but the tissue is established. The new tissue, however, is going to be overwhelming for the first week.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Amber vial. Sleep aid. Same as standard."</div>
+
+<p>She holds up a small vial of pale gold liquid.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"And the fifth. This is specific to your configuration. A dual-arousal modulator. The cross-wiring between your penile and clitoral-vaginal systems creates a feedback loop. Left unmodulated, arousal in one system stimulates the other, which stimulates the first, escalating without input. This" (she taps the gold vial) "dampens the cross-talk. Not eliminates   dampens. Enough that you can sleep without your cock getting hard because your pussy is wet and your pussy getting wet because your cock is hard."</div>
+
+<p>The bluntness. The clinical, profanity-laced precision. Vael's gift.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Take five drops before bed. It'll reduce the cross-system feedback by approximately sixty percent. You'll still feel both   you should, that's how the body works   but the spiral won't run away from you."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"How long do I need it?"</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Until your brain catches up with your body. Could be a week. Could be a month. Your neural pathways are remapping to process dual input. Once the mapping stabilises, the feedback loop becomes manageable without pharmaceutical help." A pause. "Or you could just masturbate. An orgasm resets the loop for about four hours."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's your medical advice?"</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"That's physics. The feedback loop builds tension. Tension resolves through climax. Climax resets the system. I'm not prescribing masturbation   I'm describing a biological mechanism. What you do with the information is your business."</div>
+
+<p>She leaves the five vials. Nods. Walks out.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Eat something. And take the gold drops tonight. Trust me."</div>
+
+<<set $d1ft_npc_vael3 to true>>
+<<set $energy += 10>>
+<<set $statWIS += 3>>
+<<set $stress -= 3>>
+<<set $dualArousalModulator to true>>
+<<addItem "recovery_vials_futa" "Five Vials" "Blue (pain), green (hormonal stabiliser), clear (sensitivity reducer), amber (sleep aid), gold (dual-arousal modulator)   Vael's prescriptions.">>
+
+<div class="scene-end">
+  [[Continue → |day1ft_table_hub]]
+</div>

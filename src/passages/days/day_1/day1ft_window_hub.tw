@@ -1,0 +1,17 @@
+:: day1ft_window_hub [nobr]
+<h2>🪟 The Window</h2>
+<p>The world in two columns. Male and female. You fit in neither.</p>
+
+<<if not $d1ft_npc_window>>
+<div class="interaction-card side">
+  <h4>👂 Listen</h4>
+  <p>The palace continues. Hammers, guards, children, a bread vendor's song   sorted, without meaning to be, into two categories you no longer belong to.</p>
+  [[Listen → |day1ft_npc_window]]
+</div>
+<<else>>
+  <p class="loc-flavor">A slice of sky. The bridge railing. The far palace wall. The sound of a world that doesn't know what you've become.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Back to room → |day1_hub_futa]]
+</div>

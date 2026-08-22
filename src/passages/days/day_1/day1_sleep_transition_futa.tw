@@ -1,0 +1,16 @@
+:: day1_sleep_transition_futa [nobr]
+<<set $dayNumber to 2>>
+<<set $dayLabel to "Both (still)">>
+<<set $timeSlot to "MORNING">>
+<<set $energy to 45>>
+<<set $stress -= 5>>
+<<set $arousal to 30>>
+<<clearObjectives>>
+
+<div class="day-transition">
+  <h2>Night passes. You dream of being split in two.</h2>
+  <p>One half male. One half female. Both reaching across a mirror. In the dream, they touch. Their fingers interlace. They merge back together.</p>
+  <p>You wake with morning wood and morning wet. Both. As always now. Both.</p>
+  <p class="transition-morning"><em>Day 2. The body is still here. All of it. So are you.</em></p>
+  [[Dawn → |day2_hub_futa]]
+</div>

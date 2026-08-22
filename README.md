@@ -106,7 +106,7 @@ After building, open `index.html` directly in a browser to play.
   scenes gain an internal-monologue beat ("I chose this" / "stay with
   me") threaded into the existing genital-transformation prose, unchanged
   otherwise.
-- **Day 1 ("Wrong")   female route only**   fully built. The architecture
+- **Day 1 ("Wrong")   female route**   fully built. The architecture
   changes again: Aelindra doesn't leave the Moonspire Tower, so the open
   world shrinks from a location grid to a single **room hub**
   (`.room-layout`/`.room-zone` in place of `.location-grid`/`.loc-card`)  
@@ -119,11 +119,28 @@ After building, open `index.html` directly in a browser to play.
   alone scene, Rowan's visit, and the first night, plus 9 optional
   encounters. Introduces a new stat, `$statFEM`, that only appears in the
   sidebar from Day 1 onward (same pattern as the arousal bar).
-- **Day 1 futa route, Day 2 onward**   placeholder hubs only, confirming
-  the pipeline lands correctly. The futa route's Day 1 still doesn't exist
-  as content   per the source material itself, it needs its own dedicated
-  writing (body discovery, NPCs, everything) rather than a find-and-replace
-  from the female version, same reasoning as the ritual scenes.
+- **Day 1 ("Both")   futa route**   fully built as of v0.3, same confined
+  room-hub architecture as the female route (`day1_hub_futa.tw`) plus one
+  futa-only zone, the Smallclothes (the concealment problem). Own init
+  widget (`day1ftInit`/`$d1ft_*` flags, called from `day0_void_futa.tw`),
+  since Day -1 already owns `day1Init`/`$d1_*` and the female route owns
+  `day1fInit`/`$d1f_*`. Five main scenes (waking with both anatomies
+  intact, Ilara's dual-anatomy examination, alone time, Rowan's visit,
+  first night   emotionally the inverse of the female route: relief and
+  overwhelm rather than pure loss) plus 9 optional encounters, including
+  Vael's fifth prescription vial (a dual-arousal modulator for the
+  cock/pussy feedback loop) and Nara quietly confirming she knows what
+  form was chosen. New futa-only trackers: `$loneliness`,
+  `$concealmentAwareness`/`$concealmentSkill`, `$dualArousalModulator`,
+  `$naraTrust`, `$feedbackLoopActive`. The arousal bar now shows from
+  Day 1 for the futa route specifically (`$dualAnatomy`), vs Day 7+ for
+  female; a new Concealment row appears in the right sidebar body-stats
+  block, futa-route only. Incorporates the futa-specific half of
+  `AELINDRA_Day1_Revisions.md` (Rowan reads the choice in her body
+  language rather than a nightgown silhouette; the night scene's "stay"/
+  "thank you" callback to the pre-Rite mirror scene).
+- **Day 2 onward, both routes**   placeholder hubs only, confirming the
+  pipeline lands correctly.
 
 Each day's own `day{N}Init` widget owns that day's scene/NPC flags and is
 called from the *previous* day's sleep-transition/bridge passage  

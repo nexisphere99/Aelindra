@@ -35,10 +35,11 @@
 <<set $vaginaPresent to true>>
 <<set $dualAnatomy to true>>
 <<set $concealmentDifficulty to 30>>
+<<day1ftInit>>
 
 <div class="day-transition">
   <p>The darkness holds. Two threads of light   silver and amber   run parallel through the void.</p>
   <p>A heartbeat where they converge. Yours. Both.</p>
   <p class="transition-morning"><em>Tomorrow, someone new opens her eyes. She carries everything.</em></p>
-  [[Wake → |day1_hub_futa]]
+  [[Wake → |day1_wake_futa]]
 </div>

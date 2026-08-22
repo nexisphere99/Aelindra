@@ -1,0 +1,31 @@
+:: day1ft_npc_body_discoveries [nobr]
+<h3>The Body   Dual Discoveries</h3>
+
+<p>The discoveries come in pairs. Every revelation about the female body is accompanied by a revelation about how the female body interacts with the retained male anatomy.</p>
+
+<p><strong>Hair.</strong> The same everywhere problem. Dark, thick, heavy waves. But when I twist it into a knot at the back of my head, the motion lifts my arms and the shirt pulls against my chest and the breasts shift and the movement travels downward through the core and the cock shifts against my thigh. A chain reaction. Raising my arms moves my breasts moves my cock. The body is a connected system and the connections are new.</p>
+
+<p><strong>Voice.</strong> Higher, softer. I test it: humming Rowan's song. The melody is mine. The timbre is a woman's. But when I clear my throat   the deep, deliberate throat-clear of a man asserting presence in a room   the lower register is still accessible. Not the full baritone. But a depth that the female path doesn't have. The testosterone, preserved. A voice that can be feminine and drop into something else when needed.</p>
+
+<p><strong>Walking with the cock.</strong> I practice. Four paces, turn. The hips sway   unavoidable, the wider pelvis. But the cock adds a variable. Each step, it shifts. The swing is small   soft, the shaft resting against the inner thigh   but it generates friction. Friction generates heat. Heat generates awareness. Awareness generates the clitoris response. The clitoris responds with a faint pulse. The pulse feeds back to the cock. The cock twitches. I've been walking for thirty seconds and my body has already started the loop.</p>
+
+<p>I stop. Stand still. Wait for the system to settle. Resume walking. This time, I press my thighs slightly closer   stabilising the cock, reducing the swing. The friction decreases. The loop dampens. The walk looks more natural   a woman's walk with a controlled gait that hides the stabilisation.</p>
+
+<p>I've been alive in this body for twelve hours and I'm already engineering my walk to conceal an erection cycle. This is going to be my life.</p>
+
+<p><strong>Sitting.</strong> Cross-legged: the cock rests on the inner thigh, the vulva presses against the opposite ankle. The clitoris catches pressure from the cross. I uncross immediately. Knees together: the cock is compressed between thighs, the vulva pressed closed. The sensation is contained but constant. Legs apart: the cock hangs free, the vulva opens, both are exposed to the air, both are cold. There is no comfortable sitting position. There is only a series of compromises.</p>
+
+<p><strong>Crying.</strong> I don't cry. But at the window, late afternoon, listening to the world go on, my eyes fill. The tears sit on the lower lids. I blink them back. The tears are the same.</p>
+
+<p>But the thing I'm not crying about is different. The female path's Aelindra grieves total loss. I grieve something more complicated   the loss of simplicity. I didn't lose everything. I lost the ability to be one thing. I am both, and both means never being simply either, and that's a kind of loss the world doesn't have a sympathy card for.</p>
+
+<<set $d1ft_npc_body to true>>
+<<set $statFEM += 2>>
+<<set $statRES += 1>>
+<<set $concealmentSkill += 1>>
+<<set $stress -= 3>>
+<<completeObjective "body_dual">>
+
+<div class="scene-end">
+  [[Continue → |day1_hub_futa]]
+</div>

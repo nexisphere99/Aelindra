@@ -1,0 +1,59 @@
+:: day1ft-init [widget nobr]
+
+/* ============================================================
+   DAY 1 ("Both")   FUTA ROUTE   SCENE & OBJECT FLAG INIT
+   Called once, from day0_void_futa.tw, mirroring day1f-init.tw
+   (the female route's equivalent). Opens with <<clearObjectives>>
+   per the established convention.
+
+   NAMING: widget is "day1ftInit" and every flag is prefixed d1ft_
+   (not d1f_, which the female route already owns - see the naming
+   note in day1f-init.tw). This matches the prefix the futa route's
+   own code-agent prompt document specified for state flags; passage
+   names use a plain _futa suffix instead (day1_wake_futa,
+   day1_exam_futa, etc.) to stay readable, and sub-hub/NPC passages
+   use a day1ft_ prefix rather than the doc's suggested day1f_, since
+   day1f_ reads too easily as "female" - purely a collision-avoidance
+   judgment call, not a doc error.
+
+   ARCHITECTURE: identical confined single-room hub as the female
+   route (day1_hub_futa.tw) - see day1_hub.tw's own note. One extra
+   zone here: the Smallclothes (concealment problem), futa-only.
+   ============================================================ */
+<<widget "day1ftInit">>
+  <<clearObjectives>>
+
+  /* --- Day 1 Scene Flags --- */
+  <<set $d1ft_wake to false>>
+  <<set $d1ft_exam to false>>
+  <<set $d1ft_alone to false>>
+  <<set $d1ft_rowan to false>>
+  <<set $d1ft_night to false>>
+
+  /* --- Day 1 NPC / Object Flags --- */
+  <<set $d1ft_npc_items to false>>
+  <<set $d1ft_npc_smallclothes to false>>
+  <<set $d1ft_npc_queen_message to false>>
+  <<set $d1ft_npc_aldric_door to false>>
+  <<set $d1ft_npc_nara3 to false>>
+  <<set $d1ft_npc_vael3 to false>>
+  <<set $d1ft_npc_window to false>>
+  <<set $d1ft_npc_body to false>>
+  <<set $d1ft_npc_marta_tray to false>>
+
+  /* --- Futa-specific stats (declared with safe defaults in
+       StoryInit.tw; these are the real Day 1 starting values) --- */
+  <<set $loneliness to 5>>
+  <<set $concealmentSkill to 0>>
+  <<set $dualArousalModulator to false>>
+  <<set $naraTrust to 0>>
+  <<set $feedbackLoopActive to true>>
+  <<set $arousal to 25>>          /* Elevated baseline - dual anatomy, not a scene event */
+
+  /* --- Day framing --- */
+  <<set $dayNumber to 1>>
+  <<set $dayLabel to "Both">>
+  <<set $timeSlot to "MORNING">>
+
+  <<addObjective "exam_futa" "Ilara will come soon   she's been monitoring. You need to be examined, both parts." "MAIN">>
+<</widget>>

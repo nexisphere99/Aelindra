@@ -1,0 +1,30 @@
+:: day1ft_npc_queen_message [nobr]
+<h3>The Queen's Message</h3>
+
+<p>A knock at the door. Not Rowan's knock   softer, more formal. A handmaiden, extending a sealed parchment through the gap. The royal seal. Silver stag, crescent moon.</p>
+
+<div class="dialogue"><span class="speaker">HANDMAIDEN</span>"From the Queen, my lady."</div>
+
+<p>I take the note. The handmaiden retreats. I break the seal. My mother's hand   the elegant, controlled script of a woman who was taught penmanship as a form of statecraft.</p>
+
+<p><em>Rest. I'll come to you tomorrow. I love you.</em></p>
+
+<p>The same note. The same seven words. But the reaction is different. Because my mother doesn't know. She asked me to become a woman. I became   something else. Something more. Something that includes the womanhood she needed and also includes the manhood I refused to surrender. She doesn't know I kept the cock. She doesn't know about the dual anatomy. She doesn't know that the daughter she'll visit tomorrow has a seven-inch cock hidden under her nightgown and a vagina behind it and a body that the Elder Council has never legislated for because nobody imagined it could exist.</p>
+
+<p>I'll have to tell her. Tomorrow, when she visits. I'll have to say the words: <em>I kept it, Mother. I kept my cock. I have both.</em></p>
+
+<p>How will she react? With relief that I didn't suffer total loss? With fear that the succession is complicated? With the political calculation that has defined her every decision for twenty-five years   weighing the strategic implications of a princess with dual anatomy against the clean simplicity she'd planned for?</p>
+
+<p>I crumple the note. Throw it at the wall. Pick it up. Smooth it. Read it again. <em>I love you.</em> Three words that don't specify anatomy. Three words that don't care about what's between my legs   either set.</p>
+
+<p>Under the pillow. Beside the body that holds everything and reveals nothing.</p>
+
+<<set $d1ft_npc_queen_message to true>>
+<<set $stress += 8>>
+<<set $stress -= 3>>
+<<set $affSeraphina += 2>>
+<<addItem "queens_letter" "The Queen's Letter" "Rest. I'll come to you tomorrow. I love you.">>
+
+<div class="scene-end">
+  [[Continue → |day1ft_door_hub]]
+</div>

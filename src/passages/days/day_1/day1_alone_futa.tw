@@ -1,0 +1,33 @@
+:: day1_alone_futa [nobr]
+<h2>Alone, With Both</h2>
+
+<p>Ilara leaves. The room contracts around me.</p>
+
+<p>I sit on the bed. Look down. The nightgown covers everything but I can feel all of it   the cock's weight against my thigh, the vulva's warmth between my legs, the breasts' pressure against the linen. Three zones of constant awareness. Before the transformation, I had one primary zone of genital consciousness: the cock. Background noise, mostly, unless aroused. Now I have three channels broadcasting simultaneously and none of them has a mute button.</p>
+
+<p>I stand. Walk the room. Four paces, turn, four paces. The gait is wrong   wider hips, lower centre, the same adjustment as the female path   but there's the additional factor. The cock moves when I walk. It swings gently against my inner thigh, the smooth shaft brushing skin that is newly sensitised, and the friction creates a low, warm hum of sensation that isn't arousal, exactly, but is adjacent to arousal in a way that makes the boundary unclear. Simultaneously, the vulva shifts with each step   labia sliding against each other, the clitoris receiving the faintest ghost of pressure from the cock's weight above. Two sensations. Layered. Constant. Every step a duet played on instruments I didn't know I owned.</p>
+
+<p>I need to piss. I stand at the chamber pot. And I realise   I can. I can still stand. The cock is there. I lift the nightgown, take myself in hand (the grip different   smaller fingers, different angle, but the motion is the same, the same muscle memory, the same casual familiarity of twenty years of practice), and piss standing.</p>
+
+<p>The stream arcs normally. The sound is normal. The sensation is normal. The relief   physical and emotional   is staggering. This one thing. This one normal act in a body full of the abnormal. Standing at a chamber pot, cock in hand, pissing the way I've pissed since I was old enough to aim. The normalcy of it hits me so hard that my eyes burn and my throat tightens and I have to brace one hand against the wall because the gratitude is a wave and I'm not ready for waves.</p>
+
+<p>I finish. Shake off. Tuck. The habit preserved. The muscle memory intact.</p>
+
+<p>Then I sit on the bed and notice: I'm wet. Not from urine   from the vagina. I can feel moisture between the labia, a slickness soaking into the nightgown's fabric. The body's baseline lubrication   healthy tissue doing what healthy tissue does. But the cock is dry. Soft. The disconnect is jarring: below the waist, one system is dormant and the other is active, both mine, both operating on independent schedules.</p>
+
+<p>The afternoon stretches. I eat the bread and broth. The jaw chews differently. The throat swallows differently. The broth tastes the same. I hold on to that.</p>
+
+<p>I lie on the bed. Curled on my side. The breasts settle against each other. The cock presses between my thighs   warm, soft, the shaft resting in the groove where the thighs meet. And beneath it, the vulva, pressed against the mattress through the nightgown, the labia compressed, the clitoris receiving a faint, persistent signal that is not pleasure and not pain but something between   the body's background noise, its elevator music, its constant low-level hum that says <em>I'm here, I'm here, both of me, all of me, I'm here.</em></p>
+
+<<set $d1ft_alone to true>>
+<<set $statFEM += 1>>
+<<set $stress -= 5>>
+<<set $arousal += 15>>
+<<set $timeSlot to "EVENING">>
+
+<<completeObjective "alone_futa">>
+<<addObjective "rowan_futa" "Wait for evening   the one person you can tell" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day1_hub_futa]]
+</div>

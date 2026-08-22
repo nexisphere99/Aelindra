@@ -1,0 +1,22 @@
+:: day1ft_npc_items [nobr]
+<h3>The Items You Carried</h3>
+
+<p>The same items. The same table. The same arrangement   someone placed them here while I was unconscious, while this body was still settling into its new configuration, while the cock was finding its resting place against the thigh and the vulva was completing its formation below.</p>
+
+<p>The pressed moonflower. I pick it up. The petals are intact   fragile, ancient, surviving centuries in a book. I hold it in my new hand, the fingers slender, the palm narrow, and the flower looks larger than it did yesterday because my hand is smaller. A flower from another transformation. But that transformation was complete   full conversion. Whoever left this flower in that diary gave up everything. I didn't. I held on. The moonflower is from someone braver than me, or someone who had no choice, or someone who didn't need to keep what I needed to keep.</p>
+
+<p>The jasmine sprig. Wynn's cutting. I bring it to my nose. The same scent. Jasmine doesn't care about the body smelling it.</p>
+
+<p>Aldric's letter. <em>The grip is for a smaller hand.</em> He made me a sword. He didn't know   couldn't have known   that the body he was sizing the grip for would still have a cock. He made it for a princess. He'll meet something more complicated. The grip will still fit. The rest... we'll see.</p>
+
+<p>The ginger root. Vael's practicality. Unneeded but given.</p>
+
+<p>The monogrammed handkerchief. E for Edrin. The old initial. But also   I think, sitting on this bed with this body   E for Everything. For keeping everything. For refusing the clean simplicity of total transformation and choosing instead the messy, complicated, unprecedented both.</p>
+
+<<set $d1ft_npc_items to true>>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+
+<div class="scene-end">
+  [[Continue → |day1ft_table_hub]]
+</div>

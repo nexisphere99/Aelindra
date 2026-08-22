@@ -1,0 +1,21 @@
+:: day1ft_npc_window [nobr]
+<h3>Sounds Through the Window   Different Listening</h3>
+
+<p>The same sounds as the female path   the blacksmith, the guards, the children, the bread vendor. The world continuing. But I listen differently.</p>
+
+<p>I listen for categories. For the binary the world operates on   men and women, male and female, swords and dresses, broad shoulders and wide hips. Everything I hear is sorted: the guard's deep voice (male), the vendor's alto (female), the children's shrieks (unsorted, pre-category, free). The world is organised into two columns and I exist in neither and both.</p>
+
+<p>A woman's laughter drifts up. Bright, open, the kind that happens in gardens. She's laughing in a body that is one thing   uncomplicated, categorised, fitting neatly into the column the world prepared for her. I'm standing at a window in a body that overflows both columns simultaneously.</p>
+
+<p>The wind carries jasmine. The same scent. The same garden.</p>
+
+<p>Same roots. Same scent. New branches   and the branches go in directions no one predicted, and the gardener who planted this particular jasmine would need a whole new system of taxonomy.</p>
+
+<<set $d1ft_npc_window to true>>
+<<set $statRES += 1>>
+<<set $stress -= 2>>
+<<set $loneliness += 2>>
+
+<div class="scene-end">
+  [[Continue → |day1ft_window_hub]]
+</div>

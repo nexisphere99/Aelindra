@@ -1,0 +1,57 @@
+:: day1_night_futa [nobr]
+<div class="scene-image"><<locationImage "day1ft_night_circuit" "The circuit">></div>
+
+<h2>First Night in the New Body   Both of It</h2>
+
+<p>Night. The nightgown. The bed. The body that won't stop talking to itself.</p>
+
+<p>I lie on my back. The breasts settle against my chest   the same weight, the same shift, the same nipple-against-silk sensitivity as the female path. But between my legs, the sensation is doubled.</p>
+
+<p>The cock rests against my thigh. Warm, soft, seven inches of preserved anatomy lying against skin that is newly smooth, newly sensitive, newly capable of registering the cock's presence as a textured event rather than background noise. I can feel the shaft's weight. The head's warmth. The faint, dormant pulse of tissue that is connected to a circulatory system that also feeds the vulva beneath.</p>
+
+<p>And the vulva. Warm against the linen. The labia pressed together. The moisture   constant, low-level, the body's baseline   soaking into fabric. The clitoris nestled between the two anatomies, receiving signals from both: the cock's weight above, the vaginal awareness below. A switchboard operator managing two lines that won't stop ringing.</p>
+
+<p>I shift to my side. The cock presses between my thighs   and the shaft slides against the labia. The sensation is electric and instantaneous. The cock's smooth skin against the vulva's slick folds, friction on both sets of nerve endings at once. I gasp. A sound I don't recognise   high, breathy, feminine in a way that my baritone never was. I adjust. Thighs apart. The cock hangs free. The vulva opens to the air. Both sensations register their displeasure at the separation.</p>
+
+<p>I roll onto my stomach. The cock presses into the mattress   this, at least, is familiar. The weight of my body compressing the shaft against the bed, the way I've slept a thousand times before. But now the pressure pushes the cock backward, against the vulva. The clitoris, caught between the cock's base and the mattress, sends sparks up my spine. I press my face into the pillow and breathe through my teeth.</p>
+
+<p>There is no sleeping position that doesn't create dual stimulation. Every configuration of limbs produces contact between the two anatomies. They're too close. They share the same geography, occupy adjacent territory, and every shift in position is a border skirmish.</p>
+
+<p>I lie on my back again. Stare at the ceiling. The white stone. The faint luminescence. A ceiling I don't know in a room I didn't choose in a body I didn't ask for but refused to fully surrender.</p>
+
+<p>The arousal is building. Not from deliberate touch   from architecture. The body's design. The cock is thickening despite no manual stimulation, fed by the vulva's arousal signals, the clitoris's constant hum, the nipples pressing against silk. I can feel it hardening   the familiar swell, the blood filling tissue, the shaft lengthening and stiffening against my thigh. But the cause is different. The cock is getting hard because the pussy is wet. And the pussy is getting wet because the cock is getting hard. A feedback loop. Two systems feeding each other through shared nerve pathways and cross-wired arousal, building without input, escalating without permission.</p>
+
+<p>I'm hard. Half-hard at least   the shaft thick against my thigh, the head emerging from the soft foreskin, sensitive and warm. And wet. The vaginal moisture has increased, the labia slick, the clitoris swollen. Both. At the same time. Both demanding attention. Both receiving it from each other.</p>
+
+<p>I squeeze my thighs together. Wrong move   the cock is trapped between soft thighs, the shaft compressed against warm skin, and the labia close around the base, and the clitoris grinds against the underside of the shaft, and the triple stimulation   penile, clitoral, vaginal   produces a moan. High. Breathy. Feminine. The sound of a woman's pleasure produced by a body that is also producing a man's erection and the two realities coexist in one throat and one moan and one person lying alone in a tower room in the dark.</p>
+
+<p>I do NOT touch myself. By force of will alone   the same will that walked me across a bridge and into a tower and onto an altar   I lie rigid. Breathing in measured counts. Four in. Four hold. Four out. The technique Aldric taught me for managing panic during combat. I'm using swordfighting breathing exercises to manage dual-genital arousal. The absurdity is not lost on me.</p>
+
+<p>The arousal subsides. Slowly. The cock softens over twenty minutes   reluctantly, as if it's arguing with the decision. The vulva remains wet. The clitoris throbs for another thirty minutes, a metronome of sensation that gradually decelerates from <em>urgent</em> to <em>persistent</em> to <em>present</em> to <em>background.</em></p>
+
+<p>My hand finds the cock again, once it's soft. Not for arousal this time. For the same reason as always: to hold what's mine. The same grip as two nights ago, before the Rite, in the dark, telling it to stay.</p>
+
+<p class="internal-thought"><em>Two nights ago, I held you and said: stay. Tonight, I hold you and say: thank you.</em></p>
+
+<p>I sleep. Badly. I dream of being split in two   one half male, one half female, both reaching for each other across a mirror. In the dream, they touch. Their fingers interlace. They merge back together and the body they form is mine: both, everything, holding two things in the same space and refusing to let either go.</p>
+
+<p>I wake at dawn. The cock is half-hard against my thigh   morning wood, the most ordinary phenomenon in the world, occurring in a body that is the furthest thing from ordinary that has ever existed.</p>
+
+<p>The teeth are the same. The chipped canine. The grey-blue eyes. And between my legs, seven inches of preserved self, resting on a geography that is brand new.</p>
+
+<p>I hold on to what I can.</p>
+
+<<set $d1ft_night to true>>
+<<set $statFEM += 1>>
+<<set $energy to 25>>
+<<set $arousal to 25>>
+
+<<if $dualArousalModulator>>
+  <<set $arousal to 10>>
+<</if>>
+
+<<completeObjective "night_futa">>
+
+<div class="scene-end">
+  [[Sleep, eventually → |day1_sleep_transition_futa]]
+</div>

@@ -1,24 +1,108 @@
 :: day1_hub_futa [nobr]
-<!--
-  PLACEHOLDER   pipeline test only, AND the current end of the
-  public build's content for the futa route (v0.2 - female route's
-  Day 1 is real content now, see day1_hub.tw / day2_hub.tw).
-  This is the FUTANARI-route Day 1 hub   a separate file from
-  day1_hub.tw by design, not an <<if $gamePath>> branch inside it.
-  Per day0_ritual_futa.md's own integration note, the waking scene,
-  mirror scene, body discovery, and NPC interactions all need to
-  address the dual anatomy specifically and are NOT a find-and-
-  replace from the female route. Replace with real Day 1 (futa)
-  content and its own day1Init/futa flag block when written   at
-  that point, move the <<endOfContentNoticeFuta>> call below down to
-  wherever the new content's own final passage ends, rather than
-  deleting it.
--->
-<div class="day-transition">
-  <h2><<print formatDayNumber($dayNumber)>>   Both</h2>
-  <p>Someone new opens her eyes. She carries everything.</p>
-  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
-  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+<div class="hub-header room-header">
+  <<locationImage "moonspire_recovery_room" "Recovery Room">>
+  <h2>Moonspire Tower   Recovery Room</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>> | Arousal: <<print $arousal>></p>
 </div>
 
-<<endOfContentNoticeFuta>>
+<div class="room-layout">
+
+<!-- ========== THE BED ========== -->
+<div class="room-zone">
+  <h3>🛏 The Bed</h3>
+  <p class="loc-flavor">Soft linens, white stone walls. A body that won't stop talking to itself.</p>
+  <<if $timeSlot is "NIGHT" and $d1ft_rowan and not $d1ft_night>>
+    <span class="badge main">⚔ Try to sleep   if the body allows it</span>
+    [[Lie down → |day1_night_futa]]
+  <</if>>
+</div>
+
+<!-- ========== THE MIRROR ========== -->
+<<if not $d1ft_exam>>
+<div class="room-zone">
+  <h3>🪞 The Mirror</h3>
+  <p class="loc-flavor">Full-length silver. The reflection holds everything   breasts, hips, and between your legs, both.</p>
+  <span class="badge main">⚔ Ilara is waiting   the examination is more complex for you</span>
+  [[Face it → |day1_exam_futa]]
+</div>
+<</if>>
+
+<!-- ========== THE WINDOW ========== -->
+<div class="room-zone">
+  <h3>🪟 The Window</h3>
+  <p class="loc-flavor">The world in two columns. Male and female. You fit in neither.</p>
+  <<if not $d1ft_npc_window>>
+    <span class="badge side">🗡 Listen to the world you don't fit into</span>
+  <</if>>
+  [[Approach → |day1ft_window_hub]]
+</div>
+
+<!-- ========== THE DOOR ========== -->
+<div class="room-zone">
+  <h3>🚪 The Door</h3>
+  <p class="loc-flavor">Heavy oak. The corridor beyond. Visitors who don't know your secret.</p>
+  <<if $d1ft_exam and not $d1ft_npc_aldric_door and $timeSlot is "AFTERNOON">>
+    <span class="badge side">🗡 Familiar footsteps   and a question you can't ask him</span>
+  <</if>>
+  <<if $d1ft_alone and not $d1ft_npc_nara3 and $d1_npc_nara>>
+    <span class="badge side">🗡 Three notes   someone who might know</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and not $d1ft_npc_queen_message>>
+    <span class="badge side">🗡 A sealed note   from someone who doesn't know what you kept</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and $d1ft_npc_queen_message and not $d1ft_rowan>>
+    <span class="badge main">⚔ Three taps, pause, two more   the one person you can tell</span>
+  <</if>>
+  <<if $d1ft_rowan and not $d1ft_npc_marta_tray>>
+    <span class="badge side">🗡 A tray   from someone who doesn't need to know</span>
+  <</if>>
+  [[Check → |day1ft_door_hub]]
+</div>
+
+<!-- ========== BEDSIDE TABLE ========== -->
+<div class="room-zone">
+  <h3>📦 Bedside Table</h3>
+  <p class="loc-flavor">Items from yesterday. Gifts given to a prince. Received by something else.</p>
+  <<if not $d1ft_npc_items>>
+    <span class="badge side">🗡 The things you carried</span>
+  <</if>>
+  <<if $d1ft_exam and not $d1ft_npc_vael3>>
+    <span class="badge side">🗡 Five vials   one you won't find in any apothecary</span>
+  <</if>>
+  [[Examine → |day1ft_table_hub]]
+</div>
+
+<!-- ========== THE SMALLCLOTHES (FUTA-ONLY) ========== -->
+<<if $d1ft_exam and not $d1ft_npc_smallclothes>>
+<div class="room-zone">
+  <h3>👗 The Clothing Problem</h3>
+  <p class="loc-flavor">Modified smallclothes. A visible bulge. The first of many concealment challenges.</p>
+  <span class="badge side">🗡 This isn't going to work</span>
+  [[Examine → |day1ft_npc_smallclothes]]
+</div>
+<</if>>
+
+<!-- ========== BOTH OF YOU ========== -->
+<<if $d1ft_exam>>
+<div class="room-zone">
+  <h3>🫀 Both of You</h3>
+  <p class="loc-flavor">Two systems. One body. Connected in ways you're still discovering.</p>
+  <<if not $d1ft_npc_body>>
+    <span class="badge side">🗡 Notice things   in pairs</span>
+  <</if>>
+  [[Examine → |day1ft_npc_body_discoveries]]
+</div>
+<</if>>
+
+<!-- ========== ALONE TIME (MAIN) ========== -->
+<<if $d1ft_exam and not $d1ft_alone>>
+<div class="room-zone">
+  <h3>🕯 Be Alone   With Both</h3>
+  <p class="loc-flavor">Ilara left. Two sets of nerve endings and no instruction manual.</p>
+  <span class="badge main">⚔ Sit with the complexity</span>
+  [[Be alone → |day1_alone_futa]]
+</div>
+<</if>>
+
+</div>

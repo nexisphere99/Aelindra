@@ -1,0 +1,31 @@
+:: day1ft_npc_aldric_door [nobr]
+<<npcPortrait "aldric" "Aldric">>
+<h3>Aldric's Voice Through the Door</h3>
+
+<p>The same heavy, even cadence. The same three minutes of breathing outside the door. The same vibration of his voice through oak.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Your Highness."</div>
+
+<p>The same words. But what I hear beneath them is different. Aldric made me a practice sword sized for smaller hands. He adjusted the weight for a lighter frame. He's preparing for a princess. He doesn't know that the princess he's preparing for has a cock that she's going to have to tuck into modified smallclothes before she can walk to the training yard.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"The practice sword is on the rack. It'll be there when you're ready."</div>
+
+<p>Will it? Will it be there when I walk into the yard and every guard sees the new princess and doesn't see the secret she's carrying? Will Aldric still hand me the sword when he learns that the body he sized it for is more than he expected?</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"You're still my prince." A pause. The correction, worked out in real time. "My princess. My... you're still mine to protect."</div>
+
+<p>Mine to protect. What if what he's protecting is more complex than he imagines? What if the princess he's sworn to defend has a body that some would call an abomination, others a miracle, and most would simply not believe?</p>
+
+<p>His boots walk away. Heavy, even, certain.</p>
+
+<p>I stand at the door. My hand on the oak. And I think: <em>Would you still say that if you knew?</em> The question is not rhetorical. It's the first in a long series of questions that this path will ask about every person I meet: <em>Would you still accept me if you knew what I'm hiding?</em></p>
+
+<<set $d1ft_npc_aldric_door to true>>
+<<set $affAldric += 3>>
+<<set $statRES += 1>>
+<<set $stress -= 3>>
+<<completeObjective "aldric_door">>
+
+<div class="scene-end">
+  [[Continue → |day1ft_door_hub]]
+</div>

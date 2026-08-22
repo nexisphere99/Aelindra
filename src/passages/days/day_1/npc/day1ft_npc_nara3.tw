@@ -1,0 +1,42 @@
+:: day1ft_npc_nara3 [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Apprentice Nara   Tea and Music Boxes</h3>
+
+<p>The same knock. The same music box. The same "tea helps everything" speech. The same terrible biscuits.</p>
+
+<p>Nara comes in. Looks at me. Her expression does the same thing   surprise, adjustment, landing on warmth. But there's something else in her eyes. She's a Silverveil apprentice. She was in the tower during the Rite. She may know   or suspect   that the form I chose was not the standard one.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"You look like a girl who could use tea."</div>
+
+<p>I take the tray. The tea is the same calming blend   the enchantment smoothing my jagged edges. The biscuits are the same degree of terrible, which is comforting in its consistency.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Nara. During the Rite. Were you... aware of what form was chosen?"</div>
+
+<p>She sets down her cup. The music box plays its three notes. Her expression shifts from casual to careful.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I was on the lower level. Preparing supplies. I didn't... I wasn't in the chamber." A pause. "But the chanting was different. The harmonics. The standard Rite produces a single-frequency resonance   pure, silver-white. What I heard had a secondary harmonic. A gold thread. The preservation frequency."</div>
+
+<p>She knows. Or she's deduced it. She's a third-year apprentice who understands sympathetic resonance and magical frequencies and she heard the difference.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Are you going to tell people?"</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Tell people what?" Her brown eyes are wide. Sincere. "I heard a resonance frequency during a private magical procedure. I don't know what it means. I'm a third-year apprentice. I barely understand my own music box, let alone the Rite of Becoming." She picks up a terrible biscuit. Bites it. Crunches. "Whatever body you have, it's your body, and it's none of my business. My business is sympathetic resonance and badly baked biscuits."</div>
+
+<p>The relief is sharp. The first person outside Ilara who knows   or almost knows   and chooses discretion.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"The music box."</div>
+
+<p>Her face lights up.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"I tried a moonstone anchor! The frequency held for forty seconds across the full tower before drifting. That's a record. Ilara said it was interesting, which is the highest praise she's ever given me, and I'm going to embroider it on a pillow."</div>
+
+<p>She talks about music boxes. I drink tea. The three notes play on. And in the safety of her uncomplicated enthusiasm, the weight of the secret eases fractionally.</p>
+
+<<set $d1ft_npc_nara3 to true>>
+<<set $stress -= 8>>
+<<set $silverveilFamiliarity += 3>>
+<<set $naraTrust += 3>>
+
+<div class="scene-end">
+  [[Continue → |day1ft_door_hub]]
+</div>

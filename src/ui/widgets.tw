@@ -85,18 +85,19 @@
    never touch HTML-as-text at all. */
 
 /* ===== END-OF-CONTENT NOTICES =====
-   Two routes, two distinct messages - split into separate widgets
-   rather than one shared/parameterised one now that the wording has
-   actually diverged (female: "we wrote this much, more is coming";
-   futa: "this route isn't written yet at all"). Update both version
-   labels together when a new build ships. */
+   As of v0.3, both routes are fully written through Day 1, so both
+   widgets carry the same "ends here" framing now - the wording had
+   diverged in v0.2 (female had real Day 1 content, futa didn't) but
+   that's no longer true. Each still fires from its own route's Day 2
+   placeholder (day2_hub.tw / day2_hub_futa.tw), not right after the
+   Rite, since both routes now run a full Day 1 before content runs
+   out. Update both version labels together when a new build ships. */
 
-/* Futa route: day1_hub_futa.tw. Its Day 1 doesn't exist yet, so this
-   fires right where Day 0 hands off. */
+/* Futa route: day2_hub_futa.tw. */
 <<widget "endOfContentNoticeFuta">>
   <div class="end-of-content">
-    <h3>Futanari Route   Not Yet Written</h3>
-    <p>In this v0.2 release, Day 1 content for the futanari route hasn't been added yet. The female route is fully playable end to end through Day 1   the futa route's own Day 1 is still in progress.</p>
+    <h3>v0.3 Ends Here</h3>
+    <p>You've reached the end of AELINDRA's current v0.3 content on the futanari route. Thank you for playing this far into Aelindra's story.</p>
     <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
     <p class="patreon-cta">
       <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>
@@ -104,13 +105,13 @@
   </div>
 <</widget>>
 
-/* Female route: day2_hub.tw. Day 0 and Day 1 are both fully written,
-   so this fires only once the player runs past the actual end of
-   written content, not right after the Rite. */
+/* Female route: day2_hub.tw. No new female-route content was added
+   in v0.3 (this release's work went into the futa route's Day 1) -
+   said plainly rather than implying otherwise. */
 <<widget "endOfContentNoticeFemale">>
   <div class="end-of-content">
-    <h3>v0.2 Ends Here</h3>
-    <p>You've reached the end of AELINDRA's current v0.2 content on the female route. Thank you for playing this far into Aelindra's story.</p>
+    <h3>v0.3 Ends Here</h3>
+    <p>You've reached the end of AELINDRA's current v0.3 content on the female route. No new female-route content was added in this release   v0.3's work went into the futanari route's Day 1. Thank you for playing this far into Aelindra's story.</p>
     <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
     <p class="patreon-cta">
       <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>

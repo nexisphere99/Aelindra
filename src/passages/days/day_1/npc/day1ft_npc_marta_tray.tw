@@ -1,0 +1,24 @@
+:: day1ft_npc_marta_tray [nobr]
+<<npcPortrait "marta" "Marta">>
+<h3>Marta's Tray   Same Love, Different Secret</h3>
+
+<p>The same tray. The same soup. The same bread, pastries, apple pastry. The same note: <em>Eat everything. You're thin. Same stool. Same pastries. Same Marta.   M.</em></p>
+
+<p>I eat on the bed. The food is perfect. The flavour is unchanged. Marta's cooking transcends anatomy.</p>
+
+<p>But as I eat, I think about Marta's kitchen. The stool. The promise   <em>Same stool. Same Marta.</em> She said it to a prince who was becoming a princess. She doesn't know the princess has a cock. Would the stool still be the same? Would the pastries still be offered?</p>
+
+<p>Yes. I believe yes. Marta feeds people. She doesn't inspect their anatomy. The stool is for sitting and the pastries are for eating and the kitchen is for being fed, and whatever's between my legs is irrelevant to the theology of soup.</p>
+
+<p>But the court isn't a kitchen. The court inspects. The court evaluates. The court categorises. And the court will see a princess and must never see what the princess is hiding.</p>
+
+<p>I finish the soup. I save the apple pastry for later. Marta would approve of saving it   delayed gratification is a form of respect for the baker.</p>
+
+<<set $d1ft_npc_marta_tray to true>>
+<<set $energy += 15>>
+<<set $stress -= 8>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Continue → |day1ft_door_hub]]
+</div>

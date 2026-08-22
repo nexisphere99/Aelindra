@@ -169,9 +169,17 @@ window.updateSidebars = function () {
   updateBar('stress', sv.stress);
   updateBar('arousal', sv.arousal);
 
-  // Show arousal bar only after transformation
+  // Show arousal bar only after transformation - dual anatomy (futa
+  // route) surfaces it from Day 1, since baseline arousal is part of
+  // that route's daily reality; the female route doesn't have the
+  // same mechanical need for it this early, so it stays hidden until
+  // later (Day 7+).
   var arousalWrap = document.getElementById('arousal-bar-container');
-  if (arousalWrap) arousalWrap.style.display = sv.dayNumber >= 1 ? '' : 'none';
+  if (arousalWrap) {
+    arousalWrap.style.display = sv.dualAnatomy
+      ? (sv.dayNumber >= 1 ? '' : 'none')
+      : (sv.dayNumber >= 7 ? '' : 'none');
+  }
 
   // Stat List
   var statList = document.getElementById('stat-list');
@@ -222,6 +230,16 @@ window.updateSidebars = function () {
   setTextById('bs-waist', sv.mcWaist);
   setTextById('bs-hips', sv.mcHips);
   setTextById('bs-sensitivity', sv.mcSensitivity);
+
+  // Concealment (futa route only)
+  var concRow = document.getElementById('concealment-row');
+  if (concRow) {
+    concRow.style.display = sv.dualAnatomy ? '' : 'none';
+    setTextById('bs-concealment',
+      sv.concealmentDifficulty <= 20 ? 'Secure' :
+      sv.concealmentDifficulty <= 50 ? 'Manageable' :
+      sv.concealmentDifficulty <= 75 ? 'Risky' : 'Exposed');
+  }
 
   // Outfit
   var outfitBlock = document.getElementById('outfit-block');

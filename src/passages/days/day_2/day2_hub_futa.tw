@@ -1,0 +1,26 @@
+:: day2_hub_futa [nobr]
+<!--
+  PLACEHOLDER   pipeline test only, AND the current end of the
+  public build's content (futa route).
+  Day 0 and Day 1 are both real, playable content as of v0.3, so
+  the futa route flows straight through them without any "end of
+  build" interruption   the notice only fires here, once the player
+  actually runs out of written content. Uses its own
+  <<endOfContentNoticeFuta>> widget (widgets.tw), matching the
+  female route's <<endOfContentNoticeFemale>> at day2_hub.tw.
+  Replace with real Day 2 ("Both, Still") content and its own
+  day2ftInit flag block (mirroring day1ft-init.tw) when written   at
+  that point, move the <<endOfContentNoticeFuta>> call below down to
+  wherever the new content's own final passage ends.
+-->
+<div class="day-transition">
+  <h2><<print formatDayNumber($dayNumber)>>   Both, Still</h2>
+  <p>(Day 2 content not yet written. Days -2 through Day 1 are
+  fully playable end to end on the futanari route   the Rite, the
+  first day of recovery in the Moonspire Tower, and everything
+  before it.)</p>
+  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
+  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>> | Arousal: <<print $arousal>></p>
+</div>
+
+<<endOfContentNoticeFuta>>

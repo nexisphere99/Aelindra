@@ -135,3 +135,15 @@
 /* --- RELATIONSHIP STATUS --- */
 <<set $romancePrimary to "none">>
 <<set $relationshipsVisible to false>>
+
+/* --- FUTA-ROUTE DAY 1+ TRACKERS ---
+   Declared here (not just in day1ft-init.tw) so they're never
+   undefined/unset on the female route, same reasoning as the
+   FUTANARI-ROUTE BODY DETAIL block above. Real values set in
+   day1ft-init.tw once $gamePath is "futa" and Day 1 begins. */
+<<set $loneliness to 0>>               /* Futa-only hidden stat */
+<<set $concealmentAwareness to false>> /* Activated by the smallclothes encounter */
+<<set $concealmentSkill to 0>>         /* Grows over time */
+<<set $dualArousalModulator to false>> /* Gold vial obtained from Vael */
+<<set $naraTrust to 0>>                /* Futa-specific - separate from $silverveilFamiliarity */
+<<set $feedbackLoopActive to false>>   /* Dual-arousal cross-talk (cock<->pussy) */

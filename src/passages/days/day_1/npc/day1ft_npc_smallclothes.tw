@@ -1,0 +1,32 @@
+:: day1ft_npc_smallclothes [nobr]
+<<locationImage "day1ft_smallclothes" "The clothing problem">>
+<h3>The Smallclothes Problem</h3>
+
+<p>The clothing situation is   illustrative.</p>
+
+<p>Ilara provided what she could: a breast band, standard female issue. A nightgown. A shirt and trousers. And smallclothes   the modified pair, hastily adjusted to accommodate what she delicately called "the dual configuration."</p>
+
+<p>I examine the smallclothes. Standard linen, designed for female anatomy   shaped for a vulva, a smooth mound. Ilara has added a front panel   extra fabric, gathered with a drawstring, creating a pouch. The engineering is functional. The aesthetics are terrible.</p>
+
+<p>I put them on. The breast band presses against the new tissue   tight, compressive, the linen flattening what wants to round. Below, the modified smallclothes contain the cock in the pouch while the rear fabric sits against the vulva. The sensation is layered: compression on the cock, contact on the vulva, the clitoris pressed between them.</p>
+
+<p>I look at myself in the mirror. From the waist up: a woman in a breast band, small curves visible despite the compression. From the waist down: a woman in poorly tailored smallclothes with a suspicious bulge at the front that anyone with eyes would notice.</p>
+
+<p>The concealment problem. It arrives with the force of a door slamming. The court will see me. The nobles will see me. The entire kingdom will see Aelindra, the new princess, and if they see a bulge in her smallclothes, the succession falls apart. The Elder Council can argue a woman with a vagina satisfies the Charter. They cannot argue a woman with a visible erection satisfies the Charter.</p>
+
+<p>I need better clothing. I need tailoring that hides the cock without crushing it. I need undergarments designed for a body that doesn't exist in any seamstress's pattern book.</p>
+
+<p>I need to keep a secret. A seven-inch secret that has a tendency to respond to its own arousal cycle and the vagina's arousal cycle and the clitoris's arousal cycle and the nipples' sensitivity and the friction of walking and the compression of sitting and   </p>
+
+<p>I sit on the bed. The concealment difficulty isn't just physical. It's architectural. Mechanical. Daily. For the rest of my life, I will need to hide part of my body from a world that cannot know it exists.</p>
+
+<p>The loneliness of that compounds. The female path's Aelindra can eventually walk naked in front of anyone and be seen as a woman. I cannot. I will always be one wardrobe malfunction away from exposure.</p>
+
+<<set $d1ft_npc_smallclothes to true>>
+<<set $concealmentAwareness to true>>
+<<set $stress += 5>>
+<<completeObjective "smallclothes">>
+
+<div class="scene-end">
+  [[Continue → |day1_hub_futa]]
+</div>
