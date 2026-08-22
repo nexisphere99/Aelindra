@@ -53,6 +53,9 @@
   <<if not $d1_npc_messenger>>
     <span class="badge side">🗡 A messenger with a sealed letter</span>
   <</if>>
+  <<if $d1_training and $timeSlot is "AFTERNOON" and not $d1_npc_sera>>
+    <span class="badge side">🌹 A familiar face, lingering</span>
+  <</if>>
   [[Explore → |day-1_corridors]]
 </div>
 
