@@ -1,6 +1,8 @@
 :: day0_path_choice [nobr]
 <h2>The Rite Has Two Forms</h2>
 
+<<locationImage "moonspire_ritual_chamber_prepared" "The Ritual Chamber, prepared for the Rite">>
+
 <p>At the top of the stairs, Ilara stops me. The Ritual Chamber door is open behind her — I can see the altar, the candles, the painted stars. The air is thick with magic, humming against my skin.</p>
 
 <div class="dialogue"><span class="speaker">ILARA</span>"Before we proceed." Her voice is formal now — the voice of the Archsorceress, not the woman who gave me tea and spoke with controlled compassion. "The Rite has two forms."</div>
