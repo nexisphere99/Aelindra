@@ -1,0 +1,43 @@
+:: day1_npc_nara3 [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Apprentice Nara — Checking In</h3>
+
+<p>The music box. Three notes, repeating. The sympathetic resonance experiment, still broken, still playing its fragment of melody on a loop. I hear it through the door — and then a soft knock, tentative, the knock of someone who isn't sure they should be here.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"It's Nara. You probably don't want visitors but I brought — um — Ilara asked me to bring fresh candles and I also brought tea because tea helps everything, my grandmother says, and she survived three plagues and a bad marriage so she'd know."</div>
+
+<p>I open the door. Nara is there — holding a tray with a teapot, two cups, and a small plate of biscuits. The music box is clipped to her belt, playing its three-note fragment. She's looking at the floor. At the wall. At the tray. At everything except me.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You can look," I say.</div>
+
+<p>She looks. Her brown eyes are wide, taking me in — the face, the body, the shirt-and-trousers that fit wrong, the hair that's everywhere. Her expression does something complicated — surprise, adjustment, curiosity, sympathy — and lands on warmth.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"You look like a girl who could use tea." She holds out the tray. "Also biscuits. They're terrible. I baked them myself and I'm a much better enchanter than baker. But they're warm and the gesture matters more than the flavour, that's what my grandmother says."</div>
+
+<p>I take the tray. The biscuits are, as advertised, terrible — dry, slightly burnt, crumbling into sad fragments. The tea is excellent. Silverveil blend, something herbal with a calming enchantment that I can feel smoothing the jagged edges of my nervous system like a warm hand on a rough surface.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Does the music box work yet?"</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"No." She brightens, the way she always does when asked about her work. "But I've narrowed the degradation problem to the sympathetic frequency. The bond holds across a room but the frequency drifts over distance — like two tuning forks that start in harmony and one of them slowly goes flat. I need to stabilise the base frequency. Ilara says I'm overthinking it. I say she's underthinking it."</div>
+
+<p>She talks about music boxes and sympathetic resonance and the magical properties of moonstone for frequency anchoring. I listen. Not because I understand the magical theory but because the sound of someone talking enthusiastically about something that has nothing to do with my body or my transformation or my future is the most restful sound I've heard all day.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Can I ask you something?" she says, when the tea is half gone. "You don't have to answer."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Go ahead."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"When I had my hand fixed — the webbed fingers — I couldn't stop opening and closing my new hand. For days. Just... watching the fingers separate. Because they'd never done that before and I couldn't believe they could. Does it feel like that? New things doing new things?"</div>
+
+<p>I consider this. My hand. The slender fingers. The smooth knuckles. I open and close my fist — the motion smooth, precise, the fingers spreading and curling with an ease that seems impossible for structures that are twelve hours old.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes," I say. "Exactly like that. Except everything."</div>
+
+<p>She nods. She doesn't say anything wise or comforting. She just nods, and takes a terrible biscuit, and bites into it with a crunch, and the three-note music box plays on.</p>
+
+<<set $d1f_npc_nara3 to true>>
+<<set $stress -= 8>>
+<<set $silverveilFamiliarity += 2>>
+
+<div class="scene-end">
+  [[Continue → |day1_door_hub]]
+</div>

@@ -1,0 +1,15 @@
+:: day1_sleep_transition [nobr]
+<<set $dayNumber to 2>>
+<<set $dayLabel to "Body">>
+<<set $timeSlot to "MORNING">>
+<<set $energy to 50>>
+<<set $stress -= 5>>
+<<clearObjectives>>
+
+<div class="day-transition">
+  <h2>Night passes. You dream of the mirror.</h2>
+  <p>In the dream, your reflection smiles. You don't smile back. She reaches through the glass and her fingers are warm.</p>
+  <p>You wake. The chipped canine is still there. The grey-blue eyes are still yours.</p>
+  <p class="transition-morning"><em>Day 2. The body is still here. So are you.</em></p>
+  [[Dawn → |day2_hub]]
+</div>

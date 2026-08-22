@@ -1,0 +1,43 @@
+:: day1_npc_vael3 [nobr]
+<<npcPortrait "vael" "Mistress Vael">>
+<h3>Mistress Vael — Medical Follow-Up</h3>
+
+<p>A knock. Purposeful. Three raps, no pause.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Open the door. I have your prescriptions and I'm not standing in the corridor."</div>
+
+<p>Vael. She enters before I've fully opened the door — a professional woman with a professional schedule and no time for reluctant patients.</p>
+
+<p>She carries a wooden case. Inside: four glass vials, labelled in precise handwriting.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Blue vial. Pain management. Take one spoonful at morning and night. The bone aches will last three to four days — your skeleton is still settling into its new configuration.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Green vial. Hormonal stabiliser. One spoonful at morning. Your oestrogen is spiking — normal, expected, but the emotional turbulence can be significant. This smooths the peaks.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Clear vial. Sensitivity reducer. Apply topically to the breasts and... other areas if the nerve response is overwhelming. Which it will be. For the first week, everything down there is going to feel like touching a live wire. The reducer brings it down to a manageable level.</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Amber vial. Sleep aid. Two drops on the tongue before bed. You need to sleep. Real sleep, not the anxious half-consciousness of someone lying awake cataloguing everything they've lost."</div>
+
+<p>She closes the case. Looks at me. Her gaze is assessing — not the warm assessment of a friend but the hard assessment of a medical professional evaluating a patient.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Your posture is compensating. You're hunching forward to hide the breasts. Stop. You'll develop back problems within a week. Stand straight. Let them exist."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Easy for you to say."</div>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"I've had breasts for forty-five years. They're not a burden — they're a feature. You'll adjust." She softens, fractionally. "The body is working. I checked the potion's residual markers this morning — the transformation is complete, stable, no anomalies. Whatever discomfort you're feeling is psychological, not physical. Which doesn't make it less real — but it means the timeline is yours. The body will wait for you to catch up."</div>
+
+<p>She leaves the case on the table, nods once, and walks out. At the door she pauses.</p>
+
+<div class="dialogue"><span class="speaker">VAEL</span>"Eat something. The hormonal shifts burn calories. You'll be hungry."</div>
+
+<p>She's right. I'm starving. The broth wasn't enough. The biscuits — Nara's terrible biscuits — were barely food. My metabolism, apparently, has been reset along with everything else, and it's demanding fuel with the urgency of a furnace newly lit.</p>
+
+<<set $d1f_npc_vael3 to true>>
+<<set $energy += 10>>
+<<set $statWIS += 2>>
+<<set $stress -= 3>>
+<<addItem "recovery_vials" "Recovery Vials" "Blue (pain), green (hormonal stabiliser), clear (sensitivity reducer), amber (sleep aid) — Vael's prescriptions.">>
+
+<div class="scene-end">
+  [[Continue → |day1_table_hub]]
+</div>

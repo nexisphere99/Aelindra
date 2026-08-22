@@ -181,7 +181,10 @@ window.updateSidebars = function () {
       + buildStatRow('ALL', 'Allure', sv.statALL)
       + buildStatRow('PRO', 'Prowess', sv.statPRO)
       + buildStatRow('WIS', 'Wisdom', sv.statWIS)
-      + buildStatRow('RES', 'Resolve', sv.statRES);
+      + buildStatRow('RES', 'Resolve', sv.statRES)
+      // FEM only exists post-transformation - hidden before Day 1
+      // the same way the arousal bar is hidden before Day 1 below.
+      + (sv.dayNumber >= 1 ? buildStatRow('FEM', 'Femininity', sv.statFEM) : '');
   }
 
   // Objectives

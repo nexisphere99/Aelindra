@@ -1,27 +1,108 @@
 :: day1_hub [nobr]
-<!--
-  PLACEHOLDER — pipeline test only, AND the current end of the
-  public build's content.
-  This is the FEMALE-route Day 1 hub. Replace with the real Day 1
-  content (its own day1Init flag block, mirroring day-1-init.tw /
-  day0-init.tw) when it's written — at that point, move the
-  <<endOfContentNotice>> call below down to wherever the new
-  content's own final passage ends, rather than deleting it.
-
-  Per the "two branches, never merge" instruction: this passage is
-  reachable ONLY from the female path ($gamePath = "female"). The
-  futa path lands on the separate day1_hub_futa.tw instead. Real
-  Day 1 content should branch the same way — this hub and its futa
-  counterpart should stay two independent files, not one hub with
-  internal <<if $gamePath>> branches, since the body-discovery
-  content diverges too much to share passages cleanly (per
-  day0_ritual_futa.md's own integration note).
--->
-<div class="day-transition">
-  <h2><<print formatDayNumber($dayNumber)>> — Someone New</h2>
-  <p>Someone new opens her eyes.</p>
-  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
-  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+<div class="hub-header room-header">
+  <<locationImage "moonspire_recovery_room" "Recovery Room">>
+  <h2>Moonspire Tower — Recovery Room</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
 
-<<endOfContentNotice>>
+<div class="room-layout">
+
+<!-- ========== THE BED ========== -->
+<div class="room-zone">
+  <h3>🛏 The Bed</h3>
+  <p class="loc-flavor">Soft linens, white stone walls, sunlight through narrow windows. This is where you woke up.</p>
+  <<if $timeSlot is "NIGHT" and $d1f_rowan and not $d1f_night>>
+    <span class="badge main">⚔ Try to sleep</span>
+    [[Lie down → |day1_night]]
+  <</if>>
+</div>
+
+<!-- ========== THE MIRROR ========== -->
+<<if not $d1f_exam>>
+<div class="room-zone">
+  <h3>🪞 The Mirror</h3>
+  <p class="loc-flavor">Full-length polished silver. You haven't looked. Not properly. Ilara says you should.</p>
+  <span class="badge main">⚔ Ilara is waiting to examine you</span>
+  [[Face the mirror → |day1_exam]]
+</div>
+<</if>>
+
+<!-- ========== THE WINDOW ========== -->
+<div class="room-zone">
+  <h3>🪟 The Window</h3>
+  <p class="loc-flavor">Narrow. A slice of sky and the distant sounds of the palace below.</p>
+  <<if not $d1f_npc_window>>
+    <span class="badge side">🗡 Listen to the world outside</span>
+  <</if>>
+  [[Approach → |day1_window_hub]]
+</div>
+
+<!-- ========== THE DOOR ========== -->
+<div class="room-zone">
+  <h3>🚪 The Door</h3>
+  <p class="loc-flavor">Heavy oak. The corridor beyond. The outside world — held at bay.</p>
+  <<if $d1f_exam and not $d1f_npc_aldric_door and $timeSlot is "AFTERNOON">>
+    <span class="badge side">🗡 Footsteps outside — familiar ones</span>
+  <</if>>
+  <<if $d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara>>
+    <span class="badge side">🗡 Three notes repeating — a music box</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and not $d1f_npc_queen_message>>
+    <span class="badge side">🗡 A soft knock — and a sealed note</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and $d1f_npc_queen_message and not $d1f_rowan>>
+    <span class="badge main">⚔ Three taps, pause, two more — Rowan</span>
+  <</if>>
+  <<if $d1f_rowan and not $d1f_npc_marta_tray>>
+    <span class="badge side">🗡 A tray on the floor outside</span>
+  <</if>>
+  [[Check the door → |day1_door_hub]]
+</div>
+
+<!-- ========== BEDSIDE TABLE ========== -->
+<div class="room-zone">
+  <h3>📦 Bedside Table</h3>
+  <p class="loc-flavor">Items from yesterday. Someone placed them here while you slept.</p>
+  <<if not $d1f_npc_items>>
+    <span class="badge side">🗡 The things you carried</span>
+  <</if>>
+  <<if $d1f_exam and not $d1f_npc_vael3>>
+    <span class="badge side">🗡 Vael left prescriptions</span>
+  <</if>>
+  [[Examine → |day1_table_hub]]
+</div>
+
+<!-- ========== THE NIGHTGOWN ========== -->
+<<if not $d1f_npc_nightgown>>
+<div class="room-zone">
+  <h3>👗 The Nightgown</h3>
+  <p class="loc-flavor">White linen. Someone dressed you while you were unconscious.</p>
+  <span class="badge side">🗡 Who put this on me?</span>
+  [[Examine → |day1_npc_nightgown]]
+</div>
+<</if>>
+
+<!-- ========== YOUR BODY ========== -->
+<<if $d1f_exam>>
+<div class="room-zone">
+  <h3>🫀 Yourself</h3>
+  <p class="loc-flavor">This body. These hands. This skin. There are discoveries waiting.</p>
+  <<if not $d1f_npc_body>>
+    <span class="badge side">🗡 Notice things</span>
+  <</if>>
+  [[Examine → |day1_npc_body_discoveries]]
+</div>
+<</if>>
+
+<!-- ========== ALONE TIME (MAIN SCENE) ========== -->
+<<if $d1f_exam and not $d1f_alone>>
+<div class="room-zone">
+  <h3>🕯 Be Alone</h3>
+  <p class="loc-flavor">Ilara left. The room is yours. The body is yours. You need to sit with both.</p>
+  <span class="badge main">⚔ Process</span>
+  [[Sit with it → |day1_alone]]
+</div>
+<</if>>
+
+</div>

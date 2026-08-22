@@ -732,6 +732,40 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   padding: 16px 0;
 }
 
+/* Room layout — replaces the location grid on confined days (Day 1's
+   Moonspire recovery room): a single vertical column of zones rather
+   than a multi-column grid, since there's only ever one "location" */
+.room-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.room-zone {
+  background: var(--bg-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--border-radius);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+
+.room-zone:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+}
+
+.room-zone h3 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--text-bright);
+  margin: 0 0 4px;
+}
+
+.room-header h2 {
+  font-size: 1.2rem;
+}
+
 .loc-card {
   background: var(--bg-card);
   border: 1px solid var(--border-stone);

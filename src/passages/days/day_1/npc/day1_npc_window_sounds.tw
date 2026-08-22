@@ -1,0 +1,26 @@
+:: day1_npc_window_sounds [nobr]
+<h3>Sounds Through the Window</h3>
+
+<p>The window is narrow — an arrow-slit widened to a hand's breadth by some renovation. I can't see much through it. A slice of sky. The top of the bridge railing. The far edge of the palace wall.</p>
+
+<p>But I can hear.</p>
+
+<p>The palace is continuing without me. Through the window, sounds drift up from the world below: the clang of the blacksmith's hammer (distant, rhythmic, the heartbeat of industry). A guard calling shift change. Horses in the courtyard. The creak of the merchant gate. Someone laughing — a woman, bright and high, the kind of unselfconscious laughter that happens in kitchens and gardens and places where people aren't locked in towers processing the loss of their entire physical identity.</p>
+
+<p>Children playing. Somewhere near the palace walls, the shrieks and clamour of children who are running and chasing and being gloriously unaware that the prince who lived in the palace above them is now a princess who doesn't know how to walk without her hips swaying.</p>
+
+<p>A dog barking. Someone selling something in the market — the voice carries, <em>fresh bread, fresh bread, get your bread,</em> the sing-song of a vendor who has said these words ten thousand times and will say them ten thousand more.</p>
+
+<p>The world is going on. The same world, the same sounds, the same bread and laughter and hammering and children. Nothing has changed out there. The sun rose. The market opened. The guards changed shift. The baker baked. Nobody in that world below knows that Prince Edrin is gone and a woman called Aelindra is standing at a narrow window, listening to the sounds of a life that used to be hers, in a body that isn't.</p>
+
+<p>The wind carries the scent of the garden — jasmine, faint, sweet. Wynn's jasmine. The one that survived the frost.</p>
+
+<p>Same roots. Same scent. New branches.</p>
+
+<<set $d1f_npc_window to true>>
+<<set $statRES += 1>>
+<<set $stress -= 3>>
+
+<div class="scene-end">
+  [[Continue → |day1_window_hub]]
+</div>

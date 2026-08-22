@@ -1,0 +1,28 @@
+:: day1_table_hub [nobr]
+<h2>📦 Bedside Table</h2>
+<p>Items and prescriptions. The material evidence of being cared for.</p>
+
+<<if not $d1f_npc_items>>
+<div class="interaction-card side">
+  <h4>🌸 The Things You Carried</h4>
+  <p>Moonflower. Jasmine. A letter. A handkerchief. A ginger root. Five gifts from five people.</p>
+  [[Examine → |day1_npc_items]]
+</div>
+<</if>>
+
+<<if $d1f_exam and not $d1f_npc_vael3>>
+<div class="interaction-card side">
+  <<npcPortrait "vael" "Mistress Vael">>
+  <h4>⚗ Vael's Prescriptions</h4>
+  <p>Four vials in a wooden case. A knock, three raps, no patience.</p>
+  [[Answer → |day1_npc_vael3]]
+</div>
+<</if>>
+
+<<if $d1f_npc_items and (not $d1f_exam or $d1f_npc_vael3)>>
+  <p class="empty-note">Just the table now, quiet. Nothing else here needs you.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Back to room → |day1_hub]]
+</div>

@@ -1,0 +1,17 @@
+:: day1_window_hub [nobr]
+<h2>🪟 The Window</h2>
+<p>Narrow. A hand's breadth of sky. The world beyond the tower.</p>
+
+<<if not $d1f_npc_window>>
+<div class="interaction-card side">
+  <h4>👂 Listen</h4>
+  <p>The palace continues. Hammers, horses, laughter, children. A bread vendor's song.</p>
+  [[Listen → |day1_npc_window_sounds]]
+</div>
+<<else>>
+  <p class="loc-flavor">A slice of sky. The bridge railing. The far palace wall. The sound of a world that doesn't know you've changed.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Back to room → |day1_hub]]
+</div>
