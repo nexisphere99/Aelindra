@@ -14,6 +14,6 @@ subfolder per day, slug includes the day folder (e.g. `day_1/slug`).
 | `day1f_night.png` | day1_night scene banner | A young woman lying on her back in a dim tower bed, eyes open, staring at the ceiling. White silk nightgown, one hand resting still at her side. Her expression is quiet and unreadable   not distress, not peace, something in between. Candlelight dying low. Atmosphere: the first night in a body still being learned, an anchor held onto in the dark. |
 | `day1f_vials.png` | day1_npc_vael3 | A wooden case on a bedside table, open, containing four glass vials: blue, green, clear, and amber, each labelled in precise handwriting. A woman's hand (Vael) gestures over them, mid-explanation. Behind: a young woman on a bed, listening. Tower room, afternoon light. Atmosphere: brisk, unsentimental medical care, a body being looked after by someone who refuses to make it a tragedy. |
 
-Selected via `<<set _ashVisitImg to ($bardGender is "female") ? "day1f_ash_female" : "day1f_ash_male">>`
+Selected via `<<set _ashVisitImg to ($bardGender is "female") ? "day_1/day1f_ash_female" : "day_1/day1f_ash_male">>`
 then `<<sceneImage _ashVisitImg "Ash's visit">>` in `day1_ash.tw`; the rest
-are plain `<<sceneImage "slug" "...">>` calls with no gender branching.
+are plain `<<sceneImage "day_1/slug" "...">>` calls with no gender branching.
