@@ -13,10 +13,14 @@ file (Aldric, Rowan, Ilara, Nara, Vael, Marta), so there's no
 
 Day 1 stays inside this one room all day (the architecture is intentionally
 claustrophobic   see the code prompt's own note), so the room image above
-covers the hub and every sub-hub. The five scenes below   the four both
+covers the hub and every sub-hub. The images below   the four scenes both
 routes share (waking, the mirror, Rowan's visit, the first night) plus
-Vael's prescriptions   each get their own dedicated scene banner instead,
-matching the futa route's set.
+Vael's prescriptions   each get their own dedicated scene banner, matching
+the futa route's set. `day1f_clothes` is the one addition without a futa
+equivalent: the female route has no concealment-problem scene to match
+the futa smallclothes image, but day1_exam.tw does have its own parallel
+beat   getting dressed in clothes that no longer fit   so that gets an
+inline mid-scene image instead of a passage-top banner.
 
 | Filename | Used by | Prompt |
 |---|---|---|
@@ -25,6 +29,7 @@ matching the futa route's set.
 | `day1f_rowan.png` | day1_rowan scene banner | Two figures in a dim tower room. A half-elf bard with honey-coloured eyes sits cross-legged on the floor, lute in lap, playing something soft, looking up with open warmth. On the bed above, a young woman with dark wavy hair sits wrapped in a blanket, guarded but leaning toward the sound. Candlelight, warm shadows. Atmosphere: the one person who doesn't flinch, presence offered as permission rather than obligation. |
 | `day1f_night.png` | day1_night scene banner | A young woman lying on her back in a dim tower bed, eyes open, staring at the ceiling. White silk nightgown, one hand resting still at her side. Her expression is quiet and unreadable   not distress, not peace, something in between. Candlelight dying low. Atmosphere: the first night in a body still being learned, an anchor held onto in the dark. |
 | `day1f_vials.png` | day1_npc_vael3 | A wooden case on a bedside table, open, containing four glass vials: blue, green, clear, and amber, each labelled in precise handwriting. A woman's hand (Vael) gestures over them, mid-explanation. Behind: a young woman on a bed, listening. Tower room, afternoon light. Atmosphere: brisk, unsentimental medical care, a body being looked after by someone who refuses to make it a tragedy. |
+| `day1f_clothes.png` | day1_exam (mid-scene, getting dressed) | A young woman standing in a white stone tower room, wearing a loose shirt and trousers that visibly don't fit   shoulders too wide, fabric gaping open across a chest it wasn't cut for, the waistband loose at the hips. A breast band and folded dress lie discarded on the bed behind her. Her expression is flat, resigned, arms slightly away from her body as if unsure what to do with it. Overcast light through a narrow window. Atmosphere: a body outgrowing its own wardrobe overnight, no crisis, just a quiet, practical wrongness. |
 
 ## Futa route (v0.3)
 
