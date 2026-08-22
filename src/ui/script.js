@@ -197,6 +197,14 @@ window.updateSidebars = function () {
   /* --- RIGHT SIDEBAR --- */
 
   // Portrait
+  // Reset any transient dimming (e.g. the Day 0 ritual scenes fade the
+  // frame to opacity 0.3 mid-transformation via a direct <<run>> DOM
+  // call) unconditionally on every render, so the effect never outlives
+  // the single passage that set it - the very next PassageHeader call
+  // restores it, whichever passage that turns out to be.
+  var portraitFrame = document.getElementById('mc-portrait-frame');
+  if (portraitFrame) portraitFrame.style.opacity = '1';
+
   var img = document.getElementById('mc-portrait-img');
   if (img) img.src = 'assets/images/portraits/' + sv.mcPortrait + '.png';
 
