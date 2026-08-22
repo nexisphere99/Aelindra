@@ -91,7 +91,15 @@
    that's no longer true. Each still fires from its own route's Day 2
    placeholder (day2_hub.tw / day2_hub_futa.tw), not right after the
    Rite, since both routes now run a full Day 1 before content runs
-   out. Update both version labels together when a new build ships. */
+   out. Update both version labels together when a new build ships.
+
+   NOTE (merge from v0.1, via v0.2): v0.1 gates its own public build to
+   stop at Day 0 and uses a single shared <<endOfContentNotice>> widget
+   for that, called directly from day0_void.tw / day0_void_futa.tw.
+   That gate is v0.1-specific and does not apply here - this branch's
+   Day 0 exit passages keep their normal [[Wake → ...]] links into
+   Day 1, so this branch keeps its own two-widget split below instead
+   of picking up v0.1's single widget on any future merge. */
 
 /* Futa route: day2_hub_futa.tw. */
 <<widget "endOfContentNoticeFuta">>

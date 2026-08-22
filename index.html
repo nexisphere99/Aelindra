@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://5AF0ED76-8990-4492-89C7-1A2C87D727BB// --><tw-storydata name="AELINDRA: The Rite of Becoming" startnode="149" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5AF0ED76-8990-4492-89C7-1A2C87D727BB" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ================================================================
+	<!-- UUID://5AF0ED76-8990-4492-89C7-1A2C87D727BB// --><tw-storydata name="AELINDRA: The Rite of Becoming" startnode="150" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5AF0ED76-8990-4492-89C7-1A2C87D727BB" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ================================================================
    AELINDRA   MASTER STYLESHEET
    Medieval Dark Fantasy Theme
    Color Palette: Deep purples, golds, dark stone, candlelight amber, blood red
@@ -8266,8 +8266,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_gardens" tags="nobr" position="1100,1475" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;day_minus_2/royal_gardens_ash_female&quot; : &quot;day_minus_2/royal_gardens_ash_male&quot;&gt;&gt;
-&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_gardens" tags="nobr" position="1100,1475" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day_minus_2/royal_gardens_ash_male&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Royal Gardens   Ash&#39;s Arrival&lt;/h2&gt;
 
@@ -8283,37 +8282,42 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;p&gt;I know that style. I&#39;d know it through a wall, through a storm, through ten years of silence.&lt;/p&gt;
 
-&lt;div id=&quot;ash-select&quot; class=&quot;inline-choice&quot;&gt;
-&lt;&lt;link &quot;A young man steps around the hedgerow&quot;&gt;&gt;
-&lt;&lt;set $bardGender to &quot;male&quot;&gt;&gt;
-&lt;&lt;set $bardPronoun to &quot;he&quot;&gt;&gt;
-&lt;&lt;set $bardPronounObj to &quot;him&quot;&gt;&gt;
-&lt;&lt;set $bardPronounPos to &quot;his&quot;&gt;&gt;
-&lt;&lt;set $bardPronounCap to &quot;He&quot;&gt;&gt;
-&lt;&lt;set $bardPronounPosCap to &quot;His&quot;&gt;&gt;
-&lt;&lt;set $bardPortraitSlug to &quot;ash_male&quot;&gt;&gt;
-&lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
+&lt;div class=&quot;path-choice-ritual&quot;&gt;
+  &lt;div class=&quot;path-cards&quot;&gt;
+    &lt;div class=&quot;path-card&quot;&gt;
+      &lt;h3&gt;A young man steps around the hedgerow&lt;/h3&gt;
+      &lt;&lt;link &quot;Choose&quot; &quot;day-2_gardens_arrival&quot;&gt;&gt;
+        &lt;&lt;set $bardGender to &quot;male&quot;&gt;&gt;
+        &lt;&lt;set $bardPronoun to &quot;he&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounObj to &quot;him&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounPos to &quot;his&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounCap to &quot;He&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounPosCap to &quot;His&quot;&gt;&gt;
+        &lt;&lt;set $bardPortraitSlug to &quot;ash_male&quot;&gt;&gt;
+      &lt;&lt;/link&gt;&gt;
+    &lt;/div&gt;
 
-&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;He steps around the hedgerow, lute slung across his body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
+    &lt;div class=&quot;path-card&quot;&gt;
+      &lt;h3&gt;A young woman steps around the hedgerow&lt;/h3&gt;
+      &lt;&lt;link &quot;Choose&quot; &quot;day-2_gardens_arrival&quot;&gt;&gt;
+        &lt;&lt;set $bardGender to &quot;female&quot;&gt;&gt;
+        &lt;&lt;set $bardPronoun to &quot;she&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounObj to &quot;her&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounPos to &quot;her&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounCap to &quot;She&quot;&gt;&gt;
+        &lt;&lt;set $bardPronounPosCap to &quot;Her&quot;&gt;&gt;
+        &lt;&lt;set $bardPortraitSlug to &quot;ash_female&quot;&gt;&gt;
+      &lt;&lt;/link&gt;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="120" name="day-2_gardens_arrival" tags="nobr" position="1225,1475" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;day_minus_2/royal_gardens_ash_female&quot; : &quot;day_minus_2/royal_gardens_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
-&lt;p&gt;He looks the same. Different. Both. His hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past his shoulders. Eyes the colour of honey, tilted slightly, always looking like he knows something amusing that he&#39;s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
 
-&lt;&lt;link &quot;A young woman steps around the hedgerow&quot;&gt;&gt;
-&lt;&lt;set $bardGender to &quot;female&quot;&gt;&gt;
-&lt;&lt;set $bardPronoun to &quot;she&quot;&gt;&gt;
-&lt;&lt;set $bardPronounObj to &quot;her&quot;&gt;&gt;
-&lt;&lt;set $bardPronounPos to &quot;her&quot;&gt;&gt;
-&lt;&lt;set $bardPronounCap to &quot;She&quot;&gt;&gt;
-&lt;&lt;set $bardPronounPosCap to &quot;Her&quot;&gt;&gt;
-&lt;&lt;set $bardPortraitSlug to &quot;ash_female&quot;&gt;&gt;
-&lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;&lt;&lt;print $bardPronounCap&gt;&gt; steps around the hedgerow, lute slung across &lt;&lt;print $bardPronounPos&gt;&gt; body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
 
-&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;She steps around the hedgerow, lute slung across her body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
-
-&lt;p&gt;She looks the same. Different. Both. Her hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past her shoulders. Eyes the colour of honey, tilted slightly, always looking like she knows something amusing that she&#39;s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; looks the same. Different. Both. &lt;&lt;print $bardPronounPosCap&gt;&gt; hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past &lt;&lt;print $bardPronounPos&gt;&gt; shoulders. Eyes the colour of honey, tilted slightly, always looking like &lt;&lt;print $bardPronoun&gt;&gt; knows something amusing that &lt;&lt;print $bardPronoun&gt;&gt;&#39;s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;
 
 &lt;p&gt;We met when I was fifteen. Tournament day. Ash was busking for coins near the festival stalls, playing a song so filthy that three matrons walked away and two came closer. I laughed so hard I choked on candied apple. We talked for four hours. We&#39;ve been writing letters   erratically, across distances that shouldn&#39;t allow friendship but somehow do   ever since.&lt;/p&gt;
 
@@ -8374,7 +8378,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="120" name="day-2_gardens_hub" tags="nobr" position="1225,1475" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="121" name="day-2_gardens_hub" tags="nobr" position="100,1600" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
 &lt;h2&gt;🌿 Royal Gardens&lt;/h2&gt;
 &lt;p&gt;Dusk. Jasmine and woodsmoke. The fountain splashes softly.&lt;/p&gt;
 
@@ -8410,7 +8414,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="121" name="day-2_hub" tags="nobr" position="100,1600" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="day-2_hub" tags="nobr" position="225,1600" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
   &lt;h2&gt;Crown&#39;s Rest - &lt;&lt;print formatDayNumber($dayNumber)&gt;&gt;: The Summons&lt;/h2&gt;
   &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
   &lt;p class=&quot;energy-display&quot;&gt;Energy: &lt;&lt;print $energy&gt;&gt; | Stress: &lt;&lt;print $stress&gt;&gt;&lt;/p&gt;
@@ -8560,7 +8564,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="day-2_kitchen" tags="nobr" position="225,1600" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="123" name="day-2_kitchen" tags="nobr" position="350,1600" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
 &lt;h2&gt;🍞 Palace Kitchens&lt;/h2&gt;
 &lt;p&gt;Heat, steam, chaos. Three hearths blazing. The smell of fresh bread and rosemary.&lt;/p&gt;
 
@@ -8590,7 +8594,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="123" name="day-2_library" tags="nobr" position="350,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="day-2_library" tags="nobr" position="475,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Grand Library   Research&lt;/h2&gt;
 
@@ -8663,7 +8667,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="day-2_library_hub" tags="nobr" position="475,1600" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="day-2_library_hub" tags="nobr" position="600,1600" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
 &lt;h2&gt;📚 Grand Library&lt;/h2&gt;
 &lt;p&gt;Three stories of books. Dust motes in slanted light. Haeth watches from his desk.&lt;/p&gt;
 
@@ -8701,7 +8705,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="day-2_night" tags="nobr" position="600,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="day-2_night" tags="nobr" position="725,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   Night&lt;/h2&gt;
 
@@ -8750,7 +8754,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-2_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d2&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="day-2_queen" tags="nobr" position="725,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="day-2_queen" tags="nobr" position="850,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   The Truth&lt;/h2&gt;
 
@@ -8870,7 +8874,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="127" name="day-2_servants" tags="nobr" position="850,1600" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="day-2_servants" tags="nobr" position="975,1600" size="100,100">&lt;&lt;locationImage &quot;servant_quarters&quot; &quot;Servant Quarters&quot;&gt;&gt;
 &lt;h2&gt;🔑 Servant Quarters   Below Stairs&lt;/h2&gt;
 &lt;p&gt;Clean corridors beneath the palace. The machinery of royal life.&lt;/p&gt;
 
@@ -8891,7 +8895,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="day-2_sleep_transition" tags="nobr" position="975,1600" size="100,100">&lt;&lt;day1Init&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="day-2_sleep_transition" tags="nobr" position="1100,1600" size="100,100">&lt;&lt;day1Init&gt;&gt;
 &lt;&lt;set $energy to 80&gt;&gt;
 &lt;&lt;set $stress += 5&gt;&gt;
 
@@ -8899,7 +8903,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;h2&gt;Night passes. You don&#39;t sleep until the hour before dawn.&lt;/h2&gt;
   &lt;p class=&quot;transition-morning&quot;&gt;In that single hour, you dream of water   a deep, warm pool, and you&#39;re sinking into it, and it&#39;s closing over your head, and you can&#39;t tell if you&#39;re drowning or being born.&lt;/p&gt;
   [[Dawn breaks. → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="day-2_training" tags="nobr" position="1100,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="130" name="day-2_training" tags="nobr" position="1225,1600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Training Yard   Morning Drill&lt;/h2&gt;
 
@@ -8971,7 +8975,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="130" name="day-2_training_hub" tags="nobr" position="1225,1600" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="131" name="day-2_training_hub" tags="nobr" position="100,1725" size="100,100">&lt;&lt;locationImage &quot;training_yard&quot; &quot;Training Yard&quot;&gt;&gt;
 &lt;h2&gt;⚔ Training Yard&lt;/h2&gt;
 &lt;p&gt;Chalk-dusted flagstones. Practice blades on the rack. Morning light.&lt;/p&gt;
 
@@ -9010,7 +9014,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="131" name="day-2_wake" tags="nobr" position="100,1725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="132" name="day-2_wake" tags="nobr" position="225,1725" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   Morning&lt;/h2&gt;
 
@@ -9071,7 +9075,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="132" name="day-2_npc_alva" tags="nobr" position="225,1725" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="133" name="day-2_npc_alva" tags="nobr" position="350,1725" size="100,100">&lt;&lt;npcPortrait &quot;alva&quot; &quot;Mistress Alva&quot;&gt;&gt;
 &lt;h3&gt;The Head Housekeeper   Mistress Alva&lt;/h3&gt;
 
 &lt;p&gt;The servant quarters sit below the palace&#39;s main level   a network of clean, plain corridors where the machinery of royal life operates invisibly. Here is where the linen is pressed, the silver polished, the candles replaced, the fires laid. It&#39;s a world I&#39;m not supposed to see and rarely do, which is exactly why I come here sometimes. It&#39;s honest work. No one is performing.&lt;/p&gt;
@@ -9119,7 +9123,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_servants]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="133" name="day-2_npc_brin" tags="nobr" position="350,1725" size="100,100">&lt;&lt;npcPortrait &quot;brin&quot; &quot;Brin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="134" name="day-2_npc_brin" tags="nobr" position="475,1725" size="100,100">&lt;&lt;npcPortrait &quot;brin&quot; &quot;Brin&quot;&gt;&gt;
 &lt;h3&gt;The Servant   Brin&lt;/h3&gt;
 
 &lt;p&gt;The servant lingers near the door after setting down the tray. He&#39;s young   sixteen, maybe seventeen   with sandy hair that sticks up on one side like he slept on it wrong and didn&#39;t have time to fix it. His livery is slightly too large. New hire. The palace takes them from common families as a form of patronage   steady work, meals, a roof that doesn&#39;t leak.&lt;/p&gt;
@@ -9167,7 +9171,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="134" name="day-2_npc_caedric" tags="nobr" position="475,1725" size="100,100">&lt;&lt;npcPortrait &quot;caedric&quot; &quot;Ser Caedric&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="135" name="day-2_npc_caedric" tags="nobr" position="600,1725" size="100,100">&lt;&lt;npcPortrait &quot;caedric&quot; &quot;Ser Caedric&quot;&gt;&gt;
 &lt;h3&gt;Old Ser Caedric   The Retired Knight&lt;/h3&gt;
 
 &lt;p&gt;He&#39;s sitting in the alcove near the portrait gallery, where the old knights always sit   a stone bench with a worn cushion that&#39;s been here since before I was born. Ser Caedric. Seventy-three. Retired from the Royal Guard twelve years ago when his knees gave out. He still wears his sword, though the palace wags say it&#39;s rusted into the scabbard.&lt;/p&gt;
@@ -9214,7 +9218,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="135" name="day-2_npc_elise" tags="nobr" position="600,1725" size="100,100">&lt;&lt;npcPortrait &quot;elise_librarian&quot; &quot;Elise&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="136" name="day-2_npc_elise" tags="nobr" position="725,1725" size="100,100">&lt;&lt;npcPortrait &quot;elise_librarian&quot; &quot;Elise&quot;&gt;&gt;
 &lt;h3&gt;Junior Librarian   Elise&lt;/h3&gt;
 
 &lt;p&gt;She finds me between the shelves. Or I find her   hard to tell who was lost first. Elise is a junior librarian, one of Haeth&#39;s three apprentices, a nervous woman in her mid-twenties with ink-stained fingers and spectacles that keep sliding to the tip of her nose. She pushes them up approximately once every four seconds. I&#39;ve counted.&lt;/p&gt;
@@ -9268,7 +9272,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="136" name="day-2_npc_harwick" tags="nobr" position="725,1725" size="100,100">&lt;&lt;npcPortrait &quot;harwick&quot; &quot;Lady Harwick&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="137" name="day-2_npc_harwick" tags="nobr" position="850,1725" size="100,100">&lt;&lt;npcPortrait &quot;harwick&quot; &quot;Lady Harwick&quot;&gt;&gt;
 &lt;h3&gt;Lady Harwick   The Court Gossip&lt;/h3&gt;
 
 &lt;p&gt;Lady Harwick materialises from behind a topiary like a well-dressed ambush. She&#39;s sixty, perfumed to the point of weaponisation, draped in enough jewelry to furnish a small treasury, and possessed of a smile that could mean anything from &quot;delighted to see you&quot; to &quot;I&#39;m going to destroy your reputation at dinner.&quot;&lt;/p&gt;
@@ -9310,7 +9314,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="137" name="day-2_npc_joss" tags="nobr" position="850,1725" size="100,100">&lt;&lt;npcPortrait &quot;joss&quot; &quot;Joss&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="138" name="day-2_npc_joss" tags="nobr" position="975,1725" size="100,100">&lt;&lt;npcPortrait &quot;joss&quot; &quot;Joss&quot;&gt;&gt;
 &lt;h3&gt;Scullion Joss   Kitchen Gossip&lt;/h3&gt;
 
 &lt;p&gt;Joss is a scullion   fourteen, gap-toothed, perpetually smudged with soot, and possessed of the most efficient gossip network in Crown&#39;s Rest. He knows everything that happens in the palace because he delivers trays to every wing and nobody notices the pot-boy.&lt;/p&gt;
@@ -9342,7 +9346,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_kitchen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="138" name="day-2_npc_keller" tags="nobr" position="975,1725" size="100,100">&lt;&lt;npcPortrait &quot;keller&quot; &quot;Guardsman Keller&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="day-2_npc_keller" tags="nobr" position="1100,1725" size="100,100">&lt;&lt;npcPortrait &quot;keller&quot; &quot;Guardsman Keller&quot;&gt;&gt;
 &lt;h3&gt;Guardsman Keller   The Gate Veteran&lt;/h3&gt;
 
 &lt;p&gt;Keller is sharpening his actual sword   not a practice blade   at the bench near the yard entrance. He&#39;s forty, weathered, with the kind of face that looks like it was carved from the same stone as the castle walls. Twenty years in the Royal Guard. He fought in the border skirmish. He has opinions about everything and shares them with the restraint of a man who has been told many times to keep his opinions to himself and has decided that advice is for other people.&lt;/p&gt;
@@ -9385,7 +9389,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="139" name="day-2_npc_letter" tags="nobr" position="1100,1725" size="100,100">&lt;h3&gt;The Half-Written Letter&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="140" name="day-2_npc_letter" tags="nobr" position="1225,1725" size="100,100">&lt;h3&gt;The Half-Written Letter&lt;/h3&gt;
 
 &lt;p&gt;I pick up the letter to Ash. Three weeks old. The ink has crusted in the nib, and when I tap it, a flake of dried black drops onto the parchment.&lt;/p&gt;
 
@@ -9405,7 +9409,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="140" name="day-2_npc_maids" tags="nobr" position="1225,1725" size="100,100">&lt;h3&gt;The Gossiping Maids&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="141" name="day-2_npc_maids" tags="nobr" position="100,1850" size="100,100">&lt;h3&gt;The Gossiping Maids&lt;/h3&gt;
 
 &lt;p&gt;Two handmaidens are pressed against the wall near the tapestry of the Battle of Thornridge, speaking in the urgent whisper that palace servants use when they think they&#39;re being quiet but are absolutely not.&lt;/p&gt;
 
@@ -9436,7 +9440,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_corridors]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="141" name="day-2_npc_marta" tags="nobr" position="100,1850" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="142" name="day-2_npc_marta" tags="nobr" position="225,1850" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
 &lt;h3&gt;Head Cook Marta&lt;/h3&gt;
 
 &lt;p&gt;The palace kitchens are a realm unto themselves   a vast, low-ceilinged cavern of stone and iron where three massive hearths blaze day and night, filling the air with heat, smoke, and the complex layered aroma of twelve dishes being prepared simultaneously. Pots hang from ceiling hooks. Herbs dry in bundles above the doorways. A small army of kitchen workers   junior cooks, scullions, pot-boys, pastry apprentices   move in choreographed chaos that would make a military commander weep with envy.&lt;/p&gt;
@@ -9488,7 +9492,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_kitchen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="142" name="day-2_npc_perrin" tags="nobr" position="225,1850" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="143" name="day-2_npc_perrin" tags="nobr" position="350,1850" size="100,100">&lt;&lt;npcPortrait &quot;perrin&quot; &quot;Perrin&quot;&gt;&gt;
 &lt;h3&gt;The Night Guard   Perrin&lt;/h3&gt;
 
 &lt;p&gt;I open the door to get air   the room is warm from the rebuilt fire and I can&#39;t breathe   and nearly walk into the night guard. Perrin. Young. Earnest. The kind of guard who takes the night shift seriously, which means he stands at rigid attention for eight hours even though no one is watching.&lt;/p&gt;
@@ -9540,7 +9544,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="143" name="day-2_npc_tamsin" tags="nobr" position="350,1850" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="144" name="day-2_npc_tamsin" tags="nobr" position="475,1850" size="100,100">&lt;&lt;npcPortrait &quot;tamsin&quot; &quot;Tamsin&quot;&gt;&gt;
 &lt;h3&gt;Young Recruit   Tamsin&lt;/h3&gt;
 
 &lt;p&gt;A young woman   recruit, by the uniform, which is too clean and too well-pressed to belong to anyone who&#39;s seen real duty   is methodically destroying a training dummy with a quarterstaff. Her form is wrong. Her grip is wrong. Her footwork is wrong. But the intensity is right. She&#39;s hitting the dummy like it said something about her mother.&lt;/p&gt;
@@ -9584,7 +9588,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="144" name="day-2_npc_vaelin" tags="nobr" position="475,1850" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="145" name="day-2_npc_vaelin" tags="nobr" position="600,1850" size="100,100">&lt;&lt;npcPortrait &quot;vaelin&quot; &quot;Brother Vaelin&quot;&gt;&gt;
 &lt;h3&gt;The Theology Student   Brother Vaelin&lt;/h3&gt;
 
 &lt;p&gt;A young man in temple robes is sitting cross-legged on the floor between the theology shelves, surrounded by a fortress of open books and looking like he hasn&#39;t moved in several hours. He has the pallid complexion and thousand-yard stare of someone who has been reading about divine succession law for too long.&lt;/p&gt;
@@ -9631,7 +9635,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_library_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="145" name="day-2_npc_wynn" tags="nobr" position="600,1850" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="146" name="day-2_npc_wynn" tags="nobr" position="725,1850" size="100,100">&lt;&lt;npcPortrait &quot;wynn&quot; &quot;Old Wynn&quot;&gt;&gt;
 &lt;h3&gt;The Gardener   Old Wynn&lt;/h3&gt;
 
 &lt;p&gt;Old Wynn has been the palace gardener for longer than anyone can remember. He predates my mother&#39;s reign, my grandmother&#39;s reign, possibly the castle itself. He&#39;s a small, bent man who smells of soil and speaks to his plants with more affection than he shows to humans. I&#39;ve never seen him indoors. I&#39;m not convinced he &lt;em&gt;can&lt;/em&gt; go indoors   like a tree that would wither without sunlight.&lt;/p&gt;
@@ -9670,7 +9674,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="146" name="day-2_scene_bath" tags="nobr" position="725,1850" size="100,100">&lt;&lt;locationImage &quot;royal_baths&quot; &quot;Royal Baths&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="147" name="day-2_scene_bath" tags="nobr" position="850,1850" size="100,100">&lt;&lt;locationImage &quot;royal_baths&quot; &quot;Royal Baths&quot;&gt;&gt;
 &lt;h3&gt;The Royal Baths&lt;/h3&gt;
 
 &lt;p&gt;The Royal Baths are underground   carved from the bedrock beneath the palace, fed by a natural hot spring that the first queen channelled into stone pools three centuries ago. Steam hangs in the air like gauze. The walls are slick with condensation. Torchlight refracts through the mist, turning the space into something between a room and a dream.&lt;/p&gt;
@@ -9733,7 +9737,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
     &lt;p&gt;Not today. The water is enough.&lt;/p&gt;
     [[→ |day-2_hub]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="147" name="day-2_scene_bath_sexual" tags="nobr" position="850,1850" size="100,100">&lt;h3&gt;Don&#39;t Stop&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="148" name="day-2_scene_bath_sexual" tags="nobr" position="975,1850" size="100,100">&lt;h3&gt;Don&#39;t Stop&lt;/h3&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t stop.&quot;&lt;/div&gt;
 
@@ -9800,7 +9804,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="148" name="day-2_scene_masturbation" tags="nobr" position="975,1850" size="100,100">&lt;h3&gt;The Body   One Last Familiar Thing&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="149" name="day-2_scene_masturbation" tags="nobr" position="1100,1850" size="100,100">&lt;h3&gt;The Body   One Last Familiar Thing&lt;/h3&gt;
 
 &lt;p&gt;I can&#39;t sleep. The ceiling and I have exhausted our conversation. My mother&#39;s words loop in my skull   &lt;em&gt;become my daughter, become the heir, two days&lt;/em&gt;   and the loop tightens with every repetition until my jaw aches from clenching and my shoulders are granite and my body is so wound with tension that the sheets feel like restraints.&lt;/p&gt;
 
@@ -9852,7 +9856,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-2_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="149" name="title-screen" tags="" position="1100,1850" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="150" name="title-screen" tags="" position="1225,1850" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
   &lt;div class=&quot;title-art&quot;&gt;
     &lt;h1 class=&quot;title-main&quot;&gt;AELINDRA&lt;/h1&gt;
     &lt;p class=&quot;title-sub&quot;&gt;The Rite of Becoming&lt;/p&gt;
@@ -9868,7 +9872,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
     [[Load Game|title-load]]
     [[Credits|credits]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="150" name="title-load" tags="" position="1225,1850" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="151" name="title-load" tags="" position="100,1975" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
   &lt;h1 class=&quot;title-main&quot; style=&quot;font-size:2rem;&quot;&gt;Load Game&lt;/h1&gt;
   &lt;div class=&quot;title-menu&quot;&gt;
     &lt;&lt;link &quot;Open Load Menu&quot;&gt;&gt;
@@ -9876,7 +9880,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
     &lt;&lt;/link&gt;&gt;
   &lt;/div&gt;
   &lt;p class=&quot;nav-return&quot;&gt;&lt;&lt;link &quot;◄ Back&quot; &quot;title-screen&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="151" name="widgets" tags="widget nobr" position="100,1975" size="100,100">/* ===== OBJECTIVE SYSTEM ===== */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="152" name="widgets" tags="widget nobr" position="225,1975" size="100,100">/* ===== OBJECTIVE SYSTEM ===== */
 
 &lt;&lt;widget &quot;addObjective&quot;&gt;&gt;
   &lt;&lt;set _obj to {id: _args[0], text: _args[1], type: (_args[2] || &quot;MAIN&quot;), done: false}&gt;&gt;
@@ -9967,7 +9971,15 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
    that&#39;s no longer true. Each still fires from its own route&#39;s Day 2
    placeholder (day2_hub.tw / day2_hub_futa.tw), not right after the
    Rite, since both routes now run a full Day 1 before content runs
-   out. Update both version labels together when a new build ships. */
+   out. Update both version labels together when a new build ships.
+
+   NOTE (merge from v0.1, via v0.2): v0.1 gates its own public build to
+   stop at Day 0 and uses a single shared &lt;&lt;endOfContentNotice&gt;&gt; widget
+   for that, called directly from day0_void.tw / day0_void_futa.tw.
+   That gate is v0.1-specific and does not apply here - this branch&#39;s
+   Day 0 exit passages keep their normal [[Wake → ...]] links into
+   Day 1, so this branch keeps its own two-widget split below instead
+   of picking up v0.1&#39;s single widget on any future merge. */
 
 /* Futa route: day2_hub_futa.tw. */
 &lt;&lt;widget &quot;endOfContentNoticeFuta&quot;&gt;&gt;

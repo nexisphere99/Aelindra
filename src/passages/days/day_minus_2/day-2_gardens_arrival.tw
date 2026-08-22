@@ -1,0 +1,70 @@
+:: day-2_gardens_arrival [nobr]
+<<set _gardensImg to ($bardGender is "female") ? "day_minus_2/royal_gardens_ash_female" : "day_minus_2/royal_gardens_ash_male">>
+<div class="scene-image"><<sceneImage _gardensImg "Royal Gardens">></div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Ash."</div>
+
+<p><<npcPortrait $bardPortraitSlug "Ash">><<print $bardPronounCap>> steps around the hedgerow, lute slung across <<print $bardPronounPos>> body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn't call me "Your Highness" and mean it.</p>
+
+<p><<print $bardPronounCap>> looks the same. Different. Both. <<print $bardPronounPosCap>> hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn't, swept back from pointed ears and falling past <<print $bardPronounPos>> shoulders. Eyes the colour of honey, tilted slightly, always looking like <<print $bardPronoun>> knows something amusing that <<print $bardPronoun>>'s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.</p>
+
+<p>We met when I was fifteen. Tournament day. Ash was busking for coins near the festival stalls, playing a song so filthy that three matrons walked away and two came closer. I laughed so hard I choked on candied apple. We talked for four hours. We've been writing letters   erratically, across distances that shouldn't allow friendship but somehow do   ever since.</p>
+
+<<if $bardGender is "female">>
+<div class="dialogue"><span class="speaker">ASH</span>"You look like someone deciding which cliff to jump off." She settles onto the bench beside me, adjusting the lute across her lap.</div>
+<<else>>
+<div class="dialogue"><span class="speaker">ASH</span>"You look like a man deciding which cliff to jump off." He settles onto the bench beside me, adjusting the lute across his lap.</div>
+<</if>>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's closer to accurate than you think."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Ah."</div>
+
+<p>Ash doesn't push. That's the thing about <<print $bardPronounObj>>   <<print $bardPronoun>> has the patience of an immortal, which <<print $bardPronoun>>'s technically halfway to being, and the emotional intelligence of someone who has spent <<print $bardPronounPos>> life reading rooms for a living. <<print $bardPronounCap>> sets <<print $bardPronounPos>> fingers on the strings and plays something soft. Not a performance. A presence.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I thought you were in Tormark," I say, because saying anything else would mean saying the real thing, and I'm not ready.</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I was. Terrible audiences. The Tormarkians appreciate a twelve-verse ballad about agricultural policy but look at you blankly if you play something with actual emotion. I left before I died of boredom." <<print $bardPronounCap>> glances at me sideways. "I got a letter. From your mother, actually. She said you might need a friend."</div>
+
+<p>Of course she did. Of course Mother   even from her sickbed, even while dying, even while planning the demolition and reconstruction of her only child's entire existence   thought to summon the one person who might make the demolition bearable.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"She's thorough."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"She's your mother. It's the same thing."</div>
+
+<p>We sit. Ash plays. The melody shifts   something older now, a song I half-recognize from childhood. The jasmine exhales its sweetness into the cooling air. Above us, the first stars appear   the real ones, not the painted kind on library ceilings.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Whatever it is," Ash says, not looking at me, fingers still moving on the strings, "you've never been a coward, Edrin. You're the bravest person I know. Not because you're fearless, but because you're terrified of everything and do it anyway."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"What if 'doing it' means losing... myself?"</div>
+
+<p><<print $bardPronounCap>> stops playing. The silence is sudden and specific   the kind that happens when someone puts down an instrument after playing for a long time, and the air hasn't yet figured out how to fill the space.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I've been remaking myself since I was born." Ash's voice is quiet. "Half of two worlds, belonging fully to neither. Every town I enter, I decide which version of myself to wear. It's not losing yourself. It's finding out which parts were real all along."</div>
+
+<p>The words land in a place I didn't know was open. Something behind my sternum shifts   not understanding, exactly, but the premonition of understanding. The shadow of a thought I'm not ready to have.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Stay," I say. "For a few days. I might need..." I don't finish.</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I'm here." Ash picks up the lute again. "I'm not going anywhere."</div>
+
+<p><<print $bardPronounCap>> plays until the stars are thick and the fountain's splash is the only other sound. I don't tell <<print $bardPronounObj>> about the Rite. Not tonight. Tonight I just need someone beside me who doesn't want anything, who isn't angling for position or advantage, who plays music in the garden because the evening is beautiful and that's enough.</p>
+
+<p>It's not enough. But it helps.</p>
+
+<!-- --- STAT CHANGES --- -->
+<<set $stress -= 15>>
+<<set $affAsh += 5>>
+<<set $d2_gardens to true>>
+
+<!-- --- ADVANCE TIME --- -->
+<<set $timeSlot to "NIGHT">>
+
+<!-- --- UPDATE OBJECTIVES --- -->
+<<completeObjective "follow_music">>
+<<addObjective "return_chambers" "Return to your chambers   it's late" "MAIN">>
+<<addObjective "speak_perrin" "Speak with the night guard" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day-2_hub]]
+</div>
