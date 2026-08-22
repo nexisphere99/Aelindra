@@ -2,8 +2,10 @@
 
 Same `<<npcPortrait>>` native macro as Day -2 (see `day_minus_2_manifest.md`
 for how it works and which characters are already covered   Aldric,
-Seraphina, Rowan, Marta, Vaelin, Haeth, Wynn, Perrin, Alva, and Tamsin all
+Seraphina, Ash, Marta, Vaelin, Haeth, Wynn, Perrin, Alva, and Tamsin all
 return on Day -1 and reuse their existing portrait file, no new art needed).
+Ash's portrait resolves via `$bardPortraitSlug` (`ash_male.png` or
+`ash_female.png`), not a literal filename   see day_minus_2_manifest.md.
 
 ## Characters with a full reference sheet already written
 

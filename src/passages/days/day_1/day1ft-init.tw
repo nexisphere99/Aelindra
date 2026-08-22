@@ -27,7 +27,7 @@
   <<set $d1ft_wake to false>>
   <<set $d1ft_exam to false>>
   <<set $d1ft_alone to false>>
-  <<set $d1ft_rowan to false>>
+  <<set $d1ft_ash to false>>
   <<set $d1ft_night to false>>
 
   /* --- Day 1 NPC / Object Flags --- */

@@ -1,0 +1,83 @@
+:: day1_ash_futa [nobr]
+<div class="scene-image"><<locationImage "day1ft_ash_paradox" "Paradox">></div>
+
+<h2>Ash's Visit</h2>
+
+<p>Evening. The knock. Three taps, pause, two more.</p>
+
+<p>I almost don't answer. The thought of being seen in this body   not just the breasts and the hips and the face, but all of it, the impossible combination that Ilara calls unprecedented and I call a fever dream   makes something in my chest lock up. But the lute. Ash playing through the door. Not forcing. Just being there.</p>
+
+<p>I open the door. A crack.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Don't stare."</div>
+
+<p><<npcPortrait $bardPortraitSlug "Ash">><<print $bardPronounCap>> looks at me   the surprise, the warmth. Then, carefully:</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"You kept it."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You can TELL?"</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I can tell because you're standing differently than someone who lost everything would stand. There's a... groundedness. An anchor. You chose the partial, didn't you?"</div>
+
+<p>A pause.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Yes."</div>
+
+<p>The smile   real, warm, unsurprised.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Good. I'm glad."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"You're GLAD I have a cock?"</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I'm glad you have a piece of yourself. The rest is just... architecture."</div>
+
+<p>I open the door wider. <<print $bardPronounCap>> comes in. Sits on the floor. Plays something soft. The lute fills the room with sound that doesn't demand anything   it just exists, the way the candle flames exist, the way the stone walls exist. Ash's gift: making presence feel like permission rather than obligation.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"So." <<print $bardPronounCap>> sets the lute down after a while. "'Partial' doesn't tell me much. What does it actually mean?"</div>
+
+<p>A long pause. I'm sitting on the bed. <<print $bardPronounCap>>'s on the floor. The distance between us is four feet and an entire body's worth of secrets.</p>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"Everything below the waist is... complicated."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Complicated how?"</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I have both."</div>
+
+<p>Processing. I watch it happen on Ash's face   the statement landing, the meaning unfolding, the implications cascading. <<print $bardPronounPosCap>> expression moves through several territories: surprise, curiosity, recalibration, and arrives at fascination. Not fascination-as-spectacle. Fascination-as-recognition. Ash   half-elf, half-human, perpetually between categories   understanding what it means to be a body that doesn't fit.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"Both. As in..."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"As in a cock AND a cunt, Ash. I'm a walking contradiction."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"You're not a contradiction." <<print $bardPronounPosCap>> voice is quiet. Serious. The performer gone, the person present. "You're a paradox. Contradictions cancel out. Paradoxes contain multitudes."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"That's very poetic and entirely unhelpful."</div>
+
+<p><<print $bardPronounCap>> laughs. The laugh is real   not deflection, not performance. The laugh of a friend who knows that sometimes the most helpful thing is to treat the impossible as material rather than crisis.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"I'm a bard. Poetry is all I have. But Aelindra   listen." <<print $bardPronounCap>> leans forward. "You are the only person in the world with that body. That's not a curse. That's... do you know how many songs are about the ordinary? None. The songs that LAST are about the unprecedented."</div>
+
+<div class="dialogue"><span class="speaker">EDRIN</span>"I don't want to be a song. I want to be a person."</div>
+
+<div class="dialogue"><span class="speaker">ASH</span>"You're both. You've always been both."</div>
+
+<p><<print $bardPronounCap>> stays an hour. <<print $bardPronounCap>> plays. <<print $bardPronounCap>> tells stories   the goat, the baron, a merchant in the Free Cities who tried to sell Ash a "genuine dragon scale" that was clearly a painted roof tile. <<print $bardPronounCap>> doesn't ask about the body again. <<print $bardPronounCap>> doesn't use it as a topic. <<print $bardPronounCap>> folds it into the conversation the way <<print $bardPronoun>> folds everything into <<print $bardPronounPos>> music   acknowledging it, incorporating it, making it part of the larger composition without letting it dominate.</p>
+
+<p>At the door, leaving. Lute over shoulder. <<print $bardPronounCap>> turns. <<print $bardPronounPosCap>> expression is tender and hungry and deliberately restrained   three things that shouldn't coexist on one face and yet do, because Ash has always been better at paradoxes than anyone.</p>
+
+<div class="dialogue"><span class="speaker">ASH</span>"For what it's worth... the body you described? I think it sounds beautiful."</div>
+
+<p>I close the door. Lean against it. My cock   my stupid, preserved, enhanced, beloved cock   twitches. Just slightly. Just enough to remind me it's listening to every word, receiving every signal, part of a circuit I don't have a diagram for.</p>
+
+<<set $d1ft_ash to true>>
+<<set $stress -= 15>>
+<<set $affAsh += 8>>
+<<set $statRES += 2>>
+<<set $timeSlot to "NIGHT">>
+
+<<completeObjective "ash_futa">>
+<<addObjective "night_futa" "Try to sleep   the body will make it difficult" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day1_hub_futa]]
+</div>

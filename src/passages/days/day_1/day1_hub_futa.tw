@@ -12,7 +12,7 @@
 <div class="room-zone">
   <h3>🛏 The Bed</h3>
   <p class="loc-flavor">Soft linens, white stone walls. A body that won't stop talking to itself.</p>
-  <<if $timeSlot is "NIGHT" and $d1ft_rowan and not $d1ft_night>>
+  <<if $timeSlot is "NIGHT" and $d1ft_ash and not $d1ft_night>>
     <span class="badge main">⚔ Try to sleep   if the body allows it</span>
     [[Lie down → |day1_night_futa]]
   <</if>>
@@ -51,10 +51,10 @@
   <<if $timeSlot is "EVENING" and not $d1ft_npc_queen_message>>
     <span class="badge side">🗡 A sealed note   from someone who doesn't know what you kept</span>
   <</if>>
-  <<if $timeSlot is "EVENING" and $d1ft_npc_queen_message and not $d1ft_rowan>>
+  <<if $timeSlot is "EVENING" and $d1ft_npc_queen_message and not $d1ft_ash>>
     <span class="badge main">⚔ Three taps, pause, two more   the one person you can tell</span>
   <</if>>
-  <<if $d1ft_rowan and not $d1ft_npc_marta_tray>>
+  <<if $d1ft_ash and not $d1ft_npc_marta_tray>>
     <span class="badge side">🗡 A tray   from someone who doesn't need to know</span>
   <</if>>
   [[Check → |day1ft_door_hub]]

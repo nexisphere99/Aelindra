@@ -26,7 +26,7 @@
 <<set $timeSlot to "EVENING">>
 
 <<completeObjective "alone_futa">>
-<<addObjective "rowan_futa" "Wait for evening   the one person you can tell" "MAIN">>
+<<addObjective "ash_futa" "Wait for evening   the one person you can tell" "MAIN">>
 
 <div class="scene-end">
   [[Continue → |day1_hub_futa]]

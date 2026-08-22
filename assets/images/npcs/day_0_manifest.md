@@ -2,9 +2,13 @@
 
 Same `<<npcPortrait>>` native macro as prior days. Every returning Day 0
 character reuses their existing portrait unchanged: `aldric.png`,
-`seraphina.png`, `rowan.png`, `ilara.png`, `marta.png`, `haeth.png`,
+`seraphina.png`, `ilara.png`, `marta.png`, `haeth.png`,
 `wynn.png`, `alva.png`, `caedric.png`, `nara.png`, `vael.png`, `brin.png`
-(all from `day_minus_2_manifest.md` / `day_minus_1_manifest.md`).
+(all from `day_minus_2_manifest.md` / `day_minus_1_manifest.md`). Ash
+(formerly Rowan) is the one exception   every `<<npcPortrait>>` call for
+Ash uses `$bardPortraitSlug` rather than a literal filename, resolving to
+`ash_male.png` or `ash_female.png` depending on the choice made at
+day-2_gardens.tw.
 
 ## New for Day 0   The Queen's Gift
 
