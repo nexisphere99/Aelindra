@@ -1,5 +1,5 @@
 :: day1_night [nobr]
-<div class="scene-image"><<locationImage "day1f_night" "The first night">></div>
+<div class="scene-image"><<sceneImage "day1f_night" "The first night">></div>
 
 <h2>First Night in the New Body</h2>
 

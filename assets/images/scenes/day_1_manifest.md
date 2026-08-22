@@ -3,8 +3,16 @@
 Same `<<sceneImage>>` native macro as Day -2 (see
 `day_minus_2_manifest.md`)   fails silently if missing.
 
-On this branch (v0.1), Day 1 content isn't built out yet   the only Day 1
-art is `moonspire_recovery_room.png`, a reusable room, so it stays in
-`assets/images/locations/day_1_manifest.md`. This file exists for
-structural consistency and is ready for whatever Day 1's own narrative-beat
-art turns out to be once that content exists on this branch.
+| Filename | Used by | Prompt |
+|---|---|---|
+| `day1f_waking.png` | day1_wake scene banner | A young woman sitting up in a white-stone tower bed, dark wavy hair cascading over her shoulders, staring down at her own hands with an expression of dawning disorientation. The nightgown drapes over a body clearly different from the one that lay down the night before. Morning light through a narrow window. Atmosphere: the first minutes of a body that isn't the one you fell asleep in, shock too total for tears yet. |
+| `day1f_mirror.png` | day1_exam scene banner | A young woman standing naked before a tall silver mirror. 5'6", dark wavy hair, grey-blue eyes, small breasts, narrow waist, flared hips   fully, unambiguously feminine. Her expression is caught between an involuntary, unwanted awe and outright refusal. Behind her, a composed woman in Silverveil robes watches with quiet, careful attention. White stone room, steady candlelight. Atmosphere: the first full look, beauty she didn't ask for, the argument between "that's not me" and "that is." |
+| `day1f_clothes.png` | day1_exam (mid-scene, getting dressed) | A young woman standing in a white stone tower room, wearing a loose shirt and trousers that visibly don't fit   shoulders too wide, fabric gaping open across a chest it wasn't cut for, the waistband loose at the hips. A breast band and folded dress lie discarded on the bed behind her. Her expression is flat, resigned, arms slightly away from her body as if unsure what to do with it. Overcast light through a narrow window. Atmosphere: a body outgrowing its own wardrobe overnight, no crisis, just a quiet, practical wrongness. |
+| `day1f_ash_male.png` | day1_ash scene banner (male Ash / default   renamed from day1f_rowan.png / day1_rowan.tw) | Two figures in a dim tower room. A half-elf bard (male presentation, soft features, silver rings) with honey-coloured eyes sits cross-legged on the floor, lute in lap, playing something soft, looking up with open warmth. On the bed above, a young woman with dark wavy hair sits wrapped in a blanket, guarded but leaning toward the sound. Candlelight, warm shadows. Atmosphere: the one person who doesn't flinch, presence offered as permission rather than obligation. |
+| `day1f_ash_female.png` | day1_ash scene banner, only if the player chose a female Ash | Same scene, same composition, same candlelight and warm shadows   the bard on the floor is the female presentation instead: sharper/angular features, same dark copper-toned hair, same honey-coloured eyes, pointed ears, same lute. Everything else identical to day1f_ash_male.png. |
+| `day1f_night.png` | day1_night scene banner | A young woman lying on her back in a dim tower bed, eyes open, staring at the ceiling. White silk nightgown, one hand resting still at her side. Her expression is quiet and unreadable   not distress, not peace, something in between. Candlelight dying low. Atmosphere: the first night in a body still being learned, an anchor held onto in the dark. |
+| `day1f_vials.png` | day1_npc_vael3 | A wooden case on a bedside table, open, containing four glass vials: blue, green, clear, and amber, each labelled in precise handwriting. A woman's hand (Vael) gestures over them, mid-explanation. Behind: a young woman on a bed, listening. Tower room, afternoon light. Atmosphere: brisk, unsentimental medical care, a body being looked after by someone who refuses to make it a tragedy. |
+
+Selected via `<<set _ashVisitImg to ($bardGender is "female") ? "day1f_ash_female" : "day1f_ash_male">>`
+then `<<sceneImage _ashVisitImg "Ash's visit">>` in `day1_ash.tw`; the rest
+are plain `<<sceneImage "slug" "...">>` calls with no gender branching.

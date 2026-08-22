@@ -1,6 +1,6 @@
 :: day1_ash [nobr]
 <<set _ashVisitImg to ($bardGender is "female") ? "day1f_ash_female" : "day1f_ash_male">>
-<div class="scene-image"><<locationImage _ashVisitImg "Ash's visit">></div>
+<div class="scene-image"><<sceneImage _ashVisitImg "Ash's visit">></div>
 
 <h2>Ash's Visit</h2>
 
