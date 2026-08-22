@@ -10,7 +10,7 @@
   address the dual anatomy specifically and are NOT a find-and-
   replace from the female route. Replace with real Day 1 (futa)
   content and its own day1Init/futa flag block when written   at
-  that point, move the <<endOfContentNotice>> call below down to
+  that point, move the <<endOfContentNoticeFuta>> call below down to
   wherever the new content's own final passage ends, rather than
   deleting it.
 -->
@@ -21,4 +21,4 @@
   bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
 </div>
 
-<<endOfContentNotice>>
+<<endOfContentNoticeFuta>>

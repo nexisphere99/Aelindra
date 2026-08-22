@@ -2,14 +2,17 @@
 <!--
   PLACEHOLDER   pipeline test only, AND the current end of the
   public build's content (female route).
-  As of v0.2, this route deliberately does NOT show
-  <<endOfContentNotice>> - Day 1 is real, playable content now, so
-  the female route flows straight through it without an "end of
-  public build" interruption; it just quietly runs out of content
-  here until Day 2 is written. (The futa route still shows the
-  notice, at day1_hub_futa.tw, since its Day 1 doesn't exist yet.)
+  Day 0 and Day 1 are both real, playable content as of v0.2, so
+  the female route flows straight through them without any "end of
+  build" interruption   the notice only fires here, once the player
+  actually runs out of written content. Uses its own
+  <<endOfContentNoticeFemale>> widget (widgets.tw), distinct from the
+  futa route's <<endOfContentNoticeFuta>> at day1_hub_futa.tw, since
+  the two routes are at different points and the messages diverged.
   Replace with real Day 2 ("Body") content and its own day2fInit
-  flag block (mirroring day1f-init.tw) when written.
+  flag block (mirroring day1f-init.tw) when written   at that point,
+  move the <<endOfContentNoticeFemale>> call below down to wherever
+  the new content's own final passage ends.
 -->
 <div class="day-transition">
   <h2><<print formatDayNumber($dayNumber)>>   Body</h2>
@@ -20,3 +23,5 @@
   <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
   bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
 </div>
+
+<<endOfContentNoticeFemale>>

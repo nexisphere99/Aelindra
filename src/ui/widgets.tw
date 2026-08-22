@@ -84,18 +84,33 @@
    which build the <img> element directly via the DOM API and so
    never touch HTML-as-text at all. */
 
-/* ===== END-OF-CONTENT NOTICE =====
-   As of v0.2, futa-route only: the female route's Day 1 is now fully
-   written and flows straight into day2_hub.tw's placeholder without
-   any "end of content" interruption (see the comment there). The
-   futa route's Day 1 (day1_hub_futa.tw) is still unwritten, so it's
-   the only remaining call site. Kept as a widget rather than pasted
-   inline so the version label only needs updating in one place next
-   release. */
-<<widget "endOfContentNotice">>
+/* ===== END-OF-CONTENT NOTICES =====
+   Two routes, two distinct messages - split into separate widgets
+   rather than one shared/parameterised one now that the wording has
+   actually diverged (female: "we wrote this much, more is coming";
+   futa: "this route isn't written yet at all"). Update both version
+   labels together when a new build ships. */
+
+/* Futa route: day1_hub_futa.tw. Its Day 1 doesn't exist yet, so this
+   fires right where Day 0 hands off. */
+<<widget "endOfContentNoticeFuta">>
   <div class="end-of-content">
     <h3>Futanari Route   Not Yet Written</h3>
     <p>In this v0.2 release, Day 1 content for the futanari route hasn't been added yet. The female route is fully playable end to end through Day 1   the futa route's own Day 1 is still in progress.</p>
+    <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
+    <p class="patreon-cta">
+      <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>
+    </p>
+  </div>
+<</widget>>
+
+/* Female route: day2_hub.tw. Day 0 and Day 1 are both fully written,
+   so this fires only once the player runs past the actual end of
+   written content, not right after the Rite. */
+<<widget "endOfContentNoticeFemale">>
+  <div class="end-of-content">
+    <h3>v0.2 Ends Here</h3>
+    <p>You've reached the end of AELINDRA's current v0.2 content on the female route. Thank you for playing this far into Aelindra's story.</p>
     <p>Development continues on Patreon, including early access to new chapters and the current in-progress build, ahead of the next public release.</p>
     <p class="patreon-cta">
       <a href="https://www.patreon.com/c/teamaelindra" target="_blank" rel="noopener noreferrer">Support AELINDRA on Patreon →</a>
