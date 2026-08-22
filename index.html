@@ -4261,7 +4261,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_ash" tags="nobr" position="1225,475" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_ash&quot; &quot;Ash&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_ash" tags="nobr" position="1225,475" size="100,100">&lt;&lt;set _ashVisitImg to ($bardGender is &quot;female&quot;) ? &quot;day1f_ash_female&quot; : &quot;day1f_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _ashVisitImg &quot;Ash&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ash&#39;s Visit&lt;/h2&gt;
 
