@@ -1084,21 +1084,35 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
   display: block;
 }
 
-/* Scene banner (top of a main scene passage) */
+/* Scene banner (top of a main scene passage)
+   Fixed to the passage's width, height left to fall out of the
+   image's own aspect ratio (no aspect-ratio/object-fit: cover here)
+   so nothing gets cropped - <<locationImage>>/<<sceneImage>> nest an
+   inner .loc-image div (see above) around the <img>, which normally
+   forces its own 16:9 crop too, so that has to be neutralised here
+   as well, scoped to just this nesting rather than changed globally
+   (hub-card grids still want the uniform 16:9 crop). */
 .scene-image {
   width: 100%;
   max-width: 780px;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: var(--border-radius);
   margin: 0 0 20px;
   border: 1px solid var(--border-stone);
 }
 
+.scene-image .loc-image {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: none;
+  margin: 0;
+  border-radius: 0;
+}
+
 .scene-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -3181,7 +3195,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;hr&gt;
 
-&lt;&lt;sceneImage &quot;day_0/transformation_abstract&quot; &quot;The transformation takes hold&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_0/transformation_abstract&quot; &quot;The transformation takes hold&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;p&gt;It starts at my center. The core of me   the deep interior, the place where the body keeps its secrets. A knot of heat that tightens and expands simultaneously, like a fist closing inside a furnace. Not like a wound. Wounds are external. This is internal. This is my body arguing with itself, the structure that has held steady for twenty years suddenly receiving new instructions and protesting every single one.&lt;/p&gt;
 
@@ -3334,7 +3348,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;hr&gt;
 
-&lt;&lt;sceneImage &quot;day_0/transformation_abstract_futa&quot; &quot;The transformation takes hold, dual-formed&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_0/transformation_abstract_futa&quot; &quot;The transformation takes hold, dual-formed&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;p&gt;It begins the same. The core. The knot of heat. The body arguing with its new instructions.&lt;/p&gt;
 
@@ -3459,7 +3473,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [[← Return to Palace Hub|day0_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="day0_void" tags="nobr" position="100,350" size="100,100">&lt;h2&gt;Void   Unconscious&lt;/h2&gt;
 
-&lt;&lt;sceneImage &quot;day_0/void&quot; &quot;The void between one self and the next&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_0/void&quot; &quot;The void between one self and the next&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;p&gt;Nothing.&lt;/p&gt;
 
@@ -3496,7 +3510,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [[Wake → |day1_wake]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="day0_void_futa" tags="nobr" position="225,350" size="100,100">&lt;h2&gt;Void   Two Channels&lt;/h2&gt;
 
-&lt;&lt;sceneImage &quot;day_0/void_futa&quot; &quot;Two threads of light, running parallel through the void&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;sceneImage &quot;day_0/void_futa&quot; &quot;Two threads of light, running parallel through the void&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;p&gt;Nothing.&lt;/p&gt;
 
