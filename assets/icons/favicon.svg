@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    AELINDRA favicon: a gold crescent moon (the Moonspire / the Rite)
+    on a dark purple to black badge, matching the game's own palette
+    (see the root colour variables in src/ui/stylesheet.css: the
+    deepest background shade, the purple accents, and the two gold
+    tones). Kept to a few bold shapes, no fine detail, since favicons
+    render at 16 to 32px; anything finer disappears.
+  -->
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#2a1a3a"/>
+      <stop offset="100%" stop-color="#0d0a0f"/>
+    </radialGradient>
+    <linearGradient id="moon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0c168"/>
+      <stop offset="100%" stop-color="#c9a84c"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="31" fill="url(#bg)" stroke="#7e55a0" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Crescent: a full moon circle with a second, offset circle cut out of it -->
+  <mask id="crescent-cut">
+    <rect x="0" y="0" width="64" height="64" fill="white"/>
+    <circle cx="38" cy="27" r="15" fill="black"/>
+  </mask>
+  <circle cx="30" cy="30" r="16" fill="url(#moon)" mask="url(#crescent-cut)"/>
+
+  <!-- A single small star, echoing the Moonspire's night sky -->
+  <path d="M 46 42 L 47.4 45.6 L 51 47 L 47.4 48.4 L 46 52 L 44.6 48.4 L 41 47 L 44.6 45.6 Z" fill="#e0c168"/>
+</svg>
