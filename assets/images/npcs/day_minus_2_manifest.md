@@ -17,7 +17,8 @@ nude reference variants:
 |---|---|---|
 | `aldric.png` | Sir Aldric Vane | PROMPT AV-02   Aldric, Casual/Off-Duty |
 | `seraphina.png` | Queen Seraphina | PROMPT QS-02   Seraphina, Current/Ill (Bedchamber) |
-| `rowan.png` | Rowan Ashwood | PROMPT RA-02   Rowan, Casual |
+| `ash_male.png` | Ash Ashwood (male presentation, default) | PROMPT RA-02   Rowan, Casual (same character, renamed   Ash's gender is player-selected at day-2_gardens.tw; every `<<npcPortrait>>` call for Ash uses `$bardPortraitSlug`, which resolves to this file unless the female option was chosen) |
+| `ash_female.png` | Ash Ashwood (female presentation) | Same reference as ash_male.png, adapted per the selectable-gender proposal's comparison table   sharper/angular rather than soft features, same dark copper-toned hair, same honey-coloured eyes, half-elf ears, same travel-worn leather and performance outfit. Not yet produced   `$bardPortraitSlug` fails gracefully (no art shown) if the player picks this option before the file exists. |
 
 ## Day -2 minor cast (no existing reference sheet)
 

@@ -29,7 +29,7 @@
 <<set $timeSlot to "EVENING">>
 
 <<completeObjective "alone">>
-<<addObjective "rowan_evening" "Wait for evening   someone will come" "MAIN">>
+<<addObjective "ash_evening" "Wait for evening   someone will come" "MAIN">>
 
 <div class="scene-end">
   [[Continue → |day1_hub]]

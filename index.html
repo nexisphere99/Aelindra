@@ -2106,6 +2106,25 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $timeSlot to &quot;MORNING&quot;&gt;&gt;          /* MORNING, MIDDAY, AFTERNOON, EVENING, NIGHT */
 &lt;&lt;set $gameStarted to false&gt;&gt;
 
+/* --- ASH (formerly &quot;Rowan&quot;) - selectable gender ---
+   Chosen once, at first appearance (day-2_gardens.tw, following the
+   music). $bardGender drives $bardPronoun/$bardPronounObj/
+   $bardPronounPos throughout every later Ash scene - always print
+   these instead of hardcoding &quot;he&quot;/&quot;she&quot;/&quot;they&quot;, and always write
+   the verb right after in singular form (matching either pronoun),
+   never the &quot;they + plural verb&quot; construction the character used to
+   get. $bardPortraitSlug feeds every &lt;&lt;npcPortrait&gt;&gt; call for Ash;
+   only ash_male.png exists so far, so the female branch fails
+   gracefully (same as any other missing portrait) until ash_female.png
+   is added. */
+&lt;&lt;set $bardGender to &quot;unset&quot;&gt;&gt;
+&lt;&lt;set $bardPronoun to &quot;they&quot;&gt;&gt;
+&lt;&lt;set $bardPronounObj to &quot;them&quot;&gt;&gt;
+&lt;&lt;set $bardPronounPos to &quot;their&quot;&gt;&gt;
+&lt;&lt;set $bardPronounCap to &quot;They&quot;&gt;&gt;       /* sentence-initial capitalised forms - */
+&lt;&lt;set $bardPronounPosCap to &quot;Their&quot;&gt;&gt;   /* $bardPronoun/Pos never auto-capitalise */
+&lt;&lt;set $bardPortraitSlug to &quot;ash_male&quot;&gt;&gt;
+
 /* --- PRIMARY STATS (0-100) --- */
 &lt;&lt;set $statGRA to 0&gt;&gt;       /* Grace */
 &lt;&lt;set $statAUT to 0&gt;&gt;       /* Authority */
@@ -2154,7 +2173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /* --- AFFINITY (Romance NPCs) --- */
 &lt;&lt;set $affAldric to 0&gt;&gt;
 &lt;&lt;set $affRosalind to 0&gt;&gt;
-&lt;&lt;set $affRowan to 0&gt;&gt;
+&lt;&lt;set $affAsh to 0&gt;&gt;
 &lt;&lt;set $affKael to 0&gt;&gt;
 &lt;&lt;set $affLyra to 0&gt;&gt;
 
@@ -2464,7 +2483,8 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;addObjective &quot;queens_gift&quot; &quot;A knock at the door   not a servant&#39;s&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;farewell_queen&quot; &quot;Say goodbye   the Queen&#39;s Chambers&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;cross_bridge&quot; &quot;When you&#39;re ready   cross the bridge to the Moonspire Tower&quot; &quot;MAIN&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="day0_bridge" tags="nobr" position="725,100" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_bridge&quot; &quot;The Bridge&quot;&gt;&gt;&lt;/div&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="day0_bridge" tags="nobr" position="725,100" size="100,100">&lt;&lt;set _bridgeImg to ($bardGender is &quot;female&quot;) ? &quot;moonspire_bridge_ash_female&quot; : &quot;moonspire_bridge_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _bridgeImg &quot;The Bridge&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;The Bridge   Crossing&lt;/h2&gt;
 
@@ -2472,11 +2492,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;I step onto the bridge.&lt;/p&gt;
 
-&lt;p&gt;Rowan is there.&lt;/p&gt;
+&lt;p&gt;Ash is there.&lt;/p&gt;
 
-&lt;p&gt;&lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;They&#39;re leaning against the railing at the near end, lute absent for the first time I can remember. Their arms are crossed. Their honey-coloured eyes find mine immediately   they&#39;ve been waiting. They said they would be. &lt;em&gt;I&#39;ll be in the courtyard. Before dawn. If you walk toward the tower, I&#39;ll walk with you.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;&lt;&lt;print $bardPronounCap&gt;&gt;&#39;s leaning against the railing at the near end, lute absent for the first time I can remember. &lt;&lt;print $bardPronounPosCap&gt;&gt; arms are crossed. &lt;&lt;print $bardPronounPosCap&gt;&gt; honey-coloured eyes find mine immediately   &lt;&lt;print $bardPronoun&gt;&gt;&#39;s been waiting. &lt;&lt;print $bardPronounCap&gt;&gt; said &lt;&lt;print $bardPronoun&gt;&gt; would be. &lt;em&gt;I&#39;ll be in the courtyard. Before dawn. If you walk toward the tower, I&#39;ll walk with you.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;They don&#39;t say anything. They push off the railing and fall into step beside me. Their shoulder brushes mine. The contact is deliberate and grounding   a tether, a reminder that the body walking this bridge is real and solid and present, not yet dissolved into the thing it&#39;s about to become.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t say anything. &lt;&lt;print $bardPronounCap&gt;&gt; pushes off the railing and falls into step beside me. &lt;&lt;print $bardPronounPosCap&gt;&gt; shoulder brushes mine. The contact is deliberate and grounding   a tether, a reminder that the body walking this bridge is real and solid and present, not yet dissolved into the thing it&#39;s about to become.&lt;/p&gt;
 
 &lt;p&gt;We walk. The wind roars. The spray catches my face   cold, sharp, tasting of minerals and deep earth. Below, the river carves through the gorge with the patient violence of water that has been doing this for a thousand years and will continue for a thousand more, indifferent to the small human drama crossing above it.&lt;/p&gt;
 
@@ -2484,25 +2504,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;I look down. Not suicidal. Not considering it. Just... the vertigo. The dizziness of standing between who I am and who I&#39;m about to become, with nothing below but a long fall and cold water and the implacable fact of gravity.&lt;/p&gt;
 
-&lt;p&gt;Rowan stands beside me. Looking down too. Their hair catches the wind   dark with copper, whipping across their face.&lt;/p&gt;
+&lt;p&gt;Ash stands beside me. Looking down too. &lt;&lt;print $bardPronounPosCap&gt;&gt; hair catches the wind   dark with copper, whipping across &lt;&lt;print $bardPronounPos&gt;&gt; face.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You don&#39;t have to watch me go in,&quot; I say.&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I know.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I know.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Then why are you here?&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Because that&#39;s what friends do. They walk you to the places you&#39;re afraid to go, and they wait outside, and they&#39;re there when you come out the other side.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Because that&#39;s what friends do. They walk you to the places you&#39;re afraid to go, and they wait outside, and they&#39;re there when you come out the other side.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;What if what comes out isn&#39;t me?&quot;&lt;/div&gt;
 
-&lt;p&gt;Rowan turns. Looks at me. Their expression is something I&#39;ve never seen on them before   not the easy warmth, not the performer&#39;s charm, not the gentle deflection of someone who&#39;s learned to keep the world at arm&#39;s length with humour and music. Something raw. Something that costs them.&lt;/p&gt;
+&lt;p&gt;Ash turns. Looks at me. &lt;&lt;print $bardPronounPosCap&gt;&gt; expression is something I&#39;ve never seen before   not the easy warmth, not the performer&#39;s charm, not the gentle deflection of someone who&#39;s learned to keep the world at arm&#39;s length with humour and music. Something raw. Something that costs &lt;&lt;print $bardPronounObj&gt;&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;It&#39;ll be you. Different wrapping. Same person. I&#39;ll know you. I&#39;ve always known you.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;It&#39;ll be you. Different wrapping. Same person. I&#39;ll know you. I&#39;ve always known you.&quot;&lt;/div&gt;
 
-&lt;p&gt;They put their hand on my arm. The grip is firm. Lute-calloused fingers pressing through the leather of my jerkin, and I can feel the warmth of their palm and the slight tremor that tells me they&#39;re not as calm as they&#39;re performing and that undoes me more than anything else today   the knowledge that Rowan, who is never shaken, is shaking.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; puts &lt;&lt;print $bardPronounPos&gt;&gt; hand on my arm. The grip is firm. Lute-calloused fingers pressing through the leather of my jerkin, and I can feel the warmth of &lt;&lt;print $bardPronounPos&gt;&gt; palm and the slight tremor that tells me &lt;&lt;print $bardPronoun&gt;&gt;&#39;s not as calm as &lt;&lt;print $bardPronoun&gt;&gt;&#39;s performing and that undoes me more than anything else today   the knowledge that Ash, who is never shaken, is shaking.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Go. I&#39;ll be right here. Right here on this bridge. When you wake up.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Go. I&#39;ll be right here. Right here on this bridge. When you wake up.&quot;&lt;/div&gt;
 
 &lt;p&gt;I nod. I can&#39;t speak. My throat has closed around every word I could possibly say and sealed them in like a tomb.&lt;/p&gt;
 
@@ -2526,7 +2546,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Good. I want to remember I didn&#39;t go willingly.&quot;&lt;/div&gt;
 
-&lt;p&gt;I climb the stairs. Behind me, I hear Rowan&#39;s lute   they&#39;ve produced it from somewhere, as they always do, and the first notes drift up the stairwell like a benediction. Something without words. Something that says &lt;em&gt;I&#39;m here, I&#39;m here, I&#39;m here.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I climb the stairs. Behind me, I hear Ash&#39;s lute   &lt;&lt;print $bardPronoun&gt;&gt;&#39;s produced it from somewhere, as &lt;&lt;print $bardPronoun&gt;&gt; always does, and the first notes drift up the stairwell like a benediction. Something without words. Something that says &lt;em&gt;I&#39;m here, I&#39;m here, I&#39;m here.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The stairs spiral upward. The tapestries shift as I pass   the serpent becoming the river, the tree becoming the woman, the bird becoming the song. I&#39;ve seen them before. Today they feel like prophecy.&lt;/p&gt;
 
@@ -2679,7 +2699,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;div class=&quot;loc-card loc-final&quot;&gt;
   &lt;&lt;locationImage &quot;moonspire_bridge&quot; &quot;The Bridge to Moonspire Tower&quot;&gt;&gt;
   &lt;h3&gt;🌙 The Bridge   Moonspire Tower&lt;/h3&gt;
-  &lt;p class=&quot;loc-flavor&quot;&gt;The covered bridge. Thirty paces between who you are and who you&#39;re about to become. Rowan is waiting at the near end.&lt;/p&gt;
+  &lt;p class=&quot;loc-flavor&quot;&gt;The covered bridge. Thirty paces between who you are and who you&#39;re about to become. Ash is waiting at the near end.&lt;/p&gt;
   &lt;span class=&quot;badge main&quot;&gt;⚔ Cross the Bridge   When You&#39;re Ready&lt;/span&gt;
   &lt;p class=&quot;loc-warning&quot;&gt;⚠ &lt;em&gt;Once you cross, you cannot return. Complete any remaining business first.&lt;/em&gt;&lt;/p&gt;
   &lt;&lt;if $bridgeWarningAcknowledged&gt;&gt;
@@ -2934,7 +2954,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m going.&quot;&lt;/div&gt;
 
-&lt;p&gt;The exhale that leaves her is not relief. It&#39;s something more complicated   a sound that carries weight, the way a bridge carries traffic, bearing up under something it was built for but never wanted to hold. She didn&#39;t know. She hoped. She calculated, she planned, she positioned the pieces   Rowan&#39;s letter, Ilara&#39;s readiness, the lunar alignment, the two-day deadline   with the strategic precision of the queen she is. But she didn&#39;t know. The uncertainty was real.&lt;/p&gt;
+&lt;p&gt;The exhale that leaves her is not relief. It&#39;s something more complicated   a sound that carries weight, the way a bridge carries traffic, bearing up under something it was built for but never wanted to hold. She didn&#39;t know. She hoped. She calculated, she planned, she positioned the pieces   Ash&#39;s letter, Ilara&#39;s readiness, the lunar alignment, the two-day deadline   with the strategic precision of the queen she is. But she didn&#39;t know. The uncertainty was real.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;SERAPHINA&lt;/span&gt;&quot;Edrin...&quot;&lt;/div&gt;
 
@@ -3160,7 +3180,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $ilaraFamiliarity += 3&gt;&gt;
 &lt;&lt;set $riteKnowledge += 5&gt;&gt;
 &lt;&lt;set $affSeraphina += 5&gt;&gt;
-&lt;&lt;set $affRowan += 5&gt;&gt;
+&lt;&lt;set $affAsh += 5&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Darkness. → |day0_void]]
@@ -3323,7 +3343,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $ilaraFamiliarity += 3&gt;&gt;
 &lt;&lt;set $riteKnowledge += 5&gt;&gt;
 &lt;&lt;set $affSeraphina += 5&gt;&gt;
-&lt;&lt;set $affRowan += 5&gt;&gt;
+&lt;&lt;set $affAsh += 5&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Darkness. → |day0_void_futa]]
@@ -3369,7 +3389,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;Not sleep. Not dreaming. Nothing. The kind of absence that is total   no sensation, no thought, no body to feel with or mind to think with. Just dark. Just the void between who I was and who I will be.&lt;/p&gt;
 
-&lt;p&gt;Somewhere, very far away, lute strings. Rowan. Playing on the bridge. Waiting.&lt;/p&gt;
+&lt;p&gt;Somewhere, very far away, lute strings. Ash. Playing on the bridge. Waiting.&lt;/p&gt;
 
 &lt;p&gt;Somewhere, closer, a heartbeat. Mine. New. Beating in a chest that is shaped differently, that holds different organs, that belongs to someone I haven&#39;t met yet.&lt;/p&gt;
 
@@ -3406,7 +3426,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;The same void. The same absence. But the absence is shaped differently   not the total surrender of the full transformation, but a void that holds two things in suspension. Like a river that has split into two channels and runs parallel, each carrying the same water in different directions, each arriving at the same sea.&lt;/p&gt;
 
-&lt;p&gt;Somewhere far away: lute strings. Rowan on the bridge. Waiting for someone to emerge from the tower who is neither the prince they knew nor the princess the world expects, but something between. Something that Rowan   half-elf, half-human, perpetually between   might understand better than anyone.&lt;/p&gt;
+&lt;p&gt;Somewhere far away: lute strings. Ash on the bridge. Waiting for someone to emerge from the tower who is neither the prince they knew nor the princess the world expects, but something between. Something that Ash   half-elf, half-human, perpetually between   might understand better than anyone.&lt;/p&gt;
 
 &lt;p&gt;Somewhere closer: a heartbeat. Mine. New. Beating in a chest that holds breasts and a body that holds both, and the rhythm is steady, and the rhythm is complicated, and the rhythm is mine.&lt;/p&gt;
 
@@ -3941,7 +3961,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [[Continue → |day0_chambers]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="day0_scene_queens_gift" tags="nobr" position="725,475" size="100,100">&lt;h3&gt;The Queen&#39;s Gift&lt;/h3&gt;
 
-&lt;p&gt;Two knocks. Soft. Deliberate. Not Brin&#39;s nervous tap. Not Rowan&#39;s coded three-and-two. Something else   practiced, patient, the knock of someone who has been told to arrive and is arriving exactly on time.&lt;/p&gt;
+&lt;p&gt;Two knocks. Soft. Deliberate. Not Brin&#39;s nervous tap. Not Ash&#39;s coded three-and-two. Something else   practiced, patient, the knock of someone who has been told to arrive and is arriving exactly on time.&lt;/p&gt;
 
 &lt;p&gt;A note slides under the door. Parchment. The royal seal   silver stag, crescent moon, the wax still warm. I pick it up. Break the seal.&lt;/p&gt;
 
@@ -4237,18 +4257,81 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;set $timeSlot to &quot;EVENING&quot;&gt;&gt;
 
 &lt;&lt;completeObjective &quot;alone&quot;&gt;&gt;
-&lt;&lt;addObjective &quot;rowan_evening&quot; &quot;Wait for evening   someone will come&quot; &quot;MAIN&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;ash_evening&quot; &quot;Wait for evening   someone will come&quot; &quot;MAIN&quot;&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_door_hub" tags="nobr" position="1225,475" size="100,100">&lt;h2&gt;🚪 The Door&lt;/h2&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="day1_ash" tags="nobr" position="1225,475" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_ash&quot; &quot;Ash&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
+
+&lt;h2&gt;Ash&#39;s Visit&lt;/h2&gt;
+
+&lt;p&gt;Evening. The light through the narrow windows has gone amber, then copper, then the bruised purple of dusk. Someone lit candles while I was not-sleeping   enchanted ones, steady-flamed, filling the room with warm light that is gentler than daylight and therefore easier to exist in.&lt;/p&gt;
+
+&lt;p&gt;A knock. Three taps, a pause, two more.&lt;/p&gt;
+
+&lt;p&gt;Ash.&lt;/p&gt;
+
+&lt;p&gt;I almost don&#39;t answer. The thought of being seen   of someone looking at this body, this face, these breasts, these hips   makes something in my chest contract. But then I hear the lute. Ash playing softly through the door, not forcing entry, not knocking again, just being there. The melody is something gentle, wandering, with the quality of a conversation being held with no expectation of response.&lt;/p&gt;
+
+&lt;p&gt;I open the door. A crack. Just enough.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t stare.&quot;&lt;/div&gt;
+
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;&lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t. &lt;&lt;print $bardPronounCap&gt;&gt; looks at me   a flicker of something crosses &lt;&lt;print $bardPronounPos&gt;&gt; face, surprise or adjustment or the rapid recalibration of someone seeing a friend in a shape &lt;&lt;print $bardPronoun&gt;&gt; didn&#39;t expect   and then it&#39;s gone, replaced by warmth. The warmth is genuine. I know Ash&#39;s performance face, and this isn&#39;t it.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You look like you.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I look like a stranger.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Your eyes are the same. Your eyes were always the best part.&quot;&lt;/div&gt;
+
+&lt;p&gt;I open the door wider. &lt;&lt;print $bardPronounCap&gt;&gt; comes in. &lt;&lt;print $bardPronounCap&gt;&gt; sits on the floor. The lute is in &lt;&lt;print $bardPronounPos&gt;&gt; lap. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t comment on the body. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t use a name   not Edrin, not Aelindra. &lt;&lt;print $bardPronounCap&gt;&gt; just sits and plays and talks about nothing.&lt;/p&gt;
+
+&lt;p&gt;A story from the road. A goat in Velmara that ate &lt;&lt;print $bardPronounPos&gt;&gt; lute case   the entire case, leather and buckles and all, and then looked at Ash with the blank satisfaction of an animal that has achieved its life&#39;s purpose. A baron in the Iron Reach who cried at a sad song and then tried to have Ash arrested for causing emotional distress to a nobleman, which is apparently a crime in the Iron Reach if the nobleman is drunk enough and the magistrate is bored enough.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;What happened?&quot; I ask. My voice. The stranger&#39;s voice. But the question is mine, and the curiosity is mine, and the habit of listening to Ash&#39;s stories and asking &lt;em&gt;what happened next&lt;/em&gt; is a habit that belongs to the person I&#39;ve always been regardless of the body I&#39;m being it in.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I played a happy song. The baron laughed. The magistrate dismissed the case. I left town before anyone changed their mind.&quot;&lt;/div&gt;
+
+&lt;p&gt;I almost smile. The muscles for it work the same. The pull at the corners of the mouth, the slight narrowing of the eyes   the same. The smile lives in the same muscles, and the muscles are in a different face, but the smile is the smile.&lt;/p&gt;
+
+&lt;p&gt;Ash stays for an hour. &lt;&lt;print $bardPronounCap&gt;&gt; plays. &lt;&lt;print $bardPronounCap&gt;&gt; talks. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t ask about the body. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t ask about the examination. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t ask how I feel, because Ash understands that &lt;em&gt;how do you feel&lt;/em&gt; is the worst question you can ask someone who is drowning and hasn&#39;t decided whether to swim.&lt;/p&gt;
+
+&lt;p&gt;At the door, leaving:&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You&#39;re still you. The rest is just... wardrobe.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Wardrobe doesn&#39;t usually come with breasts.&quot;&lt;/div&gt;
+
+&lt;p&gt;The grin. Full, unreserved, the grin of someone who has decided that solemnity is not going to help and irreverence might.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You&#39;d be surprised. I once wore a corset for three weeks because a duchess paid me to pretend to be her sister. Very informative experience.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Informative.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I learned that underwires are either a miracle of engineering or a torture device, depending on the hour. Good night.&quot;&lt;/div&gt;
+
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; leaves. The room is quieter but warmer. The lute echoes in the stone walls for a moment after &lt;&lt;print $bardPronoun&gt;&gt;&#39;s gone, a ghost of music dissolving into silence.&lt;/p&gt;
+
+&lt;&lt;set $d1f_ash to true&gt;&gt;
+&lt;&lt;set $stress -= 15&gt;&gt;
+&lt;&lt;set $affAsh += 5&gt;&gt;
+&lt;&lt;set $statRES += 2&gt;&gt;
+&lt;&lt;set $timeSlot to &quot;NIGHT&quot;&gt;&gt;
+
+&lt;&lt;completeObjective &quot;ash_evening&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;night&quot; &quot;Try to sleep&quot; &quot;MAIN&quot;&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="day1_door_hub" tags="nobr" position="100,600" size="100,100">&lt;h2&gt;🚪 The Door&lt;/h2&gt;
 &lt;p&gt;Heavy oak. Corridor sounds filter through.&lt;/p&gt;
 
 &lt;&lt;set _aldricCard to ($d1f_exam and not $d1f_npc_aldric_door and $timeSlot === &quot;AFTERNOON&quot;)&gt;&gt;
 &lt;&lt;set _naraCard to ($d1f_alone and not $d1f_npc_nara3 and $d1_npc_nara)&gt;&gt;
 &lt;&lt;set _queenCard to ($timeSlot === &quot;EVENING&quot; and not $d1f_npc_queen_message)&gt;&gt;
-&lt;&lt;set _rowanCard to ($timeSlot === &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_rowan)&gt;&gt;
-&lt;&lt;set _martaCard to ($d1f_rowan and not $d1f_npc_marta_tray)&gt;&gt;
+&lt;&lt;set _ashCard to ($timeSlot === &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_ash)&gt;&gt;
+&lt;&lt;set _martaCard to ($d1f_ash and not $d1f_npc_marta_tray)&gt;&gt;
 
 &lt;&lt;if _aldricCard&gt;&gt;
 &lt;div class=&quot;interaction-card side&quot;&gt;
@@ -4271,17 +4354,17 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;&lt;if _queenCard&gt;&gt;
 &lt;div class=&quot;interaction-card side&quot;&gt;
   &lt;h4&gt;📜 A Soft Knock   Sealed Note&lt;/h4&gt;
-  &lt;p&gt;Not Rowan&#39;s knock. Formal. A hand extends through the gap. The royal seal.&lt;/p&gt;
+  &lt;p&gt;Not Ash&#39;s knock. Formal. A hand extends through the gap. The royal seal.&lt;/p&gt;
   [[Take the note → |day1_npc_queen_message]]
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if _rowanCard&gt;&gt;
+&lt;&lt;if _ashCard&gt;&gt;
 &lt;div class=&quot;interaction-card main&quot;&gt;
-  &lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;
+  &lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;
   &lt;h4&gt;🎵 Three Taps. Pause. Two More.&lt;/h4&gt;
-  &lt;p&gt;Rowan. Playing softly through the door. Not forcing entry. Just... there.&lt;/p&gt;
-  [[Open the door → |day1_rowan]]
+  &lt;p&gt;Ash. Playing softly through the door. Not forcing entry. Just... there.&lt;/p&gt;
+  [[Open the door → |day1_ash]]
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -4294,13 +4377,13 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if not (_aldricCard or _naraCard or _queenCard or _rowanCard or _martaCard)&gt;&gt;
+&lt;&lt;if not (_aldricCard or _naraCard or _queenCard or _ashCard or _martaCard)&gt;&gt;
   &lt;p class=&quot;empty-note&quot;&gt;The corridor is quiet. No footsteps. No knocks. Just stone and silence.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Back to room → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="day1_exam" tags="nobr" position="100,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_mirror&quot; &quot;The mirror&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="day1_exam" tags="nobr" position="225,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_mirror&quot; &quot;The mirror&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Ilara&#39;s Examination&lt;/h2&gt;
 
@@ -4416,7 +4499,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="day1_hub" tags="nobr" position="225,600" size="100,100">&lt;div class=&quot;hub-header room-header&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="day1_hub" tags="nobr" position="350,600" size="100,100">&lt;div class=&quot;hub-header room-header&quot;&gt;
   &lt;&lt;locationImage &quot;moonspire_recovery_room&quot; &quot;Recovery Room&quot;&gt;&gt;
   &lt;h2&gt;Moonspire Tower   Recovery Room&lt;/h2&gt;
   &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
@@ -4429,7 +4512,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;div class=&quot;room-zone&quot;&gt;
   &lt;h3&gt;🛏 The Bed&lt;/h3&gt;
   &lt;p class=&quot;loc-flavor&quot;&gt;Soft linens, white stone walls, sunlight through narrow windows. This is where you woke up.&lt;/p&gt;
-  &lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1f_rowan and not $d1f_night&gt;&gt;
+  &lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1f_ash and not $d1f_night&gt;&gt;
     &lt;span class=&quot;badge main&quot;&gt;⚔ Try to sleep&lt;/span&gt;
     [[Lie down → |day1_night]]
   &lt;&lt;/if&gt;&gt;
@@ -4468,10 +4551,10 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;if $timeSlot is &quot;EVENING&quot; and not $d1f_npc_queen_message&gt;&gt;
     &lt;span class=&quot;badge side&quot;&gt;🗡 A soft knock   and a sealed note&lt;/span&gt;
   &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_rowan&gt;&gt;
-    &lt;span class=&quot;badge main&quot;&gt;⚔ Three taps, pause, two more   Rowan&lt;/span&gt;
+  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and $d1f_npc_queen_message and not $d1f_ash&gt;&gt;
+    &lt;span class=&quot;badge main&quot;&gt;⚔ Three taps, pause, two more   Ash&lt;/span&gt;
   &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $d1f_rowan and not $d1f_npc_marta_tray&gt;&gt;
+  &lt;&lt;if $d1f_ash and not $d1f_npc_marta_tray&gt;&gt;
     &lt;span class=&quot;badge side&quot;&gt;🗡 A tray on the floor outside&lt;/span&gt;
   &lt;&lt;/if&gt;&gt;
   [[Check the door → |day1_door_hub]]
@@ -4522,7 +4605,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="day1_hub_futa" tags="nobr" position="350,600" size="100,100">&lt;!--
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="day1_hub_futa" tags="nobr" position="475,600" size="100,100">&lt;!--
   PLACEHOLDER   pipeline test only, AND the current end of the
   public build&#39;s content for the futa route (v0.2 - female route&#39;s
   Day 1 is real content now, see day1_hub.tw / day2_hub.tw).
@@ -4544,7 +4627,7 @@ document.addEventListener('DOMContentLoaded', function () {
   bust &lt;&lt;print $mcBust&gt;&gt;. Stress: &lt;&lt;print $stress&gt;&gt; | Energy: &lt;&lt;print $energy&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;&lt;endOfContentNoticeFuta&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="day1_night" tags="nobr" position="475,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_night&quot; &quot;The first night&quot;&gt;&gt;&lt;/div&gt;
+&lt;&lt;endOfContentNoticeFuta&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="day1_night" tags="nobr" position="600,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_night&quot; &quot;The first night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;First Night in the New Body&lt;/h2&gt;
 
@@ -4583,69 +4666,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Sleep → |day1_sleep_transition]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="day1_rowan" tags="nobr" position="600,600" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;day1f_rowan&quot; &quot;Rowan&#39;s visit&quot;&gt;&gt;&lt;/div&gt;
-
-&lt;h2&gt;Rowan&#39;s Visit&lt;/h2&gt;
-
-&lt;p&gt;Evening. The light through the narrow windows has gone amber, then copper, then the bruised purple of dusk. Someone lit candles while I was not-sleeping   enchanted ones, steady-flamed, filling the room with warm light that is gentler than daylight and therefore easier to exist in.&lt;/p&gt;
-
-&lt;p&gt;A knock. Three taps, a pause, two more.&lt;/p&gt;
-
-&lt;p&gt;Rowan.&lt;/p&gt;
-
-&lt;p&gt;I almost don&#39;t answer. The thought of being seen   of someone looking at this body, this face, these breasts, these hips   makes something in my chest contract. But then I hear the lute. Rowan playing softly through the door, not forcing entry, not knocking again, just being there. The melody is something gentle, wandering, with the quality of a conversation being held with no expectation of response.&lt;/p&gt;
-
-&lt;p&gt;I open the door. A crack. Just enough.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Don&#39;t stare.&quot;&lt;/div&gt;
-
-&lt;p&gt;&lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;They don&#39;t. They look at me   a flicker of something crosses their face, surprise or adjustment or the rapid recalibration of someone seeing a friend in a shape they didn&#39;t expect   and then it&#39;s gone, replaced by warmth. The warmth is genuine. I know Rowan&#39;s performance face, and this isn&#39;t it.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You look like you.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I look like a stranger.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Your eyes are the same. Your eyes were always the best part.&quot;&lt;/div&gt;
-
-&lt;p&gt;I open the door wider. They come in. They sit on the floor. The lute is in their lap. They don&#39;t comment on the body. They don&#39;t use a name   not Edrin, not Aelindra. They just sit and play and talk about nothing.&lt;/p&gt;
-
-&lt;p&gt;A story from the road. A goat in Velmara that ate their lute case   the entire case, leather and buckles and all, and then looked at Rowan with the blank satisfaction of an animal that has achieved its life&#39;s purpose. A baron in the Iron Reach who cried at a sad song and then tried to have Rowan arrested for causing emotional distress to a nobleman, which is apparently a crime in the Iron Reach if the nobleman is drunk enough and the magistrate is bored enough.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;What happened?&quot; I ask. My voice. The stranger&#39;s voice. But the question is mine, and the curiosity is mine, and the habit of listening to Rowan&#39;s stories and asking &lt;em&gt;what happened next&lt;/em&gt; is a habit that belongs to the person I&#39;ve always been regardless of the body I&#39;m being it in.&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I played a happy song. The baron laughed. The magistrate dismissed the case. I left town before anyone changed their mind.&quot;&lt;/div&gt;
-
-&lt;p&gt;I almost smile. The muscles for it work the same. The pull at the corners of the mouth, the slight narrowing of the eyes   the same. The smile lives in the same muscles, and the muscles are in a different face, but the smile is the smile.&lt;/p&gt;
-
-&lt;p&gt;Rowan stays for an hour. They play. They talk. They don&#39;t ask about the body. They don&#39;t ask about the examination. They don&#39;t ask how I feel, because Rowan understands that &lt;em&gt;how do you feel&lt;/em&gt; is the worst question you can ask someone who is drowning and hasn&#39;t decided whether to swim.&lt;/p&gt;
-
-&lt;p&gt;At the door, leaving:&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You&#39;re still you. The rest is just... wardrobe.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Wardrobe doesn&#39;t usually come with breasts.&quot;&lt;/div&gt;
-
-&lt;p&gt;The grin. Full, unreserved, the grin of someone who has decided that solemnity is not going to help and irreverence might.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You&#39;d be surprised. I once wore a corset for three weeks because a duchess paid me to pretend to be her sister. Very informative experience.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Informative.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I learned that underwires are either a miracle of engineering or a torture device, depending on the hour. Good night.&quot;&lt;/div&gt;
-
-&lt;p&gt;They leave. The room is quieter but warmer. The lute echoes in the stone walls for a moment after they&#39;re gone, a ghost of music dissolving into silence.&lt;/p&gt;
-
-&lt;&lt;set $d1f_rowan to true&gt;&gt;
-&lt;&lt;set $stress -= 15&gt;&gt;
-&lt;&lt;set $affRowan += 5&gt;&gt;
-&lt;&lt;set $statRES += 2&gt;&gt;
-&lt;&lt;set $timeSlot to &quot;NIGHT&quot;&gt;&gt;
-
-&lt;&lt;completeObjective &quot;rowan_evening&quot;&gt;&gt;
-&lt;&lt;addObjective &quot;night&quot; &quot;Try to sleep&quot; &quot;MAIN&quot;&gt;&gt;
-
-&lt;div class=&quot;scene-end&quot;&gt;
-  [[Continue → |day1_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="day1_sleep_transition" tags="nobr" position="725,600" size="100,100">&lt;&lt;set $dayNumber to 2&gt;&gt;
 &lt;&lt;set $dayLabel to &quot;Body&quot;&gt;&gt;
 &lt;&lt;set $timeSlot to &quot;MORNING&quot;&gt;&gt;
@@ -4796,7 +4816,7 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;&lt;set $d1f_wake to false&gt;&gt;
   &lt;&lt;set $d1f_exam to false&gt;&gt;
   &lt;&lt;set $d1f_alone to false&gt;&gt;
-  &lt;&lt;set $d1f_rowan to false&gt;&gt;
+  &lt;&lt;set $d1f_ash to false&gt;&gt;
   &lt;&lt;set $d1f_night to false&gt;&gt;
 
   /* --- Day 1 NPC / Object Flags --- */
@@ -4862,7 +4882,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 &lt;p&gt;&lt;strong&gt;Hair.&lt;/strong&gt; I keep finding it everywhere. On the pillow, across my shoulders, falling in front of my eyes. It&#39;s heavier than it should be   thicker, denser, with a wave pattern that I didn&#39;t have before. When I push it behind my ears, it stays briefly, then slides free. I need something to hold it back. I don&#39;t have anything. I twist it into a knot at the back of my head. It holds. The motion is instinctive   a gesture I&#39;ve seen women make a thousand times and never thought about.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;My voice.&lt;/strong&gt; Every time I speak, it surprises me. The pitch is wrong   higher, softer, with less resonance. The words are mine but the instrument producing them is a stranger&#39;s. I test it: humming, then singing a line from one of Rowan&#39;s songs. The melody is the same. The timbre is completely different. A woman&#39;s voice singing a man&#39;s song in a woman&#39;s body in a tower room at noon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My voice.&lt;/strong&gt; Every time I speak, it surprises me. The pitch is wrong   higher, softer, with less resonance. The words are mine but the instrument producing them is a stranger&#39;s. I test it: humming, then singing a line from one of Ash&#39;s songs. The melody is the same. The timbre is completely different. A woman&#39;s voice singing a man&#39;s song in a woman&#39;s body in a tower room at noon.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Walking.&lt;/strong&gt; I practice. Four paces, turn, four paces back. The sway doesn&#39;t stop. The hips move. The body moves the way it moves. But by the tenth lap, the stumbling is gone. By the twentieth, the motion is almost fluid. The body learns faster than the mind. It&#39;s already adjusting, already finding its own efficient gait, and the mind is just along for the ride.&lt;/p&gt;
 
@@ -4903,7 +4923,7 @@ document.addEventListener('DOMContentLoaded', function () {
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="day1_npc_marta_tray" tags="nobr" position="475,725" size="100,100">&lt;&lt;npcPortrait &quot;marta&quot; &quot;Marta&quot;&gt;&gt;
 &lt;h3&gt;A Meal Tray   From Marta&lt;/h3&gt;
 
-&lt;p&gt;A tray appears at my door. Not brought by a servant   just there, set on the floor outside, when I open the door after Rowan leaves. A palace kitchen tray, covered with a clean cloth.&lt;/p&gt;
+&lt;p&gt;A tray appears at my door. Not brought by a servant   just there, set on the floor outside, when I open the door after Ash leaves. A palace kitchen tray, covered with a clean cloth.&lt;/p&gt;
 
 &lt;p&gt;Under the cloth: soup (thick, onion and thyme, the same recipe Marta has been making since I was nine). Bread (warm, fresh, the good kind). Two cheese pastries (golden, rosemary). An apple pastry (cinnamon, sugar, the childhood recipe) and a folded note.&lt;/p&gt;
 
@@ -4985,7 +5005,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   [[Continue → |day1_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="day1_npc_queen_message" tags="nobr" position="850,725" size="100,100">&lt;h3&gt;The Queen&#39;s Message&lt;/h3&gt;
 
-&lt;p&gt;A knock at the door. Not Rowan&#39;s knock   softer, more formal. I consider not answering. The door opens a crack   a handmaiden, young, wearing Silverveil grey rather than palace livery. She doesn&#39;t enter. She extends a hand through the gap. A sealed parchment. The royal seal   silver stag, crescent moon.&lt;/p&gt;
+&lt;p&gt;A knock at the door. Not Ash&#39;s knock   softer, more formal. I consider not answering. The door opens a crack   a handmaiden, young, wearing Silverveil grey rather than palace livery. She doesn&#39;t enter. She extends a hand through the gap. A sealed parchment. The royal seal   silver stag, crescent moon.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;HANDMAIDEN&lt;/span&gt;&quot;From the Queen, my lady.&quot;&lt;/div&gt;
 
@@ -5130,14 +5150,14 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;set $d1_queen to false&gt;&gt;
   &lt;&lt;set $d1_moonspire to false&gt;&gt;
   &lt;&lt;set $d1_training to false&gt;&gt;
-  &lt;&lt;set $d1_rowan to false&gt;&gt;
+  &lt;&lt;set $d1_ash to false&gt;&gt;
   &lt;&lt;set $d1_night to false&gt;&gt;
 
   /* --- Day -1 Scene Flags: Partial Rite introduction insert ---
      Second Moonspire visit (Ilara reveals the Partial Rite) and the
      Seraphina follow-up (&quot;did you know?&quot;). See
      AELINDRA_Supplementary_FutaChoice_DayNeg1.md - slots between the
-     Training Yard rage session and the existing Rowan evening scene. */
+     Training Yard rage session and the existing Ash evening scene. */
   &lt;&lt;set $d1_moonspire2 to false&gt;&gt;
   &lt;&lt;set $d1_queen2 to false&gt;&gt;
 
@@ -5168,7 +5188,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;set $d1_npc_lastjerk to false&gt;&gt;
   &lt;&lt;set $d1_npc_sera to false&gt;&gt;
   &lt;&lt;set $d1_npc_fantasy to false&gt;&gt;
-  &lt;&lt;set $d1_npc_rowan_desire to false&gt;&gt;
+  &lt;&lt;set $d1_npc_ash_desire to false&gt;&gt;
   /* $penetrationAnxiety lives in StoryInit.tw - it&#39;s a persistent
      payoff flag referenced by Day 1+ scenes, not reset per day */
 
@@ -5182,7 +5202,125 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;addObjective &quot;queen_round2&quot; &quot;Confront the Queen   you have a list&quot; &quot;MAIN&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;corridor_aldwyn&quot; &quot;A physician in the corridor   he&#39;s moving fast&quot; &quot;SIDE&quot;&gt;&gt;
   &lt;&lt;addObjective &quot;visit_kitchen_d1&quot; &quot;Visit the Kitchens   Marta is baking at crisis tempo&quot; &quot;SIDE&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="day-1_chambers_explore" tags="nobr" position="225,850" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="day-1_ash" tags="nobr" position="225,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+
+&lt;h2&gt;Edrin&#39;s Chambers   Telling Ash&lt;/h2&gt;
+
+&lt;p&gt;Evening. The fire is lit   someone came in while I was destroying training dummies, rebuilt it, left fresh candles and a tray of food I haven&#39;t touched. My hands are wrapped in linen bandages that I did myself, badly. The blisters sting beneath.&lt;/p&gt;
+
+&lt;p&gt;The knock is Ash&#39;s knock   three taps, a pause, two more, our old signal from years of late-night conversations in tournament camps and borrowed rooms in taverns where the walls were thin and the innkeepers were nosy.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;It&#39;s open.&quot;&lt;/div&gt;
+
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;&lt;&lt;print $bardPronounCap&gt;&gt; comes in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Ash has never had the patience for formality and cheese. A wedge of something sharp and crumbly, wrapped in cloth and &lt;&lt;print $bardPronounPos&gt;&gt; lute, slung across &lt;&lt;print $bardPronounPos&gt;&gt; back because Ash without a lute is like a knight without a sword   technically functional but fundamentally incomplete.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You look like you lost a fight with a threshing machine,&quot; &lt;&lt;print $bardPronoun&gt;&gt; says, dropping to the floor in front of the fire because Ash has never, in the entirety of our friendship, sat in a chair when a floor was available. &lt;&lt;print $bardPronounCap&gt;&gt; claims furniture creates artificial hierarchy. I think &lt;&lt;print $bardPronoun&gt;&gt; just likes being on the ground.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Training dummy.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Did the dummy win?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;The dummy is in several pieces.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Then you won. Congratulations. You&#39;ve defeated practice straw.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; pours wine into two cups   mismatched, one ceramic, one wooden, both stolen from the kitchen. &quot;Drink.&quot;&lt;/div&gt;
+
+&lt;p&gt;I sit on the floor across from &lt;&lt;print $bardPronounObj&gt;&gt;. The fire is warm at my back. The wine is rough, dark, slightly sour   tavern wine, not court wine. It doesn&#39;t pretend to be anything. I drink it and the warmth spreads down my throat and into my chest and loosens something that&#39;s been locked tight since this morning.&lt;/p&gt;
+
+&lt;p&gt;We sit. We drink. Ash picks at the cheese and eats the rind first, which is a habit I&#39;ve never understood and &lt;&lt;print $bardPronoun&gt;&gt;&#39;s never explained. The fire crackles. Outside, through the arrow-slit window, the sky is turning the deep bruised purple of early evening, and the first stars are showing, and the world looks exactly the way it&#39;s always looked, which feels like a lie.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I need to tell you something.&quot;&lt;/div&gt;
+
+&lt;p&gt;Ash sets down &lt;&lt;print $bardPronounPos&gt;&gt; cup. &lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t say &lt;em&gt;what is it&lt;/em&gt; or &lt;em&gt;are you alright&lt;/em&gt; or any of the reflexive responses that most people offer when you announce bad news. &lt;&lt;print $bardPronounCap&gt;&gt; just looks at me. &lt;&lt;print $bardPronounPosCap&gt;&gt; honey-coloured eyes are steady. &lt;&lt;print $bardPronounCap&gt;&gt; waits.&lt;/p&gt;
+
+&lt;p&gt;I tell &lt;&lt;print $bardPronounObj&gt;&gt;. Everything.&lt;/p&gt;
+
+&lt;p&gt;The succession crisis. The Elder Council. Vareth&#39;s alliances, his lawyers, his army, his seven legal minds paid to seal every loophole shut. Mother&#39;s illness   worse than anyone outside the east wing knows, the blood in the handkerchief she doesn&#39;t hide quickly enough, the cough that racks her body like something inside is trying to claw its way out. The Founding Charter, unbreakable, un-amendable, a six-hundred-year-old cage. The list in my pocket, every item crossed off.&lt;/p&gt;
+
+&lt;p&gt;The Rite. The Moonspire. Ilara. The altar. The potion. The six hours of pain. The permanent, irreversible, total transformation. Bones reshaping. Height dropping. Organs... changing. Everything that I am, physically, replaced by something else. Something female. Something that can sit on the throne and bear an heir and satisfy the bloodless bureaucratic language of a law written by dead men in an age when dragons may or may not have been real.&lt;/p&gt;
+
+&lt;p&gt;I tell &lt;&lt;print $bardPronounObj&gt;&gt; about the restricted diary in the library   &lt;em&gt;whose are these?&lt;/em&gt; I tell &lt;&lt;print $bardPronounObj&gt;&gt; about Ilara&#39;s explanation   clinical, precise, devastating. I tell &lt;&lt;print $bardPronounObj&gt;&gt; about the training dummy, the two hours of hitting things because the alternative was screaming.&lt;/p&gt;
+
+&lt;p&gt;I tell &lt;&lt;print $bardPronounObj&gt;&gt; things I haven&#39;t told anyone. That I&#39;m terrified. That I feel like I&#39;m being erased   not killed, which would be simpler and in some horrible way more dignified, but erased. Rewritten. The person who is me, overwritten by a person who is also me but lives in a body I can&#39;t imagine and didn&#39;t ask for. That every time I look at my own hands now, I see something temporary. A draft. A rough sketch that&#39;s about to be painted over.&lt;/p&gt;
+
+&lt;p&gt;Ash listens without interrupting. Not because &lt;&lt;print $bardPronoun&gt;&gt;&#39;s patient   Ash is many things but naturally patient is not one of them   but because &lt;&lt;print $bardPronoun&gt;&gt; understands that this isn&#39;t a conversation. It&#39;s an exorcism. I&#39;m casting out every fear by naming it, and the naming requires silence from everyone except the person doing the naming.&lt;/p&gt;
+
+&lt;p&gt;When I finish, my voice is hoarse. The wine is half gone. The fire has burned lower. Ash is quiet for a long time.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You want me to tell you not to do it.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I want SOMEONE to tell me there&#39;s another way.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;There isn&#39;t.&quot; &lt;&lt;print $bardPronounPosCap&gt;&gt; voice is gentle. Ash&#39;s gentleness is different from Aldric&#39;s   Aldric is gentle the way a gloved hand is soft, padding over steel. Ash is gentle the way water is gentle   shapeless, adaptable, finding every crack. &quot;I know you. You&#39;ve already looked for every other door. You wouldn&#39;t be telling me if you hadn&#39;t exhausted them all.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;So you think I should.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I think you will. Because you love your mother, and you love this kingdom, and you love the people who live in it more than you love the shape of your own jaw.&quot;&lt;/div&gt;
+
+&lt;p&gt;The words land. They land because they&#39;re true and because Ash is the only person alive who could say them without it sounding like a judgement. From anyone else, it would sound like &lt;em&gt;you should sacrifice yourself.&lt;/em&gt; From Ash, it sounds like &lt;em&gt;I see who you are, and the person I see would not let others burn.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Something breaks in me. Not dramatically   not a collapse, not a scene from a mummer&#39;s play. Just a crack. A fissure in the wall I&#39;ve been holding up since yesterday morning, since the oak door and the blood-smell and the grey-blue eyes and &lt;em&gt;by becoming the heir this kingdom needs.&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m not ready &quot; My voice cracks. Actually cracks, the way it hasn&#39;t since I was fourteen and still growing and my body couldn&#39;t decide what register to speak in.&lt;/div&gt;
+
+&lt;p&gt;Ash moves. &lt;&lt;print $bardPronounCap&gt;&gt; sets &lt;&lt;print $bardPronounPos&gt;&gt; cup down, shifts across the floor to my side, and puts an arm around my shoulders. &lt;&lt;print $bardPronounPosCap&gt;&gt; body is warm. &lt;&lt;print $bardPronounPosCap&gt;&gt; lute-calloused fingers grip my upper arm with a strength that surprises me   Ash looks delicate, built for music and movement, but the grip is real and solid and present.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;No one&#39;s ever ready to become someone new,&quot; &lt;&lt;print $bardPronoun&gt;&gt; says, &lt;&lt;print $bardPronounPos&gt;&gt; voice close to my ear, breath warm. &quot;You just... wake up one morning and realize you already did.&quot;&lt;/div&gt;
+
+&lt;p&gt;I lean into &lt;&lt;print $bardPronounObj&gt;&gt;. Just for a moment. Just because there&#39;s no one else in the world I can be this with   this small, this scared, this unmade. My forehead against &lt;&lt;print $bardPronounPos&gt;&gt; shoulder. The leather of &lt;&lt;print $bardPronounPos&gt;&gt; vest smells like road-dust and campfire smoke and the faintest trace of rosin from &lt;&lt;print $bardPronounPos&gt;&gt; lute strings. It smells like every summer I&#39;ve spent counting the days until &lt;&lt;print $bardPronoun&gt;&gt; visits.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Will you still...&quot; I can&#39;t finish. The words stick.&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Will I still what? Know you? See you? Be here?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;When I&#39;m...&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;ll still be here. You&#39;ll still be you. Just... more.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; squeezes my arm. &quot;Edrin. Listen. I have been remaking myself every day since I was old enough to understand that the world doesn&#39;t have a shape for what I am. Half-elf. Half-human. Neither thing completely. Every town I enter, I choose which part to lead with. Which ears to show. Which songs to play. It&#39;s not losing yourself. It&#39;s finding out which parts were always the real ones.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Which parts are the real ones?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;The ones that survive the change.&quot;&lt;/div&gt;
+
+&lt;p&gt;We sit by the fire until the wine is gone. Ash plays   &lt;&lt;print $bardPronounPos&gt;&gt; lute voice filling the room with something that has no words, just melody, minor key shifting to major and back, like a question that doesn&#39;t need an answer. Like breathing, in and out, the music of being alive in a body that is yours for exactly as long as it is yours and not one moment longer.&lt;/p&gt;
+
+&lt;p&gt;When Ash leaves   late, very late, the candles guttering and the fire reduced to a red memory   &lt;&lt;print $bardPronoun&gt;&gt; stops at the door.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Tomorrow.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Tomorrow.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;ll be in the courtyard. Before dawn. If you walk toward the tower, I&#39;ll walk with you.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You don&#39;t have to &quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;No. But I&#39;m going to. Because that&#39;s what friends do   they walk you to the places you&#39;re afraid to go, and they wait outside, and they&#39;re there when you come out the other side.&quot;&lt;/div&gt;
+
+&lt;p&gt;The door closes. The room is quiet.&lt;/p&gt;
+
+&lt;!-- --- STAT CHANGES --- --&gt;
+&lt;&lt;set $stress -= 20&gt;&gt;
+&lt;&lt;set $statRES += 2&gt;&gt;
+&lt;&lt;set $affAsh += 10&gt;&gt;
+
+&lt;!-- --- ADVANCE TIME --- --&gt;
+&lt;&lt;set $timeSlot to &quot;NIGHT&quot;&gt;&gt;
+
+&lt;!-- --- UPDATE OBJECTIVES --- --&gt;
+&lt;&lt;set $d1_ash to true&gt;&gt;
+&lt;&lt;completeObjective &quot;chambers_ash&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;mirror_last&quot; &quot;The mirror. One last time.&quot; &quot;MAIN&quot;&gt;&gt;
+&lt;&lt;addObjective &quot;perrin_night&quot; &quot;The corridor   Perrin is at his post&quot; &quot;SIDE&quot;&gt;&gt;
+
+&lt;&lt;if not $d1_npc_ash_desire&gt;&gt;
+&lt;div class=&quot;interaction-card side&quot;&gt;
+  &lt;h4&gt;🔥 Ask the Question&lt;/h4&gt;
+  &lt;p&gt;&quot;Ash. When I&#39;m... different. When I have a woman&#39;s body. Will you still...&quot; You can&#39;t finish. But &lt;&lt;print $bardPronoun&gt;&gt; knows what you&#39;re asking.&lt;/p&gt;
+  [[Ask → |day-1_scene_ash_desire]]
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day-1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="day-1_chambers_explore" tags="nobr" position="350,850" size="100,100">&lt;&lt;set _chamberImg to ($timeSlot is &quot;NIGHT&quot;) ? &quot;palace_chambers_night&quot; : &quot;palace_chambers&quot;&gt;&gt;
 &lt;&lt;locationImage _chamberImg &quot;Edrin&#39;s Chambers&quot;&gt;&gt;
 &lt;h2&gt;🛏 Edrin&#39;s Chambers&lt;/h2&gt;
 &lt;p&gt;Your room. The half-written letter is gone from the desk. The mirror waits.&lt;/p&gt;
@@ -5196,7 +5334,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1_rowan and not $d1_night and not $d1_npc_lastjerk&gt;&gt;
+&lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1_ash and not $d1_night and not $d1_npc_lastjerk&gt;&gt;
 &lt;div class=&quot;interaction-card side&quot;&gt;
   &lt;h4&gt;🔥 The Body   You Know What This Is&lt;/h4&gt;
   &lt;p&gt;Tomorrow you walk to the tower. Tomorrow the body changes. Tonight, for the last time, you know exactly how this works.&lt;/p&gt;
@@ -5207,7 +5345,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;div class=&quot;interaction-card&quot;&gt;
   &lt;h4&gt;🪞 The Mirror&lt;/h4&gt;
   &lt;p&gt;The full-length mirror. Gilded frame. Ancient, slightly warped glass.&lt;/p&gt;
-  &lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1_rowan&gt;&gt;
+  &lt;&lt;if $timeSlot is &quot;NIGHT&quot; and $d1_ash&gt;&gt;
     [[Stand before it   one last time|day-1_night]]
   &lt;&lt;else&gt;&gt;
     &lt;p class=&quot;flavor-dim&quot;&gt;Not yet. Not today. The mirror and you have said enough for now.&lt;/p&gt;
@@ -5216,7 +5354,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="day-1_corridors" tags="nobr" position="350,850" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="day-1_corridors" tags="nobr" position="475,850" size="100,100">&lt;&lt;locationImage &quot;corridors&quot; &quot;Palace Corridors&quot;&gt;&gt;
 &lt;h2&gt;🏛 Palace Corridors&lt;/h2&gt;
 &lt;p&gt;The usual traffic   servants, guards, courtiers   and an unusual tension beneath it all.&lt;/p&gt;
 
@@ -5252,7 +5390,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="day-1_gardens_hub" tags="nobr" position="475,850" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="day-1_gardens_hub" tags="nobr" position="600,850" size="100,100">&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;
 &lt;h2&gt;🌿 Royal Gardens&lt;/h2&gt;
 &lt;p&gt;Dusk again. The jasmine is covered tonight   frost warning.&lt;/p&gt;
 
@@ -5273,7 +5411,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="day-1_hub" tags="nobr" position="600,850" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="day-1_hub" tags="nobr" position="725,850" size="100,100">&lt;div class=&quot;hub-header&quot;&gt;
   &lt;h2&gt;Crown&#39;s Rest   &lt;&lt;print formatDayNumber($dayNumber)&gt;&gt;: The Arguments&lt;/h2&gt;
   &lt;p class=&quot;time-display&quot;&gt;Time: &lt;&lt;print $timeSlot&gt;&gt;&lt;/p&gt;
   &lt;p class=&quot;energy-display&quot;&gt;Energy: &lt;&lt;print $energy&gt;&gt; | Stress: &lt;&lt;print $stress&gt;&gt;&lt;/p&gt;
@@ -5286,9 +5424,9 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;
   &lt;h3&gt;🛏 Edrin&#39;s Chambers&lt;/h3&gt;
   &lt;p class=&quot;loc-flavor&quot;&gt;Your room. The half-written letter is gone from the desk. The mirror waits.&lt;/p&gt;
-  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and not $d1_rowan&gt;&gt;
+  &lt;&lt;if $timeSlot is &quot;EVENING&quot; and not $d1_ash&gt;&gt;
     &lt;span class=&quot;badge main&quot;&gt;⚔ Someone is knocking&lt;/span&gt;
-    [[Enter → |day-1_rowan]]
+    [[Enter → |day-1_ash]]
   &lt;&lt;elseif $timeSlot is &quot;NIGHT&quot; and not $d1_night&gt;&gt;
     &lt;span class=&quot;badge main&quot;&gt;⚔ The mirror. One last time.&lt;/span&gt;
     [[Enter → |day-1_chambers_explore]]
@@ -5428,7 +5566,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="day-1_kitchen" tags="nobr" position="725,850" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="day-1_kitchen" tags="nobr" position="850,850" size="100,100">&lt;&lt;locationImage &quot;kitchens&quot; &quot;Palace Kitchens&quot;&gt;&gt;
 &lt;h2&gt;🍞 Palace Kitchens&lt;/h2&gt;
 &lt;p&gt;The output is staggering. Marta is baking like the world is ending. She might not be wrong.&lt;/p&gt;
 
@@ -5449,7 +5587,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="day-1_library_hub" tags="nobr" position="850,850" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="day-1_library_hub" tags="nobr" position="975,850" size="100,100">&lt;&lt;locationImage &quot;grand_library&quot; &quot;Grand Library&quot;&gt;&gt;
 &lt;h2&gt;📚 Grand Library&lt;/h2&gt;
 &lt;p&gt;Three stories of answers. Some of them might even be useful today.&lt;/p&gt;
 
@@ -5479,7 +5617,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="day-1_moonspire" tags="nobr" position="975,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="day-1_moonspire" tags="nobr" position="1100,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Moonspire Tower   Meeting Ilara&lt;/h2&gt;
 
@@ -5608,7 +5746,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_moonspire_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="day-1_moonspire2" tags="nobr" position="1100,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="day-1_moonspire2" tags="nobr" position="1225,850" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Moonspire Tower   One More Question&lt;/h2&gt;
 
@@ -5753,7 +5891,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_moonspire_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="day-1_moonspire_hub" tags="nobr" position="1225,850" size="100,100">&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="day-1_moonspire_hub" tags="nobr" position="100,975" size="100,100">&lt;&lt;locationImage &quot;moonspire_tower&quot; &quot;Moonspire Tower&quot;&gt;&gt;
 &lt;h2&gt;🌙 Moonspire Tower&lt;/h2&gt;
 &lt;p class=&quot;moonspire-flavor&quot;&gt;White stone walls. Enchanted candles. Tapestries that shift when you&#39;re not looking. The air tastes electric.&lt;/p&gt;
 
@@ -5808,7 +5946,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Cross the bridge back|day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="day-1_night" tags="nobr" position="100,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_night" tags="nobr" position="225,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers_night&quot; &quot;Edrin&#39;s Chambers, Night&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Edrin&#39;s Chambers   The Last Night&lt;/h2&gt;
 
@@ -5870,7 +6008,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   &lt;&lt;link &quot;Sleep →&quot; &quot;day-1_sleep_transition&quot;&gt;&gt;
     &lt;&lt;completeObjective &quot;sleep_d1&quot;&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="day-1_queen" tags="nobr" position="225,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="day-1_queen" tags="nobr" position="350,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   Round Two&lt;/h2&gt;
 
@@ -5984,7 +6122,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="day-1_queen2" tags="nobr" position="350,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="day-1_queen2" tags="nobr" position="475,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;queen_chambers&quot; &quot;Queen&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
 
 &lt;h2&gt;Queen&#39;s Chambers   What Ilara Didn&#39;t Say&lt;/h2&gt;
 
@@ -6075,125 +6213,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 &lt;!-- --- UPDATE OBJECTIVES --- --&gt;
 &lt;&lt;set $d1_queen2 to true&gt;&gt;
 &lt;&lt;completeObjective &quot;queen_seraphina2&quot;&gt;&gt;
-&lt;&lt;addObjective &quot;chambers_rowan&quot; &quot;Evening approaches   return to your chambers&quot; &quot;MAIN&quot;&gt;&gt;
-
-&lt;div class=&quot;scene-end&quot;&gt;
-  [[Continue → |day-1_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="day-1_rowan" tags="nobr" position="475,975" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;palace_chambers&quot; &quot;Edrin&#39;s Chambers&quot;&gt;&gt;&lt;/div&gt;
-
-&lt;h2&gt;Edrin&#39;s Chambers   Telling Rowan&lt;/h2&gt;
-
-&lt;p&gt;Evening. The fire is lit   someone came in while I was destroying training dummies, rebuilt it, left fresh candles and a tray of food I haven&#39;t touched. My hands are wrapped in linen bandages that I did myself, badly. The blisters sting beneath.&lt;/p&gt;
-
-&lt;p&gt;The knock is Rowan&#39;s knock   three taps, a pause, two more, our old signal from years of late-night conversations in tournament camps and borrowed rooms in taverns where the walls were thin and the innkeepers were nosy.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;It&#39;s open.&quot;&lt;/div&gt;
-
-&lt;p&gt;&lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;They come in carrying wine   a clay jug, unstoppered, the kind you buy from the kitchen stores rather than the royal cellar because Rowan has never had the patience for formality and cheese. A wedge of something sharp and crumbly, wrapped in cloth and their lute, slung across their back because Rowan without a lute is like a knight without a sword   technically functional but fundamentally incomplete.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You look like you lost a fight with a threshing machine,&quot; they say, dropping to the floor in front of the fire because Rowan has never, in the entirety of our friendship, sat in a chair when a floor was available. They claim furniture creates artificial hierarchy. I think they just like being on the ground.&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Training dummy.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Did the dummy win?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;The dummy is in several pieces.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Then you won. Congratulations. You&#39;ve defeated practice straw.&quot; They pour wine into two cups   mismatched, one ceramic, one wooden, both stolen from the kitchen. &quot;Drink.&quot;&lt;/div&gt;
-
-&lt;p&gt;I sit on the floor across from them. The fire is warm at my back. The wine is rough, dark, slightly sour   tavern wine, not court wine. It doesn&#39;t pretend to be anything. I drink it and the warmth spreads down my throat and into my chest and loosens something that&#39;s been locked tight since this morning.&lt;/p&gt;
-
-&lt;p&gt;We sit. We drink. Rowan picks at the cheese and eats the rind first, which is a habit I&#39;ve never understood and they&#39;ve never explained. The fire crackles. Outside, through the arrow-slit window, the sky is turning the deep bruised purple of early evening, and the first stars are showing, and the world looks exactly the way it&#39;s always looked, which feels like a lie.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I need to tell you something.&quot;&lt;/div&gt;
-
-&lt;p&gt;Rowan sets down their cup. They don&#39;t say &lt;em&gt;what is it&lt;/em&gt; or &lt;em&gt;are you alright&lt;/em&gt; or any of the reflexive responses that most people offer when you announce bad news. They just look at me. Their honey-coloured eyes are steady. They wait.&lt;/p&gt;
-
-&lt;p&gt;I tell them. Everything.&lt;/p&gt;
-
-&lt;p&gt;The succession crisis. The Elder Council. Vareth&#39;s alliances, his lawyers, his army, his seven legal minds paid to seal every loophole shut. Mother&#39;s illness   worse than anyone outside the east wing knows, the blood in the handkerchief she doesn&#39;t hide quickly enough, the cough that racks her body like something inside is trying to claw its way out. The Founding Charter, unbreakable, un-amendable, a six-hundred-year-old cage. The list in my pocket, every item crossed off.&lt;/p&gt;
-
-&lt;p&gt;The Rite. The Moonspire. Ilara. The altar. The potion. The six hours of pain. The permanent, irreversible, total transformation. Bones reshaping. Height dropping. Organs... changing. Everything that I am, physically, replaced by something else. Something female. Something that can sit on the throne and bear an heir and satisfy the bloodless bureaucratic language of a law written by dead men in an age when dragons may or may not have been real.&lt;/p&gt;
-
-&lt;p&gt;I tell them about the restricted diary in the library   &lt;em&gt;whose are these?&lt;/em&gt; I tell them about Ilara&#39;s explanation   clinical, precise, devastating. I tell them about the training dummy, the two hours of hitting things because the alternative was screaming.&lt;/p&gt;
-
-&lt;p&gt;I tell them things I haven&#39;t told anyone. That I&#39;m terrified. That I feel like I&#39;m being erased   not killed, which would be simpler and in some horrible way more dignified, but erased. Rewritten. The person who is me, overwritten by a person who is also me but lives in a body I can&#39;t imagine and didn&#39;t ask for. That every time I look at my own hands now, I see something temporary. A draft. A rough sketch that&#39;s about to be painted over.&lt;/p&gt;
-
-&lt;p&gt;Rowan listens without interrupting. Not because they&#39;re patient   Rowan is many things but naturally patient is not one of them   but because they understand that this isn&#39;t a conversation. It&#39;s an exorcism. I&#39;m casting out every fear by naming it, and the naming requires silence from everyone except the person doing the naming.&lt;/p&gt;
-
-&lt;p&gt;When I finish, my voice is hoarse. The wine is half gone. The fire has burned lower. Rowan is quiet for a long time.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You want me to tell you not to do it.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I want SOMEONE to tell me there&#39;s another way.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;There isn&#39;t.&quot; Their voice is gentle. Rowan&#39;s gentleness is different from Aldric&#39;s   Aldric is gentle the way a gloved hand is soft, padding over steel. Rowan is gentle the way water is gentle   shapeless, adaptable, finding every crack. &quot;I know you. You&#39;ve already looked for every other door. You wouldn&#39;t be telling me if you hadn&#39;t exhausted them all.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;So you think I should.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I think you will. Because you love your mother, and you love this kingdom, and you love the people who live in it more than you love the shape of your own jaw.&quot;&lt;/div&gt;
-
-&lt;p&gt;The words land. They land because they&#39;re true and because Rowan is the only person alive who could say them without it sounding like a judgement. From anyone else, it would sound like &lt;em&gt;you should sacrifice yourself.&lt;/em&gt; From Rowan, it sounds like &lt;em&gt;I see who you are, and the person I see would not let others burn.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Something breaks in me. Not dramatically   not a collapse, not a scene from a mummer&#39;s play. Just a crack. A fissure in the wall I&#39;ve been holding up since yesterday morning, since the oak door and the blood-smell and the grey-blue eyes and &lt;em&gt;by becoming the heir this kingdom needs.&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m not ready &quot; My voice cracks. Actually cracks, the way it hasn&#39;t since I was fourteen and still growing and my body couldn&#39;t decide what register to speak in.&lt;/div&gt;
-
-&lt;p&gt;Rowan moves. They set their cup down, shift across the floor to my side, and put an arm around my shoulders. Their body is warm. Their lute-calloused fingers grip my upper arm with a strength that surprises me   Rowan looks delicate, built for music and movement, but the grip is real and solid and present.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;No one&#39;s ever ready to become someone new,&quot; they say, their voice close to my ear, breath warm. &quot;You just... wake up one morning and realize you already did.&quot;&lt;/div&gt;
-
-&lt;p&gt;I lean into them. Just for a moment. Just because there&#39;s no one else in the world I can be this with   this small, this scared, this unmade. My forehead against their shoulder. The leather of their vest smells like road-dust and campfire smoke and the faintest trace of rosin from their lute strings. It smells like every summer I&#39;ve spent counting the days until they visit.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Will you still...&quot; I can&#39;t finish. The words stick.&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Will I still what? Know you? See you? Be here?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;When I&#39;m...&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;ll still be here. You&#39;ll still be you. Just... more.&quot; They squeeze my arm. &quot;Edrin. Listen. I have been remaking myself every day since I was old enough to understand that the world doesn&#39;t have a shape for what I am. Half-elf. Half-human. Neither thing completely. Every town I enter, I choose which part to lead with. Which ears to show. Which songs to play. It&#39;s not losing yourself. It&#39;s finding out which parts were always the real ones.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Which parts are the real ones?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;The ones that survive the change.&quot;&lt;/div&gt;
-
-&lt;p&gt;We sit by the fire until the wine is gone. Rowan plays   their lute voice filling the room with something that has no words, just melody, minor key shifting to major and back, like a question that doesn&#39;t need an answer. Like breathing, in and out, the music of being alive in a body that is yours for exactly as long as it is yours and not one moment longer.&lt;/p&gt;
-
-&lt;p&gt;When Rowan leaves   late, very late, the candles guttering and the fire reduced to a red memory   they stop at the door.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Tomorrow.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Tomorrow.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;ll be in the courtyard. Before dawn. If you walk toward the tower, I&#39;ll walk with you.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You don&#39;t have to &quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;No. But I&#39;m going to. Because that&#39;s what friends do   they walk you to the places you&#39;re afraid to go, and they wait outside, and they&#39;re there when you come out the other side.&quot;&lt;/div&gt;
-
-&lt;p&gt;The door closes. The room is quiet.&lt;/p&gt;
-
-&lt;!-- --- STAT CHANGES --- --&gt;
-&lt;&lt;set $stress -= 20&gt;&gt;
-&lt;&lt;set $statRES += 2&gt;&gt;
-&lt;&lt;set $affRowan += 10&gt;&gt;
-
-&lt;!-- --- ADVANCE TIME --- --&gt;
-&lt;&lt;set $timeSlot to &quot;NIGHT&quot;&gt;&gt;
-
-&lt;!-- --- UPDATE OBJECTIVES --- --&gt;
-&lt;&lt;set $d1_rowan to true&gt;&gt;
-&lt;&lt;completeObjective &quot;chambers_rowan&quot;&gt;&gt;
-&lt;&lt;addObjective &quot;mirror_last&quot; &quot;The mirror. One last time.&quot; &quot;MAIN&quot;&gt;&gt;
-&lt;&lt;addObjective &quot;perrin_night&quot; &quot;The corridor   Perrin is at his post&quot; &quot;SIDE&quot;&gt;&gt;
-
-&lt;&lt;if not $d1_npc_rowan_desire&gt;&gt;
-&lt;div class=&quot;interaction-card side&quot;&gt;
-  &lt;h4&gt;🔥 Ask the Question&lt;/h4&gt;
-  &lt;p&gt;&quot;Rowan. When I&#39;m... different. When I have a woman&#39;s body. Will you still...&quot; You can&#39;t finish. But they know what you&#39;re asking.&lt;/p&gt;
-  [[Ask → |day-1_scene_rowan_desire]]
-&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;addObjective &quot;chambers_ash&quot; &quot;Evening approaches   return to your chambers&quot; &quot;MAIN&quot;&gt;&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_hub]]
@@ -6866,7 +6886,68 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_gardens_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="day-1_scene_fantasy" tags="nobr" position="100,1225" size="100,100">&lt;h3&gt;Intrusive Thoughts&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="day-1_scene_ash_desire" tags="nobr" position="100,1225" size="100,100">&lt;h3&gt;The Question&lt;/h3&gt;
+
+&lt;p&gt;The fire is low. The wine is almost gone. Ash is still on the floor, lute silent in &lt;&lt;print $bardPronounPos&gt;&gt; lap, &lt;&lt;print $bardPronounPos&gt;&gt; body warm against the side of the bed where I&#39;m sitting. The conversation has been about goats and barons and magistrates. Normal things. Safe things.&lt;/p&gt;
+
+&lt;p&gt;I break the safety.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash. When I&#39;m... different. When I have a woman&#39;s body. Will you still &quot; I can&#39;t finish. The sentence has too many possible endings and all of them are terrifying.&lt;/div&gt;
+
+&lt;p&gt;Ash looks at me. &lt;&lt;print $bardPronounPosCap&gt;&gt; honey eyes catch the firelight and hold it. &lt;&lt;print $bardPronounCap&gt;&gt;&#39;s quiet for a long time   not because &lt;&lt;print $bardPronoun&gt;&gt; doesn&#39;t know the answer but because &lt;&lt;print $bardPronoun&gt;&gt;&#39;s choosing how to say it.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You&#39;re asking if I&#39;ll still want you.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m asking if &quot; I gesture. At my body. At the broad shoulders and flat chest and the cock I&#39;m sitting on. &quot;If this is what you want, and this is going to be gone, then &quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Edrin.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; sets the lute aside. Turns to face me fully. Cross-legged on the floor, close enough that &lt;&lt;print $bardPronounPos&gt;&gt; knee touches my calf. &quot;I&#39;ve been wanting you since I was sixteen and you choked on a candied apple and I thought it was the most endearing thing I&#39;d ever seen. I wanted you when you were a gangly teenager with bad hair. I wanted you when you grew into a man with a sharp jaw and sad eyes and I will want you when you&#39;re a woman with those same eyes in a different face.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You don&#39;t know what the body will look like.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I don&#39;t care what the body looks like.&quot; &lt;&lt;print $bardPronounPosCap&gt;&gt; voice is firm. Certain. The rare moments when Ash stops performing and speaks from the bedrock. &quot;I&#39;ve fucked people with cocks and people with cunts and people who had both and people who had neither and the thing that makes me want someone has never, ever been about what&#39;s between their legs. It&#39;s about &quot; &lt;&lt;print $bardPronounCap&gt;&gt; taps &lt;&lt;print $bardPronounPos&gt;&gt; chest. Heart. &quot;This and yours hasn&#39;t changed. It can&#39;t change. The Rite rewrites bodies. It doesn&#39;t rewrite souls.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;But the sex. The sex will be &quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Different. Wonderfully, terrifyingly different.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; leans forward. &quot;Edrin. I once spent a night with a woman who had been a man. She told me the orgasms were different   not better, not worse, different. Deeper, she said. Less concentrated. Like the pleasure goes through you instead of shooting out of you. She said it was like learning a new instrument   the music is still music, but the technique is completely different.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s   that&#39;s exactly what I&#39;m afraid of.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I know and it&#39;s exactly what I&#39;m excited about.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; grins   that specific Ash grin, the one that&#39;s tender and filthy simultaneously. &quot;I&#39;m a bard. I live for new instruments. New sounds. New ways to make someone sing.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Sing?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Moan. Scream. Whimper. The whole register. I want to learn yours. Whatever yours turns out to be.&quot;&lt;/div&gt;
+
+&lt;p&gt;The warmth that floods through me isn&#39;t arousal   or it is, but it&#39;s bigger than arousal. It&#39;s the feeling of being wanted not despite the change but through it. Of someone looking at the transformation not as loss but as possibility. New territory. New music. New ways to make someone come.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Mmhm?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;If I have breasts   when I have breasts   are you going to stare at them?&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Absolutely. Shamelessly. I&#39;ll write a sonnet about each one.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;There&#39;ll only be two.&quot;&lt;/div&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;ll write a duet.&quot;&lt;/div&gt;
+
+&lt;p&gt;I laugh. The sound is genuine and surprised and it comes from the same deep place as the fear, and somehow both can exist simultaneously   the terror of what&#39;s coming and the warmth of being wanted through it.&lt;/p&gt;
+
+&lt;p&gt;Ash stays. &lt;&lt;print $bardPronounCap&gt;&gt; plays. The music is softer now   intimate, low, the kind of thing you play for one person in a room and no one else. The fire dies. The darkness grows.&lt;/p&gt;
+
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; doesn&#39;t touch me. Not tonight. Tonight the intimacy is verbal   the confession of desire across the threshold of transformation, the promise that the body on the other side will be met with hunger, not horror.&lt;/p&gt;
+
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;ll be here,&quot; &lt;&lt;print $bardPronoun&gt;&gt; says at the door. &quot;On the other side and I&#39;ll want you. Whatever shape you&#39;re in.&quot;&lt;/div&gt;
+
+&lt;&lt;set $d1_npc_ash_desire to true&gt;&gt;
+&lt;&lt;set $stress -= 10&gt;&gt;
+&lt;&lt;set $affAsh += 5&gt;&gt;
+&lt;&lt;set $arousal += 5&gt;&gt;
+
+&lt;div class=&quot;scene-end&quot;&gt;
+  [[Continue → |day-1_hub]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="day-1_scene_fantasy" tags="nobr" position="225,1225" size="100,100">&lt;h3&gt;Intrusive Thoughts&lt;/h3&gt;
 
 &lt;p&gt;I&#39;m sitting in the training yard. The dummy is destroyed. My hands are blistered. My body is wrung out, emptied by two hours of violence against straw, and in the vacuum the exhaustion creates, my mind   unguarded, undefended   goes where I don&#39;t want it to go.&lt;/p&gt;
 
@@ -6915,9 +6996,9 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_training_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="day-1_scene_masturbation" tags="nobr" position="225,1225" size="100,100">&lt;h3&gt;The Last Time Knowing&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="day-1_scene_masturbation" tags="nobr" position="350,1225" size="100,100">&lt;h3&gt;The Last Time Knowing&lt;/h3&gt;
 
-&lt;p&gt;Rowan is gone. The wine is a warm ghost in my blood. The fire is embers. Tomorrow I walk to the tower. Tomorrow the Rite begins. Tomorrow this body   this specific body, with this specific cock and these specific hands and this specific way of feeling pleasure   will be rewritten.&lt;/p&gt;
+&lt;p&gt;Ash is gone. The wine is a warm ghost in my blood. The fire is embers. Tomorrow I walk to the tower. Tomorrow the Rite begins. Tomorrow this body   this specific body, with this specific cock and these specific hands and this specific way of feeling pleasure   will be rewritten.&lt;/p&gt;
 
 &lt;p&gt;This is the last time.&lt;/p&gt;
 
@@ -6959,67 +7040,6 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;scene-end&quot;&gt;
   [[Continue → |day-1_chambers_explore]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="day-1_scene_rowan_desire" tags="nobr" position="350,1225" size="100,100">&lt;h3&gt;The Question&lt;/h3&gt;
-
-&lt;p&gt;The fire is low. The wine is almost gone. Rowan is still on the floor, lute silent in their lap, their body warm against the side of the bed where I&#39;m sitting. The conversation has been about goats and barons and magistrates. Normal things. Safe things.&lt;/p&gt;
-
-&lt;p&gt;I break the safety.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Rowan. When I&#39;m... different. When I have a woman&#39;s body. Will you still &quot; I can&#39;t finish. The sentence has too many possible endings and all of them are terrifying.&lt;/div&gt;
-
-&lt;p&gt;Rowan looks at me. Their honey eyes catch the firelight and hold it. They&#39;re quiet for a long time   not because they don&#39;t know the answer but because they&#39;re choosing how to say it.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You&#39;re asking if I&#39;ll still want you.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I&#39;m asking if &quot; I gesture. At my body. At the broad shoulders and flat chest and the cock I&#39;m sitting on. &quot;If this is what you want, and this is going to be gone, then &quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Edrin.&quot; They set the lute aside. Turn to face me fully. Cross-legged on the floor, close enough that their knee touches my calf. &quot;I&#39;ve been wanting you since I was sixteen and you choked on a candied apple and I thought it was the most endearing thing I&#39;d ever seen. I wanted you when you were a gangly teenager with bad hair. I wanted you when you grew into a man with a sharp jaw and sad eyes and I will want you when you&#39;re a woman with those same eyes in a different face.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;You don&#39;t know what the body will look like.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I don&#39;t care what the body looks like.&quot; Their voice is firm. Certain. The rare moments when Rowan stops performing and speaks from the bedrock. &quot;I&#39;ve fucked people with cocks and people with cunts and people who had both and people who had neither and the thing that makes me want someone has never, ever been about what&#39;s between their legs. It&#39;s about &quot; They tap their chest. Heart. &quot;This and yours hasn&#39;t changed. It can&#39;t change. The Rite rewrites bodies. It doesn&#39;t rewrite souls.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;But the sex. The sex will be &quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Different. Wonderfully, terrifyingly different.&quot; They lean forward. &quot;Edrin. I once spent a night with a woman who had been a man. She told me the orgasms were different   not better, not worse, different. Deeper, she said. Less concentrated. Like the pleasure goes through you instead of shooting out of you. She said it was like learning a new instrument   the music is still music, but the technique is completely different.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s   that&#39;s exactly what I&#39;m afraid of.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I know and it&#39;s exactly what I&#39;m excited about.&quot; They grin   that specific Rowan grin, the one that&#39;s tender and filthy simultaneously. &quot;I&#39;m a bard. I live for new instruments. New sounds. New ways to make someone sing.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Sing?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Moan. Scream. Whimper. The whole register. I want to learn yours. Whatever yours turns out to be.&quot;&lt;/div&gt;
-
-&lt;p&gt;The warmth that floods through me isn&#39;t arousal   or it is, but it&#39;s bigger than arousal. It&#39;s the feeling of being wanted not despite the change but through it. Of someone looking at the transformation not as loss but as possibility. New territory. New music. New ways to make someone come.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Rowan.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Mmhm?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;If I have breasts   when I have breasts   are you going to stare at them?&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Absolutely. Shamelessly. I&#39;ll write a sonnet about each one.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;There&#39;ll only be two.&quot;&lt;/div&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;ll write a duet.&quot;&lt;/div&gt;
-
-&lt;p&gt;I laugh. The sound is genuine and surprised and it comes from the same deep place as the fear, and somehow both can exist simultaneously   the terror of what&#39;s coming and the warmth of being wanted through it.&lt;/p&gt;
-
-&lt;p&gt;Rowan stays. They play. The music is softer now   intimate, low, the kind of thing you play for one person in a room and no one else. The fire dies. The darkness grows.&lt;/p&gt;
-
-&lt;p&gt;They don&#39;t touch me. Not tonight. Tonight the intimacy is verbal   the confession of desire across the threshold of transformation, the promise that the body on the other side will be met with hunger, not horror.&lt;/p&gt;
-
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;ll be here,&quot; they say at the door. &quot;On the other side and I&#39;ll want you. Whatever shape you&#39;re in.&quot;&lt;/div&gt;
-
-&lt;&lt;set $d1_npc_rowan_desire to true&gt;&gt;
-&lt;&lt;set $stress -= 10&gt;&gt;
-&lt;&lt;set $affRowan += 5&gt;&gt;
-&lt;&lt;set $arousal += 5&gt;&gt;
-
-&lt;div class=&quot;scene-end&quot;&gt;
-  [[Continue → |day-1_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="day-1_scene_sera_approach" tags="nobr" position="475,1225" size="100,100">&lt;&lt;npcPortrait &quot;sera&quot; &quot;Sera&quot;&gt;&gt;
 &lt;h3&gt;The Approach&lt;/h3&gt;
 
@@ -7291,9 +7311,10 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;nav-return&quot;&gt;
   [[← Return to Palace Hub|day-2_hub]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_gardens" tags="nobr" position="1100,1225" size="100,100">&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage &quot;royal_gardens&quot; &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="day-2_gardens" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;set _gardensImg to ($bardGender is &quot;female&quot;) ? &quot;royal_gardens_ash_female&quot; : &quot;royal_gardens_ash_male&quot;&gt;&gt;
+&lt;div class=&quot;scene-image&quot;&gt;&lt;&lt;locationImage _gardensImg &quot;Royal Gardens&quot;&gt;&gt;&lt;/div&gt;
 
-&lt;h2&gt;Royal Gardens   Rowan&#39;s Arrival&lt;/h2&gt;
+&lt;h2&gt;Royal Gardens   Ash&#39;s Arrival&lt;/h2&gt;
 
 &lt;p&gt;The gardens at dusk are the only place in Crown&#39;s Rest that doesn&#39;t feel like a cage.&lt;/p&gt;
 
@@ -7307,55 +7328,85 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;p&gt;I know that style. I&#39;d know it through a wall, through a storm, through ten years of silence.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Rowan.&quot;&lt;/div&gt;
+&lt;div id=&quot;ash-select&quot; class=&quot;inline-choice&quot;&gt;
+&lt;&lt;link &quot;A young man steps around the hedgerow&quot;&gt;&gt;
+&lt;&lt;set $bardGender to &quot;male&quot;&gt;&gt;
+&lt;&lt;set $bardPronoun to &quot;he&quot;&gt;&gt;
+&lt;&lt;set $bardPronounObj to &quot;him&quot;&gt;&gt;
+&lt;&lt;set $bardPronounPos to &quot;his&quot;&gt;&gt;
+&lt;&lt;set $bardPronounCap to &quot;He&quot;&gt;&gt;
+&lt;&lt;set $bardPronounPosCap to &quot;His&quot;&gt;&gt;
+&lt;&lt;set $bardPortraitSlug to &quot;ash_male&quot;&gt;&gt;
+&lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
 
-&lt;p&gt;&lt;&lt;npcPortrait &quot;rowan&quot; &quot;Rowan&quot;&gt;&gt;They step around the hedgerow, lute slung across their body, half-smile already in place. Rowan Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;He steps around the hedgerow, lute slung across his body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
 
-&lt;p&gt;They look the same. Different. Both. Their hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past their shoulders. Eyes the colour of honey, tilted slightly, always looking like they know something amusing that they&#39;re deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;
+&lt;p&gt;He looks the same. Different. Both. His hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past his shoulders. Eyes the colour of honey, tilted slightly, always looking like he knows something amusing that he&#39;s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;p&gt;We met when I was fifteen. Tournament day. Rowan was busking for coins near the festival stalls, playing a song so filthy that three matrons walked away and two came closer. I laughed so hard I choked on candied apple. We talked for four hours. We&#39;ve been writing letters   erratically, across distances that shouldn&#39;t allow friendship but somehow do   ever since.&lt;/p&gt;
+&lt;&lt;link &quot;A young woman steps around the hedgerow&quot;&gt;&gt;
+&lt;&lt;set $bardGender to &quot;female&quot;&gt;&gt;
+&lt;&lt;set $bardPronoun to &quot;she&quot;&gt;&gt;
+&lt;&lt;set $bardPronounObj to &quot;her&quot;&gt;&gt;
+&lt;&lt;set $bardPronounPos to &quot;her&quot;&gt;&gt;
+&lt;&lt;set $bardPronounCap to &quot;She&quot;&gt;&gt;
+&lt;&lt;set $bardPronounPosCap to &quot;Her&quot;&gt;&gt;
+&lt;&lt;set $bardPortraitSlug to &quot;ash_female&quot;&gt;&gt;
+&lt;&lt;replace &quot;#ash-select&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Ash.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;You look like a man deciding which cliff to jump off.&quot; They settle onto the bench beside me, adjusting the lute across their lap.&lt;/div&gt;
+&lt;p&gt;&lt;&lt;npcPortrait $bardPortraitSlug &quot;Ash&quot;&gt;&gt;She steps around the hedgerow, lute slung across her body, half-smile already in place. Ash Ashwood   half-elf, traveling bard, the closest thing I have to a friend who doesn&#39;t call me &quot;Your Highness&quot; and mean it.&lt;/p&gt;
+
+&lt;p&gt;She looks the same. Different. Both. Her hair is longer   dark with that faint copper undertone that catches light in ways human hair doesn&#39;t, swept back from pointed ears and falling past her shoulders. Eyes the colour of honey, tilted slightly, always looking like she knows something amusing that she&#39;s deciding whether to share. Lean and angular, dressed in travel-worn leather and a shirt that might have been white several washes ago, boots dusty from the road.&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We met when I was fifteen. Tournament day. Ash was busking for coins near the festival stalls, playing a song so filthy that three matrons walked away and two came closer. I laughed so hard I choked on candied apple. We talked for four hours. We&#39;ve been writing letters   erratically, across distances that shouldn&#39;t allow friendship but somehow do   ever since.&lt;/p&gt;
+
+&lt;&lt;if $bardGender is &quot;female&quot;&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You look like someone deciding which cliff to jump off.&quot; She settles onto the bench beside me, adjusting the lute across her lap.&lt;/div&gt;
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;You look like a man deciding which cliff to jump off.&quot; He settles onto the bench beside me, adjusting the lute across his lap.&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s closer to accurate than you think.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Ah.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Ah.&quot;&lt;/div&gt;
 
-&lt;p&gt;Rowan doesn&#39;t push. That&#39;s the thing about them   they have the patience of an immortal, which they&#39;re technically halfway to being, and the emotional intelligence of someone who has spent their life reading rooms for a living. They set their fingers on the strings and play something soft. Not a performance. A presence.&lt;/p&gt;
+&lt;p&gt;Ash doesn&#39;t push. That&#39;s the thing about &lt;&lt;print $bardPronounObj&gt;&gt;   &lt;&lt;print $bardPronoun&gt;&gt; has the patience of an immortal, which &lt;&lt;print $bardPronoun&gt;&gt;&#39;s technically halfway to being, and the emotional intelligence of someone who has spent &lt;&lt;print $bardPronounPos&gt;&gt; life reading rooms for a living. &lt;&lt;print $bardPronounCap&gt;&gt; sets &lt;&lt;print $bardPronounPos&gt;&gt; fingers on the strings and plays something soft. Not a performance. A presence.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;I thought you were in Tormark,&quot; I say, because saying anything else would mean saying the real thing, and I&#39;m not ready.&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I was. Terrible audiences. The Tormarkians appreciate a twelve-verse ballad about agricultural policy but look at you blankly if you play something with actual emotion. I left before I died of boredom.&quot; They glance at me sideways. &quot;I got a letter. From your mother, actually. She said you might need a friend.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I was. Terrible audiences. The Tormarkians appreciate a twelve-verse ballad about agricultural policy but look at you blankly if you play something with actual emotion. I left before I died of boredom.&quot; &lt;&lt;print $bardPronounCap&gt;&gt; glances at me sideways. &quot;I got a letter. From your mother, actually. She said you might need a friend.&quot;&lt;/div&gt;
 
 &lt;p&gt;Of course she did. Of course Mother   even from her sickbed, even while dying, even while planning the demolition and reconstruction of her only child&#39;s entire existence   thought to summon the one person who might make the demolition bearable.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;She&#39;s thorough.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;She&#39;s your mother. It&#39;s the same thing.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;She&#39;s your mother. It&#39;s the same thing.&quot;&lt;/div&gt;
 
-&lt;p&gt;We sit. Rowan plays. The melody shifts   something older now, a song I half-recognize from childhood. The jasmine exhales its sweetness into the cooling air. Above us, the first stars appear   the real ones, not the painted kind on library ceilings.&lt;/p&gt;
+&lt;p&gt;We sit. Ash plays. The melody shifts   something older now, a song I half-recognize from childhood. The jasmine exhales its sweetness into the cooling air. Above us, the first stars appear   the real ones, not the painted kind on library ceilings.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;Whatever it is,&quot; Rowan says, not looking at me, fingers still moving on the strings, &quot;you&#39;ve never been a coward, Edrin. You&#39;re the bravest person I know. Not because you&#39;re fearless, but because you&#39;re terrified of everything and do it anyway.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;Whatever it is,&quot; Ash says, not looking at me, fingers still moving on the strings, &quot;you&#39;ve never been a coward, Edrin. You&#39;re the bravest person I know. Not because you&#39;re fearless, but because you&#39;re terrified of everything and do it anyway.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;What if &#39;doing it&#39; means losing... myself?&quot;&lt;/div&gt;
 
-&lt;p&gt;They stop playing. The silence is sudden and specific   the kind that happens when someone puts down an instrument after playing for a long time, and the air hasn&#39;t yet figured out how to fill the space.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; stops playing. The silence is sudden and specific   the kind that happens when someone puts down an instrument after playing for a long time, and the air hasn&#39;t yet figured out how to fill the space.&lt;/p&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;ve been remaking myself since I was born.&quot; Rowan&#39;s voice is quiet. &quot;Half of two worlds, belonging fully to neither. Every town I enter, I decide which version of myself to wear. It&#39;s not losing yourself. It&#39;s finding out which parts were real all along.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;ve been remaking myself since I was born.&quot; Ash&#39;s voice is quiet. &quot;Half of two worlds, belonging fully to neither. Every town I enter, I decide which version of myself to wear. It&#39;s not losing yourself. It&#39;s finding out which parts were real all along.&quot;&lt;/div&gt;
 
 &lt;p&gt;The words land in a place I didn&#39;t know was open. Something behind my sternum shifts   not understanding, exactly, but the premonition of understanding. The shadow of a thought I&#39;m not ready to have.&lt;/p&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;Stay,&quot; I say. &quot;For a few days. I might need...&quot; I don&#39;t finish.&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ROWAN&lt;/span&gt;&quot;I&#39;m here.&quot; Rowan picks up the lute again. &quot;I&#39;m not going anywhere.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;ASH&lt;/span&gt;&quot;I&#39;m here.&quot; Ash picks up the lute again. &quot;I&#39;m not going anywhere.&quot;&lt;/div&gt;
 
-&lt;p&gt;They play until the stars are thick and the fountain&#39;s splash is the only other sound. I don&#39;t tell them about the Rite. Not tonight. Tonight I just need someone beside me who doesn&#39;t want anything, who isn&#39;t angling for position or advantage, who plays music in the garden because the evening is beautiful and that&#39;s enough.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;print $bardPronounCap&gt;&gt; plays until the stars are thick and the fountain&#39;s splash is the only other sound. I don&#39;t tell &lt;&lt;print $bardPronounObj&gt;&gt; about the Rite. Not tonight. Tonight I just need someone beside me who doesn&#39;t want anything, who isn&#39;t angling for position or advantage, who plays music in the garden because the evening is beautiful and that&#39;s enough.&lt;/p&gt;
 
 &lt;p&gt;It&#39;s not enough. But it helps.&lt;/p&gt;
 
 &lt;!-- --- STAT CHANGES --- --&gt;
 &lt;&lt;set $stress -= 15&gt;&gt;
-&lt;&lt;set $affRowan += 5&gt;&gt;
+&lt;&lt;set $affAsh += 5&gt;&gt;
 &lt;&lt;set $d2_gardens to true&gt;&gt;
 
 &lt;!-- --- ADVANCE TIME --- --&gt;
@@ -7721,7 +7772,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;p&gt;Two days.&lt;/p&gt;
 
-&lt;p&gt;I get into bed. The sheets are cold, then warm. The fire crackles. Outside, very faintly, I can hear Rowan playing   they must be in the guest quarters overlooking the garden. Something without a melody, just chords, drifting.&lt;/p&gt;
+&lt;p&gt;I get into bed. The sheets are cold, then warm. The fire crackles. Outside, very faintly, I can hear Ash playing   &lt;&lt;print $bardPronoun&gt;&gt; must be in the guest quarters overlooking the garden. Something without a melody, just chords, drifting.&lt;/p&gt;
 
 &lt;p&gt;I think about my mother&#39;s eyes. The fire in them. The certainty. She&#39;s already decided. She decided before she called me. The two days aren&#39;t for her to make up her mind   they&#39;re for me to arrive at the conclusion she&#39;s already reached.&lt;/p&gt;
 
@@ -7729,7 +7780,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;p&gt;I think about the anonymous account in blue leather. &lt;em&gt;Whose are these? then, mine.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;I think about Rowan&#39;s words. &lt;em&gt;Finding out which parts were real all along.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I think about Ash&#39;s words. &lt;em&gt;Finding out which parts were real all along.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I think about the water dream that woke me this morning   the cold closing over my head, the half-second of not knowing whether I was sinking or rising. I didn&#39;t think about it again, all day. There wasn&#39;t room. Now it&#39;s the only thing in the room with me.&lt;/p&gt;
 
@@ -8022,7 +8073,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;p&gt;My chambers are... modest, for a prince. That&#39;s what the courtiers whisper, anyway, in that tone that makes &quot;modest&quot; sound like a disease. Bookshelves line two walls   histories, treatises on statecraft, a worn collection of Thornridge campaign journals that belonged to my grandmother. A training sword hangs above the desk, blade dull but grip worn smooth from years of evening drills when the yard was occupied. Maps pinned to the wall   the kingdom, the neighbouring territories, a crude sketch of the Ashborne lands I drew myself when I was seventeen and furious about something I can&#39;t remember now.&lt;/p&gt;
 
-&lt;p&gt;The half-finished letter on the desk catches my eye. I started writing to Rowan three weeks ago. Got as far as &lt;em&gt;&quot;The court is suffocating and I&#39;m considering taking up goat herding as an alternative career&quot;&lt;/em&gt; before I lost the energy to be funny. The ink has dried in the nib.&lt;/p&gt;
+&lt;p&gt;The half-finished letter on the desk catches my eye. I started writing to Ash three weeks ago. Got as far as &lt;em&gt;&quot;The court is suffocating and I&#39;m considering taking up goat herding as an alternative career&quot;&lt;/em&gt; before I lost the energy to be funny. The ink has dried in the nib.&lt;/p&gt;
 
 &lt;p&gt;I dress. Linen shirt, leather jerkin   the good one, with the reinforced shoulders, because I&#39;m sparring this morning and last time I wore the thin one Aldric&#39;s practice blade left a bruise the shape of a crescent moon on my collarbone. Dark trousers. Boots. The boots are getting worn at the heels. I should have the cobbler replace them. I won&#39;t. I&#39;ve broken them in perfectly and new boots are a betrayal of the feet.&lt;/p&gt;
 
@@ -8381,11 +8432,11 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
   [[Continue → |day-2_training_hub]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="day-2_npc_letter" tags="nobr" position="1100,1475" size="100,100">&lt;h3&gt;The Half-Written Letter&lt;/h3&gt;
 
-&lt;p&gt;I pick up the letter to Rowan. Three weeks old. The ink has crusted in the nib, and when I tap it, a flake of dried black drops onto the parchment.&lt;/p&gt;
+&lt;p&gt;I pick up the letter to Ash. Three weeks old. The ink has crusted in the nib, and when I tap it, a flake of dried black drops onto the parchment.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&quot;The court is suffocating and I&#39;m considering taking up goat herding as an alternative career &quot;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;That&#39;s where I stopped. I remember now. I was trying to be funny. Trying to write something light because Rowan&#39;s letters are always light   full of tavern stories and terrible puns and sketches of people they&#39;ve met on the road. A merchant with a moustache shaped like a seagull. A dog that stole a whole roast chicken from a banquet table. Small, beautiful things.&lt;/p&gt;
+&lt;p&gt;That&#39;s where I stopped. I remember now. I was trying to be funny. Trying to write something light because Ash&#39;s letters are always light   full of tavern stories and terrible puns and sketches of people met on the road. A merchant with a moustache shaped like a seagull. A dog that stole a whole roast chicken from a banquet table. Small, beautiful things.&lt;/p&gt;
 
 &lt;p&gt;I wanted to match that energy. I couldn&#39;t. Everything I tried to write after the goat herding line turned dark   &lt;em&gt;Mother is worse. The court is circling. I feel like I&#39;m standing on a trapdoor and someone&#39;s hand is on the lever.&lt;/em&gt;&lt;/p&gt;
 
@@ -8497,7 +8548,7 @@ Same stool. Same pastries. Same Marta.&lt;br&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;PERRIN&lt;/span&gt;&quot;Yes, Your Highness. Very quiet.&quot; He hesitates. &quot;Except   there was something. Around midnight. Music. From the guest wing.&quot;&lt;/div&gt;
 
-&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s Rowan. A friend.&quot;&lt;/div&gt;
+&lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;EDRIN&lt;/span&gt;&quot;That&#39;s Ash. A friend.&quot;&lt;/div&gt;
 
 &lt;div class=&quot;dialogue&quot;&gt;&lt;span class=&quot;speaker&quot;&gt;PERRIN&lt;/span&gt;&quot;Ah. Good music. Sad, though.&quot;&lt;/div&gt;
 

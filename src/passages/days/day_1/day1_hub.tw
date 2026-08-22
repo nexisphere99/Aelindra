@@ -12,7 +12,7 @@
 <div class="room-zone">
   <h3>🛏 The Bed</h3>
   <p class="loc-flavor">Soft linens, white stone walls, sunlight through narrow windows. This is where you woke up.</p>
-  <<if $timeSlot is "NIGHT" and $d1f_rowan and not $d1f_night>>
+  <<if $timeSlot is "NIGHT" and $d1f_ash and not $d1f_night>>
     <span class="badge main">⚔ Try to sleep</span>
     [[Lie down → |day1_night]]
   <</if>>
@@ -51,10 +51,10 @@
   <<if $timeSlot is "EVENING" and not $d1f_npc_queen_message>>
     <span class="badge side">🗡 A soft knock   and a sealed note</span>
   <</if>>
-  <<if $timeSlot is "EVENING" and $d1f_npc_queen_message and not $d1f_rowan>>
-    <span class="badge main">⚔ Three taps, pause, two more   Rowan</span>
+  <<if $timeSlot is "EVENING" and $d1f_npc_queen_message and not $d1f_ash>>
+    <span class="badge main">⚔ Three taps, pause, two more   Ash</span>
   <</if>>
-  <<if $d1f_rowan and not $d1f_npc_marta_tray>>
+  <<if $d1f_ash and not $d1f_npc_marta_tray>>
     <span class="badge side">🗡 A tray on the floor outside</span>
   <</if>>
   [[Check the door → |day1_door_hub]]

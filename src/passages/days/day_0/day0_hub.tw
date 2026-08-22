@@ -11,7 +11,7 @@
 <div class="loc-card loc-final">
   <<locationImage "moonspire_bridge" "The Bridge to Moonspire Tower">>
   <h3>🌙 The Bridge   Moonspire Tower</h3>
-  <p class="loc-flavor">The covered bridge. Thirty paces between who you are and who you're about to become. Rowan is waiting at the near end.</p>
+  <p class="loc-flavor">The covered bridge. Thirty paces between who you are and who you're about to become. Ash is waiting at the near end.</p>
   <span class="badge main">⚔ Cross the Bridge   When You're Ready</span>
   <p class="loc-warning">⚠ <em>Once you cross, you cannot return. Complete any remaining business first.</em></p>
   <<if $bridgeWarningAcknowledged>>
