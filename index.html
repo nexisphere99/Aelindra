@@ -606,6 +606,21 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
    RIGHT SIDEBAR   MC PORTRAIT
    ================================================================ */
 
+/* Current public build version, top of the right sidebar */
+#version-badge {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--border-radius);
+  padding: 3px 0;
+  margin-bottom: 10px;
+}
+
 /* Portrait Frame */
 #mc-portrait-frame {
   width: 100%;
@@ -2447,6 +2462,15 @@ document.addEventListener('DOMContentLoaded', function () {
   &lt;!-- RIGHT SIDEBAR   MC Portrait &amp; Body Info --&gt;
   &lt;div id=&quot;sidebar-right&quot; role=&quot;complementary&quot;&gt;
     &lt;div id=&quot;sidebar-right-inner&quot;&gt;
+
+      &lt;!-- Current public build version. Plain static text, not a
+           $variable/widget - matches how the endOfContentNotice
+           widgets already handle this (see the comment there:
+           &quot;Update the version label in one place when a new build
+           ships&quot;). Update this line the same way, on the same
+           occasions, when this branch&#39;s public version number
+           advances. --&gt;
+      &lt;div id=&quot;version-badge&quot;&gt;Version 0.2&lt;/div&gt;
 
       &lt;!-- MC Portrait Frame --&gt;
       &lt;div id=&quot;mc-portrait-frame&quot;&gt;

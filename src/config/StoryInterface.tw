@@ -108,6 +108,15 @@
   <div id="sidebar-right" role="complementary">
     <div id="sidebar-right-inner">
 
+      <!-- Current public build version. Plain static text, not a
+           $variable/widget - matches how the endOfContentNotice
+           widgets already handle this (see the comment there:
+           "Update the version label in one place when a new build
+           ships"). Update this line the same way, on the same
+           occasions, when this branch's public version number
+           advances. -->
+      <div id="version-badge">Version 0.2</div>
+
       <!-- MC Portrait Frame -->
       <div id="mc-portrait-frame">
         <div id="mc-portrait-border">

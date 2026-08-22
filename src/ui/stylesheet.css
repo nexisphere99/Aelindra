@@ -484,6 +484,21 @@ body.mobile-sidebar-active #mobile-sidebar-backdrop {
    RIGHT SIDEBAR   MC PORTRAIT
    ================================================================ */
 
+/* Current public build version, top of the right sidebar */
+#version-badge {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--border-radius);
+  padding: 3px 0;
+  margin-bottom: 10px;
+}
+
 /* Portrait Frame */
 #mc-portrait-frame {
   width: 100%;
