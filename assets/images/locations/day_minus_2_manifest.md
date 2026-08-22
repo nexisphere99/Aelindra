@@ -15,7 +15,7 @@ happening there. Art tied to one specific passage/story moment instead
 anything that wouldn't make sense reused elsewhere) lives in
 `assets/images/scenes/` instead, via the sibling `<<sceneImage>>` macro  
 identical mechanics, different folder, so this one doesn't fill up with
-one-off art that isn't actually a place. See `assets/images/scenes/day_minus_2_manifest.md`
+one-off art that isn't actually a place. See `assets/images/scenes/day_minus_2/day_minus_2_manifest.md`
 for that folder's per-day structure.
 
 | Filename | Used by | Prompt |
@@ -28,7 +28,7 @@ for that folder's per-day structure.
 | `royal_gardens.png` | Hub cards and sub-hubs across Day -2/-1/0 (day-2_hub, day-2_gardens_hub, day-1_hub, day-1_gardens_hub, day0_hub, day0_gardens   generic reuses, no Ash in frame) | Castle gardens at twilight. Stone paths between night-blooming jasmine and winter roses. A silver stag fountain catches the last copper light. Empty bench, no figures. First stars appearing. Atmosphere: fleeting beauty, fragile comfort, the calm before upheaval. |
 
 The day-2_gardens.tw arrival banner (Ash on the bench, male/female variants)
-moved to `assets/images/scenes/day_minus_2_manifest.md`   it's a single-passage
+moved to `assets/images/scenes/day_minus_2/day_minus_2_manifest.md`   it's a single-passage
 narrative beat wired via `<<sceneImage>>`, not a reusable place, so it lives
 with the other scene art instead of cluttering this location-only folder.
 | `kitchens.png` | day-2_hub card, day-2_kitchen | Massive medieval palace kitchen. Multiple hearths blazing, pots on ceiling hooks, steam and flour in the air. A stout, formidable woman (50s, flour in hair, wooden spoon in hand) watches a young dark-haired prince eating a pastry on a stool. Around them, kitchen staff in organized chaos. Warm amber light. Atmosphere: warmth, comfort, a sanctuary of routine. |

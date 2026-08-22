@@ -1,9 +1,11 @@
 # Day 0   Scene Images
 
 Same `<<sceneImage>>` native macro as Day -2 (see
-`day_minus_2_manifest.md`)   fails silently if missing. Day 0 is where this
-split earns its keep: five of seven Day 0 art pieces are single-passage
-narrative beats, not reusable rooms.
+`../day_minus_2/day_minus_2_manifest.md`)   fails silently if missing, one
+subfolder per day, slug includes the day folder:
+`<<sceneImage "day_0/void" "...">>`. Day 0 is where this split earns its
+keep: five of seven Day 0 art pieces are single-passage narrative beats,
+not reusable rooms.
 
 | Filename | Used by | Prompt |
 |---|---|---|
@@ -14,9 +16,9 @@ narrative beats, not reusable rooms.
 | `void.png` | day0_void | Pure darkness with a single point of light at the center   a heartbeat rendered as a faint pulse of warm gold in infinite black. At the very edge of hearing (visually implied by thin luminous threads), the ghost of lute strings. Atmosphere: the space between, total absence, the mercy of unconsciousness before waking to a new body. |
 | `void_futa.png` | day0_void_futa | Darkness with two parallel threads of light   one silver, one amber   running through infinite black space, not merging but flowing alongside each other. A faint pulse of gold at their convergence point. Atmosphere: dual identity suspended, the body holding both. |
 
-Selected via `<<set _bridgeImg to ($bardGender is "female") ? "moonspire_bridge_ash_female" : "moonspire_bridge_ash_male">>`
+Selected via `<<set _bridgeImg to ($bardGender is "female") ? "day_0/moonspire_bridge_ash_female" : "day_0/moonspire_bridge_ash_male">>`
 then `<<sceneImage _bridgeImg "The Bridge">>` in `day0_bridge.tw`; the rest
-are plain `<<sceneImage "slug" "...">>` calls with no gender branching.
+are plain `<<sceneImage "day_0/slug" "...">>` calls with no gender branching.
 
 `moonspire_bridge.png` (the empty-bridge hub-card shot) and
 `moonspire_ritual_chamber_prepared.png` (the prepared-but-empty altar room
