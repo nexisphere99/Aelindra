@@ -89,7 +89,15 @@
    rather than one shared/parameterised one now that the wording has
    actually diverged (female: "we wrote this much, more is coming";
    futa: "this route isn't written yet at all"). Update both version
-   labels together when a new build ships. */
+   labels together when a new build ships.
+
+   NOTE (merge from v0.1): v0.1 gates its own public build to stop at
+   Day 0 and uses a single shared <<endOfContentNotice>> widget for
+   that, called directly from day0_void.tw / day0_void_futa.tw. That
+   gate is v0.1-specific and does not apply here - v0.2's Day 0 exit
+   passages keep their normal [[Wake → ...]] links into Day 1, so this
+   branch keeps its own pre-existing two-widget split below instead of
+   picking up v0.1's single widget. */
 
 /* Futa route: day1_hub_futa.tw. Its Day 1 doesn't exist yet, so this
    fires right where Day 0 hands off. */
