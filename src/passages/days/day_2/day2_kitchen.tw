@@ -1,0 +1,21 @@
+:: day2_kitchen [nobr]
+<<locationImage "kitchens" "Palace Kitchens">>
+<h2>🍞 Palace Kitchens</h2>
+<p>Heat, steam, three hearths blazing. The smell of fresh bread and rosemary. The kitchen is running at normal tempo   not crisis, not siege. Normal.</p>
+
+<<completeObjective "explore_palace">>
+
+<<if not $d2f_npc_marta>>
+<div class="interaction-card side">
+  <<npcPortrait "marta" "Marta">>
+  <h4>👩‍🍳 Head Cook Marta</h4>
+  <p>She sees you in the doorway. For one fraction of a second her face does something. Then: a pointed finger. The stool.</p>
+  [[Sit → |day2_npc_marta]]
+</div>
+<<else>>
+  <p class="empty-note">The kitchen hums on. Marta is back to commanding her domain. No one else needs your attention.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day2_hub]]
+</div>

@@ -1,0 +1,19 @@
+:: day2_npc_nara_package [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Nara's Package</h3>
+
+<p>A small crystal sphere, about the size of a walnut. When I hold it, it warms in my palm. And from inside   faintly, tinily   three notes. The same three notes. Playing on a loop.</p>
+
+<p>The sympathetic resonance. She got it working. Across the distance between the tower and the palace, the crystal resonates with her music box. Three notes, transmitted through enchanted crystal, playing in my palm.</p>
+
+<p>She gave me a piece of the tower to carry. A signal that says <em>I'm here, I'm here, I'm here</em>   in a language made of magic and bad baking and earnest, uncomplicated love.</p>
+
+<<set $hasResonanceCrystal to true>>
+<<addItem "resonance_crystal" "Resonance Crystal" "A walnut-sized crystal that plays three notes on a loop, resonating with Nara's music box in the tower.">>
+<<set $stress -= 4>>
+<<set $statRES += 1>>
+<<set $silverveilFamiliarity += 3>>
+
+<div class="scene-end">
+  [[Continue → |day2_chambers_hub]]
+</div>

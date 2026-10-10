@@ -1,0 +1,43 @@
+:: day2_npc_caedric [nobr]
+<<npcPortrait "caedric" "Ser Caedric">>
+<h3>Ser Caedric   The Bench Observes</h3>
+
+<p>The bench. The knight. The rusted sword. Unchanged. The most stable element in a palace that has been rearranged by my transformation.</p>
+
+<p>He doesn't stand. He never stands. But he looks at me   and for the first time since Day -2, his expression shifts into something I haven't seen before. Not surprise (he knew). Not calculation (he's too old for politics). Something softer. Recognition.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"There she is."</div>
+
+<p>Two words. Present tense. Not <em>there he is</em>   <em>there she is.</em> As if I arrived, rather than changed. As if the person sitting on this bench for twelve years was waiting for THIS version of me to appear, and now that I have, the waiting is over.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Ser Caedric."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Sit."</div>
+
+<p>I sit. The bench is the same   warm from his presence, worn smooth. I'm smaller on it. My feet are further from the ground. The portraits of queens above us look down, and for the first time, they're looking at someone who belongs in their line.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"You look like your grandmother. Around the eyes. And the jaw   she had that same set. The 'I dare you to comment' jaw. She used it on everyone from the Elder Council to the stable master."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Did it work?"</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"The Council confirmed her succession in three minutes. The stable master still gave her a difficult horse. Some things don't respond to jaws."</div>
+
+<p>He adjusts his sword belt. The leather creaks. The sound is the same sound it's been making for twelve years.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"You're scared."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"I'm terrified."</div>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"Good. Your grandmother was terrified. Your mother was terrified. Every queen in those portraits was terrified on the day the crown touched her head. The ones who WEREN'T terrified were the bad ones." He looks up at the portraits. "Fear means you understand what's at stake. Fearlessness is just ignorance in armour."</div>
+
+<p>He pats the bench beside me. The wood, worn smooth. The same bench.</p>
+
+<div class="dialogue"><span class="speaker">CAEDRIC</span>"I'll be here. Same bench. Same sword. Same stubbornness."</div>
+
+<<set $d2f_npc_caedric to true>>
+<<set $statRES += 3>>
+<<set $stress -= 8>>
+
+<div class="scene-end">
+  [[Continue → |day2_corridors]]
+</div>

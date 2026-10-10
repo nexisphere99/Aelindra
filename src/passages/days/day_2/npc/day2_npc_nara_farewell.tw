@@ -1,0 +1,35 @@
+:: day2_npc_nara_farewell [nobr]
+<<npcPortrait "nara" "Nara">>
+<h3>Apprentice Nara   Farewell from the Tower</h3>
+
+<p>She's at the bottom of the stairs. Music box clipped to her belt   still playing three notes, still broken, still Nara. She's holding a small wrapped package.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"You're leaving." Not a question. She can see the determination   the set of my jaw (soft now, but the expression hasn't changed), the pack Ilara helped me assemble, the fact that I'm wearing my own ill-fitting clothes because I'd rather look absurd than wear something that acknowledges the new body.</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"I'm going home."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"The tower was nice, though. Quiet. Good acoustics." She holds out the package. "I made you something. Don't open it until you're in your chambers. And don't tell Ilara   she'd say it's energetically irresponsible."</div>
+
+<p>The package is light. I can feel something small and hard inside the wrapping   metal, maybe, or crystal.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Nara. Thank you. For the tea. The biscuits. The music boxes."</div>
+
+<div class="dialogue"><span class="speaker">NARA</span>"The biscuits were terrible."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"The biscuits were terrible. The kindness wasn't."</div>
+
+<p>Her brown eyes go bright. She blinks rapidly.</p>
+
+<div class="dialogue"><span class="speaker">NARA</span>"Go. Before I cry and short-circuit the sympathetic resonance experiment, which I ALMOST have working and I can't afford the emotional interference."</div>
+
+<p>I put the package in my pack. Behind me, three notes play, growing fainter with distance.</p>
+
+<<set $d2f_npc_nara_farewell to true>>
+<<set $stress -= 4>>
+<<set $statRES += 1>>
+
+<<completeObjective "nara_farewell">>
+
+<div class="scene-end">
+  [[Continue → |day2_tower_hub]]
+</div>

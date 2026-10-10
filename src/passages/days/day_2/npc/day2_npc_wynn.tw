@@ -1,0 +1,29 @@
+:: day2_npc_wynn [nobr]
+<<npcPortrait "wynn" "Old Wynn">>
+<h3>Old Wynn   New Growth</h3>
+
+<p>He's at the jasmine. Trowel in hand. The new growth is visible   green shoots pushing outward from where the dead branches were cut. Different directions. Unexpected angles. The plant remaking itself.</p>
+
+<p>He doesn't turn when I approach. He knows my footstep   or rather, he knows SOMETHING is different about it, and the difference doesn't concern him because people change and footsteps change and the garden doesn't judge.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"New growth. Four shoots. Healthy. Vigorous. Going in directions I didn't predict."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Does that bother you?"</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"Does it bother the jasmine?" He stands. Looks at me. The sharp old eyes take in everything   the new body, the women's clothes, the face, the height. He looks the way he looks at a plant: assessing health, noting changes, predicting growth.</div>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"You're growing too. I can see it. The face is settling. The body is filling." He touches a jasmine shoot   the newest one, pushing outward toward the morning sun. "Don't fight the direction. Let the growth go where it goes. The jasmine doesn't argue with its own branches."</div>
+
+<p>He hands me a cutting. Fresh jasmine. Three white flowers, opening.</p>
+
+<div class="dialogue"><span class="speaker">WYNN</span>"For the new room. Whatever the room looks like now."</div>
+
+<<set $d2f_npc_wynn to true>>
+<<set $hasJasmineCutting to true>>
+<<addItem "jasmine_cutting" "Fresh Jasmine Cutting" "Three white flowers, opening. From Wynn, for the new room.">>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+
+<div class="scene-end">
+  [[Continue → |day2_gardens_hub]]
+</div>

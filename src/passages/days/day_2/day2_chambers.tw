@@ -1,0 +1,76 @@
+:: day2_chambers [nobr]
+<<locationImage "palace_chambers" "Your Chambers">>
+
+<h2>Your Chambers   The Old Life</h2>
+
+<p>Everything is the same. And therefore, everything is wrong.</p>
+
+<p>The ceiling. The crack. The smoke-stain halo. Unchanged. The ceiling I've mapped since I was twelve, the ceiling I stared at for three nights while deciding whether to walk to the tower. It's still there. I'm six inches closer to it.</p>
+
+<p>The mirror. Polished silver in its dark wood frame. I don't look. Not yet.</p>
+
+<p>The bookshelves. The maps pinned to the wall. The desk with its scarred surface and the inkwell and the quills. My things. In my room. The room of a man who lived here for twenty years and left three days ago and didn't come back.</p>
+
+<p>Someone came back. Someone with his eyes. But not him.</p>
+
+<p>The training sword on the wall. I reach for it   and the reach is different. My arm is shorter. My fingers close around the grip and the grip is too large, the sword too heavy, the balance wrong in a hand that is narrower and weaker. I hold it at extension   first position, feet apart, blade forward   and my arm trembles. The sword that I could hold steady for a minute, that I could spar with for an hour, is now a weight that my new muscles protest within seconds.</p>
+
+<p>I hang it back on the wall. Beside it, invisible but known: Aldric's practice sword, waiting on the rack in the training yard. The one sized for smaller hands. I'll use that one now. This one   Edrin's sword   stays on the wall. A monument.</p>
+
+<div class="scene-image"><<sceneImage "day_2/day2_wardrobe" "The wardrobe">></div>
+
+<p>The wardrobe. I open it. All men's clothing. Shirts with broad shoulders. Trousers with narrow hips. Jerkins designed for flat chests. I pull out a shirt   hold it up against my body. It hangs like a tent. The shoulders extend three inches past mine on each side. The chest gapes around breasts it wasn't designed to accommodate.</p>
+
+<p>I try the leather jerkin. The good one, with the reinforced shoulders. I buckle it. The leather compresses my breasts   painfully, the tissue mashed flat against my ribcage, the nipples screaming. The shoulders hang off me. The waist is enormous. I look in the mirror for the first time   involuntarily, the motion reflexive, and the mirror catches me before I can look away.</p>
+
+<p>A woman drowning in a man's wardrobe. The jerkin hangs like borrowed armour. The breasts bulge awkwardly beneath the leather, compressed but not hidden. My face   soft jaw, full lips, grey-blue eyes wide with an expression I don't want to name   peers out from above a neckline that was built for a neck three inches wider.</p>
+
+<p>I'm pretending. And I look exactly like what I am: someone pretending.</p>
+
+<p>I take off the jerkin. Throw it on the floor. Then pick it up and hang it back carefully, because I am a pr   because I was raised to maintain my things.</p>
+
+<p>The knock.</p>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Your Highness, the Archsorceress sent clothing selections. May I come in?"</div>
+
+<p><<npcPortrait "maren" "Maren">>Maren. Young   eighteen, brown-haired, gentle, with the wide earnest eyes of someone new to palace service and trying very hard to get everything right. She's been briefed. She's one of three handmaidens assigned to the princess. She enters carrying an armful of garments.</p>
+
+<p>The clothing. Riding trousers cut for women   fitted at hip and thigh. Blouses   feminine but not frilly, practical, Ilara knowing her audience. Breast support garments   structured linen, lightly boned, the medieval engineering solution to gravity. Undergarments. And one dress   dark blue, practical, included as an option.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"No dress."</div>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Of course, Your Highness."</div>
+
+<div class="scene-image"><<sceneImage "day_2/day2_clothing" "Women's clothing that fits">></div>
+
+<p>I change behind the screen. The riding trousers. I pull them up and they slide over my hips with the frictionless ease of clothing that was designed for the body wearing it. The fabric hugs my thighs, my ass, the curve of hip to waist. The fit is   good. That's the problem. They FIT. They fit the way Edrin's trousers used to fit: like they belong on this body. Because they belong on this body. Because this body is female and these trousers are female and the engineering is correct.</p>
+
+<p>The blouse. Soft, fitted at the waist, buttoning up the front with room at the chest for the breasts to occupy space without compression. I button it and look down   the swell of my chest is visible through the fabric. Two distinct curves, outlined by linen. Not dramatic   B-cup   but unmistakable. The blouse acknowledges what the jerkin tried to deny: there are breasts here and they are not going away.</p>
+
+<p>The breast support garment. Maren helps   her fingers professional, adjusting straps, settling the tissue into the structured cups, brushing the sides of my breasts with the impersonal efficiency of a woman performing a task she's been trained for. The contact is mortifying. Someone else's hands on the most intimate, most changed part of my body, arranging it into clothing that I didn't know existed three days ago.</p>
+
+<p>The support changes everything. The weight lifts. The bounce is controlled. The shape is contained   present but managed, the breasts existing within a structure that acknowledges them and supports them rather than fighting them.</p>
+
+<p>I stand before the mirror. Full-length. Women's riding trousers, blouse, support garment beneath. Hair loose to my shoulders.</p>
+
+<p>I look like a woman. A young, attractive, somewhat shell-shocked woman wearing practical clothing that fits her body. Not a prince in costume. Not a man pretending. Just a woman.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Fuck."</div>
+
+<p>The word exits quietly. Maren pretends not to hear. The mirror reflects it back.</p>
+
+<<set $d2f_chambers to true>>
+<<set $statFEM += 5>>
+<<set $statGRA += 3>>
+<<set $statALL += 2>>
+<<set $stress += 5>>
+<<set $timeSlot to "AFTERNOON">>
+
+<<completeObjective "chambers">>
+<<addObjective "gardens" "You need air. The gardens. The corridors. Anywhere but this room." "MAIN">>
+<<addObjective "maren_talk" "Maren is still in the room   she may have answers" "SIDE">>
+<<addObjective "explore_palace" "The palace has reopened   corridors, kitchens, familiar faces" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day2_hub]]
+</div>

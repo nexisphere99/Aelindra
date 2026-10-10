@@ -1,0 +1,76 @@
+:: day2_bath [nobr]
+<div class="scene-image"><<sceneImage "day_2/day2_bath" "The bath">></div>
+
+<h2>The Bath</h2>
+
+<p>Evening. Maren draws the bath. Hot water, herbs   lavender, chamomile, calming. Candle-lit. The bathing alcove off my chambers, the same one I've used for twenty years. The tub is copper, deep, large enough for a man of five-eleven.</p>
+
+<p>I'm not a man of five-eleven.</p>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Shall I assist you, Your Highness?"</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"No. Leave me."</div>
+
+<p>Alone. I undress. The women's clothes come off in the reverse order they went on   blouse, support garment, trousers, smallclothes. Each garment removed reveals another landscape of changed skin. The breasts without support: round, full at the B-cup, sitting higher than they will eventually sit (gravity hasn't had time to begin its work). The nipples hard in the cooling air   wider, darker, the areolae puffed and tender. The waist, the hips, the smooth mound between my thighs.</p>
+
+<p>I step into the bath.</p>
+
+<p>The gasp that exits me is involuntary and total   not pain but INTENSITY. Every nerve ending in this skin is tuned to a frequency I didn't know existed. The hot water hits my calves, my thighs, my hips, my stomach, and each contact point is a full-channel report: temperature, pressure, texture, the movement of the water, the mineral content, the herbs dissolving. My male body felt hot water as warm. This body feels it as an EVENT.</p>
+
+<p>The water reaches my breasts. They bob   gently, at the surface, the tissue less dense than water, floating with a surreal buoyancy that I watch with the detached fascination of a scientist observing something impossible. Two round, soft shapes, breaking the water's surface, the nipples just above the waterline, hardening further from the temperature contrast.</p>
+
+<p>I sink deeper. Hair spreads in the water   dark waves fanning out, floating. I close my eyes. The warmth seeps into the new muscles, the new bones. The ache in my hips eases. The tenderness in my chest dulls. The water doesn't judge. The water just holds.</p>
+
+<p>I lie back. Breathing. The water laps at my collarbones. My hands float at my sides. The bath is quiet except for the small sounds of water and breathing and the single candle flame that flickers in the draft from the window.</p>
+
+<p>My hands want to move. I can feel it   the way hands move when the body wants something and the mind hasn't been consulted.</p>
+
+<<set $d2f_bath to true>>
+<<set $stress to Math.max(0, $stress - 10)>>
+<<set $statFEM += 1>>
+<<set $timeSlot to "NIGHT">>
+
+<<completeObjective "bath">>
+
+<div id="bath-choices" class="choice-cards">
+  <div class="interaction-card side">
+    <h4>Wash clinically</h4>
+    <p>Scrub. Rinse. Exit. The body is a task, not a discovery.</p>
+    <<link "Clinical">>
+      <<set $d2f_bath_explored to false>>
+      <<replace "#bath-choices">><</replace>>
+      <<replace "#bath-continuation">>
+        <p>I make my hands do what hands are for. Soap   Maren's lavender, soft and green   across the shoulders, the arms, the long unfamiliar line of the back. The breasts, quickly, the way you'd wash anything that's difficult to look at. The stomach. The thighs. I keep my eyes on the candle and my attention on the checklist, and the checklist does not include discovery.</p>
+        <p>The water cools. The body is clean. That's enough. A task completed is a task that can be put down.</p>
+        <<include "day2_bath_towel">>
+      <</replace>>
+    <</link>>
+  </div>
+
+  <div class="interaction-card main">
+    <h4>Explore</h4>
+    <p>Carefully. Quietly. In the privacy of the water. Your hands want to know what's there.</p>
+    <<link "Explore">>
+      <<set $d2f_bath_explored to true>>
+      <<set $arousal to Math.min(100, $arousal + 20)>>
+      <<set $statALL += 1>>
+      <<set $statFEM += 2>>
+      <<replace "#bath-choices">><</replace>>
+      <<replace "#bath-continuation">>
+        <p>Down my body, underwater. Over the collarbones   more prominent now, delicate ridges. Over the breasts   I cup them. They're warm from the water, heavy for their size, fitting my palms with an intimacy that is both clinical and devastating. The nipples harden under my hands and the sensation travels   a line from chest to stomach to the space between my legs, a wire being pulled.</p>
+        <p>My hands move lower. Over the stomach   flat, soft. Over the hips   the bones wide beneath my palms, unfamiliar. To the mound. To the folds.</p>
+        <p>I touch the vulva underwater. My fingers find the outer labia   soft, plump, parting under the gentle pressure. Inner labia   slippery, thinner, delicate. The architecture of tissue that has existed for thirty-six hours and responds to touch as if it's always been here.</p>
+        <p>The clitoris. My fingertip brushes it   accidentally, deliberately, the distinction is lost in the electric jolt that shoots from the point of contact through my pelvis, my spine, the base of my skull. My hips jerk. Water sloshes. The sensation is PINPOINT   not the diffuse, shaft-based pleasure of male arousal but a concentrated, white-hot spark that radiates outward in concentric rings.</p>
+        <p>I gasp. Pull my hand away. Breathe.</p>
+        <p>The pleasure fades. Slowly. Like a bell that's been struck   the initial ring is sharp and specific, and the afterglow hums for seconds, settling into the tissue, becoming a warmth that is not quite arousal and not quite not.</p>
+        <p>I touch again. Carefully. One fingertip. Circling the clitoris   not directly, the sensitivity is too acute for direct contact, but around it, tracing the hood, the folds that shelter it. The pleasure builds   a climbing curve, steep, unfamiliar. My breathing accelerates. My thighs open wider in the water, an unconscious spreading, the body asking for more of what the hand is providing.</p>
+        <p>The pleasure builds faster than I expect. The climb is steep   steeper than male arousal, which was a long gradual slope. This is a wall. I'm scaling it and the top is approaching and I can feel the edge and beyond the edge is   </p>
+        <p>I stop. Sit up in the bath. Water sloshing. Breasts dripping. Heart pounding. The clitoris throbs   angry, protesting the withdrawal. The arousal doesn't vanish   it recedes reluctantly, like a tide that was promised the shore and is being denied.</p>
+        <p>Not yet. Not ready. To feel PLEASURE in this body would be to accept it, and I haven't accepted it. I'm surviving it. Surviving and accepting are different things. I can survive in a house I haven't agreed to live in.</p>
+        <<include "day2_bath_towel">>
+      <</replace>>
+    <</link>>
+  </div>
+</div>
+
+<div id="bath-continuation"></div>

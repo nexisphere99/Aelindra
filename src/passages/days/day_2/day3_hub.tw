@@ -1,0 +1,17 @@
+:: day3_hub [nobr]
+<!--
+  PLACEHOLDER   the current end of the public build's content
+  (female route). Day 2 is real content now; Day 3 ("Learning" -
+  the Queen's visit, the lessons begin) is not yet written.
+  Replace with real Day 3 content and its own day3fInit flag block
+  when written, and move the <<endOfContentNoticeFemale>> call
+  below down to wherever the new content's own final passage ends.
+-->
+<div class="day-transition">
+  <h2><<print formatDayNumber($dayNumber)>>   Learning</h2>
+  <p>(Day 3 content not yet written. Days -2 through Day 2 are fully playable end to end on the female route.)</p>
+  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
+  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+</div>
+
+<<endOfContentNoticeFemale>>

@@ -1,0 +1,36 @@
+:: day2_night [nobr]
+<<set _nightImg to "palace_chambers_night">>
+<<locationImage _nightImg "Your chambers at night">>
+
+<h2>First Night in Her Own Bed</h2>
+
+<p>The nightgown Maren left. Dark blue silk. I put it on because the alternative is naked and naked in this body in this room is too much exposure for one day.</p>
+
+<p>The silk slides over my skin and every inch of contact is a conversation between fabric and nerve endings that have nothing else to do but report. The nipples harden through the silk   two points pressing outward, visible, announcing themselves. The fabric drapes over my hips, my ass, the curve of my waist, and the shape it creates is the shape of a woman and the woman is me and the silk knows it even if I don't.</p>
+
+<p>I climb into bed. My bed. Edrin's bed. The mattress holds a body fifty pounds lighter, six inches shorter, shaped in curves where it used to be shaped in angles. I lie where he lay. The pillow holds a head with more hair. The sheets cover breasts that didn't exist three days ago.</p>
+
+<p>The furs settle over me. The weight of them on my chest   warm, pressing, the breasts compressed beneath. I feel them. Not with my hands   with the rest of my body. The weight, the warmth, the way they shift when I breathe.</p>
+
+<p>I think about my cock. Not sexually   nostalgically. The phantom limb. The weight that's missing. I know, intellectually, that the clitoris IS my cock   the same tissue, reformed, concentrated into a smaller, infinitely more sensitive structure. But it doesn't FEEL like my cock. My cock was familiar and comfortable and mine and it hung between my thighs like an old friend and the clitoris is a stranger who lives in my body and sends signals I don't understand in a language I don't speak.</p>
+
+<p>I reach between my legs in the dark. Don't touch   just rest my hand there. Over the mound. The soft warmth. The folds I can feel through the silk.</p>
+
+<p class="internal-thought"><em>This is me now. This is my body. This is where my cock was and now there's this.</em></p>
+
+<p>I sleep. Fitfully. I dream of riding a horse   in the dream, I'm male, and the saddle presses against cock and balls, and the rhythm is familiar and the day is bright and everything makes sense. I wake at dawn, disoriented, reaching between my legs for something that isn't there.</p>
+
+<p>The chipped canine. The grey-blue eyes. The crack in the ceiling.</p>
+
+<p>The breasts on my chest.</p>
+
+<p>Day 2 ends.</p>
+
+<<set $d2f_night to true>>
+<<set $statFEM += 2>>
+
+<<completeObjective "sleep">>
+
+<div class="scene-end">
+  [[Sleep → |day2_sleep_transition]]
+</div>

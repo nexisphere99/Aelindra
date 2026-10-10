@@ -1,0 +1,45 @@
+:: day2_npc_marta [nobr]
+<<npcPortrait "marta" "Marta">>
+<h3>Marta   The Stool</h3>
+
+<p>The kitchen is running at normal tempo   not crisis tempo, not siege tempo. Normal. Which means Marta has decided that the crisis is manageable and the appropriate response is regular output rather than panic baking. This is, paradoxically, more reassuring than the cheese pastries.</p>
+
+<p>She sees me in the doorway. For one second   one fraction of a second   her face does something. Not shock. Not pity. Something that passes too fast to name. Grief, maybe, for the boy. Joy, maybe, for the survival. Love, certainly, for the person regardless.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Sit."</div>
+
+<p>She points at the stool. The stool. My stool. The same stool I've been sitting on since I was nine years old, since I was small enough that my legs swung free and Marta had to put a box beneath for my feet.</p>
+
+<p>I sit. My legs don't swing   I'm not tall enough now for them to hang quite right, but I'm not short enough for the box. I'm in between. I'm in between everything.</p>
+
+<p>She puts food in front of me without asking. Bread. Cheese. Soup   thick, onion and thyme, the recipe that has been unchanged since before I was born. Two cheese pastries. An apple pastry.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Eat."</div>
+
+<p>I eat. The flavour is the same. The jaw chews differently. The throat swallows differently. But the food is Marta's food and Marta's food tastes the same regardless of the body consuming it because Marta's food operates on a level that transcends the merely physical.</p>
+
+<p>She watches me eat. The wooden spoon is in her hand   always, perpetually, the extension of her arm and her authority. She doesn't comment on the body. She doesn't mention the breasts or the hips or the voice or the face. She watches me eat the way she's watched me eat since I was nine: with the fierce, protective attention of a woman who believes that feeding someone is the highest form of care.</p>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Same stool. Same pastries."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Same Marta."</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Damn right." She takes the plate. Returns to her domain. Then, over her shoulder: "You need to eat more. You're burning through food   the body is still changing. I'll have extra trays sent to your chambers. Three meals isn't enough."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Marta, I can't eat four   "</div>
+
+<div class="dialogue"><span class="speaker">MARTA</span>"Five. Three meals and two snacks. The body wants what the body wants. Don't argue with the body OR with me. We both win."</div>
+
+<p>She's right. The hunger is constant   a low-grade demand that rises to a roar if I go more than three hours without food. The transformation is still consuming energy. The breasts are still growing. The body is still building itself and it needs raw materials and Marta is going to provide them whether I request it or not.</p>
+
+<p>The stool is the same. The pastries are the same. The love is the same.</p>
+
+<p>Some things survive the Rite.</p>
+
+<<set $d2f_npc_marta to true>>
+<<set $energy to Math.min(100, $energy + 15)>>
+<<set $stress -= 10>>
+
+<div class="scene-end">
+  [[Continue → |day2_kitchen]]
+</div>

@@ -1,0 +1,50 @@
+:: day2_aldric [nobr]
+<<npcPortrait "aldric" "Aldric">>
+<h2>Aldric in the Garden</h2>
+
+<p>He finds me. Of course he finds me   he's my guard, and finding me is his job, and Aldric does his job with the relentless precision of a man who defines himself by his duties.</p>
+
+<p>He rounds the hedge and sees me. I see him see me. And I watch his face because Aldric is incapable of deception   the man couldn't lie with a knife to his throat, his face is a broadsheet that publishes every emotion within seconds of its occurrence.</p>
+
+<p>His eyes widen. Not shock   he's been briefed, he knew what to expect in theory. But theory and practice are different animals, and the practice of seeing someone you've sparred with for six years sitting on a garden bench as a woman with puffy eyes and a cat on her lap is apparently different from the theory.</p>
+
+<p>His lips part. A breath enters that he doesn't release for several seconds. His hand twitches at his side   an aborted gesture, half-formed, the beginning of a reach that could have been a touch or a salute and was neither because he stopped it before it became anything.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"Your Highness."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Captain."</div>
+
+<p>Silence. The long kind. He stands at attention   spine straight, shoulders squared, chin level. The posture of a knight before his sovereign. But his eyes are doing something his posture won't allow: they're looking at me. Not at my body   at ME. Trying to find the person he knew in the person he's seeing.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I   you look   " He stops. Resets. The false start is agony   Aldric doesn't false-start. Aldric speaks in complete sentences the way he fights in complete techniques. "Is there anything you require?"</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"I require my old body back, a time machine, and for House Ashborne to spontaneously combust."</div>
+
+<p>The ghost of a smile. One corner of his mouth lifts   barely, just enough to shift the scar. I said something like Edrin would say. The humour, the dry bitterness, the stubbornness wrapped in sarcasm. He heard the person he knew through the voice he doesn't.</p>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I'll see what the armoury has in stock."</div>
+
+<p>I almost smile. The muscles work. The expression starts   the same pull at the corners, the same narrowing of the eyes. The same smile. In a different face.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Stay. If you want. Just... don't stare."</div>
+
+<div class="dialogue"><span class="speaker">ALDRIC</span>"I wouldn't dream of it, Your Highness."</div>
+
+<p>He stands guard. Not at attention   at ease, which for Aldric means his hands are clasped behind his back instead of at his sides and his feet are twelve inches apart instead of six. He stands three paces away. He faces outward, watching the garden paths, guarding the bench and the woman and the cat from threats that aren't coming.</p>
+
+<p>We don't speak. The silence is   comfortable. The most comfortable silence I've had in this body. Because Aldric doesn't need to fill silence with words. He fills it with presence. The simple, solid, unwavering presence of a man who is exactly where he's supposed to be, doing exactly what he's supposed to do, and who doesn't require conversation to confirm that he is here and he is staying.</p>
+
+<p>The cat purrs. The sun moves. The knight stands guard.</p>
+
+<<set $d2f_aldric to true>>
+<<set $affAldric += 5>>
+<<set $stress to Math.max(0, $stress - 5)>>
+<<set $statRES += 2>>
+<<set $timeSlot to "EVENING">>
+
+<<completeObjective "aldric_garden">>
+<<addObjective "bath" "The bath   you haven't properly bathed since the Rite" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day2_hub]]
+</div>

@@ -139,8 +139,20 @@ After building, open `index.html` directly in a browser to play.
   `AELINDRA_Day1_Revisions.md` (Rowan reads the choice in her body
   language rather than a nightgown silhouette; the night scene's "stay"/
   "thank you" callback to the pre-Rite mirror scene).
-- **Day 2 onward, both routes**   placeholder hubs only, confirming the
-  pipeline lands correctly.
+- **Day 2 ("The Body Speaks")   female route**   fully built. The open
+  world reopens: back to the `.location-grid`, but gated   the morning hub
+  shows only the Moonspire Tower and the bridge, and crossing the bridge
+  leads through the corridor gauntlet (semi-linear, with the Tobin page
+  boy embedded) into the chambers wardrobe/Maren scene, which unlocks the
+  palace hub (chambers, corridors, gardens, kitchens). Main chain: wake →
+  bridge → gauntlet → chambers → gardens (cry) → Aldric → bath (in-passage
+  Clinical/Explore choice) → night → `day2_sleep_transition` → Day 3
+  placeholder (`day3_hub.tw`, carries the end-of-content notice). 9
+  optional encounters, a new recurring NPC (Handmaiden Maren,
+  `$marenFamiliarity`), Nara's Resonance Crystal, and the Day 7 Elder
+  Council date seeded via Lady Harwick. Own init widget `day2fInit` /
+  `$d2f_*` flags, called from `day1_sleep_transition.tw`.
+- **Day 2 futa route, Day 3 onward**   placeholder hubs only.
 
 Each day's own `day{N}Init` widget owns that day's scene/NPC flags and is
 called from the *previous* day's sleep-transition/bridge passage  

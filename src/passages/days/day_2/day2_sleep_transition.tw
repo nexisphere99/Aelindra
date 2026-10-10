@@ -1,0 +1,17 @@
+:: day2_sleep_transition [nobr]
+<<set $dayNumber to 3>>
+<<set $dayLabel to "Learning">>
+<<set $timeSlot to "MORNING">>
+<<set $energy to 65>>
+<<set $stress -= 5>>
+<<set $mcBust to "B cup (growing)">>
+<<clearObjectives>>
+
+<div class="day-transition">
+  <h2>Night passes. You dream of riding a horse.</h2>
+  <p>In the dream, you're male. The saddle presses against cock and balls. The rhythm is familiar. The day is bright. Everything makes sense.</p>
+  <p>You wake at dawn, disoriented, reaching between your legs for something that isn't there.</p>
+  <p>The crack in the ceiling. The grey-blue eyes. The breasts on your chest   slightly larger than yesterday.</p>
+  <p class="transition-morning"><em>Day 3. The Queen visits today. The lessons begin.</em></p>
+  [[Dawn → |day3_hub]]
+</div>

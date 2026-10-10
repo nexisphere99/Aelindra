@@ -1,0 +1,62 @@
+:: day2f-init [widget nobr]
+
+/* ============================================================
+   DAY 2 ("The Body Speaks")   FEMALE ROUTE   SCENE & NPC FLAG INIT
+   Called once, from day1_sleep_transition.tw (female route),
+   mirroring day1fInit. Opens with <<clearObjectives>> per the
+   established convention.
+
+   NAMING: widget is "day2fInit" and every flag is prefixed d2f_
+   (Day -2 owns d2_ / day2Init, so Day 2 gets its own prefix, same
+   reason Day 1 uses d1f_).
+
+   ARCHITECTURE: the open world REOPENS. Day 1 was a single room
+   hub; Day 2 returns to the .location-grid, with the palace
+   locations gated behind crossing the bridge (see day2_hub.tw).
+   ============================================================ */
+<<widget "day2fInit">>
+  <<clearObjectives>>
+
+  /* --- Day 2 Scene Flags --- */
+  <<set $d2f_wake to false>>
+  <<set $d2f_bridge to false>>
+  <<set $d2f_gauntlet to false>>
+  <<set $d2f_chambers to false>>        /* Wardrobe confrontation + Maren clothing */
+  <<set $d2f_gardens to false>>         /* Cry scene */
+  <<set $d2f_aldric to false>>          /* Garden encounter */
+  <<set $d2f_bath to false>>
+  <<set $d2f_bath_explored to false>>   /* Player chose to explore in the bath */
+  <<set $d2f_night to false>>
+
+  /* --- Day 2 NPC Flags --- */
+  <<set $d2f_npc_nara_farewell to false>>
+  <<set $d2f_npc_pageboy to false>>
+  <<set $d2f_npc_harwick to false>>
+  <<set $d2f_npc_caedric to false>>
+  <<set $d2f_npc_marta to false>>
+  <<set $d2f_npc_maren to false>>
+  <<set $d2f_npc_queen_note to false>>
+  <<set $d2f_npc_perrin to false>>
+  <<set $d2f_npc_wynn to false>>
+
+  /* --- New NPC: Handmaiden Maren (recurring from today) --- */
+  <<set $marenFamiliarity to 0>>
+
+  /* --- Elder Council presentation (established by Harwick) --- */
+  <<set $councilPresentationDay to 7>>
+  <<set $councilPresentationKnown to false>>
+
+  /* --- New items --- */
+  <<set $hasResonanceCrystal to false>>
+  <<set $hasJasmineCutting to false>>
+
+  /* --- Body update (portrait stays aelindra_day1 until Day 3+) --- */
+  <<set $mcBust to "B cup">>
+  <<set $mcBreastSize to "B">>
+
+  /* --- Day framing --- */
+  <<set $dayNumber to 2>>
+  <<set $dayLabel to "The Body Speaks">>
+  <<set $timeSlot to "MORNING">>
+  <<set $energy to 70>>
+<</widget>>

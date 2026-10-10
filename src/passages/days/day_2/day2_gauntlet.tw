@@ -1,0 +1,54 @@
+:: day2_gauntlet [nobr]
+<div class="scene-image"><<sceneImage "day_2/day2_gauntlet" "The gauntlet">></div>
+
+<h2>Palace Corridors   The Gauntlet</h2>
+
+<p>The corridors are a gauntlet.</p>
+
+<p>I take the most direct route to my chambers   the central corridor, the main artery of the palace, because taking a back route would be hiding and I refuse to hide in my own home. This is MY palace. These are MY corridors. The portraits on the walls are MY ancestors   six hundred years of queens looking down at me from their frames, and I may be wearing the wrong clothes and standing six inches shorter than I did three days ago but I am STILL the heir to this throne and I will walk these corridors with my head up or I will not walk them at all.</p>
+
+<p>The servants. They bow, avert eyes, steal glances when they think I'm not looking. I am always looking. I FEEL their gazes   a physical sensation, the weight of eyes on skin that is newly sensitive to everything including scrutiny. A woman scrubbing the floor looks up, sees me, and drops her brush. The clatter echoes in the corridor. She scrambles for it, face flushed, murmuring apologies.</p>
+
+<p>A page boy turns a corner, sees me   the person in prince's clothes who is clearly not the prince, who has the prince's grey-blue eyes in a woman's face and the prince's stride in a woman's hips   and walks directly into the wall. The sound of his forehead hitting stone is almost comical. Almost. He bounces off, clutching his face, and his companions drag him away with whispered urgency.</p>
+
+<p>Two courtiers in the junction near the east wing. They see me coming and their conversation stops   not gradually, not trailing off, but stopping like a door slamming shut. They bow. One of them   Lord Something, I can't remember, minor house, no importance   looks at me and his expression cycles through surprise, confusion, assessment, and settles on the careful blankness of a man who is going to report what he saw to his allies within the hour.</p>
+
+<p>Past the junction, the page boy is waiting. Or rather   he's been posted there with a message for someone, his companions have abandoned him, and his forehead has a red mark, and he's standing alone looking like he wants the flagstones to swallow him. He sees me. Goes crimson. Opens his mouth. Closes it.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"You're the one who met the wall." My voice   the woman's voice   carrying the same dry tone that Edrin used. The same words Edrin would have chosen.</div>
+
+<div class="dialogue"><span class="speaker">PAGE</span>"I   Your Highness   I'm so sorry, I didn't   I wasn't expecting   you look very   " He's fourteen. He's terrified. He's stammering with the desperate incoherence of a teenager who has done something embarrassing in front of royalty and is trying to die of shame but his body won't cooperate.</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Different?"</div>
+
+<div class="dialogue"><span class="speaker">PAGE</span>"Beautiful," he blurts. Then goes so red that the wall-bruise disappears into the general flush. "I mean   different! I meant different! I didn't   oh no   "</div>
+
+<p>Despite everything   the gauntlet, the stares, the woman with the brush, the corridors that feel different at five foot six   I laugh. A small, real laugh. The sound surprises both of us. It's higher than Edrin's laugh. But the humour behind it is the same: the ability to find something funny in the middle of a disaster.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"What's your name?"</div>
+
+<div class="dialogue"><span class="speaker">TOBIN</span>"Tobin, Your Highness. Page to Lord Merrick. I'm   I'm very sorry about the wall."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"The wall will survive. Tell Lord Merrick I said his page has good reflexes, if not spatial awareness."</div>
+
+<p>He bows   deep, grateful, the bow of a fourteen-year-old who has just been forgiven by someone he accidentally offended and who is now going to tell every page in the palace that the new princess is actually funny. The gossip will spread. The story will become legend. The page who walked into a wall because the princess was pretty. It's not the worst reputation to begin with.</p>
+
+<p>I keep my head up. My jaw is set   the jaw that used to be sharp and is now soft, but the EXPRESSION is the same. The same stubborn set, the same defiant angle. The muscles for defiance live in the same place regardless of the jawline that houses them.</p>
+
+<p class="internal-thought"><em>Don't look at me. Don't you DARE look at me with pity.</em></p>
+
+<p>My chambers. The door. The same heavy oak I've pushed open ten thousand times. The handle is higher now   I have to reach slightly. The door is heavier   I have less upper body strength. I push it open. Step inside.</p>
+
+<p>Close it behind me.</p>
+
+<p>Lock it.</p>
+
+<<set $d2f_gauntlet to true>>
+<<set $d2f_npc_pageboy to true>>
+<<set $stress += 7>>
+<<set $statGRA += 1>>
+<<set $repStaff += 1>>
+
+<div class="scene-end">
+  [[Your chambers → |day2_chambers]]
+</div>

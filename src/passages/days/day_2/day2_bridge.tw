@@ -1,0 +1,39 @@
+:: day2_bridge [nobr]
+<<locationImage "moonspire_bridge" "The Bridge">>
+
+<h2>The Bridge   Return</h2>
+
+<p>The bridge. The same thirty paces I crossed two mornings ago walking toward the tower. Walking toward the Rite. Walking as a man.</p>
+
+<p>I'm walking back as a woman.</p>
+
+<p>I'm wearing my own clothes   trousers, shirt, boots. Edrin's clothes. They fit the way a tent fits a tent pole: technically covering, functionally useless, aesthetically disastrous. The trousers are too long   I've cuffed them. The waist is too wide   I've cinched a belt so tight that the excess fabric bunches over my hips, which strain against the seat and thighs because the trousers were cut for a male pelvis and my pelvis is no longer male. The shirt drapes off my shoulders like a surrender flag and pulls tight across the chest where the breasts push the fabric outward in two distinct, unavoidable mounds.</p>
+
+<p>The boots are half a size too big. I shuffle slightly. The sound of my footsteps is different   lighter, shorter stride, the gait of a smaller body in too-large shoes.</p>
+
+<p>The wind on the bridge hits me differently. I'm shorter   the railing that I used to look over, I now look THROUGH, my eyeline at the level of the stone coping rather than above it. The wind reaches more of me   the shirt billows, the hair whips (so much hair, why is there so MUCH of it), and I'm colder because the skin is thinner and the body has less mass and the wind cuts through everything.</p>
+
+<p>The river below sounds the same. The spray tastes the same. The minerals and deep earth and the particular cold of water that has been underground for centuries   the same. The bridge doesn't care about my body. The bridge is stone.</p>
+
+<p>On the palace side: guards. They've been informed. I can tell because their faces have the careful neutrality of men who have been briefed on a situation and told to show no reaction. They stand at attention. They bow   the same bow they gave the prince, adjusted neither upward nor downward in deference.</p>
+
+<p>One guard   young, new, probably a recent transfer   stares. Not maliciously. With the wide-eyed confusion of a man seeing something his brain can't categorise. His companion elbows him. Hard. The staring stops.</p>
+
+<div class="dialogue"><span class="speaker">GUARD</span>"Your Highness." The senior guard. His voice is steady. His eyes don't drop below my face. Professional. I'll take professional.</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"At ease."</div>
+
+<p>My voice. The woman's voice. Higher, softer, giving a military command that sounds like a suggestion rather than an order. The guards shift but the shift is different   they're not responding to the voice they're used to. They're adjusting to a new register, a new authority, a new version of the person they're sworn to protect.</p>
+
+<p>I walk into the palace.</p>
+
+<<set $d2f_bridge to true>>
+<<set $timeSlot to "MIDDAY">>
+
+<<completeObjective "bridge_return">>
+<<completeObjective "nara_farewell">>
+<<addObjective "chambers" "Confront the old life   your chambers" "MAIN">>
+
+<div class="scene-end">
+  [[Enter the palace → |day2_gauntlet]]
+</div>

@@ -1,0 +1,19 @@
+:: day2_tower_hub [nobr]
+<<locationImage "moonspire_tower" "Moonspire Tower">>
+<h2>🌙 Moonspire Tower</h2>
+<p>White stone. Narrow windows. The faint electric hum of ambient magic. The room behind you is already a little less yours.</p>
+
+<<if $d1_npc_nara and not $d2f_npc_nara_farewell>>
+<div class="interaction-card side">
+  <<npcPortrait "nara" "Nara">>
+  <h4>🎵 Three Notes at the Bottom of the Stairs</h4>
+  <p>A music box, still broken, still playing its fragment of melody. She's holding something small, wrapped in cloth.</p>
+  [[Go down → |day2_npc_nara_farewell]]
+</div>
+<<else>>
+  <p class="empty-note">Nothing more to do here. Ilara has said her piece. The bridge is waiting.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Back to the hub|day2_hub]]
+</div>

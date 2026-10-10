@@ -1,0 +1,11 @@
+:: day2_bath_towel [nobr]
+<<set $statFEM += 2>>
+<p>I stand. Water cascading off a body that is curved where it was flat, soft where it was hard, five inches shorter than the body that last stood in this tub. I reach for the towel.</p>
+
+<p>I wrap it above my breasts. Instinctively   the wrap goes ABOVE, tucking at the chest, covering from sternum to thigh, the way women wrap towels. Not at the waist, the way men do. The feminine gesture arrives without conscious decision. The body knows. The body is teaching me things I didn't agree to learn.</p>
+
+<<addObjective "sleep" "Sleep   in your own bed" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day2_hub]]
+</div>

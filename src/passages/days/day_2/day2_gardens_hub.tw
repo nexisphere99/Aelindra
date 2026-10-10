@@ -1,0 +1,38 @@
+:: day2_gardens_hub [nobr]
+<<locationImage "royal_gardens" "Royal Gardens">>
+<h2>🌿 Royal Gardens</h2>
+<p>Late afternoon. Jasmine and cut herbs. The silver stag pours water from its antlers.</p>
+
+<<if not $d2f_gardens>>
+<div class="interaction-card main">
+  <h4>🪨 The Stone Bench</h4>
+  <p>The same bench. You can't stay in the chambers   the walls are closing in. Fewer eyes out here, down the servant stairs.</p>
+  [[Sit → |day2_gardens]]
+</div>
+<</if>>
+
+<<if $d2f_gardens and not $d2f_aldric>>
+<div class="interaction-card main">
+  <<npcPortrait "aldric" "Aldric">>
+  <h4>👣 Footsteps on the Gravel</h4>
+  <p>Heavy. Even. Someone rounding the hedge   he was always going to find you.</p>
+  [[Look up → |day2_aldric]]
+</div>
+<</if>>
+
+<<if $d2_npc_wynn and not $d2f_npc_wynn>>
+<div class="interaction-card side">
+  <<npcPortrait "wynn" "Old Wynn">>
+  <h4>🌱 The Jasmine   New Growth</h4>
+  <p>The old gardener, trowel in hand, tending shoots that are going in directions he didn't predict.</p>
+  [[Approach → |day2_npc_wynn]]
+</div>
+<</if>>
+
+<<if $d2f_gardens and $d2f_aldric and (not $d2_npc_wynn or $d2f_npc_wynn)>>
+  <p class="empty-note">The garden is quiet. Just the fountain, the jasmine, and the long light.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day2_hub]]
+</div>

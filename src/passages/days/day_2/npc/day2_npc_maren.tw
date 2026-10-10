@@ -1,0 +1,53 @@
+:: day2_npc_maren [nobr]
+<<npcPortrait "maren" "Maren">>
+<h3>Handmaiden Maren   The First Dressing</h3>
+
+<p>She's tidying. Folding the men's clothes I discarded, hanging them in the wardrobe with the care of someone who understands that these garments are relics, not rubbish.</p>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Your Highness... may I speak freely?"</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"You're folding my dead wardrobe. I think we've passed the formality threshold."</div>
+
+<p>She smiles. Small, careful.</p>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"I was assigned to you because Mistress Alva said I was 'least likely to stare or say something idiotic.' I think that was a compliment."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"From Alva, that's practically a marriage proposal."</div>
+
+<p>She sets down the shirt she's folding. Looks at me   directly, without the sidelong glances the corridor servants deployed. Direct. Honest.</p>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"I've served three ladies at court. Lady Veltham, Lady Thornecrest's daughter, and the Tormark ambassador's wife. I know how to dress a woman, manage a wardrobe, assist with bathing and grooming, and maintain discretion about private matters." She pauses. "I also know that you didn't ask for any of this. And I know that having a stranger help you into a breast support garment is probably not how you imagined your week going."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"It was not at the top of the list, no."</div>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Then I'll make it as painless as possible. I'm here to help, not to observe. Whatever you need   clothing adjustments, hair management, questions about the body that you don't want to ask the Archsorceress because she's too clinical, or questions you don't want to ask anyone because they're too embarrassing   I'm here."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Questions about the body?"</div>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Lady Veltham's daughter was fourteen when I served her. She had a LOT of questions about the body. I answered all of them without judgment. I'll extend you the same courtesy, Your Highness."</div>
+
+<p>The offer is genuine. And the comparison   me to a fourteen-year-old girl going through puberty   is simultaneously insulting and completely accurate. I'm going through puberty. Second puberty, compressed and magical, but puberty nonetheless. The breasts, the hormones, the emotional volatility, the body changing faster than the mind can track. I'm a twenty-year-old woman experiencing fourteen-year-old milestones at ten times the speed.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Maren. The breast support garment. The one you helped me with."</div>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Yes?"</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Is it supposed to itch?"</div>
+
+<div class="dialogue"><span class="speaker">MAREN</span>"Slightly, at first. The linen needs to soften   it's new. After three washings, it'll feel like a second skin. Would you like me to wash it tonight? I can have it ready by morning."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Please."</div>
+
+<p>And like that   with a question about itchy linen and a practical answer about washing cycles   the relationship begins. Not dramatic. Not emotional. Just a woman asking another woman about the mechanics of wearing a bra, and the other woman answering, and the normalcy of the exchange being its own kind of healing.</p>
+
+<<set $d2f_npc_maren to true>>
+<<set $statGRA += 1>>
+<<set $statFEM += 1>>
+<<set $stress -= 3>>
+<<set $marenFamiliarity += 3>>
+
+<<completeObjective "maren_talk">>
+
+<div class="scene-end">
+  [[Continue → |day2_chambers_hub]]
+</div>

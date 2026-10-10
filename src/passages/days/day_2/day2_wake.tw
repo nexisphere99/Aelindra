@@ -1,0 +1,54 @@
+:: day2_wake [nobr]
+<<locationImage "moonspire_recovery_room" "Recovery Room">>
+
+<h2>Moonspire Tower   Morning After</h2>
+
+<p>I wake hungry. Not the polite, manageable hunger of a body requesting fuel   the ravenous, consuming hunger of a body that is burning everything it has to finish rebuilding itself. My stomach doesn't growl. It ROARS. A sound from deep in the abdomen that I feel in my spine, my ribs, the new tissue on my chest that is apparently demanding caloric tribute for the privilege of existing.</p>
+
+<p>The pain has faded. Not vanished   there's a dull ache in my hips where the bones widened, a tenderness in my chest where the breast tissue is expanding, a stiffness in my lower back where the spine shortened. But the sharp, grinding agony of the Rite is gone, replaced by something that feels more like post-exertion soreness. The body hurts the way a body hurts after it's been used hard. Which it has. Just not by me.</p>
+
+<p>I sit up. The breasts shift   they're heavier than yesterday. I can feel the difference in the way they pull when I lean forward, the way gravity catches them and draws them downward and they settle with a soft, warm weight that is incrementally more substantial than the weight that settled yesterday morning. They're growing. Overnight. While I slept, the magic continued its quiet work, adding tissue, shaping curves, building a chest that belongs on the body of a woman and is currently occupying the body of me.</p>
+
+<p>I look down. Through the nightgown: unmistakable. Not buds. Not swelling. BREASTS. Round, firm, pressing the linen outward with a definitive convexity. The nipples are visible through the fabric   wider, darker, hard from the morning chill. They have weight. They bounce when I swing my legs over the side of the bed   a tiny, perceptible motion that I feel in the tissue and the skin and the ligaments that are learning to support mass they've never held.</p>
+
+<p>Ilara arrives. She brings breakfast   eggs, bread, fruit, honey, a fortifying herbal drink that tastes like someone steeped determination in hot water. I eat everything. I eat the eggs and the bread and the fruit and I mop the honey with the bread crust and I drink the herbal thing in three swallows and I'm still hungry. Ilara watches with clinical satisfaction. A patient who eats is a patient who's healing.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Your body is settling." She refills the herbal drink. "The growth will continue for weeks   breasts, hips, the overall softening. But the structural changes are complete. You can return to your chambers today."</div>
+
+<p>My chambers. The words land with physical weight. My chambers   the room with the crack in the ceiling and the training sword on the wall and the mirror that last reflected a man. The room where I slept for twenty years as one person and will now enter as another.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"My chambers. With my clothes that don't fit and my sword that's too heavy and my mirror that shows someone I don't know."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"I'll have appropriate clothing sent."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"I don't want APPROPRIATE clothing. I want MY clothing."</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Then wear yours." Ilara's patience is limitless but her tolerance for self-pity is not. "But you'll find the shoulders too wide, the waist too loose, the hips too tight. Your body is different now. Denying it won't change it."</div>
+
+<p>The morning examination. She measures. The breasts have grown   solidly B-cup. She cups them with clinical hands, assessing density, palpating the tissue, checking the nipples for proper development.</p>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Thirty-two B. Growing well. The tissue is firm, responsive. The nipple-areolar complex is expanding normally."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"How big will they get?"</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"Based on the magical indicators and the precedent cases   likely D or DD at full development. Over the next three to four months."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Of course." Flatly. Because a B-cup wasn't enough. Because the body that stole my cock and my height and my jaw and my voice has also decided to give me breasts that will be, by all accounts, substantial. The gift that keeps on giving. Literally.</div>
+
+<div class="dialogue"><span class="speaker">ILARA</span>"You need proper breast support. The band is inadequate at this size. I'll have structured garments sent to your chambers."</div>
+
+<p>Structured garments. Medieval bras. For the breasts I didn't ask for, growing on the chest I didn't choose, attached to the body I didn't want.</p>
+
+<p>I eat another piece of bread. The hunger doesn't care about my feelings. The body needs fuel. I provide it.</p>
+
+<<set $d2f_wake to true>>
+<<set $statWIS += 1>>
+
+<<addObjective "bridge_return" "Return to the palace   cross the bridge. Your chambers are waiting." "MAIN">>
+<<if $d1_npc_nara>>
+  <<addObjective "nara_farewell" "Three notes at the bottom of the stairs   Nara" "SIDE">>
+<</if>>
+
+<div class="scene-end">
+  [[Continue → |day2_hub]]
+</div>

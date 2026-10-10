@@ -1,0 +1,49 @@
+:: day2_gardens [nobr]
+<div class="scene-image"><<sceneImage "day_2/day2_garden" "The garden, a cat, and tears">></div>
+
+<h2>Royal Gardens   Air</h2>
+
+<p>I can't stay in the chambers. The walls are closing in   the familiar walls, the walls I've known for twenty years, pressing inward with the particular claustrophobia of a room that knows you and doesn't recognise you simultaneously.</p>
+
+<p>I take the back route to the gardens. Through the servant corridors, down the narrow stairs, out the side door that opens near the herb garden. Fewer people. Fewer eyes.</p>
+
+<p>The garden. Late afternoon. The light is amber, slanting through the hedgerows, catching the dust motes that drift from the dry paths. The fountain splashes   the silver stag pouring water from its antlers. The jasmine   Wynn's jasmine, the one that survived the frost   is putting out new growth. Green shoots reaching in unexpected directions.</p>
+
+<p>I sit on the stone bench. The same bench where I sat with Ash four nights ago. The same bench. But I'm shorter   my feet don't reach the ground the same way. They dangle slightly, or I have to sit forward, and the adjustment is another small indignity in a cascade of small indignities that together constitute the experience of being a different size in a world that was measured for someone else.</p>
+
+<p>I sit with my knees together. Unconsciously   the wider hips make the legs fall differently, the thighs angling inward, and the natural resting position is knees together rather than apart. The vulva between my thighs is present with every shift. I've been aware of it all day   the soft, warm, constant presence of anatomy I've had for thirty-six hours and that accompanies every sitting, standing, walking, and breathing act like a passenger who won't stop talking.</p>
+
+<p>I breathe. Count breaths. Try to remember the meditation Ilara taught me.</p>
+
+<p>A cat. One of the palace ratcatchers   a grey tabby with a torn ear and the battle-scarred confidence of a professional predator. It jumps onto the bench beside me with the casual entitlement of an animal that has never once considered the possibility that it might not be welcome.</p>
+
+<p>It doesn't care about gender. It doesn't care about transformation or succession or the Rite of Becoming. It wants to be scratched. It communicates this desire by pressing its head against my hand with the insistent, boneless pressure of a creature that has perfected the art of demanding affection without speaking.</p>
+
+<p>I scratch behind its ears. The purring starts immediately   a low, rumbling vibration that I can feel through my fingertips, through my palm, through the wrist and up the arm. The cat pushes harder against my hand. Its eyes close. Total trust. Total presence. Just the scratch and the purr and the warm weight of a small body against my thigh.</p>
+
+<p>I cry.</p>
+
+<p>For the first time since the Rite. Silently   no sound, just the tears coming, hot and fast, spilling over the lower lids and tracking down cheeks that are softer than they were three days ago. The tears fall on the cat, which does not care. The tears fall on the bench, the stone, the garden that smells of jasmine and cut herbs and the particular warmth of afternoon sun on old rock.</p>
+
+<p>I cry because the cat doesn't care. Because the cat sees me   whoever I am, whatever I look like   and pushes its head against my hand and purrs, and the unconditional acceptance of a creature that cannot judge is the one thing that breaks through the wall I've been building since I woke up in the tower.</p>
+
+<p>I cry because I'm five foot six and I have breasts and my voice is higher and my cock is gone and the clothes that fit me are women's clothes and the face in the mirror is a stranger's face and I am sitting on a bench in a garden petting a cat and I look like a woman and I am a woman and I don't know how to be a woman and I don't know how to not be a man and I don't know who I am.</p>
+
+<p>The cat purrs louder.</p>
+
+<p>After a while, the tears stop. They don't dry up   they just finish, the way a rain shower finishes, not because the clouds are empty but because the rain has said what it needed to say. I wipe my face on my sleeve   the blouse sleeve, the women's blouse sleeve   and the fabric is softer against my skin than any sleeve I've ever owned.</p>
+
+<p>The cat opens one eye. Confirms I'm still scratching. Closes the eye.</p>
+
+<p>I sit in the garden. The sun moves. The jasmine grows. The cat purrs.</p>
+
+<<set $d2f_gardens to true>>
+<<set $stress to Math.max(0, $stress - 20)>>
+<<set $statRES += 2>>
+
+<<completeObjective "gardens">>
+<<addObjective "aldric_garden" "Someone is coming across the gravel   Aldric" "MAIN">>
+
+<div class="scene-end">
+  [[Continue → |day2_gardens_hub]]
+</div>

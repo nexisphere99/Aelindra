@@ -1,0 +1,24 @@
+:: day2_npc_queen_note [nobr]
+<h3>A Note Under the Door</h3>
+
+<p>Another note. Same seal. Mother's handwriting.</p>
+
+<div class="dialogue"><span class="speaker">SERAPHINA</span><em>Tomorrow I come to you. Be ready to learn. The kingdom won't wait for your grief to finish   and neither can I. But we'll grieve together, between the lessons. I promise.</em><br><em>Wear something that fits. You represent the crown now.</em><br><em>I love you. I'm proud of you. I'm sorry.</em><br><em>  S.</em></div>
+
+<p>Three sentences of statecraft. Three sentences of love. One sentence of apology. Seraphina in seven lines   the queen, the mother, and the woman who knows what she's done.</p>
+
+<p><em>Wear something that fits.</em> A command and a plea. Stop drowning in Edrin's clothes. Stop pretending the body isn't real. The kingdom is watching and the kingdom needs to see a princess, not a refugee from someone else's wardrobe.</p>
+
+<p><em>I'm sorry.</em> Two words she's never said before. Not during the arguments, not during the reveal, not during the farewell. She waited until the Rite was done and the body was changed and the cost was paid before she allowed herself the luxury of remorse.</p>
+
+<p>I put the note under my pillow. Next to the other one. A growing collection of maternal love compressed into parchment.</p>
+
+<<set $d2f_npc_queen_note to true>>
+<<set $affSeraphina += 3>>
+<<set $stress += 2>>
+
+<<addObjective "queen_visit" "The Queen comes to you tomorrow   Day 3" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day2_chambers_hub]]
+</div>

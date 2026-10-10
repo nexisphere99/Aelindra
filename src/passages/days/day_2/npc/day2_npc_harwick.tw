@@ -1,0 +1,42 @@
+:: day2_npc_harwick [nobr]
+<<npcPortrait "harwick" "Lady Harwick">>
+<h3>Lady Harwick   The Perfumed Assessment</h3>
+
+<p>She materialises from a doorway like a silk-wrapped ambush. The same cloud of perfume. The same jewellery. The same smile that could mean seventeen different things simultaneously.</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Princess Aelindra." The name, used publicly, for the first time by someone other than Ilara. It hits my ears and detonates somewhere behind my sternum. "What a TRANSFORMATION. And I don't mean that flippantly, dear   well, perhaps a little flippantly. You look absolutely striking."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Lady Harwick."</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"You have your mother's cheekbones. I always thought Edrin had his father's structure   strong jaw, broad shoulders. But the cheekbones were always Seraphina's. Now they're YOURS, and darling, they're magnificent."</div>
+
+<p>She's assessing me. The compliments are genuine but the eyes behind them are calculating   Lady Harwick doesn't offer a word that isn't strategic. She's evaluating the new princess the way she evaluates everything: as political material.</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"The court is buzzing, of course. Lord Merrick is drafting a formal announcement. The Elder Council has requested   well, I say 'requested,' 'demanded' is closer   a presentation. They want to SEE you. Confirm the transformation. Verify that the succession is secured."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"When?"</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Lord Merrick suggests Day Seven. Your mother agrees. One week from the Rite   enough time for the body to settle, for you to learn basic court protocol in the new form, for the gown to be fitted."</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"I'm not wearing a gown."</div>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Darling." She pats my arm. Her rings dig into the sleeve. "You'll wear whatever makes the Elder Council confirm you as heir. If that's a gown, you'll wear a gown. If it's armour, you'll wear armour. Personally, I'd recommend the gown   you have the waist for it, and there's nothing the Council respects more than a woman who looks the part while being smarter than all of them combined."</div>
+
+<p>She adjusts a brooch. Looks at me. Behind the perfume and the jewellery and the strategic smiling, something else   warmth, maybe. Or the recognition of one woman by another.</p>
+
+<div class="dialogue"><span class="speaker">HARWICK</span>"Your mother was terrified on her coronation day. She told me later   years later   that her knees were shaking so badly she was grateful the gown was floor-length. Nobody saw. She looked like a queen. She BECAME a queen. The knees stopped shaking eventually."</div>
+
+<p>She glides away. Trailing perfume. The last thing I hear: "Eat something, dear. You're thin."</p>
+
+<<set $d2f_npc_harwick to true>>
+<<set $councilPresentationKnown to true>>
+<<set $statAUT += 2>>
+<<set $statGRA += 1>>
+<<set $stress += 5>>
+<<set $repCourt += 2>>
+
+<<addObjective "council_day7" "The Elder Council wants to see you   Day 7" "SIDE">>
+
+<div class="scene-end">
+  [[Continue → |day2_corridors]]
+</div>

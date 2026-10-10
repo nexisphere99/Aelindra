@@ -1,0 +1,32 @@
+:: day2_corridors [nobr]
+<<locationImage "corridors" "Palace Corridors">>
+<h2>🏛 Palace Corridors</h2>
+<p>Long stone hallways. Portraits of queens. Echoing footsteps   and the sense that every one of them is a little too loud.</p>
+
+<<completeObjective "explore_palace">>
+
+<<if not $d2f_npc_harwick>>
+<div class="interaction-card side">
+  <<npcPortrait "harwick" "Lady Harwick">>
+  <h4>💎 A Doorway   Perfume</h4>
+  <p>A silk-wrapped ambush. The same cloud of perfume. The same smile that could mean seventeen things at once.</p>
+  [[Face her → |day2_npc_harwick]]
+</div>
+<</if>>
+
+<<if $d2_npc_caedric and not $d2f_npc_caedric>>
+<div class="interaction-card side">
+  <<npcPortrait "caedric" "Ser Caedric">>
+  <h4>🪑 The Bench by the Portrait Gallery</h4>
+  <p>The old knight. The rusted sword. The most stable thing in a palace that has been rearranged around you.</p>
+  [[Sit with him → |day2_npc_caedric]]
+</div>
+<</if>>
+
+<<if $d2f_npc_harwick and (not $d2_npc_caedric or $d2f_npc_caedric)>>
+  <p class="empty-note">The corridors are quiet. Just portraits and stone and the echoes of your boots   lighter now, shorter-strided.</p>
+<</if>>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day2_hub]]
+</div>

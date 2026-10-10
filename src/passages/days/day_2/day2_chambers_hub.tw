@@ -1,0 +1,66 @@
+:: day2_chambers_hub [nobr]
+<<set _chamberImg to ($timeSlot is "NIGHT") ? "palace_chambers_night" : "palace_chambers">>
+<<locationImage _chamberImg "Your Chambers">>
+<h2>🛏 Your Chambers</h2>
+<p>Your room. Bookshelves, maps, the training sword on the wall. A woman's clothes folded on the chair.</p>
+
+<<if not $d2f_npc_maren>>
+<div class="interaction-card side">
+  <<npcPortrait "maren" "Maren">>
+  <h4>🧺 Handmaiden Maren</h4>
+  <p>She's folding the men's clothes you discarded, hanging them in the wardrobe with the care of someone who knows they're relics.</p>
+  [[Speak with her → |day2_npc_maren]]
+</div>
+<</if>>
+
+<<if $d2f_npc_nara_farewell and not $hasResonanceCrystal>>
+<div class="interaction-card side">
+  <<npcPortrait "nara" "Nara">>
+  <h4>🎁 Nara's Package</h4>
+  <p>Wrapped in cloth. "Don't open it until you're in your chambers." You're in your chambers.</p>
+  [[Unwrap it → |day2_npc_nara_package]]
+</div>
+<</if>>
+
+<<if $timeSlot is "EVENING" and not $d2f_npc_queen_note>>
+<div class="interaction-card side">
+  <h4>📜 A Note Under the Door</h4>
+  <p>Cream parchment. A silver stag and a crescent moon pressed in wax.</p>
+  [[Read it → |day2_npc_queen_note]]
+</div>
+<</if>>
+
+<<if $timeSlot is "EVENING" and not $d2f_bath>>
+<div class="interaction-card main">
+  <h4>🛁 The Bath</h4>
+  <p>The copper tub in the bathing alcove. Maren has drawn it   hot water, lavender, chamomile. You haven't properly bathed since before the Rite.</p>
+  [[Bathe → |day2_bath]]
+</div>
+<</if>>
+
+<<if $timeSlot is "NIGHT" and $d2_npc_perrin and not $d2f_npc_perrin>>
+<div class="interaction-card side">
+  <<npcPortrait "perrin" "Perrin">>
+  <h4>🚪 The Door</h4>
+  <p>The corridor beyond. The night watch, as ever.</p>
+  [[Open it → |day2_npc_perrin]]
+</div>
+<</if>>
+
+<<if $timeSlot is "NIGHT" and $d2f_bath and not $d2f_night>>
+<div class="interaction-card main">
+  <h4>🛌 Your Own Bed</h4>
+  <p>The nightgown Maren left. The furs. The crack in the ceiling, waiting.</p>
+  [[Lie down → |day2_night]]
+</div>
+<</if>>
+
+<div class="interaction-card">
+  <h4>🪞 The Mirror</h4>
+  <p>Polished silver in a dark wood frame.</p>
+  <p class="flavor-dim">You've seen enough of her for one day. The mirror can wait.</p>
+</div>
+
+<div class="nav-return">
+  [[← Return to Palace Hub|day2_hub]]
+</div>

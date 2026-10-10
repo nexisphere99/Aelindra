@@ -1,27 +1,110 @@
 :: day2_hub [nobr]
-<!--
-  PLACEHOLDER   pipeline test only, AND the current end of the
-  public build's content (female route).
-  Day 0 and Day 1 are both real, playable content as of v0.2, so
-  the female route flows straight through them without any "end of
-  build" interruption   the notice only fires here, once the player
-  actually runs out of written content. Uses its own
-  <<endOfContentNoticeFemale>> widget (widgets.tw), distinct from the
-  futa route's <<endOfContentNoticeFuta>> at day1_hub_futa.tw, since
-  the two routes are at different points and the messages diverged.
-  Replace with real Day 2 ("Body") content and its own day2fInit
-  flag block (mirroring day1f-init.tw) when written   at that point,
-  move the <<endOfContentNoticeFemale>> call below down to wherever
-  the new content's own final passage ends.
--->
-<div class="day-transition">
-  <h2><<print formatDayNumber($dayNumber)>>   Body</h2>
-  <p>(Day 2 content not yet written. Days -2 through Day 1 are
-  fully playable end to end on the female route   the Rite, the
-  first day of recovery in the Moonspire Tower, and everything
-  before it.)</p>
-  <p><<print $mcName>>, <<print $mcTitle>>. Height <<print $mcHeight>>,
-  bust <<print $mcBust>>. Stress: <<print $stress>> | Energy: <<print $energy>></p>
+<div class="hub-header">
+  <h2><<if $timeSlot is "MORNING">>Moonspire Tower<<else>>Crown's Rest<</if>> - <<print formatDayNumber($dayNumber)>>: The Body Speaks</h2>
+  <p class="time-display">Time: <<print $timeSlot>></p>
+  <p class="energy-display">Energy: <<print $energy>> | Stress: <<print $stress>></p>
 </div>
 
-<<endOfContentNoticeFemale>>
+<div class="location-grid">
+
+<!-- ========== MORNING: TOWER & BRIDGE ========== -->
+<<if not $d2f_bridge>>
+
+<!-- ========== MOONSPIRE TOWER ========== -->
+<div class="loc-card">
+  <<locationImage "moonspire_tower" "Moonspire Tower">>
+  <h3>🌙 Moonspire Tower</h3>
+  <p class="loc-flavor">Your last morning here. The tower held you. Now it lets go.</p>
+  <<if $d1_npc_nara and not $d2f_npc_nara_farewell>>
+    <span class="badge side">🗡 Three notes at the bottom of the stairs</span>
+  <</if>>
+  [[Explore → |day2_tower_hub]]
+</div>
+
+<!-- ========== THE BRIDGE ========== -->
+<div class="loc-card">
+  <<locationImage "moonspire_bridge" "The Bridge">>
+  <h3>🌉 The Bridge   Return to the Palace</h3>
+  <p class="loc-flavor">Thirty paces back. The same bridge. A different person crossing it.</p>
+  <span class="badge main">⚔ Cross back   go home</span>
+  [[Cross → |day2_bridge]]
+</div>
+
+<</if>>
+
+<!-- ========== PALACE LOCATIONS (after the bridge, gauntlet and chambers) ========== -->
+<<if $d2f_chambers>>
+
+<!-- ========== YOUR CHAMBERS ========== -->
+<div class="loc-card<<if $d2f_night>> visited<</if>>">
+  <<set _chamberImg to ($timeSlot is "NIGHT") ? "palace_chambers_night" : "palace_chambers">>
+  <<locationImage _chamberImg "Your Chambers">>
+  <h3>🛏 Your Chambers</h3>
+  <p class="loc-flavor">Everything is the same. The crack in the ceiling. The sword on the wall. The wardrobe full of a dead man's clothes.</p>
+  <<if not $d2f_npc_maren>>
+    <span class="badge side">🗡 Maren is tidying</span>
+  <</if>>
+  <<if $d2f_npc_nara_farewell and not $hasResonanceCrystal>>
+    <span class="badge side">🗡 Nara's wrapped package</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and not $d2f_bath>>
+    <span class="badge main">⚔ The bath</span>
+  <</if>>
+  <<if $timeSlot is "EVENING" and not $d2f_npc_queen_note>>
+    <span class="badge side">🗡 A note under the door</span>
+  <</if>>
+  <<if $timeSlot is "NIGHT" and $d2f_bath and not $d2f_night>>
+    <span class="badge main">⚔ Sleep   in your own bed</span>
+  <</if>>
+  <<if $timeSlot is "NIGHT" and $d2_npc_perrin and not $d2f_npc_perrin>>
+    <span class="badge side">🗡 Perrin on the night watch</span>
+  <</if>>
+  [[Enter → |day2_chambers_hub]]
+</div>
+
+<!-- ========== PALACE CORRIDORS ========== -->
+<div class="loc-card">
+  <<locationImage "corridors" "Palace Corridors">>
+  <h3>🏛 Palace Corridors</h3>
+  <p class="loc-flavor">The same corridors. Different height. Different everything.</p>
+  <<if not $d2f_npc_harwick>>
+    <span class="badge side">🗡 A perfumed ambush   politics</span>
+  <</if>>
+  <<if $d2_npc_caedric and not $d2f_npc_caedric>>
+    <span class="badge side">🗡 "There she is"</span>
+  <</if>>
+  [[Explore → |day2_corridors]]
+</div>
+
+<!-- ========== ROYAL GARDENS ========== -->
+<div class="loc-card<<if $d2f_aldric>> visited<</if>>">
+  <<locationImage "royal_gardens" "Royal Gardens">>
+  <h3>🌿 Royal Gardens</h3>
+  <p class="loc-flavor">The same bench. Six inches lower. A cat that doesn't care about succession law.</p>
+  <<if not $d2f_gardens>>
+    <span class="badge main">⚔ You need air</span>
+  <<elseif not $d2f_aldric>>
+    <span class="badge main">⚔ Footsteps on the gravel   Aldric</span>
+  <</if>>
+  <<if $d2_npc_wynn and not $d2f_npc_wynn>>
+    <span class="badge side">🗡 Old Wynn at the jasmine   new growth</span>
+  <</if>>
+  [[Enter → |day2_gardens_hub]]
+</div>
+
+<!-- ========== PALACE KITCHENS ========== -->
+<<if $d2_npc_marta>>
+<div class="loc-card">
+  <<locationImage "kitchens" "Palace Kitchens">>
+  <h3>🍞 Palace Kitchens</h3>
+  <p class="loc-flavor">Normal tempo. The crisis is manageable. The stool is waiting.</p>
+  <<if not $d2f_npc_marta>>
+    <span class="badge side">🗡 Same stool</span>
+  <</if>>
+  [[Enter → |day2_kitchen]]
+</div>
+<</if>>
+
+<</if>>
+
+</div>

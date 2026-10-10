@@ -1,0 +1,41 @@
+:: day2_npc_perrin [nobr]
+<<npcPortrait "perrin" "Perrin">>
+<h3>Night Guard Perrin   New Rounds</h3>
+
+<p>The same corridor. The same post. Perrin.</p>
+
+<p>He looks at me when I open the door. The same attentive gaze. The same earnest, uncalculating attention.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Your Highness." No hesitation. No stumble. No false start. The address delivered with the same inflection he used three days ago, as if nothing has changed except the person being addressed.</div>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Perrin."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Quiet night. Though   your friend is playing again. The guest wing. Softer tonight."</div>
+
+<p>Ash. Playing in the guest wing. Not at my door   giving me space. But playing. Present. The lute reaching through stone walls and night air to say what words don't need to: <em>still here.</em></p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Perrin. Do I look different to you?"</div>
+
+<p>He considers this. The same careful consideration, the same unhurried processing that I valued on Day -2.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"You look like the same person in different clothes. The eyes are the same. The way you lean on the doorframe   that's the same. You used to lean left shoulder first. You still do."</div>
+
+<p>I am, in fact, leaning on the doorframe. Left shoulder first. A posture I didn't choose, a lean I didn't plan. The body changed but the habits didn't.</p>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"The house is different. But the person living in it leans the same way."</div>
+
+<p>The body's the house. The person's the tenant. He said it on Day -2 and he's saying it now, and the consistency   the beautiful, stubborn consistency of a night guard who believes the same things on Thursday that he believed on Monday   is the anchor I didn't know I needed.</p>
+
+<div class="dialogue"><span class="speaker">AELINDRA</span>"Good night, Perrin."</div>
+
+<div class="dialogue"><span class="speaker">PERRIN</span>"Good night, Your Highness. Sleep well."</div>
+
+<p>I close the door. The lute plays, distantly. Perrin stands his post. The ceiling crack waits.</p>
+
+<<set $d2f_npc_perrin to true>>
+<<set $statRES += 2>>
+<<set $stress -= 5>>
+
+<div class="scene-end">
+  [[Continue → |day2_chambers_hub]]
+</div>
